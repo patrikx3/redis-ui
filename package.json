@@ -12,6 +12,9 @@
         "reponame": "redis-ui"
     },
     "main": "src/index.js",
+    "bin": {
+        "p3x-redis": "./bin/p3x-redis.js"
+    },
     "scripts": {
         "test": "grunt"
     },
@@ -41,5 +44,9 @@
     "engines": {
         "node": ">=8.11.4"
     },
-    "homepage": "https://pages.corifeus.com/redis-ui"
+    "homepage": "https://pages.corifeus.com/redis-ui",
+    "dependencies": {
+        "p3x-redis-ui-material": "^2018.9.8-8",
+        "p3x-redis-ui-server": "^2018.9.8-7"
+    }
 }

@@ -12,5 +12,3 @@
 /*.lock
 *.log
 /corifeus-boot.json
-
-/src/**/*.*
