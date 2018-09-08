@@ -1,0 +1,45 @@
+{
+    "name": "p3x-redis-ui",
+    "version": "2018.9.8-0",
+    "description": "The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.",
+    "corifeus": {
+        "prefix": "p3x-",
+        "type": "p3x",
+        "opencollective": false,
+        "publish": true,
+        "build": false,
+        "nodejs": "v10.10.0",
+        "reponame": "redis-ui"
+    },
+    "main": "src/index.js",
+    "scripts": {
+        "test": "grunt"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/patrikx3/redis-ui.git"
+    },
+    "keywords": [
+        "redis",
+        "ui",
+        "gui",
+        "web",
+        "electron",
+        "desktop",
+        "server",
+        "angularjs",
+        "javascript",
+        "material",
+        "dark",
+        "light"
+    ],
+    "author": "Patrik Laszlo <alabard@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "corifeus-builder": "^2018.9.8-0"
+    },
+    "engines": {
+        "node": ">=10.10.0"
+    },
+    "homepage": "https://pages.corifeus.com/redis-ui"
+}

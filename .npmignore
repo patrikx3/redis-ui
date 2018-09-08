@@ -1,0 +1,16 @@
+/.idea
+/artifacts
+/build
+/test
+/node_modules
+/*.iml
+/*.ipr
+/*.iws
+/.travis.yml
+/.scrutinizer.yml
+/Gruntfile.js
+/*.lock
+*.log
+/corifeus-boot.json
+
+/src/**/*.*
