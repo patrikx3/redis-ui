@@ -1,13 +1,13 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2018.9.8-0",
+    "version": "2018.9.8-1",
     "description": "The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.",
     "corifeus": {
         "prefix": "p3x-",
         "type": "p3x",
         "opencollective": false,
         "publish": true,
-        "build": false,
+        "build": true,
         "nodejs": "v10.10.0",
         "reponame": "redis-ui"
     },
@@ -39,7 +39,7 @@
         "corifeus-builder": "^2018.9.8-0"
     },
     "engines": {
-        "node": ">=10.10.0"
+        "node": ">=8.11.4"
     },
     "homepage": "https://pages.corifeus.com/redis-ui"
 }
