@@ -6,7 +6,7 @@
   
  
 ---
-# 📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material. v2018.9.11-0  
+# 📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material. v2018.9.11-2  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -43,15 +43,60 @@ It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-r
 The test version:  
 https://p3x.redis.patrikx3.com
 
-In progress. Not fully released.
+# TODO
+[the todo readme](artifacts/readme/todo.md)
 
+# Start up
+```bash
+npm i -g p3x-redis-ui
+p3x-redis 
+
+# if you want to disable changing of connections
+p3x-redis --readonly-connections
+# or
+p3x-redis -r
+```
+
+# Create a Linux SystemD service
+```bash
+adduser --disabled-password redis-ui
+touch /etc/systemd/system/p3x-redis-ui.service
+nano /etc/systemd/system/p3x-redis-ui.service
+```
+
+Place this file with this content:
+```text
+[Unit]
+Description=p3x-redis
+After=network.target
+
+[Service]
+Type=simple
+User=redis-ui
+WorkingDirectory=/home/redis/ui
+ExecStart=/usr/bin/p3x-redis
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Finally:
+```bash
+systemctl daemon-reload
+systemctl enable p3x-redis
+service p3x-redis start
+```
+
+The server is loading at:  
+https://localhost:7843
 
 
 [//]: #@corifeus-footer
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.11-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.11-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
