@@ -4,10 +4,21 @@
 
                         
 [//]: #@corifeus-header:end
+# Create HTTPS2 certificate
 
-# To do
+Use PEM pass phrase: `123456789`
 
-in progress ...
+```bash
+#openssl req -newkey rsa:2048 -keyout localhost.key -out localhost.csr -passwd 123456789
+openssl req -x509 -sha256 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 36500 
+openssl rsa -in key.pem -out key.nopass.pem
+```
+
+# Allow unauthorized TLS certificate
+
+```bash
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+```
 
 [//]: #@corifeus-footer
 

@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2018.9.11-11",
+    "version": "2018.9.11-15",
     "description": "📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.",
     "corifeus": {
         "icon": "fas fa-database",
@@ -41,14 +41,14 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2018.9.8-0"
+        "corifeus-builder": "^2018.9.11-0"
     },
     "engines": {
         "node": ">=8.11.4"
     },
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
-        "p3x-redis-ui-material": "^2018.9.11-10",
-        "p3x-redis-ui-server": "^2018.9.11-10"
+        "p3x-redis-ui-material": "^2018.9.11-14",
+        "p3x-redis-ui-server": "^2018.9.11-14"
     }
 }
