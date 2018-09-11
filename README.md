@@ -6,7 +6,7 @@
   
  
 ---
-# 📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material. v2018.9.11-9  
+# 📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material. v2018.9.11-10  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -43,12 +43,6 @@ It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-r
 The test version:  
 https://p3x.redis.patrikx3.com
 
-# TODO
-[The to do readme](todo.md)
-
-# Change log
-[The change log readme](changelog.md)
-
 # Start up with a server
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
@@ -56,12 +50,19 @@ https://p3x.redis.patrikx3.com
 # Start up with Electron
 [Start up with Electron readme](artifacts/readme/start-up-with-electron.md)
 
+# TODO
+[The to do readme](todo.md)
+
+# Change log
+[The change log readme](changelog.md)
+
+
 
 [//]: #@corifeus-footer
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.11-9 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.11-10 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
