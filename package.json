@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2018.9.11-6",
+    "version": "2018.9.11-8",
     "description": "📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.",
     "corifeus": {
         "icon": "fas fa-database",
@@ -48,7 +48,7 @@
     },
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
-        "p3x-redis-ui-material": "^2018.9.11-6",
-        "p3x-redis-ui-server": "^2018.9.11-6"
+        "p3x-redis-ui-material": "^2018.9.11-7",
+        "p3x-redis-ui-server": "^2018.9.11-7"
     }
 }
