@@ -1,17 +1,14 @@
 [//]: #@corifeus-header
 
-# 📡 The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron.
 
                         
 [//]: #@corifeus-header:end
 
 # To do
-* icons
-  * hash - hashtag (fontaweomse hashtag)
-  * list - bar different up and down (fontaweomse columns)
-  * zset - {}
-  * string - abc
-  * zset - bar like fontawesome cellular
+* stats secondary tabs are ugly
+* key view
+* key editor
 * tree key
   * filter
   * show count of
@@ -49,6 +46,7 @@
   * load types
     * encoding
     * ttl
+      * editable, -1 expire right away
     * type
     * size
 
@@ -57,7 +55,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.12-5 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.12-6 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
