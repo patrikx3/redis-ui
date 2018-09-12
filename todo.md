@@ -6,14 +6,58 @@
 [//]: #@corifeus-header:end
 
 # To do
+* icons
+  * hash - hashtag (fontaweomse hashtag)
+  * list - bar different up and down (fontaweomse columns)
+  * zset - {}
+  * string - abc
+  * zset - bar like fontawesome cellular
+* tree key
+  * filter
+  * show count of
+    * hash
+    * list
+    * set
+    * zset
+* types
+  * string
+    * key
+    * value
+  * hash
+    * key
+    * hash key
+    * value
+  * list
+    * key
+    * index
+      * empty to append, -1 to prepend
+    * value
+  * set
+    * key
+    * value
+  * zset
+    * key
+    * score
+    * value
+* type encoding    
+  * encoding
+* key
+  * rename
+  * delete
+  * export
+  * json tree
+  * load types
+    * encoding
+    * ttl
+    * type
+    * size
 
-in progress ...
 
 [//]: #@corifeus-footer
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.12-3 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.12-4 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
