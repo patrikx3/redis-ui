@@ -6,16 +6,11 @@
 [//]: #@corifeus-header:end
 
 # To do
-* stats secondary tabs are ugly
-* key view
+* final key view
+* select from the console database, update the gui
 * key editor
 * tree key
   * filter
-  * show count of
-    * hash
-    * list
-    * set
-    * zset
 * types
   * string
     * key
@@ -36,8 +31,6 @@
     * key
     * score
     * value
-* type encoding    
-  * encoding
 * key
   * rename
   * delete
