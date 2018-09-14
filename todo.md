@@ -6,6 +6,16 @@
 [//]: #@corifeus-header:end
 
 # To do
+* add pager for max 200 keys at once
+  * for now, the keys will be loaded at once, but the tree will be paging, because that is where it is having a penalty from AngularJS
+  * add pager to use 
+    * 10
+    * 25
+    * 50
+    * 100 - default
+    * 250
+    * 500
+    * All
 * overview is not complete
 * final key view
 * key editor
@@ -48,7 +58,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.14-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.14-1 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 

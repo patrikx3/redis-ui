@@ -6,7 +6,7 @@
   
  
 ---
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.9.14-0  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.9.14-1  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -41,23 +41,24 @@ https://nodejs.org/en/download/package-manager/
 ## Features 
 
 * Works as a backend
-  * For now, it is only works with HTTP
+  * For now, it only works with HTTPS
 * Works as a desktop via Electron
   * I have 
     * Linux
     * Windows
     * macOS
-      * I do not have the money to buy a macOS machine and build an Electron installer, but it would be very easy to do it
-* You error handling (as much I can find)
-* Starts with no settings
-* Able to create, test, save, delete multiple connections
+      * I do not have the money to buy a macOS machine and build an Electron installer, but it would be very easy to do
+* The error handling took careful (as much I can find errors)
+* Starts with no settings without config, or setup your own config
+* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
 * Able to use the console and interact with Redis
-* Online you are able to choose the tree separator, for example :, /, -, space, etc...)
+* Online you are able to choose the tree separator, for example :, /, -, space, etc...
 * It is based on Redis-Commander and phpRedisAdmin
 * You can select the database via console or the drop down, where the checked database is not empty, so you can always know which is filled
 * Save button to save the db
-* There is a performance penalty for this application, given it uses AngularJS `ng-repeat` for the tree component. The best is if your application uses nested keys (something:nested:good), then the tree will be fast, but for example Nextcloud uses about 500 keys inline and it can take 5 seconds to generate the tree.
-  * Another solution is that instead of the : separator for your app, you can use the / separator. Then it will be much more responsive.
+* There is a performance penalty for this application, given it uses AngularJS `ng-repeat` for the tree component. The best is if your application uses nested keys (something:nested:good), then the tree will be fast, but, for example, Nextcloud uses about 500 keys inline and it can take 5 seconds to generate the tree.
+  * Another solution is that instead of the : separator for your app, you can use the / separator. Then it will be much more responsive, see the settings tree separator 
+  * A second solution is to use paging, the default paging is 250 keys
 * Full statistics pages, can be useful
 * This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
 * Dark - Dracula / light themes
@@ -103,7 +104,7 @@ https://p3x.redis.patrikx3.com
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.14-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.14-1 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
