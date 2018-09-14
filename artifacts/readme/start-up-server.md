@@ -16,6 +16,10 @@ p3x-redis
 p3x-redis --readonly-connections
 # or
 p3x-redis -r
+# or
+p3x-redis --config p3xrs.json
+# mix
+p3x-redis --config p3xrs.json --readonly-connections
 ```
 
 # Create a Linux SystemD service
@@ -37,6 +41,7 @@ User=redis-ui
 WorkingDirectory=/home/redis-ui
 # or if you want readonly connections as it is public
 #ExecStart=/usr/bin/p3x-redis --readonly-connections
+#ExecStart=/usr/bin/p3x-redis --readonly-connections --config /usr/some/path/p3xrs.json
 ExecStart=/usr/bin/p3x-redis
 Restart=on-abort
 
@@ -125,7 +130,7 @@ server {
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.12-6 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.14-0 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
