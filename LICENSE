@@ -1,7 +1,7 @@
 
-@license p3x-redis-ui v2018.9.8-1
+@license p3x-redis-ui v2018.9.16-2
   
-The built p3x-redis-ui using p3x-redis-ui-server and p3x-redis-ui-material.
+📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron.
 
 https://pages.corifeus.com/redis-ui
 
@@ -25,4 +25,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE.    
