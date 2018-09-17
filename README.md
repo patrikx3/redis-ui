@@ -6,7 +6,7 @@
   
  
 ---
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.9.17-4  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.9.17-6  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -83,15 +83,17 @@ https://p3x.redis.patrikx3.com
     * the search keys starts with a string key
     * the search keys includes a string in the key
 
-## Releases
-https://github.com/patrikx3/redis-ui/releases  
   
 # Start up with a server
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
 
 # Start up with Electron
-[Start up with Electron readme](artifacts/readme/start-up-with-electron.md) - in progress
+
+Please check out the releases section.
+
+## Releases
+https://github.com/patrikx3/redis-ui/releases  
 
 # To create your own certificate
 [To create your own certificate readme](artifacts/readme/create-https-cert.md)
@@ -112,7 +114,7 @@ https://github.com/patrikx3/redis-ui/releases
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.17-4 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.17-6 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
