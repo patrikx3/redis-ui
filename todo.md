@@ -6,19 +6,13 @@
 [//]: #@corifeus-header:end
 
 # To do
-* tree search 
-  * client side
-  * server side
-* overview is not complete
-* final key view
-  * actions
-* key editor
-* tree key
-  * filter
-* types
+* handle when a key view is deleted
+* add key
+* key editor/viewer
   * string
     * key
     * value
+    * JSON viewer
   * hash
     * key
     * hash key
@@ -35,18 +29,7 @@
     * key
     * score
     * value
-* key
-  * rename
-  * delete
-  * export
-  * json tree
-  * load types
-    * encoding
-    * ttl
-      * editable, -1 expire right away
-    * type
-    * size
-
+* overview is not complete
 
 [//]: #@corifeus-footer
 

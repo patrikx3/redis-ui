@@ -52,7 +52,7 @@ https://nodejs.org/en/download/package-manager/
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
 * Able to use the console and interact with Redis
-* Online you are able to choose the tree separator, for example :, /, -, space, etc...
+* Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
 * It is based on Redis-Commander and phpRedisAdmin
 * You can select the database via console or the drop down, where the checked database is not empty, so you can always know which is filled
 * Save button to save the db
@@ -62,6 +62,12 @@ https://nodejs.org/en/download/package-manager/
 * Full statistics pages, can be useful
 * This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
 * Dark - Dracula / light themes
+* Search
+  * Client side mode searching in keys - small key set
+  * Server side mode searching in keys - large key set
+  * Search mode
+    * the search keys starts with a string key
+    * the search keys includes a string in the key
 
 ## Releases
 https://github.com/patrikx3/redis-ui/releases  
