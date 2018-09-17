@@ -13,7 +13,7 @@
         "nodejs": "v10.10.0",
         "reponame": "redis-ui"
     },
-    "main": "src/index.js",
+    "main": "bin/p3xr-electron.js",
     "bin": {
         "p3x-redis": "./bin/p3x-redis.js"
     },
@@ -41,7 +41,10 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2018.9.16-3"
+        "corifeus-builder": "^2018.9.16-3",
+        "corifeus-utils": "^2018.9.16-3",
+        "electron": "^2.0.9",
+        "electron-builder": "^20.28.4"
     },
     "engines": {
         "node": ">=8.11.4"
@@ -49,6 +52,23 @@
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
         "p3x-redis-ui-material": "^2018.9.17-4",
-        "p3x-redis-ui-server": "^2018.9.17-4"
+        "p3x-redis-ui-server": "^2018.9.17-6"
+    },
+    "build": {
+        "appId": "p3x.redis-ui.electron",
+        "productName": "patrikx3-redis-ui-electron",
+        "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
+        "win": {
+            "icon": "src/electron/images/",
+            "target": "nsis"
+        },
+        "nsis": {
+            "artifactName": "${name}-setup-${os}-x64-${version}.${ext}"
+        },
+        "linux": {
+            "category": "Office",
+            "icon": "src/electron/images/",
+            "target": "appimage"
+        }
     }
 }
