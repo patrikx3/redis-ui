@@ -3,7 +3,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const boot = require('p3x-redis-ui-server/src/lib/boot')
 boot()
 
-require('./global.js');
+require('./electron/global.js');
 
 
 const { app, ipcMain } = require('electron')
@@ -25,7 +25,7 @@ if (isSecondInstance) {
 
 const utils = require('corifeus-utils')
 
-const createWindow = require('./module/create/window');
+const createWindow = require('./electron/module/create/window');
 
 
 app.on('ready', () => {

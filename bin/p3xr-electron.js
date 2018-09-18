@@ -1,1 +1,1 @@
-require('../src/electron/app')
+require('../src/app')
