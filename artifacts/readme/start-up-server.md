@@ -64,6 +64,10 @@ The best is, if you have an NGINX with a valid, secure HTTPS certificate for exa
 /etc/nginx/sites-enabled/p3x.redis.patrikx3.com
 ```
 
+For free SSL certificate, I use `acme.sh`:  
+https://github.com/Neilpang/acme.sh  
+
+
 Config:  
 ```text
 server {
@@ -71,7 +75,7 @@ server {
         listen [::]:80 ;        
         server_name p3x.redis.patrikx3.com;        
         error_log /var/log/nginx/p3x.redis.patrikx3.com-error.log;
-        access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined if=$loggable;
+        access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined;
         root /home/redis-ui/www/public;
         location ~ /.well-known {        
                 auth_basic off;
@@ -90,7 +94,7 @@ server {
 server {
         server_name p3x.redis.patrikx3.com;        
         error_log /var/log/nginx/p3x.redis.patrikx3.com-error.log;
-        access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined if=$loggable;
+        access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined;
         root /home/redis-ui/www/public;
         location ~ /.well-known {        
                 auth_basic off;
@@ -130,7 +134,7 @@ server {
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.18-35 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.9.18-36 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
