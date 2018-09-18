@@ -83,10 +83,6 @@ https://p3x.redis.patrikx3.com
     * the search keys starts with a string key
     * the search keys includes a string in the key
 
-  
-# Start up with a server
-[Start up with a server readme](artifacts/readme/start-up-server.md)
-
 
 # Start up with Electron
 
@@ -94,10 +90,12 @@ Please check out the releases section.
 
 ## Releases
 https://github.com/patrikx3/redis-ui/releases  
+  
+# Start up with a server
+[Start up with a server readme](artifacts/readme/start-up-server.md)
 
 # To create your own certificate
 [To create your own certificate readme](artifacts/readme/create-https-cert.md)
-
 
 # Some description about the config file
 [Some description about the config file readme](p3xrs.json)
