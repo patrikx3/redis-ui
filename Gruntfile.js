@@ -6,9 +6,10 @@ module.exports = (grunt) => {
     const builder = require(`corifeus-builder`);
     const loader = new builder.loader(grunt);
     loader.js({
-
     });
 
-    grunt.registerTask('default', builder.config.task.build.js);
+    let defaults = builder.config.task.build.js.slice()
+    defaults.splice(defaults.indexOf('mocha_istanbul:cory-coverage'), 1)
+    grunt.registerTask('default', defaults);
 
 }
