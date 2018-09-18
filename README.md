@@ -52,6 +52,10 @@ By default, only English is created, but given all strings are from a `JS` file,
 ## The test version
 https://p3x.redis.patrikx3.com
 
+![Screenshot 1](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-1.png)
+
+![Screenshot 2](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
+
 ## Features 
 
 * Works as a backend
