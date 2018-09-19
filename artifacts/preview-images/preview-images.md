@@ -5,10 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
-# Change log
+
+# More to come
 
 in progress ...
-
 [//]: #@corifeus-footer
 
 ---
