@@ -1,5 +1,5 @@
 
-@license p3x-redis-ui v2018.9.18-34
+@license p3x-redis-ui v2018.9.28-1
   
 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron.
 

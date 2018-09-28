@@ -1,3 +1,4 @@
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const boot = require('p3x-redis-ui-server/src/lib/boot')
@@ -14,19 +15,19 @@ if (process.env.NODE_ENV === 'development') {
     app.commandLine.appendSwitch('remote-debugging-port', '9222')
 }
 
-const isSecondInstance = app.makeSingleInstance((commandLine, workingDirectory) => {
+const gotTheLock = app.requestSingleInstanceLock()
+
+if (!gotTheLock) {
+    app.quit()
+    return
+}
+app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, we should focus our window.
     global.p3xre.setVisible(true);
     global.p3xre.mainWindow.webContents.reload();
 })
 
-if (isSecondInstance) {
-    return app.quit()
-}
-
-const utils = require('corifeus-utils')
-
 const createWindow = require('./electron/module/create/window');
-
 
 app.on('ready', () => {
     createWindow();
@@ -41,6 +42,7 @@ app.on('window-all-closed', function () {
 });
 
 app.on('activate', function () {
+    console.warn('activate')
     if (global.p3xre.mainWindow === null) {
         createWindow();
     }
