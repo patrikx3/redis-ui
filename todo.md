@@ -7,8 +7,8 @@
 
 # To do
 * when in a key and switch database, it shows an error
-* favicon is missing
-* add menus
+* add menus for changelog, todo, github popup menu
+* on mobile the layout bottom is not right
 * hover on table list on key or config info
 * add key and refresh tree
 * overview is not complete
