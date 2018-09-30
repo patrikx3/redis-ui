@@ -7,8 +7,7 @@
 
 # To do
 * when in a key and switch database, it shows an error
-* add menus for changelog, todo, github popup menu
-* on mobile the layout bottom is not right
+* add menus
 * hover on table list on key or config info
 * add key and refresh tree
 * overview is not complete
