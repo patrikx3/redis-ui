@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2018.10.25-1",
+    "version": "2018.11.1-2",
     "description": "📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron.",
     "corifeus": {
         "icon": "fas fa-database",
@@ -10,7 +10,7 @@
         "opencollective": false,
         "publish": true,
         "build": true,
-        "nodejs": "v10.12.0",
+        "nodejs": "v11.0.0",
         "reponame": "redis-ui"
     },
     "main": "src/app.js",
@@ -43,19 +43,19 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2018.10.25-0",
-        "corifeus-utils": "^2018.10.20-3",
-        "electron": "^3.0.6",
-        "electron-builder": "^20.28.4",
-        "jsdom": "^12.2.0"
+        "corifeus-builder": "^2018.11.1-2",
+        "corifeus-utils": "^2018.11.1-2",
+        "electron": "^3.0.7",
+        "electron-builder": "^20.29.0",
+        "jsdom": "^13.0.0"
     },
     "engines": {
         "node": ">=8.11.4"
     },
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
-        "p3x-redis-ui-material": "^2018.10.25-1",
-        "p3x-redis-ui-server": "^2018.10.25-1"
+        "p3x-redis-ui-material": "^2018.11.1-1",
+        "p3x-redis-ui-server": "^2018.11.1-1"
     },
     "build": {
         "appId": "p3x.redis-ui.electron",
