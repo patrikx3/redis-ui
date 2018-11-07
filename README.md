@@ -46,9 +46,14 @@ Some of the features are coming below.
 
 ## Development
 
-It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one.
+It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
+
+[Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
+[Client on GitHub](https://github.com/patrikx3/redis-ui-material)
 
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, France, Spanish etc ...
+
+[English strings, easy to translate](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)
 
 ## The test version
 https://p3x.redis.patrikx3.com
