@@ -55,6 +55,8 @@ By default, only English is created, but given all strings are from a `JS` file,
 
 [English strings, easy to translate](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)
 
+This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
+
 ## The test version
 https://p3x.redis.patrikx3.com
 
