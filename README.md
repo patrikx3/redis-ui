@@ -44,6 +44,8 @@ https://nodejs.org/en/download/package-manager/
 `p3x-redis-ui` is a new Redis GUI which can serve as a backend server or as a desktop application.
 Some of the features are coming below.
 
+**It was created in 20 days in September of 2018.**
+
 ## Warning
 `Node v11.1.0` has changed in the HTTP streams. So, until the upstream packages are not updated, do not use `NodeJs` above `v11.0.0`.  
 
@@ -123,8 +125,6 @@ https://github.com/patrikx3/redis-ui/releases
 # Change log
 [The change log readme](changelog.md) 
 
-# Release
-It was created in 20 days in September of 2018.
 
 [//]: #@corifeus-footer
 
