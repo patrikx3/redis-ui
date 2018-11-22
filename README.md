@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.11.17-4  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.11.22-2  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -26,7 +26,7 @@ All my domains (patrikx3.com and corifeus.com) could have errors, since I am dev
    
 ### Built on Node 
 ``` 
-v10.13.0
+v11.2.0
 ```   
    
 The ```async``` and ```await``` keywords are required.
@@ -45,9 +45,6 @@ https://nodejs.org/en/download/package-manager/
 Some of the features are coming below.
 
 👷 **It was created in 20 days in September of 2018.** 
-
-## Warning
-`Node v11.1.0` has changed in the HTTP streams. So, until the upstream packages are not updated, do not use `NodeJs` above `v11.0.0`.  
 
 ## Development
 
@@ -75,6 +72,8 @@ https://p3x.redis.patrikx3.com
 
 * Works as a backend
   * For now, it only works with HTTPS
+    * Warning: Actually, until Electron NodeJs version is below v10.13.0, we disabled https2 and use https.
+
 * Works as a desktop via Electron
   * I have 
     * Linux
@@ -130,7 +129,7 @@ https://github.com/patrikx3/redis-ui/releases
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.11.17-4 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.11.22-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
