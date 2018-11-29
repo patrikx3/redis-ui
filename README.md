@@ -62,11 +62,11 @@ This solution is not using REST at all, but instead uses Socket.IO 🤣, which i
 ## The test version
 https://p3x.redis.patrikx3.com
 
-![Screenshot 1](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-1.png)
+![Key view](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-1.png)
 
-![Screenshot 2](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
+![JSON preview](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
 
-
+![Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
 
 ## Features 
 
