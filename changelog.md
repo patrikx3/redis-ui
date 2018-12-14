@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2018.12.14
+* Due to a variable name, the key sorting was not working, now is.
+
 ## v2018.9.28-3
 * the AppImage was not working, now I verified on Windows and Linux
 
@@ -17,7 +20,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.11-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.14-0 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
