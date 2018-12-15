@@ -6,11 +6,9 @@
 [//]: #@corifeus-header:end
 
 # To do
-* when in a key and switch database, it shows an error
 * hover on table list on key or config info
 * add key and refresh tree
 * overview is not complete
-* enable http in the server (right now only https)
 
 [//]: #@corifeus-footer
 

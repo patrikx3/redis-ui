@@ -110,9 +110,6 @@ https://github.com/patrikx3/redis-ui/releases
 # Start up with a server or via a browser and NodeJs/NPM
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
-# To create your own certificate
-[To create your own certificate readme](artifacts/readme/create-https-cert.md)
-
 # Some description about the config file
 [Some description about the config file readme](p3xrs.json)
 
