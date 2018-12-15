@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2018.12.15
+* I have found, that the best solution is on the server side is to use http instead of https and for security use NGINX (or similar) as a proxy and it is as secure as it can be.
+
 ## v2018.12.14
 * Due to a variable name, the key sorting was not working, now is.
 
