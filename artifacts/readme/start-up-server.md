@@ -57,7 +57,7 @@ service p3x-redis-ui start
 ```
 
 The server is loading at:  
-[https://localhost:7843](https://localhost:7843)
+[http://localhost:7843](http://localhost:7843)
 
 The best is, if you have an NGINX with a valid, secure HTTPS certificate for example Let's Encrypt and then use it as a proxy, for example my own:
 ```text
@@ -112,7 +112,7 @@ server {
         ssl_certificate_key /home/redis-ui/acme/ssl//patrikx3.com/patrikx3.com.key;
 
         location / {
-                proxy_pass "https://127.0.0.1:7843";
+                proxy_pass "http://127.0.0.1:7843";
                 proxy_set_header X-Forwarded-For $remote_addr;
                 proxy_set_header Host $host;
                 proxy_set_header Upgrade $http_upgrade;
@@ -134,7 +134,7 @@ server {
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.15-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.15-4 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
