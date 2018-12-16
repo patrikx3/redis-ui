@@ -6,7 +6,6 @@
 [//]: #@corifeus-header:end
 
 # To do
-* the left tree panel should be resizable
 * hover on table list on key or config info
 * add key and refresh tree
 * overview is not complete
