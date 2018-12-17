@@ -63,6 +63,7 @@ This solution is not using REST at all, but instead uses Socket.IO 🤣, which i
 https://github.com/patrikx3/redis-ui/releases  
 
 ## On ElectronJs  
+(The GitHub versions are always instant to see than from ElectronJs Apps - delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
     
 ## The test version
