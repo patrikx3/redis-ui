@@ -7,7 +7,7 @@
 
 # Change log
 
-## v2018.12.16
+## v2018.12.17
 * The Redis key tree is resizable now - before it was working with click, now it works with dragging 
 
 ## v2018.12.16
