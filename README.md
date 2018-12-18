@@ -69,11 +69,11 @@ https://electronjs.org/apps/p3x-redis-ui
 ## The test version
 https://p3x.redis.patrikx3.com
 
-![Statistics](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/screenshot-1.png)
+![Redis themed - Statistics](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-1.png)
 
-![JSON preview](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
+![Dark themed - JSON preview](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
 
-![Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
+![Light theme - Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
 
 ## Features 
 
