@@ -59,6 +59,9 @@ By default, only English is created, but given all strings are from a `JS` file,
 
 This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
 
+### Reference for Socket.IO speed
+http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
+
 ## Releases
 https://github.com/patrikx3/redis-ui/releases  
 
