@@ -1,4 +1,3 @@
-
 [//]: #@corifeus-header
   
 [![NPM](https://nodei.co/npm/p3x-redis-ui.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/p3x-redis-ui/)
@@ -73,11 +72,11 @@ https://electronjs.org/apps/p3x-redis-ui
 ## The test version
 https://p3x.redis.patrikx3.com
 
-![Redis themed - Statistics](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-1.png)
+![Light theme - Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
 
 ![Dark themed - JSON preview](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
 
-![Light theme - Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
+![Enterprise themed - Statistics](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview.png)
 
 ## Features 
 
