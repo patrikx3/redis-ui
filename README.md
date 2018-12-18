@@ -1,3 +1,4 @@
+
 [//]: #@corifeus-header
   
 [![NPM](https://nodei.co/npm/p3x-redis-ui.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/p3x-redis-ui/)
@@ -66,7 +67,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 https://github.com/patrikx3/redis-ui/releases  
 
 ## On ElectronJs  
-(The GitHub versions are always instant to see than from ElectronJs Apps - delayed.)  
+(The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
     
 ## The test version
