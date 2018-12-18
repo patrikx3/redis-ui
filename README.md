@@ -72,11 +72,8 @@ https://electronjs.org/apps/p3x-redis-ui
 ## The test version
 https://p3x.redis.patrikx3.com
 
-![Light theme - Settings](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png)
-
-![Dark themed - JSON preview](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png)
-
-![Enterprise themed - Statistics](https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview.png)
+## Screenshots
+[Screenshots readme](artifacts/readme/screenshots.md)
 
 ## Features 
 
@@ -108,7 +105,7 @@ https://p3x.redis.patrikx3.com
   * Search mode
     * the search keys starts with a string key
     * the search keys includes a string in the key
-
+* From 320px width, it is supposed to be 100% responsive
 
 # Start up with Electron
 
