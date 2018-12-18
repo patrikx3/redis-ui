@@ -107,11 +107,6 @@ https://p3x.redis.patrikx3.com
     * the search keys includes a string in the key
 * From 320px width, it is supposed to be 100% responsive
 
-# Start up with Electron
-
-Please check out the releases section.
-
-
 # Start up with a server or via a browser and NodeJs/NPM
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
