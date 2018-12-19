@@ -79,6 +79,8 @@ https://p3x.redis.patrikx3.com
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
 * Able to use the console and interact with Redis
+  * TAB or SHIFT + TAB completion like bash is enabled
+  * Cursor UP or DOWN history is enabled
 * Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
 * It is based on Redis-Commander and phpRedisAdmin
 * You can select the database via console or the drop down.
@@ -94,9 +96,6 @@ https://p3x.redis.patrikx3.com
     * the search keys starts with a string key
     * the search keys includes a string in the key
 * From 320px width, it is supposed to be 100% responsive
-* Console features
-  * TAB or SHIFT + TAB completion like bash is enabled
-  * Cursor UP or DOWN history is enabled
 * There is a key sorting function, which has a penalty, because it sorts with natural compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
 * There is a performance penalty for this application, given it uses AngularJS `ng-repeat` for the tree component. The best is if your application uses nested keys (something:nested:good), then the tree will be fast, but, for example, Nextcloud uses about 500 keys inline and it can take 5 seconds to generate the tree.
   * Another solution is that instead of the : separator for your app, you can use the / separator. Then it will be much more responsive, see the settings tree separator.
