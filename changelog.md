@@ -9,6 +9,8 @@
 
 ## v2018.12.19
 * The client side key sorting is using natural compare (has a small penalty, but under 100k is bearable).
+* CONSOLE: TAB or SHIFT + TAB completion like bash is enabled
+* CONSOLE: Cursor UP or DOWN history is enabled
 
 ## v2018.12.17
 * The Redis key tree is resizable now - before it was working with click, now it works with dragging
@@ -34,7 +36,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-9 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-14 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
