@@ -17,14 +17,14 @@ p3x-redis --readonly-connections
 # or
 p3x-redis -r
 # or
-p3x-redis --config p3xrs.json
+p3x-redis --config /home/p3x-redis-ui/p3xrs.json
 # mix
-p3x-redis --config p3xrs.json --readonly-connections
+p3x-redis --config /home/p3x-redis-ui/p3xrs.json --readonly-connections
 ```
 
 # Create a Linux SystemD service
 ```bash
-adduser --disabled-password redis-ui
+adduser --disabled-password p3x-redis-ui
 touch /etc/systemd/system/p3x-redis-ui.service
 nano /etc/systemd/system/p3x-redis-ui.service
 ```
@@ -37,17 +37,17 @@ After=network.target
 
 [Service]
 Type=simple
-User=redis-ui
-WorkingDirectory=/home/redis-ui
+User=p3x-redis-ui
+WorkingDirectory=/home/p3x-redis-ui
 # or if you want readonly connections as it is public
 #ExecStart=/usr/bin/p3x-redis --readonly-connections
-#ExecStart=/usr/bin/p3x-redis --readonly-connections --config /usr/some/path/p3xrs.json
+#ExecStart=/usr/bin/p3x-redis --readonly-connections --config /home/p3x-redis-ui/p3xrs.json
 ExecStart=/usr/bin/p3x-redis
 Restart=on-abort
 
 [Install]
 WantedBy=multi-user.target
-```
+``` 
 
 Finally:
 ```bash
@@ -67,7 +67,6 @@ The best is, if you have an NGINX with a valid, secure HTTPS certificate for exa
 For free SSL certificate, I use `acme.sh`:  
 https://github.com/Neilpang/acme.sh  
 
-
 Config:  
 ```text
 server {
@@ -76,11 +75,11 @@ server {
         server_name p3x.redis.patrikx3.com;        
         error_log /var/log/nginx/p3x.redis.patrikx3.com-error.log;
         access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined;
-        root /home/redis-ui/www/public;
         location ~ /.well-known {        
                 auth_basic off;
                 auth_pam off;
                 allow all;
+                # make sure this path existing and has read for nginx
                 root /var/www/acme-challenge;
         }      
         location = /robots.txt {
@@ -95,7 +94,6 @@ server {
         server_name p3x.redis.patrikx3.com;        
         error_log /var/log/nginx/p3x.redis.patrikx3.com-error.log;
         access_log /var/log/nginx/p3x.redis.patrikx3.com-access.log combined;
-        root /home/redis-ui/www/public;
         location ~ /.well-known {        
                 auth_basic off;
                 auth_pam off;
@@ -108,8 +106,8 @@ server {
                 log_not_found off;
                 access_log off;
         }        
-        ssl_certificate /home/redis-ui/acme/ssl/p3x.redis.patrikx3.com/fullchain.cer;
-        ssl_certificate_key /home/redis-ui/acme/ssl//patrikx3.com/patrikx3.com.key;
+        ssl_certificate /home/p3x-redis-ui/acme/ssl/p3x.redis.patrikx3.com/fullchain.cer;
+        ssl_certificate_key /home/p3x-redis-ui/acme/ssl//patrikx3.com/patrikx3.com.key;
 
         location / {
                 proxy_pass "http://127.0.0.1:7843";
