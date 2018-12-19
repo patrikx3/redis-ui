@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.19-2  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.19-9  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -46,22 +46,6 @@ Some of the features are coming below.
 
 👷 **The first full complete version was created in 20 days in September of 2018.** 
 
-## Development
-
-It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
-
-[Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
-[Client on GitHub](https://github.com/patrikx3/redis-ui-material)
-
-By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
-
-[English strings, easy to translate](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)
-
-This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
-
-### Reference for Socket.IO speed
-http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
-
 ## Releases
 https://github.com/patrikx3/redis-ui/releases  
 
@@ -71,6 +55,13 @@ https://electronjs.org/apps/p3x-redis-ui
     
 ## The test version
 https://p3x.redis.patrikx3.com
+
+#### Larger key sets
+* On the test version, test out larger key sets
+  * Database 3 - 100k keys
+    * You will see, that with large sets, it can take up to 15 seconds to load all the keys and sort (if you enabled in the settings). It is usable, but it is created for smaller key sets. 
+  * Database 2 - 10k keys 
+    * It is fast totally. Given, it is not over for 50 keys / page.  
 
 ## Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
@@ -105,7 +96,7 @@ https://p3x.redis.patrikx3.com
 * From 320px width, it is supposed to be 100% responsive
 * There is a key sorting function, which has a penalty, because it sorts with natural compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
 * There is a performance penalty for this application, given it uses AngularJS `ng-repeat` for the tree component. The best is if your application uses nested keys (something:nested:good), then the tree will be fast, but, for example, Nextcloud uses about 500 keys inline and it can take 5 seconds to generate the tree.
-  * Another solution is that instead of the : separator for your app, you can use the / separator. Then it will be much more responsive, see the settings tree separator - Nextcloud should use / 
+  * Another solution is that instead of the : separator for your app, you can use the / separator. Then it will be much more responsive, see the settings tree separator.
   * A second solution is to use paging, the default paging is 50 keys
 * Maximum keys for this App
   * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
@@ -129,12 +120,27 @@ This software is more functional than fast ...
 # Change log
 [The change log readme](changelog.md) 
 
+# Development
+
+It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
+
+[Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
+[Client on GitHub](https://github.com/patrikx3/redis-ui-material)
+
+By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
+
+[English strings, easy to translate](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)
+
+This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
+
+### Reference for Socket.IO speed
+http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 [//]: #@corifeus-footer
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-9 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
