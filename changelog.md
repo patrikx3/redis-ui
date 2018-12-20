@@ -7,6 +7,13 @@
 
 # Change log
 
+## v2018.12.20
+* Allows to work with 1 million keys, with reduced functions
+  * With keys over 110k keys
+    * Sorting is disabled
+    * Searching happening only on the server, client side searching is disabled
+    * The fancy information on the tree are disabled
+
 ## v2018.12.19
 * The client side key sorting is using natural compare (has a small penalty, but under 100k is bearable).
 * CONSOLE: TAB or SHIFT + TAB completion like bash is enabled
@@ -36,7 +43,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-17 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.20-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 

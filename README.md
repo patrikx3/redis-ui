@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.19-17  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.20-2  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -57,12 +57,27 @@ https://electronjs.org/apps/p3x-redis-ui
 https://p3x.redis.patrikx3.com
 
 #### Larger key sets
-* On the test version, test out larger key sets
-  * Database 3 - 100k keys
-    * You will see, that with large sets, it can take up to 15 seconds to load all the keys and sort (if you enabled in the settings). It is usable, but it is created for smaller key sets. 
-  * Database 2 - 10k keys 
+* On the test server you can test
+  * Database 0 - below 10k keys
+    * Fancy
+    * Fast
+  * Database 1 - 10k keys
     * It is fast totally. Given, it is not over for 50 keys / page.  
-
+  * Database 2 - 100k keys 
+    * You will see, that with large sets, it can take up to 15 seconds to load all the keys (dependent on the workstation and memory) and sort (if you enabled in the settings). It is usable, but it is fancy and fast for smaller key sets. 
+  * Database 3 - 1 million keys 
+    * Given the app pre-loads all keys at once, the browser or the electron app for a small workstation could crash
+    * The latency is quite long, so the app is not so responsive
+    * The app is certified to work for max 100k keys, although it works with over 900k keys  
+    * The below functions are happening if the key count is above 110k keys
+      * Key sorting is disabled
+      * Searching only allows on server side searching
+      * In the tree, no fancy information is showing - to reduce the stressing on the server
+    * Although, this app works with 1 million keys and reduced functions. For such huge key count, it is recommended to use the pure `redis-cli`.
+    
+**The sweet spot for the key count is around 10-20k including key sorting and still the app is very responsive.**  
+Above 10-20k key count as the key large set grows the GUI latency is including as well.    
+    
 ## Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
 
@@ -104,9 +119,8 @@ https://p3x.redis.patrikx3.com
   * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
     * In that case, loading all keys into the browser takes about maximum 5-15 seconds
     * For big key set to be usable paging should be a maximum 100 keys / page, though for 50 is the sweetest spot
-  * This application is not recommended with over 100k keys, because it might just crash the NodeJs server. I can understand there are use cases where you need over 100k keys, but this is not that p3x-redis-ui. To make it to work with large set vs more functional cute app, it would require a larger re-architect, of course you can find a better software on the web for large sets or pure redis-cli.
-    * With some help, this could be implemented, but for now it looks like I will never use over 1k keys ...  
-    * Besides, there are functions like sorting and tree options that are very nice vs large sets ...
+  * This application is not recommended with over 100k keys, because it might just crash the NodeJs server. I can understand there are use cases where you need over 100k keys, but this is not that p3x-redis-ui. 
+    * This app including functions like sorting and tree options that are fancy vs large sets ...
 
 This software is more functional than fast ...
 
@@ -142,7 +156,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.19-17 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.20-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
