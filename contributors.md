@@ -7,7 +7,7 @@
 
 
 # Contributors
-@hjlarry - https://github.com/hjlarry (Package a macOS build)
+[@hjlarry](https://github.com/hjlarry) - Creates macOS build
 
 [//]: #@corifeus-footer
 

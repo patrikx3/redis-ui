@@ -143,7 +143,7 @@ This software is more functional than fast ...
 [The change log readme](changelog.md) 
 
 # Contributors
-[The contributers readme](contributors.md)
+[The contributors readme](contributors.md)
 
 # Development
 
