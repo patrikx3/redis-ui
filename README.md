@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-4  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-5  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -142,6 +142,9 @@ This software is more functional than fast ...
 # Change log
 [The change log readme](changelog.md) 
 
+# Contributors
+[The contributers readme](contributors.md)
+
 # Development
 
 It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
@@ -162,7 +165,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-4 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-5 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
