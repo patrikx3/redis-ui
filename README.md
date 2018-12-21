@@ -173,7 +173,4 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 [The Smartest IDE for MongoDB](https://www.nosqlbooster.com)
   
-  
- 
-
 [//]: #@corifeus-footer:end
