@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-6  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-7  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -48,18 +48,28 @@ Some of the features are coming below.
 👷 **The first full complete version was created in 20 days in September of 2018.** 
 -->
 
-## Releases
+### Screenshots
+[Screenshots readme](artifacts/readme/screenshots.md)
+
+## Electron releases
 https://github.com/patrikx3/redis-ui/releases  
+
+#### The latest mac version build 
+
+https://github.com/patrikx3/redis-ui/releases/tag/2018.12.20-7    
 
 ## On ElectronJs  
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
     
-#### The latest mac version build will always be here
+## Start up with a server or via a browser and NodeJs/NPM
+[Start up with a server readme](artifacts/readme/start-up-server.md)
 
-https://github.com/patrikx3/redis-ui/releases/tag/2018.12.20-7    
-    
-## The test version
+#### Some description about the config file
+[Some description about the config file readme](p3xrs.json)
+
+   
+## The online current version
 https://p3x.redis.patrikx3.com
 
 #### Larger key sets
@@ -84,9 +94,6 @@ https://p3x.redis.patrikx3.com
 **The sweet spot for the key count is around 10-20k including key sorting and still the app is very responsive.**  
 Above 10-20k key count as the key large set grows the GUI latency is including as well.    
     
-## Screenshots
-[Screenshots readme](artifacts/readme/screenshots.md)
-
 ## Features 
 
 * Works as a backend
@@ -130,12 +137,6 @@ Above 10-20k key count as the key large set grows the GUI latency is including a
 
 This software is more functional than fast ...
 
-# Start up with a server or via a browser and NodeJs/NPM
-[Start up with a server readme](artifacts/readme/start-up-server.md)
-
-# Some description about the config file
-[Some description about the config file readme](p3xrs.json)
-
 # TODO
 [The to do readme](todo.md) 
 
@@ -165,7 +166,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-6 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-7 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
