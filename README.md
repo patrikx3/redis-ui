@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-0  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.21-1  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -55,6 +55,10 @@ https://github.com/patrikx3/redis-ui/releases
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
     
+#### The latest mac version build will always be here
+
+https://github.com/patrikx3/redis-ui/releases/tag/2018.12.20-7    
+    
 ## The test version
 https://p3x.redis.patrikx3.com
 
@@ -92,8 +96,6 @@ Above 10-20k key count as the key large set grows the GUI latency is including a
     * Windows
     * macOS
       * I do not own a mac, but the community provides some builds
-      * The latest mac version build will always be here
-        * https://github.com/patrikx3/redis-ui/releases/tag/2018.12.20-7
 * I took very careful of the error handling (as much I can find errors)
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
@@ -160,7 +162,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-1 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
@@ -173,4 +175,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 [The Smartest IDE for MongoDB](https://www.nosqlbooster.com)
   
+  
+ 
+
 [//]: #@corifeus-footer:end
