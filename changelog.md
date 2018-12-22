@@ -10,7 +10,7 @@
 ## v2018.12.22
 * The key search behaviour changed
   * before it triggered the search with on-change the input
-  * not it is triggered by a search icon
+  * now it is triggered by a search icon
 * The main screen drag divider resizer has fancier cursors
 
 ## v2018.12.20
