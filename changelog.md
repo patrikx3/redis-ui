@@ -7,6 +7,12 @@
 
 # Change log
 
+## v2018.12.22
+* The key search behaviour changed
+  * before it triggered the search with on-change the input
+  * not it is triggered by a search icon
+* The main screen drag divider resizer has fancier cursors
+
 ## v2018.12.20
 * Allows to work with 1 million keys, with reduced functions
   * With keys over 110k keys
@@ -44,7 +50,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.21-11 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.22-0 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
