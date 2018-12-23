@@ -8,7 +8,9 @@
 # Change log
 
 ## v2018.12.23
-* There is an AngularJs Material bug
+* There is an AngularJs Material bug (the flex changed)
+  * https://github.com/angular/material/issues/11565
+* When you disconnected and you were in the console, it was throwing and error. Now, on disconnecting it goes to the main screen.
 
 ## v2018.12.22
 * The key search behaviour changed
@@ -55,7 +57,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.23-1 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.23-3 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
