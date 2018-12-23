@@ -8,7 +8,7 @@
 # Change log
 
 ## v2018.12.23
-* There is a AngularJs Material bug
+* There is an AngularJs Material bug
 
 ## v2018.12.22
 * The key search behaviour changed
