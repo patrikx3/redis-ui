@@ -9,7 +9,7 @@
 
 
  
-# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.26-1  
+# 📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron. v2018.12.26-2  
 
 This is an open-source project. Star this repository, if you like it, or even donate! Thank you so much! :)
 
@@ -86,7 +86,6 @@ https://p3x.redis.patrikx3.com
     * The app is certified to work for max 100k keys, although it works with over 900k keys  
     * The below functions are happening if the key count is above 110k keys
       * Key sorting is disabled
-      * Searching only allows on server side searching
       * In the tree, no fancy information is showing - to reduce the stressing on the server
     * Although, this app works with 1 million keys and reduced functions. For such huge key count, it is recommended to use the pure `redis-cli`.
     
@@ -117,8 +116,6 @@ Above 10-20k key count as the key large set grows the GUI latency is including a
 * This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
 * Dark - Dracula / light themes
 * Search
-  * Client side mode searching in keys - small key set
-  * Server side mode searching in keys - large key set
   * Search mode
     * the search keys starts with a string key
     * the search keys includes a string in the key
@@ -165,7 +162,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.26-1 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.26-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
