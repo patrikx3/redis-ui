@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2018.12.27
+* final cosmetic style - fixed removing the outline on input focus, so it is styled by only p3x
+
 ## v2018.12.26
 * Cosmetic changes, do make the UI a bit fancier (shadows, borders)
 
