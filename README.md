@@ -48,6 +48,10 @@ Some of the features are coming below.
 👷 **The first full complete version was created in 20 days in September of 2018.** 
 -->
 
+   
+## The online current version
+https://p3x.redis.patrikx3.com
+
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
 
@@ -67,9 +71,6 @@ https://electronjs.org/apps/p3x-redis-ui
 
 [Some description about the config file readme](p3xrs.json)
 
-   
-## The online current version
-https://p3x.redis.patrikx3.com
 
 #### Larger key sets
 * On the test server you can test
