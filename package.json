@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2018.12.29-0",
+    "version": "2018.12.29-10",
     "description": "📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop by Electron.",
     "corifeus": {
         "icon": "fas fa-database",
@@ -20,7 +20,8 @@
     "scripts": {
         "test": "grunt",
         "build": "build --ia32 --x64  build/dist",
-        "build-test": "build build/dist"
+        "build-test": "build build/dist",
+        "publish": "build --ia32 --x64 -p always"
     },
     "repository": {
         "type": "git",
@@ -43,6 +44,7 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
+        "angular-mocks": "^1.7.5",
         "corifeus-builder": "^2018.12.28-1",
         "corifeus-utils": "^2018.12.28-1",
         "electron": "^4.0.0",
@@ -54,10 +56,24 @@
     },
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
+        "angular": "^1.7.5",
+        "angular-animate": "^1.7.5",
+        "angular-aria": "^1.7.5",
+        "angular-material": "^1.1.11",
+        "angular-messages": "^1.7.5",
+        "electron-updater": "^4.0.6",
         "p3x-redis-ui-material": "^2018.12.29-0",
-        "p3x-redis-ui-server": "^2018.12.29-0"
+        "p3x-redis-ui-server": "^2018.12.29-0",
+        "typeface-roboto": "0.0.54"
     },
     "build": {
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "patrikx3",
+                "repo": "redis-ui"
+            }
+        ],
         "appId": "p3x.redis-ui.electron",
         "productName": "p3x-redis-ui-electron",
         "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
@@ -72,6 +88,12 @@
             "category": "Office",
             "icon": "src/electron/images/",
             "target": "appimage"
+        },
+        "mac": {
+            "category": "public.app-category.developer-tools",
+            "target": [
+                "dmg"
+            ]
         }
     }
 }

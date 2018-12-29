@@ -26,3 +26,9 @@ const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
 global.document = dom.window.document;
 global.window = dom.window
 
+require('angular/angular');
+require('angular-mocks');
+
+global.angular = window.angular;
+global.inject = global.angular.mock.inject;
+global.ngModule = global.angular.mock.module;

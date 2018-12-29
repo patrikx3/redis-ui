@@ -4,16 +4,33 @@ global.p3xre = {
     webview: undefined
 };
 
+require('./angular')
+
 window.p3xreRun = async function() {
 
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
+
+        global.p3xre.webview.src = 'http://localhost:7843';
 
         global.p3xre.webview.addEventListener("dom-ready", async function() {
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
                 global.p3xre.webview.openDevTools();
             }
         });
+
+
+        const { ipcRenderer } =require('electron');
+        ipcRenderer.on('p3x-action', function(event, data) {
+            switch(data.action) {
+                case 'toast':
+                    p3xre.toast.action(data.message)
+                    break;
+            }
+        })
+
+
+
     } catch(e) {
         console.error(e);
         alert(e.message);
