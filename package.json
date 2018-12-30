@@ -75,6 +75,7 @@
                 "repo": "redis-ui"
             }
         ],
+        "icon": "src/electron/images/",
         "appId": "p3x.redis-ui.electron",
         "productName": "p3x-redis-ui-electron",
         "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
