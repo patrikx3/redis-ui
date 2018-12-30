@@ -5,7 +5,7 @@ node_js:
 - node
 before_script:
   - npm install -g grunt-cli npm
-script:
+after_script:
   - npm run publish-osx
 env:
   global:
