@@ -10,7 +10,7 @@ module.exports = {
         'download-progress': (opts) => {
             return 'Downloaded ' + opts.progressObj.percent + '%'
         },
-        'update-downloaded': 'Update downloaded.'
+        'update-downloaded': 'Update downloaded. You may restart the app to update.'
     },
     menu: {
         main: {
@@ -40,6 +40,7 @@ module.exports = {
         help: {
             download: 'Download',
             developer: 'Developer',
+            checkUpdates: 'Check updates',
         },
         donate: {
             title: 'Donate',

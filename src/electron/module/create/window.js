@@ -43,6 +43,10 @@ function createWindow() {
 
     global.p3xre.mainWindow.on('unmaximize', () => {
         global.p3xre.conf.set('maximized', false)
+        const windowBounds = global.p3xre.conf.get('window-bounds');
+        if (windowBounds !== null && windowBounds !== undefined) {
+            global.p3xre.mainWindow.setBounds(windowBounds);
+        }
     })
 
 

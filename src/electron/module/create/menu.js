@@ -131,6 +131,14 @@ function mainMenu() {
                         shell.openExternal('https://www.npmjs.com/package/p3x-redis-ui')
                     }
                 },
+                {type: 'separator'},
+                {
+                    label: global.p3xre.strings.menu.help.checkUpdates,
+                    click: () => {
+                        const {autoUpdater} = require("electron-updater");
+                        autoUpdater.checkForUpdatesAndNotify();
+                    }
+                }
             ]
         },
         {
