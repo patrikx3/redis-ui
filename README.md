@@ -58,9 +58,9 @@ https://p3x.redis.patrikx3.com
 ## Electron releases
 https://github.com/patrikx3/redis-ui/releases  
 
-#### The latest mac version build 
+#### The mac version build 
 
-https://github.com/patrikx3/redis-ui/releases/tag/2018.12.20-7    
+I cannot verify, but I build on Travis with an OSX image. I have no idea how I can add a certificate, but it supposed to work. 
 
 ## On ElectronJs  
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
@@ -102,7 +102,6 @@ Above 10-20k key count as the key large set grows the GUI latency is including a
     * Linux
     * Windows
     * macOS
-      * I do not own a mac, but the community provides some builds
 * I took very careful of the error handling (as much I can find errors)
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
