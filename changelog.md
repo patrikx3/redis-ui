@@ -10,6 +10,8 @@
 ## v2018.12.30
 * added menus
 * added a donate button
+* added proper minimize/maximize behavior
+* keeps the last state of the window - maximized or set bounds
 
 ## v2018.12.29
 * added auto updater
@@ -70,7 +72,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.30-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2018.12.30-3 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 

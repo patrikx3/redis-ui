@@ -1,4 +1,8 @@
+const configstore = require('configstore');
+
 const pkg = require('../../package.json');
+
+const conf = new configstore(pkg.name);
 
 global.p3xre = {
     iconFile: `${__dirname}/images/256x256.png`,
@@ -6,6 +10,7 @@ global.p3xre = {
     pkg: pkg,
     indexHtml: 'file://' + __dirname + '/window/main/index.html',
     strings: require('../strings/en/index'),
+    conf: conf,
 }
 
 global.p3xre.setVisible = (visible = true) => {
