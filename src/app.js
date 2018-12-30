@@ -1,3 +1,12 @@
+process.on("unhandledRejection", (err, promise) => {
+    console.error(new Date().toLocaleString(), 'unhandledRejection', err, promise);
+});
+
+process.on('uncaughtException', function (err) {
+    console.error(new Date().toLocaleString(), 'uncaughtException', err);
+    process.exit(-1)
+});
+
 const boot = require('p3x-redis-ui-server/src/lib/boot')
 boot()
 

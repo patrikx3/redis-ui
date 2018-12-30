@@ -1,6 +1,23 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 
 function createWindow() {
+
+
+    /*
+    const template = [
+        {
+            label: 'Debug',
+            click: () => {
+                global.p3xre.mainWindow.webContents.openDevTools()
+            }
+        },
+    ]
+
+    const menu = Menu.buildFromTemplate(template)
+    Menu.setApplicationMenu(menu)
+    */
+
+
 
     global.p3xre.mainWindow = new BrowserWindow({
         icon: global.p3xre.iconFile,
@@ -17,20 +34,6 @@ function createWindow() {
         global.p3xre.mainWindow.webContents.openDevTools()
     }
 
-    /*
-    global.ngivr.mainWindow.on('minimize', function (event) {
-        event.preventDefault()
-        global.p3xre.setVisible(false);
-    });
-
-    global.ngivr.mainWindow.on('close', function (event) {
-        if (!app.isQuiting) {
-            event.preventDefault()
-            global.p3xre.setVisible(false);
-        }
-        return false;
-    });
-    */
 
     const {autoUpdater} = require("electron-updater");
 
@@ -53,22 +56,18 @@ function createWindow() {
         })
     })
     autoUpdater.on('error', (error) => {
-        console.error(error)
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
             error: error,
             message: global.p3xre.strings.updater["error"]({
-                errorMessage: error.message
             })
         })
     })
 
     autoUpdater.on('download-progress', (progressObj) => {
-        /*
-        let log_message = "Download speed: " + progressObj.bytesPerSecond;
-        log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
-        log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
-        */
+        // let log_message = "Download speed: " + progressObj.bytesPerSecond;
+        // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+        // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
             message: p3xre.strings.updater["download-progress"]({
@@ -83,8 +82,9 @@ function createWindow() {
         })
 
     });
+
     autoUpdater.checkForUpdatesAndNotify();
-    
+
 }
 
 module.exports = createWindow;
