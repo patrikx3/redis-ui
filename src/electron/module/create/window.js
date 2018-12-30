@@ -2,22 +2,7 @@ const { app, BrowserWindow, Menu } = require('electron')
 
 function createWindow() {
 
-
-    /*
-    const template = [
-        {
-            label: 'Debug',
-            click: () => {
-                global.p3xre.mainWindow.webContents.openDevTools()
-            }
-        },
-    ]
-
-    const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu)
-    */
-
-
+    require('./menu')()
 
     global.p3xre.mainWindow = new BrowserWindow({
         icon: global.p3xre.iconFile,

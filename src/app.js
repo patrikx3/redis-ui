@@ -48,7 +48,6 @@ app.on('window-all-closed', function () {
 });
 
 app.on('activate', function () {
-    console.warn('activate')
     if (global.p3xre.mainWindow === null) {
         createWindow();
     }
