@@ -12,6 +12,7 @@
 * added a donate button
 * added proper minimize/maximize behavior
 * keeps the last state of the window - maximized or set bounds
+* added version to the window
 
 ## v2018.12.29
 * added auto updater
