@@ -58,10 +58,6 @@ https://p3x.redis.patrikx3.com
 ## Electron releases
 https://github.com/patrikx3/redis-ui/releases  
 
-#### The mac version build 
-
-I cannot verify, but I build on Travis with an OSX image. I have no idea how I can add a certificate, but it supposed to work with a certificate, maybe on macOS it will shows that there is no certificate. I do not know, please let me know. 
-
 ## On ElectronJs  
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
@@ -154,7 +150,8 @@ It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-r
 
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
 
-[English strings, easy to translate](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)
+[English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
+[English strings, for the Electron](src/strings/en/index.js)
 
 This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
 
