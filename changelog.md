@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2019.01.0.1
+* on the search input it works with ENTER besides the search icon
+
 ## v2018.12.30
 * added menus
 * added a donate button
@@ -73,7 +76,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.1-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.1-4 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
