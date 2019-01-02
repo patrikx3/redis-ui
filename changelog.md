@@ -7,7 +7,10 @@
 
 # Change log
 
-## v2019.01.0.1
+## v2019.01.02
+* the dark error inputs were too dark, so we replaced with orange
+
+## v2019.01.01
 * on the search input it works with ENTER besides the search icon
 
 ## v2018.12.30
