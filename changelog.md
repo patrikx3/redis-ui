@@ -9,6 +9,7 @@
 
 ## v2019.01.06
 * it was showing empty databases on the statistics, now it is not showing properly
+* in Electron with the dev server it was conflicting with the 7843 port, so I changed to 7844
 
 ## v2019.01.02
 * the dark error inputs were too dark, so we replaced with orange
