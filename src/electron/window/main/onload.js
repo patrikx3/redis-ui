@@ -14,7 +14,7 @@ window.p3xreRun = async function() {
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
 
-        global.p3xre.webview.src = 'http://localhost:7843';
+        global.p3xre.webview.src = 'http://localhost:7844';
 
         global.p3xre.webview.addEventListener("dom-ready", async function() {
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
