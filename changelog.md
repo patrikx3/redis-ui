@@ -7,6 +7,10 @@
 
 # Change log
 
+## v2019.01.08
+* it was showing empty databases on the statistics, now it is not showing properly
+* because I moved the Electron port to 7844, there was an error because of it, now it works as expected
+
 ## v2019.01.06
 * it was showing empty databases on the statistics, now it is not showing properly
 * in Electron with the dev server it was conflicting with the 7843 port, so I changed to 7844
@@ -83,7 +87,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.6-3 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.8-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
