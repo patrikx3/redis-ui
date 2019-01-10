@@ -54,7 +54,9 @@ Some of the features are coming below.
 
    
 ## The online current version
-https://p3x.redis.patrikx3.com
+https://p3x.redis.patrikx3.com  
+
+This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.
 
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
