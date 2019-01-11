@@ -56,7 +56,9 @@ Some of the features are coming below.
 ## The online current version
 https://p3x.redis.patrikx3.com  
 
-This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.
+This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.   
+  
+Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto update itself when the code from Git changes.
 
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
