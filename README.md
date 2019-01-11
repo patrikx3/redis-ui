@@ -60,6 +60,8 @@ This Redis database every day in the morning European time CET restores some dat
   
 Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto update itself when the code from Git changes.
 
+Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen.
+
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
 
