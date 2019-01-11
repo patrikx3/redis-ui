@@ -7,6 +7,11 @@
 
 # Change log
 
+## v2019.01.11
+* the DarkoBluo toast was too dark, now every theme can use it own toast background
+* in the key display list item has a hover to rename the key and the ttl vs just only using a button
+* the key buttons have moved to the right
+
 ## v2019.01.08
 * it was showing empty databases on the statistics, now it is not showing properly
 * because I moved the Electron port to 7844, there was an error because of it, now it works as expected
@@ -87,7 +92,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.11-0 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.11-2 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
