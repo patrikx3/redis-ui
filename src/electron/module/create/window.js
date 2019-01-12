@@ -64,7 +64,15 @@ function createWindow() {
             message: global.p3xre.strings.updater["update-available"]
         })
     })
+
+    let firstCheck = true
     autoUpdater.on('update-not-available', (info) => {
+
+        if (firstCheck) {
+            firstCheck = false
+            return
+        }
+
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
             message: global.p3xre.strings.updater["update-not-available"]
