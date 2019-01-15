@@ -8,7 +8,7 @@
 # Change log
 
 ## v2019.01.12
-* on the first time, the program checks if there is a new update, but, if there is no new updated notification, it will not show the toast (No new update available.), as it is automatic and we do not need to know, unless there is a new release ... If we trigger a check update, it will show the toast...
+* on the first time, the program checks if there is a new update, but, if there is no new release, it will not show the notification (No new update available.), as it is automatic and we do not need to know, unless there is a new release ... If we trigger a check update by hand/click, it will show the toast...
 
 ## v2019.01.11
 * the DarkoBluo toast was too dark, now every theme can use it own toast background
