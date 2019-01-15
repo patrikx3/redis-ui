@@ -7,8 +7,8 @@
 
 # Change log
 
-## v2019.01.11
-* the first check update function, if there is now new updated, it will not show a toast, as it is the automatic and we do not need to know, unless there is a new release ...
+## v2019.01.12
+* on the first check update function, if there is no new updated notification, it will not show the toast, as it is automatic and we do not need to know, unless there is a new release ...
 
 ## v2019.01.11
 * the DarkoBluo toast was too dark, now every theme can use it own toast background
