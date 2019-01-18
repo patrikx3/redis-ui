@@ -20,12 +20,14 @@ function createWindow() {
     }
 
 
-    const windowBounds = global.p3xre.conf.get('window-bounds');
+    //const windowBounds = global.p3xre.conf.get('window-bounds');
     const maximized = global.p3xre.conf.get('maximized');
 
     if (maximized === true) {
         global.p3xre.mainWindow.maximize()
-    } else if (windowBounds !== null && windowBounds !== undefined) {
+    }
+    /*
+    else if (windowBounds !== null && windowBounds !== undefined) {
         global.p3xre.mainWindow.setBounds(windowBounds);
     }
 
@@ -34,7 +36,7 @@ function createWindow() {
             global.p3xre.conf.set('window-bounds', global.p3xre.mainWindow.getBounds())
         }
     })
-
+    */
 
     global.p3xre.mainWindow.on('maximize', () => {
         global.p3xre.conf.set('maximized', true)
@@ -43,10 +45,13 @@ function createWindow() {
 
     global.p3xre.mainWindow.on('unmaximize', () => {
         global.p3xre.conf.set('maximized', false)
+
+        /*
         const windowBounds = global.p3xre.conf.get('window-bounds');
         if (windowBounds !== null && windowBounds !== undefined) {
             global.p3xre.mainWindow.setBounds(windowBounds);
         }
+        */
     })
 
 
