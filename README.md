@@ -58,7 +58,7 @@ https://p3x.redis.patrikx3.com
 
 This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.   
   
-Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto update itself when the code from Git changes.
+Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto updates itself when the code from Git changes.
 
 Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen.
 
