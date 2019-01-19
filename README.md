@@ -96,7 +96,7 @@ https://electronjs.org/apps/p3x-redis-ui
     * The below functions are happening if the key count is above 110k keys
       * Key sorting is disabled
       * Searching only allows on server side searching
-      * In the tree, no fancy information is showing - to reduce the stressing on the server
+      * In the tree, no fancy information is showing - to reduce the stressing on the browser
     * Although, this app works with 1 million keys and reduced functions. For such huge key count, it is recommended to use the pure `redis-cli`.
     
 **The sweet spot for the key count is around 10-20k including key sorting with max 100 key / page and still the app is very responsive. If you have a huge key set, make sure to search on the server and it will be very responsive.**  
