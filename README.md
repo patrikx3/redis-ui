@@ -61,8 +61,7 @@ This Redis database every day in the morning European time CET restores some dat
 Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto updates itself when the code from Git changes.
 
 Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen. 
-  
-At last, as for the keyset size, of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
+
 
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
@@ -102,6 +101,9 @@ https://electronjs.org/apps/p3x-redis-ui
     
 **The sweet spot for the key count is around 10-20k including key sorting with max 100 key / page and still the app is very responsive. If you have a huge key set, make sure to search on the server and it will be very responsive.**  
 Above 10-20k key count as the key large set grows the GUI latency is including as well.    
+    
+        
+Of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
     
 ## Features 
 
