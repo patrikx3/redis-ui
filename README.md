@@ -60,7 +60,9 @@ This Redis database every day in the morning European time CET restores some dat
   
 Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto updates itself when the code from Git changes.
 
-Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen.
+Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen. 
+  
+At last, as for the keyset size, of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
 
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
