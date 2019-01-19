@@ -109,10 +109,9 @@ Of course, we could set a limit and the UI would be always responsive, but there
 
 * Works as a backend
 * Works as a desktop via Electron
-  * I have 
-    * Linux
-    * Windows
-    * macOS
+  * Linux
+  * Windows
+  * macOS
 * I took very careful of the error handling (as much I can find errors)
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
