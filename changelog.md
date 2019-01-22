@@ -7,7 +7,7 @@
 
 # Change log
 
-## v2019.01.21
+## v2019.01.22
 * FEATURE: on the TTL, the MomentJS duration using custom configuration
 
 ## v2019.01.21
