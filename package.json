@@ -1,7 +1,7 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.1.23-2",
-    "description": "\uD83D\uDCE1 P3X Redis UI can work with huge keys, is fast and works on the web and desktop (Electron)",
+    "version": "2019.1.23-3",
+    "description": "📡 P3X Redis UI can work with huge keys, is fast and works on the web and desktop (Electron)",
     "corifeus": {
         "icon": "fas fa-database",
         "code": "2Q",

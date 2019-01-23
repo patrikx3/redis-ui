@@ -1,7 +1,7 @@
 
-@license p3x-redis-ui v2019.1.23-2
+@license p3x-redis-ui v2019.1.23-3
   
-📡 P3X Redis UI that uses Socket.IO, AngularJs Material and IORedis with statistics, console - terminal, tree, dark mode, internationalization, multiple connections, web and desktop (Electron)
+📡 P3X Redis UI can work with huge keys, is fast and works on the web and desktop (Electron)
 
 https://pages.corifeus.com/redis-ui
 
