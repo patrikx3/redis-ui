@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2019.01.24
+* CHORE: upgrade to Electron 4.0.2
+
 ## v2019.01.22
 * FEATURE: on the TTL, the MomentJS duration using custom configuration
 
@@ -110,7 +113,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.23-4 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.24-1 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
