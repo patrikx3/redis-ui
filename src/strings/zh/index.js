@@ -34,7 +34,7 @@ module.exports = {
             toggledevtools: '切换开发者工具',
             resetzoom: '重置缩放',
             zoomin: '放大',
-            zoomout: '缩小',
+            zoomout: '缩放',
             togglefullscreen: '切换全屏',
         },
         help: {
