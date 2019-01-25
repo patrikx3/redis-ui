@@ -10,15 +10,16 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
 
     /*
     window.p3xrBooter = () => {
+        console.log('p3xr booting ...');
         if (window.p3xrSetLanguage === undefined) {
             setTimeout(() => {
-                window.p3xrBooter()
-            }, 500)
+                window.p3xrBooter();
+            }, 500);
         } else {
             window.p3xrSetLanguage('translation');
         }
     };
-    window.p3xrBooter()
+    window.p3xrBooter();
     */
 })
 
