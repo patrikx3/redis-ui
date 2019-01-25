@@ -37,6 +37,13 @@ module.exports = {
             zoomout: '缩放',
             togglefullscreen: '切换全屏',
         },
+        language: {
+            title: '语言 / Language',
+            translation: {
+                en: '英语 / English',
+                zn: '中文 / Chinese'
+            }
+        },
         help: {
             download: '下载',
             developer: '开发者',

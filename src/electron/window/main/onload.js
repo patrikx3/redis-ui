@@ -1,4 +1,34 @@
-//const { ipcRenderer } = require('electron');
+const { ipcRenderer } = require('electron');
+
+ipcRenderer.on('p3x-set-language', (event, data) => {
+    const translation = data.translation
+    //console.warn('p3x-set-language', data)
+    global.p3xre.strings = require('../../../strings/' + translation + '/index')
+
+    // global.p3xre.webview.getWebContents().executeJavaScript is different!!!
+    global.p3xre.webview.executeJavaScript(`window.p3xrBooter=(()=>{void 0===window.p3xrSetLanguage?setTimeout(()=>{window.p3xrBooter()},500):window.p3xrSetLanguage("${translation}")}),window.p3xrBooter();`)
+
+    /*
+    window.p3xrBooter = () => {
+        if (window.p3xrSetLanguage === undefined) {
+            setTimeout(() => {
+                window.p3xrBooter()
+            }, 500)
+        } else {
+            window.p3xrSetLanguage('translation');
+        }
+    };
+    window.p3xrBooter()
+    */
+})
+
+ipcRenderer.on('p3x-action', function(event, data) {
+    switch(data.action) {
+        case 'toast':
+            p3xre.toast.action(data.message)
+            break;
+    }
+})
 
 global.p3xre = {
     webview: undefined,
@@ -20,19 +50,13 @@ window.p3xreRun = async function() {
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
                 global.p3xre.webview.openDevTools();
             }
-        });
-
-
-        const { ipcRenderer } =require('electron');
-        ipcRenderer.on('p3x-action', function(event, data) {
-            switch(data.action) {
-                case 'toast':
-                    p3xre.toast.action(data.message)
-                    break;
-            }
         })
 
-
+        if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
+            global.p3xre.webview.src = 'http://localhost:8080';
+        } else {
+            global.p3xre.webview.src = 'http://localhost:7844';
+        }
 
     } catch(e) {
         console.error(e);

@@ -37,6 +37,13 @@ module.exports = {
             zoomout: 'Zoom out',
             togglefullscreen: 'Toggle full screen',
         },
+        language: {
+          title: 'Language',
+          translation: {
+              en: 'English',
+              zn: 'Chinese / 中文'
+          }
+        },
         help: {
             download: 'Download',
             developer: 'Developer',

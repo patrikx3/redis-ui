@@ -56,6 +56,7 @@ function mainMenu() {
                 }
             ]
         },
+
         {
             label: global.p3xre.strings.menu.view.title,
             submenu: [
@@ -89,6 +90,11 @@ function mainMenu() {
                     label: global.p3xre.strings.menu.view.togglefullscreen,
                     role: 'togglefullscreen'
                 }
+            ]
+        },
+        {
+            label: global.p3xre.strings.menu.language.title,
+            submenu: [
             ]
         },
         {
@@ -148,6 +154,28 @@ function mainMenu() {
             }
         },
     ]
+
+    const languageIndex = template.length - 1 - 2
+    for(let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
+        const clickFunction = (key) => {
+            return () => {
+                global.p3xre.currentTranslation = key;
+                global.p3xre.conf.set('current-translation', key)
+                global.p3xre.strings = require('../../../strings/' + key)
+                global.p3xre.mainWindow.webContents.send('p3x-set-language', {
+                    translation: key
+                })
+                //console.warn('set language', key)
+                mainMenu()
+            }
+        }
+        template[languageIndex].submenu.push({
+            label: global.p3xre.strings.menu.language.translation[translationKey],
+            type: 'radio',
+            checked: global.p3xre.currentTranslation === translationKey,
+            click: clickFunction(translationKey)
+        })
+    }
 
     const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)

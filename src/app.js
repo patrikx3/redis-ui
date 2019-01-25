@@ -37,6 +37,8 @@ const createWindow = require('./electron/module/create/window');
 
 app.on('ready', () => {
     createWindow();
+
+
 //    ngivrSession.init();
 });
 

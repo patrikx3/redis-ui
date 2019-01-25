@@ -11,7 +11,7 @@
 
 
  
-# 📡 P3X Redis UI can work with huge key sets, is fast and works on the web and desktop (Electron) v2019.1.24-2  
+# 📡 P3X Redis UI can work with huge key sets, is fast and works on the web and desktop (Electron) v2019.1.25-4  
 
   
 🙏 This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
@@ -169,6 +169,11 @@ By default, only English is created, but given all strings are from a `JS` file,
 
 This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
 
+For a new language:
+Add into `redis-ui-material/src/core/settings.language.translation`.
+MomentJS has to be implemented as well.
+
+
 ### Reference for Socket.IO speed
 http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
@@ -187,7 +192,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.24-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.1.25-4 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 

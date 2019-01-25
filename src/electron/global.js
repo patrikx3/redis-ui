@@ -4,12 +4,19 @@ const pkg = require('../../package.json');
 
 const conf = new configstore(pkg.name);
 
+let currentTranslation = conf.get('current-translation')
+
+if (currentTranslation === undefined) {
+    currentTranslation = 'en'
+}
+
 global.p3xre = {
     iconFile: `${__dirname}/images/256x256.png`,
     mainWindow: undefined,
     pkg: pkg,
     indexHtml: 'file://' + __dirname + '/window/main/index.html',
-    strings: require('../strings/en/index'),
+    strings: require('../strings/' + currentTranslation + '/index'),
+    currentTranslation: currentTranslation,
     conf: conf,
 }
 

@@ -9,8 +9,10 @@ Module.prototype.require = function(name){
             };
             return {
                 ipcMain: mock,
+                ipcRenderer: mock,
                 app: Object.assign({
-                    makeSingleInstance: () => {}
+                    makeSingleInstance: () => {},
+                    requestSingleInstanceLock: () => {},
                 }, mock)
             };
 

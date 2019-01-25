@@ -15,6 +15,9 @@ function createWindow() {
 
     global.p3xre.mainWindow.loadURL(global.p3xre.indexHtml);
 
+
+
+
     if (global.p3xre.dev) {
         global.p3xre.mainWindow.webContents.openDevTools()
     }
@@ -113,6 +116,11 @@ function createWindow() {
 
     autoUpdater.checkForUpdatesAndNotify();
 
+    global.p3xre.mainWindow.webContents.on('dom-ready', () => {
+        global.p3xre.mainWindow.webContents.send('p3x-set-language', {
+            translation: global.p3xre.currentTranslation
+        })
+    })
 }
 
 module.exports = createWindow;
