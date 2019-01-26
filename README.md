@@ -185,7 +185,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 [AlternativeTo Redis UI](https://alternativeto.net/software/p3x-redis-ui/)  
 
-
+[NPM P3X Redis UI](https://www.npmjs.com/package/p3x-redis-ui)
 
 [//]: #@corifeus-footer
 

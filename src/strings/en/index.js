@@ -38,8 +38,12 @@ module.exports = {
             togglefullscreen: 'Toggle full screen',
         },
         language: {
+            // When you translate the language, keep the Language in English
+            // eg. Idioma / Language
           title: 'Language',
           translation: {
+              // When you translate the english name, keep the Language in English
+              // eg. Inglés / English
               en: 'English',
               zn: 'Chinese / 中文'
           }
