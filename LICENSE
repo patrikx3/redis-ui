@@ -1,7 +1,7 @@
 
-@license p3x-redis-ui v2019.1.25-11
+@license p3x-redis-ui v2019.1.26-0
   
-📡 P3X Redis UI can work with huge key sets, is fast and works on the web and desktop (Electron)
+📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)
 
 https://pages.corifeus.com/redis-ui
 
