@@ -179,10 +179,10 @@ By default, only English is created, but given all strings are from a `JS` file,
 [English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
 [English strings, for the Electron](https://github.com/patrikx3/redis-ui/blob/master/src/strings/en/index.js)
 
-This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
-
 For a new language:
 Add into `redis-ui-material/src/bundle.js`.
+
+This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
 
 ### Reference for Socket.IO speed
 http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
