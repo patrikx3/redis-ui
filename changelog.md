@@ -7,6 +7,9 @@
 
 # Change log
 
+## v2019.01.28
+* FEATURE: Added more translation for Chinese.
+
 ## v2019.01.27
 * FEATURE: Added more translation for English and Chinese.
 
