@@ -150,7 +150,7 @@ function mainMenu() {
         {
             label: global.p3xre.strings.menu.donate.title,
             click: () => {
-                shell.openExternal('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6')
+                shell.openExternal('https://paypal.me/patrikx3')
             }
         },
     ]
