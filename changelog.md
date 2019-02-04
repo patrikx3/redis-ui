@@ -7,6 +7,9 @@
 
 # Change log
 
+### v2019.02.04
+* BUGFIX: Donation button was Hungarian, now is supposed to be automatically by browser locale.
+
 ## v2019.01.28
 * FEATURE: Added more translation for Chinese.
 
