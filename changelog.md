@@ -7,6 +7,9 @@
 
 # Change log
 
+### v2019.02.09
+* FEATURE: On the modal and form buttons order were not correct, the cancel button should be the last.
+
 ### v2019.02.04
 * BUGFIX: Donation button was Hungarian, now is supposed to be automatically by browser locale.
 
