@@ -7,6 +7,9 @@
 
 # Change log
 
+### v2019.02.10
+* FEATURE: On Electron, disable the header and the buttons (home, settings, overview) are in the main menu (P3X Redis UI menu).
+
 ### v2019.02.09
 * FEATURE: On the modal and form buttons order were not correct, the cancel button should be the last.
 * BUGFIX: The key string length view was not updating when the string changed. (Eg. size was not updating)
@@ -129,7 +132,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.2.9-5 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.2.10-1 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 

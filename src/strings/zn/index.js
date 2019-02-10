@@ -14,6 +14,9 @@ module.exports = {
     },
     menu: {
         main: {
+            home: '主页',
+            settings: '设置',
+            overview: '概览',
             quit: '退出',
         },
         edit: {

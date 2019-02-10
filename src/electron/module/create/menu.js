@@ -10,11 +10,36 @@ function mainMenu() {
             label: global.p3xre.strings.title,
             submenu: [
                 {
+                    label: global.p3xre.strings.menu.main.home,
+                    click: () => {
+                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
+                            action: 'main.statistics'
+                        })
+                    }
+                },
+                {
+                    label: global.p3xre.strings.menu.main.settings,
+                    click: () => {
+                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
+                            action: 'settings'
+                        })
+                    }
+                },
+                {
+                    label: global.p3xre.strings.menu.main.overview,
+                    click: () => {
+                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
+                            action: 'overview'
+                        })
+                    }
+                },
+                {type: 'separator'},
+                {
                     label: global.p3xre.strings.menu.main.quit,
                     click: () => {
                         app.quit()
                     }
-                }
+                },
             ],
         },
         {

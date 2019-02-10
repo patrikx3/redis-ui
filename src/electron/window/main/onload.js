@@ -23,6 +23,25 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
     */
 })
 
+
+ipcRenderer.on('p3x-menu', function(event, data) {
+    global.p3xre.webview.executeJavaScript(`window.p3xrMenu=(()=>{console.log("p3xr menu booting ..."),void 0===window.p3xrSetMenu?setTimeout(()=>{window.p3xrMenu()},500):window.p3xrSetMenu("${data.action}")}),window.p3xrMenu();`)
+    /*
+    window.p3xrMenu = () => {
+        console.log('p3xr menu booting ...');
+        if (window.p3xrSetMenu === undefined) {
+            setTimeout(() => {
+                window.p3xrMenu();
+            }, 500);
+        } else {
+            window.p3xrSetMenu('menu');
+        }
+    };
+    window.p3xrMenu();
+    */
+})
+
+
 ipcRenderer.on('p3x-action', function(event, data) {
     switch(data.action) {
         case 'toast':
