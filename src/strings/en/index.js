@@ -15,6 +15,7 @@ module.exports = {
     menu: {
         main: {
             home: 'Home',
+            console: 'Console',
             settings: 'Settings',
             overview: 'Overview',
             quit: 'Quit',

@@ -1,12 +1,22 @@
 const { ipcRenderer } = require('electron');
 
-ipcRenderer.on('p3x-set-language', (event, data) => {
-    const translation = data.translation
-    //console.warn('p3x-set-language', data)
-    global.p3xre.strings = require('../../../strings/' + translation + '/index')
+let domReady = false
 
-    // global.p3xre.webview.getWebContents().executeJavaScript is different!!!
-    global.p3xre.webview.executeJavaScript(`window.p3xrBooter=(()=>{void 0===window.p3xrSetLanguage?setTimeout(()=>{window.p3xrBooter()},500):window.p3xrSetLanguage("${translation}")}),window.p3xrBooter();`)
+let p3xSetLanguageWaiter
+ipcRenderer.on('p3x-set-language', (event, data) => {
+    const callMe = () => {
+        if (domReady === false) {
+            clearTimeout(p3xSetLanguageWaiter)
+            setTimeout(callMe, 250)
+            return;
+        }
+        const translation = data.translation
+        //console.warn('p3x-set-language', data)
+        global.p3xre.strings = require('../../../strings/' + translation + '/index')
+        // global.p3xre.webview.getWebContents().executeJavaScript is different!!!
+        global.p3xre.webview.executeJavaScript(`window.p3xrBooter=(()=>{void 0===window.p3xrSetLanguage?setTimeout(()=>{window.p3xrBooter()},500):window.p3xrSetLanguage("${translation}")}),window.p3xrBooter();`)
+    }
+    callMe()
 
     /*
     window.p3xrBooter = () => {
@@ -67,6 +77,7 @@ window.p3xreRun = async function() {
         global.p3xre.webview.src = 'http://localhost:7844';
 
         global.p3xre.webview.addEventListener("dom-ready", async function() {
+            domReady = true
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
                 global.p3xre.webview.openDevTools();
             }

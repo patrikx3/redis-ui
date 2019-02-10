@@ -18,6 +18,14 @@ function mainMenu() {
                     }
                 },
                 {
+                    label: global.p3xre.strings.menu.main.console,
+                    click: () => {
+                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
+                            action: 'console'
+                        })
+                    }
+                },
+                {
                     label: global.p3xre.strings.menu.main.settings,
                     click: () => {
                         global.p3xre.mainWindow.webContents.send('p3x-menu', {

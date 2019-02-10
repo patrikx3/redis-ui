@@ -15,6 +15,7 @@ module.exports = {
     menu: {
         main: {
             home: '主页',
+            console: '控制台',
             settings: '设置',
             overview: '概览',
             quit: '退出',
