@@ -49,6 +49,7 @@ module.exports = {
             }
         },
         help: {
+            changelog: '更新日志',
             download: '下载',
             developer: '开发者',
             checkUpdates: '检查更新',

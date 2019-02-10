@@ -135,6 +135,13 @@ function mainMenu() {
             submenu: [
 
                 {
+                    label: global.p3xre.strings.menu.help.changelog,
+                    click: () => {
+                        shell.openExternal('https://github.com/patrikx3/redis-ui/blob/master/changelog.md#change-log')
+                    }
+                },
+
+                {
                     label: global.p3xre.strings.menu.help.download,
                     click: () => {
                         shell.openExternal('https://github.com/patrikx3/redis-ui/releases')

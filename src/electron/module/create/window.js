@@ -125,6 +125,7 @@ function createWindow() {
             translation: global.p3xre.currentTranslation
         })
     })
+
 }
 
 module.exports = createWindow;

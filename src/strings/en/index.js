@@ -53,6 +53,7 @@ module.exports = {
           }
         },
         help: {
+            changelog: 'Change log',
             download: 'Download',
             developer: 'Developer',
             checkUpdates: 'Check updates',
