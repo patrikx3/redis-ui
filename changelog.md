@@ -10,6 +10,9 @@
 ### Unreleased
 * none
 
+### v2019.03.09
+* BUGFIX: when you are on the 2nd page and then switch to another database that has only one page, it will not show the keys
+
 ### v2019.02.13
 * BUGFIX: the `p3xr accordion` margin was too big 
 * FEATURE: The delete buttons is always to the left, then edit and the cancel is the last
@@ -144,7 +147,7 @@
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.3.3-2 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.3.9-1 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
