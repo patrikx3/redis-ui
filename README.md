@@ -120,6 +120,7 @@ Of course, we could set a limit and the UI would be always responsive, but there
     
 ## Features 
 
+* **Does not work with cluster or sentinel**
 * Works with multiple languages
 * Works as a backend
 * Works as a desktop via Electron
