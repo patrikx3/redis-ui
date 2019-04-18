@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.4.9",
+    "version": "2019.4.11",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "icon": "fas fa-database",
@@ -10,7 +10,7 @@
         "opencollective": false,
         "publish": true,
         "build": true,
-        "nodejs": "v11.13.0",
+        "nodejs": "v11.14.0",
         "reponame": "redis-ui"
     },
     "main": "src/app.js",
@@ -22,7 +22,8 @@
         "build": "build --ia32 --x64  build/dist",
         "build-test": "build build/dist",
         "publish-electron": "build --ia32 --x64 -p always",
-        "publish-osx": "build -p always"
+        "publish-osx": "build -p always",
+        "publish-electron-snap": "build --linux snap"
     },
     "repository": {
         "type": "git",
