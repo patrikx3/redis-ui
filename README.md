@@ -208,6 +208,8 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 [NPM P3X Redis UI](https://www.npmjs.com/package/p3x-redis-ui)
 
+[Snap Store](https://snapcraft.io/p3x-redis-ui)
+
 [//]: #@corifeus-footer
 
 ---
