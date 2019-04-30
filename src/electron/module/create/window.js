@@ -8,6 +8,12 @@ function createWindow() {
         icon: global.p3xre.iconFile,
         title: global.p3xre.strings.title,
         backgroundColor: 'black',
+        webPreferences: {
+            webviewTag: true,
+            nodeIntegration: true,
+//            allowRunningInsecureContent: true,
+//            webSecurity: false,
+        }
     });
 
 

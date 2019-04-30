@@ -1,5 +1,6 @@
 const { ipcRenderer } = require('electron');
 
+
 let domReady = false
 
 let p3xSetLanguageWaiter
@@ -70,11 +71,12 @@ require('./angular')
 
 window.p3xreRun = async function() {
 
+
     document.title =  `${p3xre.strings.title} v${p3xre.pkg.version}`
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
 
-        global.p3xre.webview.src = 'http://localhost:7844';
+        //global.p3xre.webview.src = 'http://localhost:7844';
 
         global.p3xre.webview.addEventListener("dom-ready", async function() {
             domReady = true
@@ -84,10 +86,15 @@ window.p3xreRun = async function() {
         })
 
         if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
+            console.log('development mode')
             global.p3xre.webview.src = 'http://localhost:8080';
+//            global.p3xre.webview.src = 'https://patrikx3.com';
+//            console.log(global.p3xre.webview)
+//            console.log(global.p3xre.webview.src)
         } else {
             global.p3xre.webview.src = 'http://localhost:7844';
         }
+
 
     } catch(e) {
         console.error(e);
