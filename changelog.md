@@ -7,8 +7,9 @@
 
 # Change log
 
-### Unreleased
+### 2019.4.20
 * CHORE: The console crashed the app with invalid commands eg. `áéűáű`. It was implemented with my own solution, now it is a native solution by `ioredis`.
+* BUGFIX: Reverted Electron v4, as v5 is giving a SUID permission error (same as https://github.com/patrikx3/onenote/issues/63)
 
 ### v2019.4.18
 BUGFIX: The console crashed the app with invalid commands eg. `áéűáű`
@@ -156,7 +157,7 @@ CHORE: Updated all dependencies.
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.18 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.20 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
