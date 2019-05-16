@@ -8,7 +8,7 @@
 # Change log
 
 ### Unreleased
-* none
+* CHORE: The console crashed the app with invalid commands eg. `áéűáű`. It was implemented with my own solution, now it is a native solution by `ioredis`.
 
 ### v2019.4.18
 BUGFIX: The console crashed the app with invalid commands eg. `áéűáű`
