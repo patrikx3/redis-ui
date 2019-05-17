@@ -7,9 +7,9 @@
 
 # Change log
 
-### 2019.4.20
+### v2019.4.20
 * CHORE: The console crashed the app with invalid commands eg. `áéűáű`. It was implemented with my own solution, now it is a native solution by `ioredis`.
-* BUGFIX: Reverted Electron v4, as v5 is giving a SUID permission error (same as https://github.com/patrikx3/onenote/issues/63)
+* BUGFIX: Reverted Electron v4, as v5 is giving an SUID permission error (same as https://github.com/patrikx3/onenote/issues/63)
 
 ### v2019.4.18
 BUGFIX: The console crashed the app with invalid commands eg. `áéűáű`
