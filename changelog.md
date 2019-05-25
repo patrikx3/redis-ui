@@ -9,7 +9,7 @@
 
 ### v2019.4.111
 * CHORE: Upgraded to Electron v5
-* BUGFIX: Electron was not working sandbox, I worked it out with a script in `src/after-pack.js`
+* BUGFIX: Electron was not working sandbox, I worked it out with a script in `src/build/after-pack.js`
 
 ### v2019.4.20
 * CHORE: The console crashed the app with invalid commands eg. `áéűáű`. It was implemented with my own solution, now it is a native solution by `ioredis`.
