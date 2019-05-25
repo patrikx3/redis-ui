@@ -7,7 +7,7 @@
 
 # Change log
 
-### v2019.4.112
+### v2019.4.111
 * CHORE: Upgraded to Electron v5
 * BUGFIX: Electron was not working sandbox, I worked it out with a script in `src/after-pack.js`
 
