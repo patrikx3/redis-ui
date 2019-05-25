@@ -7,6 +7,10 @@
 
 # Change log
 
+### v2019.4.110
+* CHORE: Upgraded to Electron v5
+* BUGFIX: Electron was not working sandbox, I worked it out with a script in `src/after-pack.js`
+
 ### v2019.4.20
 * CHORE: The console crashed the app with invalid commands eg. `áéűáű`. It was implemented with my own solution, now it is a native solution by `ioredis`.
 * BUGFIX: Reverted Electron v4, as v5 is giving an SUID permission error (same as https://github.com/patrikx3/onenote/issues/63)
