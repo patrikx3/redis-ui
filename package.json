@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.4.111",
+    "version": "2019.4.120",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -71,7 +71,7 @@
         "typeface-roboto": "0.0.54"
     },
     "build": {
-        "afterPack": "./src/after-pack.js",
+        "afterPack": "./src/build/after-pack.js",
         "publish": [
             {
                 "provider": "github",
