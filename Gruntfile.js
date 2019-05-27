@@ -9,6 +9,7 @@ module.exports = (grunt) => {
         replacer: {
             type: 'p3x',
             npmio: true,
+            opencollective: true,
         },
     });
 
