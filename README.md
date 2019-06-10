@@ -102,33 +102,7 @@ https://electronjs.org/apps/p3x-redis-ui
 
 [Some description about the config file readme](p3xrs.json)
 
-## Performance
-
-#### Key set size
-* On the test server you can test
-  * Database 0 - below 10k keys
-    * Fancy
-    * Fast
-  * Database 1 - 10k keys
-    * It is fast totally. Given, it is not over for 50 keys / page.  
-  * Database 2 - 100k keys 
-    * You will see, that with large sets, it can take up to 15 seconds to load all the keys (dependent on the workstation and memory) and sort (if you enabled in the settings). It is usable, but it is fancy and fast for smaller key sets. 
-  * Database 3 - 1 million keys 
-    * Given the app pre-loads all keys at once, the browser or the electron app for a small workstation could crash
-    * The latency is quite long, so the app is not so responsive
-    * The app is certified to work for max 100k keys, although it works with over 900k keys  
-    * The below functions are happening if the key count is above 110k keys
-      * Key sorting is disabled
-      * Searching only allows on server side searching
-      * In the tree, no fancy information is showing - to reduce the stressing on the browser
-    * Although, this app works with 1 million keys and reduced functions. For such huge key count, it is recommended to use the pure `redis-cli`.
-    
-**The sweet spot for the key count is around 10-20k including key sorting with max 100 key / page and still the app is very responsive. If you have a huge key set, make sure to search on the server and it will be very responsive.**  
-Above 10-20k key count as the key large set grows the GUI latency is including as well.    
-    
-        
-Of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
-    
+  
 ## Features 
 
 * **Does not work with cluster or sentinel**
@@ -173,6 +147,33 @@ Of course, we could set a limit and the UI would be always responsive, but there
 
 This software is more functional than fast ...
 
+## Performance
+
+#### Key set size
+* On the test server you can test
+  * Database 0 - below 10k keys
+    * Fancy
+    * Fast
+  * Database 1 - 10k keys
+    * It is fast totally. Given, it is not over for 50 keys / page.  
+  * Database 2 - 100k keys 
+    * You will see, that with large sets, it can take up to 15 seconds to load all the keys (dependent on the workstation and memory) and sort (if you enabled in the settings). It is usable, but it is fancy and fast for smaller key sets. 
+  * Database 3 - 1 million keys 
+    * Given the app pre-loads all keys at once, the browser or the electron app for a small workstation could crash
+    * The latency is quite long, so the app is not so responsive
+    * The app is certified to work for max 100k keys, although it works with over 900k keys  
+    * The below functions are happening if the key count is above 110k keys
+      * Key sorting is disabled
+      * Searching only allows on server side searching
+      * In the tree, no fancy information is showing - to reduce the stressing on the browser
+    * Although, this app works with 1 million keys and reduced functions. For such huge key count, it is recommended to use the pure `redis-cli`.
+    
+**The sweet spot for the key count is around 10-20k including key sorting with max 100 key / page and still the app is very responsive. If you have a huge key set, make sure to search on the server and it will be very responsive.**  
+Above 10-20k key count as the key large set grows the GUI latency is including as well.    
+    
+        
+Of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
+  
 # TODO
 [The to do readme](todo.md) 
 
