@@ -45,7 +45,8 @@ module.exports = {
             title: '语言 / Language',
             translation: {
                 en: '英语 / English',
-                zn: '中文 / Chinese'
+                zn: '中文 / Chinese',
+                pt: '葡萄牙 / Portuguese'
             }
         },
         help: {

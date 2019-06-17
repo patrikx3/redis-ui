@@ -49,7 +49,8 @@ module.exports = {
               // When you translate the english name, keep the Language in English
               // eg. Inglés / English
               en: 'English',
-              zn: 'Chinese / 中文'
+              zn: 'Chinese / 中文',
+              pt: 'Portuguese / Português'
           }
         },
         help: {
