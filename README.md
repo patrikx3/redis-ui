@@ -11,7 +11,7 @@
 
 
  
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.4.147  
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.4.149  
 
   
 🙏 This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
@@ -105,7 +105,10 @@ https://electronjs.org/apps/p3x-redis-ui
   
 ## Features 
 
-* **Does not work with cluster or sentinel**
+* **Does not work with sentinel**
+* **Has experimental cluster support**
+  * On the info page it says wrong key count / database, but the rest seems ok
+  * The nodes passwords are not encrypted right now, so beware! In progress...
 * Works with multiple languages
 * Works as a backend
 * Works as a desktop via Electron
@@ -220,7 +223,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.147 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.149 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
