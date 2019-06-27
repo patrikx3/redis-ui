@@ -201,6 +201,8 @@ npm install
 ./scripts/start-local.cmd
 ```
 
+### Development of the translations
+
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
 
 [English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
