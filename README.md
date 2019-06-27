@@ -11,7 +11,7 @@
 
 
  
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.4.153  
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.4.154  
 
   
 🙏 This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
@@ -191,6 +191,16 @@ It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-r
 [Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
 [Client on GitHub](https://github.com/patrikx3/redis-ui-material)
 
+If you develop on this app, you are required to test, that all JS you code write is working with Electron (as the embedded Electron NodeJs version is usually below the real NodeJs). Once the server and client is running as above, you clone this repo and test like this:
+```bash
+git clone https://github.com/patrikx3/redis-ui.git
+cd redis-ui
+npm install
+./scripts/start-local.sh
+# or
+./scripts/start-local.cmd
+```
+
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
 
 [English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
@@ -221,7 +231,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.153 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.154 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
