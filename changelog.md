@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+
+### 2019.4.162
+* FEATURE: For the cluster mode, the database selector is disabled, as in clusters, there is only one database.
+
+
 ### 2019.4.160
 * FEATURE: It shows the key count as a tooltip, when there is a pager on the page input. When there is no pager, now, we show the key count.
 
@@ -190,7 +195,7 @@ CHORE: Updated all dependencies.
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.160 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.162 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
