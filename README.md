@@ -187,6 +187,9 @@ Of course, we could set a limit and the UI would be always responsive, but there
 
 # Development
 
+For file names do not use camelCase, but use kebab-case. Folder should be named as kebab-case as well. As you can see, all code filenames are using it like that, please do not change that.
+Please apply the `.editorconfig` settings in your IDE.
+
 It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
 
 [Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
