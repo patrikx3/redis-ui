@@ -1,5 +1,5 @@
-const { dialog, Menu } = require('electron')
-const { shell, app } = require('electron')
+const {dialog, Menu} = require('electron')
+const {shell, app} = require('electron')
 
 
 function mainMenu() {
@@ -127,8 +127,7 @@ function mainMenu() {
         },
         {
             label: global.p3xre.strings.menu.language.title,
-            submenu: [
-            ]
+            submenu: []
         },
         {
             role: 'help',
@@ -196,7 +195,7 @@ function mainMenu() {
     ]
 
     const languageIndex = template.length - 1 - 2
-    for(let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
+    for (let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
         const clickFunction = (key) => {
             return () => {
                 global.p3xre.currentTranslation = key;

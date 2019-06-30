@@ -4,7 +4,7 @@ require('angular-animate');
 require('angular-messages');
 require('angular-material');
 
-global.p3xre.ng =  angular.module('p3x-redis-ui', [
+global.p3xre.ng = angular.module('p3x-redis-ui', [
     'ngMaterial', 'ngMessages'
 ]);
 require('./angular/toast');

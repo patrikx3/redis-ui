@@ -13,7 +13,7 @@ boot()
 require('./electron/global.js');
 
 
-const { app, ipcMain } = require('electron')
+const {app, ipcMain} = require('electron')
 
 //app.commandLine.appendSwitch("ignore-certificate-errors");
 

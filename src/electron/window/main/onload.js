@@ -1,4 +1,4 @@
-const { ipcRenderer } = require('electron');
+const {ipcRenderer} = require('electron');
 
 
 let domReady = false
@@ -35,7 +35,7 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
 })
 
 
-ipcRenderer.on('p3x-menu', function(event, data) {
+ipcRenderer.on('p3x-menu', function (event, data) {
     global.p3xre.webview.executeJavaScript(`window.p3xrMenu=(()=>{console.log("p3xr menu booting ..."),void 0===window.p3xrSetMenu?setTimeout(()=>{window.p3xrMenu()},500):window.p3xrSetMenu("${data.action}")}),window.p3xrMenu();`)
     /*
     window.p3xrMenu = () => {
@@ -53,8 +53,8 @@ ipcRenderer.on('p3x-menu', function(event, data) {
 })
 
 
-ipcRenderer.on('p3x-action', function(event, data) {
-    switch(data.action) {
+ipcRenderer.on('p3x-action', function (event, data) {
+    switch (data.action) {
         case 'toast':
             p3xre.toast.action(data.message)
             break;
@@ -69,16 +69,16 @@ global.p3xre = {
 
 require('./angular')
 
-window.p3xreRun = async function() {
+window.p3xreRun = async function () {
 
 
-    document.title =  `${p3xre.strings.title} v${p3xre.pkg.version}`
+    document.title = `${p3xre.strings.title} v${p3xre.pkg.version}`
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
 
         //global.p3xre.webview.src = 'http://localhost:7844';
 
-        global.p3xre.webview.addEventListener("dom-ready", async function() {
+        global.p3xre.webview.addEventListener("dom-ready", async function () {
             domReady = true
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
                 global.p3xre.webview.openDevTools();
@@ -96,7 +96,7 @@ window.p3xreRun = async function() {
         }
 
 
-    } catch(e) {
+    } catch (e) {
         console.error(e);
         alert(e.message);
     }

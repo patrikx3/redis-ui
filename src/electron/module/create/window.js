@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 
 function createWindow() {
 
@@ -20,8 +20,6 @@ function createWindow() {
     global.p3xre.setVisible(true);
 
     global.p3xre.mainWindow.loadURL(global.p3xre.indexHtml);
-
-
 
 
     if (global.p3xre.dev) {
@@ -96,26 +94,25 @@ function createWindow() {
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
             error: error,
-            message: global.p3xre.strings.updater["error"]({
-            })
+            message: global.p3xre.strings.updater["error"]({})
         })
     })
 
 
-/*
-    autoUpdater.on('download-progress', (progressObj) => {
-        // let log_message = "Download speed: " + progressObj.bytesPerSecond;
-        // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
-        // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
-
-        global.p3xre.mainWindow.webContents.send('p3x-action', {
-            action: 'toast',
-            message: p3xre.strings.updater["download-progress"]({
-                progressObj: progressObj,
+    /*
+        autoUpdater.on('download-progress', (progressObj) => {
+            // let log_message = "Download speed: " + progressObj.bytesPerSecond;
+            // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+            // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+    
+            global.p3xre.mainWindow.webContents.send('p3x-action', {
+                action: 'toast',
+                message: p3xre.strings.updater["download-progress"]({
+                    progressObj: progressObj,
+                })
             })
         })
-    })
-    */
+        */
     autoUpdater.on('update-downloaded', (info) => {
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',

@@ -14,7 +14,7 @@ global.p3xre.ng.factory('p3xToast', ($mdToast) => {
         );
     }
 
-    return new function() {
+    return new function () {
         this.action = toast;
 
     }
