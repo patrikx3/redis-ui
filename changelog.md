@@ -6,9 +6,11 @@
 [//]: #@corifeus-header:end
 
 
+### 2019.10.101
+* FEATURE: Final cluster mode development.
+
 ### 2019.4.177
 * BUGFIX: For the cluster mode, enabled read only connections, GUI was incorrect (was showing add/delete nodes). Now, is correct.
-
 
 ### 2019.4.164
 * FEATURE: For the cluster mode, the database selector is disabled, as in clusters, there is only one database.
@@ -199,7 +201,7 @@ CHORE: Updated all dependencies.
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.183 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.10.101 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 

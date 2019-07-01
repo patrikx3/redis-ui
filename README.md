@@ -11,7 +11,7 @@
 
 
  
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.4.183  
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2019.10.101  
 
   
 🙏 This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
@@ -27,7 +27,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ### Node Version Requirement 
 ``` 
->=10.13.0 
+>=10.16.0 
 ```  
    
 ### Built on Node 
@@ -237,7 +237,7 @@ http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.4.183 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.10.101 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
