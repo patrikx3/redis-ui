@@ -5,7 +5,7 @@
                         
 [//]: #@corifeus-header:end
 
-### v2019.10.121
+### 2019.10.121
 * BUGFIX: DISABLE_WAYLAND fix
 * BUGFIX: When refreshing, it was refreshing twice. 
 
