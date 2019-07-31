@@ -1,6 +1,8 @@
 os: osx
 osx_image: xcode8
 language: node_js
+cache:
+    npm: false
 node_js:
 - node
 before_script:
