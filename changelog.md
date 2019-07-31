@@ -11,39 +11,39 @@
 ### v2019.10.129
 * CHORE: Upgraded Electron v4 to v6.
 
-### 2019.10.121
+### v2019.10.121
 * BUGFIX: DISABLE_WAYLAND fix
 * BUGFIX: When refreshing, it was refreshing twice. 
 
-### 2019.10.105
+### v2019.10.105
 * BUGFIX: Removed unnecessary self created ioredis cluster code. 
 
-### 2019.10.101
+### v2019.10.101
 * FEATURE: Final cluster mode development.
 
-### 2019.4.177
+### v2019.4.177
 * BUGFIX: For the cluster mode, enabled read only connections, GUI was incorrect (was showing add/delete nodes). Now, is correct.
 
-### 2019.4.164
+### v2019.4.164
 * FEATURE: For the cluster mode, the database selector is disabled, as in clusters, there is only one database.
 
 
-### 2019.4.160
+### v2019.4.160
 * FEATURE: It shows the key count as a tooltip, when there is a pager on the page input. When there is no pager, now, we show the key count.
 
-### 2019.4.158
+### v2019.4.158
 * FEATURE: Frontend cleaning up on the cluster settings page.
 
-### 2019.4.153
+### v2019.4.153
 * FEATURE: In cluster mode, nodes passwords's have a security feature.
 
-### 2019.4.149
+### v2019.4.149
 * FEATURE: Highly experimental cluster support.
 
-### 2019.4.144
+### v2019.4.144
 * FEATURE: Able to monitor all channel messages on the console by using a checkbox.
 
-### 2019.4.142
+### v2019.4.142
 * FEATURE: Validate text as JSON. 
   * https://github.com/patrikx3/redis-ui/issues/19
 
