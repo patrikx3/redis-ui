@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2019.10.132
+* Bugfix: Electron v6 was generating twice icons so I reverted to v4.2.8
+
 ### v2019.10.129
 * CHORE: Upgraded Electron v4 to v6.
 
@@ -218,7 +221,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
   
 ---
   
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.10.129 
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2019.10.132 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 
