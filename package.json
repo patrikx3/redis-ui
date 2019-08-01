@@ -22,7 +22,7 @@
         "test": "grunt",
         "build": "electron-builder --ia32 --x64  build/dist",
         "build-test": "electron-builder build/dist",
-        "publish-electron": "rm -rf dist && electron-builder -p onTagOrDraft --ia32 --x64 --linux",
+        "publish-electron": "rimraf dist && electron-builder -p onTagOrDraft --ia32 --x64 --linux",
         "publish-osx": "electron-builder -p always",
         "publish-electron-snap": "electron-builder --linux snap",
         "publish-electron-yml": "node ./src/build/post-build.js"
@@ -57,6 +57,7 @@
         "github-api": "^3.2.2",
         "globby": "^10.0.1",
         "jsdom": "^15.1.1",
+        "rimraf": "^2.6.3",
         "yaml": "^1.6.0"
     },
     "engines": {
