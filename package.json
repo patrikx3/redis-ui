@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.232",
+    "version": "2019.10.233",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -22,9 +22,10 @@
         "test": "grunt",
         "build": "electron-builder --ia32 --x64  build/dist",
         "build-test": "electron-builder build/dist",
-        "publish-electron": "electron-builder --ia32 --x64 -p always",
+        "publish-electron": "rm -rf dist && electron-builder -p onTagOrDraft --ia32 --x64 --linux",
         "publish-osx": "electron-builder -p always",
-        "publish-electron-snap": "electron-builder --linux snap"
+        "publish-electron-snap": "electron-builder --linux snap",
+        "publish-electron-yml": "node ./src/build/post-build.js"
     },
     "repository": {
         "type": "git",
@@ -49,10 +50,14 @@
     "devDependencies": {
         "angular-mocks": "^1.7.8",
         "corifeus-builder": "^2019.10.130",
-        "fs-extra": "^8.1.0",
-        "electron": "^4.2.8",
+        "electron": "^6.0.0",
         "electron-builder": "^21.2.0",
-        "jsdom": "^15.1.1"
+        "escape-string-regexp": "^2.0.0",
+        "fs-extra": "^8.1.0",
+        "github-api": "^3.2.2",
+        "globby": "^10.0.1",
+        "jsdom": "^15.1.1",
+        "yaml": "^1.6.0"
     },
     "engines": {
         "node": ">=10.16.0"
@@ -70,10 +75,8 @@
         "p3x-redis-ui-server": "^2019.10.126",
         "typeface-roboto": "0.0.75"
     },
-    "build-save": {
-        "afterPack": "./src/build/after-pack2.js"
-    },
     "build": {
+        "afterAllArtifactBuild": "./src/build/after-all-artifact-build.js",
         "publish": [
             {
                 "provider": "github",

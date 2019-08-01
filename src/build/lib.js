@@ -1,7 +1,5 @@
-const fs = require('fs-extra')
-const pkg = require('../../package')
+
 const {spawn} = require('child_process')
-const {chdir} = require('process')
 
 const exec = async function exec(cmd, args = []) {
     const child = spawn(cmd, args, {shell: true})
@@ -31,23 +29,17 @@ const waitFor = async function (child) {
     })
 }
 
-module.exports = async function (context) {
-    //console.log(context)
-    console.warn('p3x disable sandbox')
-    const isLinux = context.targets.find(target => target.name === 'appImage' || target.name === 'snap')
-    if (!isLinux) {
-        return
-    }
-    const originalDir = process.cwd()
-    const dirname = context.appOutDir
-    chdir(dirname)
+const execSync = require('child_process').execSync
 
-    await exec('mv', [pkg.name, pkg.name + '.bin'])
-    const wrapperScript = `#!/bin/bash
-    "\${BASH_SOURCE%/*}"/${pkg.name}.bin "$@" --no-sandbox
-  `
-    fs.writeFileSync(pkg.name, wrapperScript)
-    await exec('chmod', ['+x', pkg.name])
-
-    chdir(originalDir)
+const sha512 =  (filename) => {
+    const output = execSync(`sha512sum ${filename} | cut -f1 | xxd -r -p | base64`)
+    //console.log(output)
+    let sha512 = output.toString().split('\n').join('').trim()
+    //sha512 = sha512.substring(0, sha512.length - 1)
+    //console.log(sha512)
+    return sha512
 }
+
+module.exports.sha512 = sha512
+
+module.exports.exec = exec
