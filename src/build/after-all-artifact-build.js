@@ -12,6 +12,9 @@ module.exports = async function (context) {
         return
     }
 
+    if (/^win/i.test(process.platform)) {
+        return
+    }
 
     //console.log(context)
     const originalDir = process.cwd()
@@ -26,8 +29,8 @@ module.exports = async function (context) {
     const appimagetool = 'appimagetool';
 
     const assetsUploads = [
-     //   'latest-linux.yml',
-     //   'latest-linux-ia32.yml',
+        //   'latest-linux.yml',
+        //   'latest-linux-ia32.yml',
     ]
 
 
@@ -72,7 +75,7 @@ module.exports = async function (context) {
 
             fs.writeFileSync(shFile, content);
 
-          //  await exec('rm', ['-rf', artifact])
+            //  await exec('rm', ['-rf', artifact])
 
             const uploadArtifact = artifact.replace(/ /g, '-')
             await exec(dirname + '/' + appimagetool, [
