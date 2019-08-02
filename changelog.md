@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2019.10.235
+* CHORE: Upgraded Electron v4 to v6 finally and using just 1 icon 🙌
+
 ### v2019.10.132
 * Bugfix: Electron v6 was generating twice icons so I reverted to v4.2.8
 
