@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.243",
+    "version": "2019.10.247",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -11,7 +11,7 @@
         "opencollective": true,
         "publish": true,
         "build": true,
-        "nodejs": "v12.7.0",
+        "nodejs": "v12.8.0",
         "reponame": "redis-ui"
     },
     "main": "src/app.js",
@@ -25,8 +25,8 @@
         "publish-electron": "rimraf dist && electron-builder -p onTagOrDraft --ia32 --x64 --linux",
         "publish-windows": "rimraf dist && electron-builder -p always --ia32 --x64 --windows",
         "publish-osx": "electron-builder -p always",
-        "publish-electron-snap": "electron-builder --linux snap",
-        "publish-electron-yml": "node ./src/build/post-build.js"
+        "publish-electron-snap": "electron-builder --linux snap -p never",
+        "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js"
     },
     "repository": {
         "type": "git",
@@ -50,8 +50,8 @@
     "license": "MIT",
     "devDependencies": {
         "angular-mocks": "^1.7.8",
-        "corifeus-builder": "^2019.10.216",
-        "electron": "^6.0.0",
+        "corifeus-builder": "^2019.10.227",
+        "electron": "^6.0.1",
         "electron-builder": "^21.2.0",
         "escape-string-regexp": "^2.0.0",
         "fs-extra": "^8.1.0",
@@ -73,12 +73,12 @@
         "angular-messages": "^1.7.8",
         "configstore": "^4.0.0",
         "electron-updater": "^4.1.2",
-        "p3x-redis-ui-material": "^2019.10.136",
-        "p3x-redis-ui-server": "^2019.10.136",
+        "p3x-redis-ui-material": "^2019.10.139",
+        "p3x-redis-ui-server": "^2019.10.139",
         "typeface-roboto": "0.0.75"
     },
     "build": {
-        "afterAllArtifactBuild": "./src/build/after-all-artifact-build.js",
+        "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
         "publish": [
             {
                 "provider": "github",
