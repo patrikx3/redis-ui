@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.247",
+    "version": "2019.10.249",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -26,7 +26,8 @@
         "publish-windows": "rimraf dist && electron-builder -p always --ia32 --x64 --windows",
         "publish-osx": "electron-builder -p always",
         "publish-electron-snap": "electron-builder --linux snap -p never",
-        "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js"
+        "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
+        "help-release-snap": "snapcraft release p3x-redis-ui 53 stable"
     },
     "repository": {
         "type": "git",
@@ -73,8 +74,8 @@
         "angular-messages": "^1.7.8",
         "configstore": "^4.0.0",
         "electron-updater": "^4.1.2",
-        "p3x-redis-ui-material": "^2019.10.139",
-        "p3x-redis-ui-server": "^2019.10.139",
+        "p3x-redis-ui-material": "^2019.10.141",
+        "p3x-redis-ui-server": "^2019.10.141",
         "typeface-roboto": "0.0.75"
     },
     "build": {
