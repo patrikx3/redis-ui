@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.251",
+    "version": "2019.10.254",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -52,7 +52,7 @@
     "devDependencies": {
         "angular-mocks": "^1.7.8",
         "corifeus-builder": "^2019.10.227",
-        "electron": "^6.0.1",
+        "electron": "^6.0.2",
         "electron-builder": "^21.2.0",
         "escape-string-regexp": "^2.0.0",
         "fs-extra": "^8.1.0",
@@ -74,8 +74,8 @@
         "angular-messages": "^1.7.8",
         "configstore": "^4.0.0",
         "electron-updater": "^4.1.2",
-        "p3x-redis-ui-material": "^2019.10.142",
-        "p3x-redis-ui-server": "^2019.10.142",
+        "p3x-redis-ui-material": "^2019.10.143",
+        "p3x-redis-ui-server": "^2019.10.143",
         "typeface-roboto": "0.0.75"
     },
     "build": {
