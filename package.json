@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.261",
+    "version": "2019.10.265",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -51,7 +51,7 @@
     "license": "MIT",
     "devDependencies": {
         "angular-mocks": "^1.7.8",
-        "corifeus-builder": "^2019.10.227",
+        "corifeus-builder": "^2019.10.235",
         "electron": "^6.0.2",
         "electron-builder": "^21.2.0",
         "escape-string-regexp": "^2.0.0",
@@ -59,7 +59,7 @@
         "github-api": "^3.2.2",
         "globby": "^10.0.1",
         "jsdom": "^15.1.1",
-        "rimraf": "^2.6.3",
+        "rimraf": "^2.7.0",
         "yaml": "^1.6.0"
     },
     "engines": {
@@ -74,8 +74,8 @@
         "angular-messages": "^1.7.8",
         "configstore": "^4.0.0",
         "electron-updater": "^4.1.2",
-        "p3x-redis-ui-material": "^2019.10.146",
-        "p3x-redis-ui-server": "^2019.10.146",
+        "p3x-redis-ui-material": "^2019.10.149",
+        "p3x-redis-ui-server": "^2019.10.149",
         "typeface-roboto": "0.0.75"
     },
     "build": {
@@ -99,8 +99,8 @@
             "artifactName": "${name}-electron-setup-${os}-${version}.${ext}"
         },
         "linux": {
-            "category": "Development",
-            "icon": "src/electron/images/",
+            "category": "Programming",
+            "icon": "../src/electron/images/",
             "target": "appimage"
         },
         "mac": {
