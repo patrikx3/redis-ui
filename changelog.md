@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### v2019.10.269    
-* FEATURE: Hash key is is limited by the max value display length. 
+* FEATURE: Hash key length is also limited by the max value display length. 
 
 ### v2019.10.261    
 * FEATURE: Rename tree settings to Redis settings. 
