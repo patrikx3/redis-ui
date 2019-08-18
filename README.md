@@ -103,6 +103,7 @@ https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml
 ```bash
 wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.yml
 # You might want to tune the settings folder in the docker-compose.yml.
+# the /my-own-setting settings in yml should be set by yourself.
 docker-compose up
 ```
 
