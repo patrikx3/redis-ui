@@ -1,0 +1,11 @@
+# docker-compose up
+registry:
+    image: patrikx3/p3x-redis-ui
+    ports:
+        - 7843:7843
+    environment:
+        P3XRS_DOCKER_HOME: /settings
+    volumes:
+        # here you can set your my-own-settings folder
+        - /my-own-setting:/settings
+
