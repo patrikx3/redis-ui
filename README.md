@@ -95,6 +95,8 @@ https://electronjs.org/apps/p3x-redis-ui
 
 [Some description about the config file readme](p3xrs.json)
 
+### Docker is working with compose
+
   
 ## Features 
 
