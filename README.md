@@ -61,7 +61,7 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
 
-## Electron releases
+## Releases
 
 ### Snap
 
