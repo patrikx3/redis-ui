@@ -99,12 +99,11 @@ https://electronjs.org/apps/p3x-redis-ui
 
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
   
-You might want to tune the settings folder in the `docker-compose.yml`.
 
 ```bash
-git clone https://github.com/patrikx3/redis-ui
-cd redis-ui
-sudo docker-compose up
+wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.yml
+# You might want to tune the settings folder in the docker-compose.yml.
+docker-compose up
 ```
 
 The GUI will be @ http://localhost:7843
