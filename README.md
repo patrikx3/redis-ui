@@ -86,22 +86,23 @@ $HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage &
 
 It then actually integrates itself into the menus and it will auto update itself.
 
-## On ElectronJs  
+### On ElectronJs  
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
     
-## Start up with a server or via a browser and NodeJs/NPM
+### Start up with a server or via a browser and NodeJs/NPM
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
 [Some description about the config file readme](p3xrs.json)
 
-### Docker is working with compose
+### Docker is working with compose or bare
 
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
-or, if you want to use bare with `Dockerfile`:
+
 ```bash
-# here you can set your my-own-settings folder
-docker run -e P3XRS_DOCKER_HOME='/settings' -v /my-own-setting/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
+git clone https://github.com/patrikx3/redis-ui
+cd redis-ui
+sudo docker-compose up
 ```
 
 The GUI will be @ http://localhost:7843
