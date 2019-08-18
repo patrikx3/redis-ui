@@ -98,6 +98,8 @@ https://electronjs.org/apps/p3x-redis-ui
 ### Docker is working with compose
 
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
+  
+You might want to tune the settings folder in the `docker-compose.yml`.
 
 ```bash
 git clone https://github.com/patrikx3/redis-ui
