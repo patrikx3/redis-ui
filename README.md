@@ -97,6 +97,14 @@ https://electronjs.org/apps/p3x-redis-ui
 
 ### Docker is working with compose
 
+https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
+or, if you want to use bare with `Dockerfile`:
+```bash
+# here you can set your my-own-settings folder
+docker run -e P3XRS_DOCKER_HOME='/settings' -v /my-own-setting/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
+```
+
+The GUI will be @ http://localhost:7843
   
 ## Features 
 
