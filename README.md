@@ -97,24 +97,24 @@ https://electronjs.org/apps/p3x-redis-ui
 
 ### Docker 
 
+### Compose
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
   
 
 ```bash
 wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.yml
 # You might want to tune the settings folder in the docker-compose.yml.
-# the /my-own-setting settings in yml should be set by yourself.
+# the /home/user/p3x-redis-ui-settings settings folder in yml should be set by yourself.
 docker-compose up
 ```
 
-With bare:
+### Bare
 
 ```bash
 # you can tune the settings folder
-# the P3XRS_DOCKER_HOME enviroment should always be /settings
 # in the -v first part is where you can set your own folder
-mkdir -p ./settings
-docker run -e P3XRS_DOCKER_HOME='/settings' -v settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
+mkdir -p ./p3x-redis-ui-settings
+docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
 ```
 
 The GUI will be @ http://localhost:7843

@@ -3,9 +3,7 @@ registry:
     image: patrikx3/p3x-redis-ui:latest
     ports:
         - 7843:7843
-    environment:
-        P3XRS_DOCKER_HOME: /settings
     volumes:
-        # here you can set your my-own-settings folder
-        - settings:/settings
+        # here you can set your own /home/user/p3x-redis-ui-settings folder
+        - /home/user/p3x-redis-ui-settings:/settings
 
