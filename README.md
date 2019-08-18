@@ -114,7 +114,7 @@ With bare:
 # the P3XRS_DOCKER_HOME enviroment should always be /settings
 # in the -v first part is where you can set your own folder
 mkdir -p ./settings
-sudo docker run -e P3XRS_DOCKER_HOME='/settings' -v settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
+docker run -e P3XRS_DOCKER_HOME='/settings' -v settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
 ```
 
 The GUI will be @ http://localhost:7843
