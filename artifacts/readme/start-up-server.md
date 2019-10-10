@@ -14,6 +14,17 @@ npm i -g p3x-redis-ui
 # help info
 p3x-redis --help
 
+# help info detailed
+Usage: p3x-redis [options]
+
+Options:
+  -V, --version                           output the version number
+  -c, --config [config]                   Set the p3xr.json p3x-redis-ui-server configuration, see more help in https://github.com/patrikx3/redis-ui-server
+  -r, --readonly-connections              Set the connections to be readonly, no adding, saving or delete a connection
+  -n, --connections-file-name [filename]  Set the connections file name, overrides default .p3xrs-conns.json
+  -h, --help                              output usage information
+
+
 # startup with default settings on 7843 port
 p3x-redis 
 
