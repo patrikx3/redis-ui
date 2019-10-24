@@ -5,5 +5,5 @@ registry:
         - 7843:7843
     volumes:
         # here you can set your own /home/user/p3x-redis-ui-settings folder
-        - /home/user/p3x-redis-ui-settings:/settings
+        - /home/home/p3x-redis-ui-settings:/settings
 

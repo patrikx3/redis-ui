@@ -1,10 +1,12 @@
 #docker login
 #docker build -t patrikx3/p3x-redis-ui .
-#docker tag IMAGE_ID patrikx3/p3x-redis-ui:latest
+##docker tag IMAGE_ID patrikx3/p3x-redis-ui:latest
+#docker push patrikx3/p3x-redis-ui:latest
+#docker tag IMAGE_ID patrikx3/p3x-redis-ui:2019.10.525
 #docker push patrikx3/p3x-redis-ui
 #docker images
 #docker rmi -f IMAGE_ID
-FROM node:latest
+FROM node:slim
 MAINTAINER patrikx3/p3x-redis-ui - Patrik Laszlo
 ENV COMPOSER_PROCESS_TIMEOUT=3600
 ENV DEBIAN_FRONTEND=noninteractive
