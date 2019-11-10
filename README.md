@@ -121,6 +121,7 @@ The GUI will be @ http://localhost:7843
   
 ## Features 
 
+* Does not handle binary data
 * **Does not work with sentinel**
 * **Has experimental cluster support**
   * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) of the cluster function.
