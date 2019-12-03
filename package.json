@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2019.10.528",
+    "version": "2019.10.531",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -11,7 +11,7 @@
         "opencollective": true,
         "publish": true,
         "build": true,
-        "nodejs": "v12.13.0",
+        "nodejs": "v12.13.1",
         "reponame": "redis-ui"
     },
     "main": "src/app.js",
@@ -50,15 +50,15 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "angular-mocks": "^1.7.8",
-        "corifeus-builder": "^2019.10.252",
-        "electron": "^7.0.0",
+        "angular-mocks": "^1.7.9",
+        "corifeus-builder": "^2019.10.256",
+        "electron": "^7.1.3",
         "electron-builder": "^21.2.0",
         "escape-string-regexp": "^2.0.0",
         "fs-extra": "^8.1.0",
         "github-api": "^3.3.0",
         "globby": "^10.0.1",
-        "jsdom": "^15.2.0",
+        "jsdom": "^15.2.1",
         "rimraf": "^3.0.0",
         "yaml": "^1.7.2"
     },
@@ -67,15 +67,15 @@
     },
     "homepage": "https://pages.corifeus.com/redis-ui",
     "dependencies": {
-        "angular": "^1.7.8",
-        "angular-animate": "^1.7.8",
-        "angular-aria": "^1.7.8",
+        "angular": "^1.7.9",
+        "angular-animate": "^1.7.9",
+        "angular-aria": "^1.7.9",
         "angular-material": "^1.1.20",
-        "angular-messages": "^1.7.8",
+        "angular-messages": "^1.7.9",
         "configstore": "^4.0.0",
-        "electron-updater": "^4.1.2",
-        "p3x-redis-ui-material": "^2019.10.170",
-        "p3x-redis-ui-server": "^2019.10.180",
+        "electron-updater": "^4.2.0",
+        "p3x-redis-ui-material": "^2019.10.173",
+        "p3x-redis-ui-server": "^2019.10.183",
         "typeface-roboto": "0.0.75"
     },
     "build": {
