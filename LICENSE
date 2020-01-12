@@ -1,11 +1,11 @@
 
-@license p3x-redis-ui v2019.10.531
+@license p3x-redis-ui v2020.4.103
   
 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)
 
 https://pages.corifeus.com/redis-ui
 
-Copyright (c) 2019 Patrik Laszlo / P3X / Corifeus and contributors.
+Copyright (c) 2020 Patrik Laszlo / P3X / Corifeus and contributors.
 
 MIT License
 
