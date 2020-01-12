@@ -5,7 +5,7 @@
                         
 [//]: #@corifeus-header:end
 
-### 2020.4.103
+### v2020.4.103
 * FEAT: GCloud Memorystore support
 * FEAT: Has a different flag for the settings Azure and Aws ElastiCache. Please, change your settings do appropriately what kind of Redis you use.  
 
