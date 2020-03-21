@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.4.126
+* FEATURE: when testing a connection, we provide an overlay, as sometimes, it takes some time, and if we do not have an overlay, you will think nothing is happening
+
 ### v2020.4.124
 * CHORE: update all dependencies 
 
@@ -257,7 +260,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2020.4.124
+[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2020.4.126
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
