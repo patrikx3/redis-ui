@@ -11,24 +11,24 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.155
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.158
 
 
 
 **Bugs are evident™ - MATRIX️**
     
 
-### Node Version Requirement
+### NodeJs LTS Version Requirement
 ```
 >=12.13.0
 ```
 
-### Built on Node
+### Built on NodeJs
 ```
-v12.16.2
+v12.16.3
 ```
 
-The ```async``` and ```await``` keywords are required.
+The ```async``` and ```await``` keywords are required. Only the latest LTS variant is supported.
 
 Install NodeJs:
 https://nodejs.org/en/download/package-manager/
@@ -243,7 +243,7 @@ https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
 
 [P3X Redis UI playground](https://patrikx3.com/hu/ajto/jatszoter/22/p3x-reds-ui#PG22)  
 
-[Corifeus P3X Redis UI pages](https://pages.corifeus.com/redis-ui/)  
+[Corifeus P3X Redis UI pages](https://corifeus.com/redis-ui/)  
 
 [AlternativeTo Redis UI](https://alternativeto.net/software/p3x-redis-ui/)  
 
@@ -266,7 +266,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://pages.corifeus.com/redis-ui) Build v2020.4.155
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.158
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
