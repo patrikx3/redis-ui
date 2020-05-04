@@ -241,7 +241,7 @@ https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
 
 # URL links
 
-[P3X Redis UI playground](https://patrikx3.com/hu/ajto/jatszoter/22/p3x-reds-ui#PG22)  
+[P3X Redis UI playground](https://www.patrikx3.com/en/front/playground/20/p3x-reds-ui#PG20)  
   
 [Corifeus P3X Redis UI](https://corifeus.com/redis-ui/)  
   
