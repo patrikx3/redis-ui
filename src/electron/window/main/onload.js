@@ -14,7 +14,7 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
         const translation = data.translation
         //console.warn('p3x-set-language', data)
         global.p3xre.strings = require('../../../strings/' + translation + '/index')
-        // global.p3xre.webview.getWebContents().executeJavaScript is different!!!
+        // global.p3xre.webview.getWebContents().executeJavaScript is different!!! - getWebContents deprecated, removed
         global.p3xre.webview.executeJavaScript(`window.p3xrBooter=(()=>{void 0===window.p3xrSetLanguage?setTimeout(()=>{window.p3xrBooter()},500):window.p3xrSetLanguage("${translation}")}),window.p3xrBooter();`)
     }
     callMe()
