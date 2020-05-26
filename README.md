@@ -97,6 +97,8 @@ https://electronjs.org/apps/p3x-redis-ui
 
 ### Docker 
 
+https://hub.docker.com/r/patrikx3/p3x-redis-ui
+
 ### Compose
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
   
