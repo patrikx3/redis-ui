@@ -7,11 +7,11 @@
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://paypal.me/patrikx3) [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Corifeus @ Facebook](https://img.shields.io/badge/Facebook-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)  [![Build Status](https://api.travis-ci.com/patrikx3/redis-ui.svg?branch=master)](https://travis-ci.com/patrikx3/redis-ui)
 [![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m780749701-41bcade28c1ea8154eda7cca.svg)](https://uptimerobot.patrikx3.com/)
 
- [![Backers on Open Collective](https://opencollective.com/p3x-redis-ui/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/p3x-redis-ui/sponsors/badge.svg)](#sponsors)
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.176
+
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.180
 
 
 
@@ -25,7 +25,7 @@
 
 ### Built on NodeJs
 ```txt
-v12.16.3
+v12.17.0
 ```
 
 The ```async``` and ```await``` keywords are required. Only the latest LTS variant is supported.
@@ -268,7 +268,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.176
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.180
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
@@ -279,43 +279,6 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 [![JetBrains](https://cdn.corifeus.com/assets/svg/jetbrains-logo.svg)](https://www.jetbrains.com/?from=patrikx3)
 
-
-
-
-# Open collective
-
-## Contributors
-
-This project exists thanks to all the people who contribute.
-
-<a href="https://github.com/patrikx3/redis-ui/graphs/contributors"><img src="https://opencollective.com/p3x-redis-ui/contributors.svg?width=890&button=false" /></a>
-
-
-## Backers
-
-Thank you to all our backers!
-
-🙏 [Become a backer](https://opencollective.com/p3x-redis-ui#backer)
-
-<a href="https://opencollective.com/p3x-redis-ui#backers" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/backers.svg?width=890"></a>
-
-
-## Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
-
-🙏 [Become a sponsor](https://opencollective.com/p3x-redis-ui#sponsor)
-
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/0/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/1/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/2/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/3/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/4/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/5/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/6/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/7/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/8/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/p3x-redis-ui/sponsor/9/website" target="_blank"><img src="https://opencollective.com/p3x-redis-ui/sponsor/9/avatar.svg"></a>
 
 
 

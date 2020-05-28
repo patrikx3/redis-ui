@@ -8,8 +8,7 @@ module.exports = (grunt) => {
     loader.js({
         replacer: {
             type: 'p3x',
-            npmio: true,
-            opencollective: true,
+            npmio: true
         },
     });
 
