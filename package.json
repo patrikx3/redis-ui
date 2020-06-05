@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2020.4.180",
+    "version": "2020.4.182",
     "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -10,7 +10,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v12.17.0",
+        "nodejs": "v12.18.0",
         "reponame": "redis-ui",
         "opencollective": false
     },
@@ -51,8 +51,8 @@
     "license": "MIT",
     "devDependencies": {
         "corifeus-builder": "^2020.4.205",
-        "electron": "^9.0.0",
-        "electron-builder": "^22.6.1",
+        "electron": "^9.0.2",
+        "electron-builder": "^22.7.0",
         "rimraf": "^3.0.2"
     },
     "engines": {
@@ -60,15 +60,15 @@
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "angular": "^1.7.9",
-        "angular-animate": "^1.7.9",
-        "angular-aria": "^1.7.9",
+        "angular": "^1.8.0",
+        "angular-animate": "^1.8.0",
+        "angular-aria": "^1.8.0",
         "angular-material": "^1.1.22",
-        "angular-messages": "^1.7.9",
+        "angular-messages": "^1.8.0",
         "configstore": "^4.0.0",
         "electron-updater": "^4.3.1",
-        "p3x-redis-ui-material": "^2020.4.168",
-        "p3x-redis-ui-server": "^2020.4.166",
+        "p3x-redis-ui-material": "^2020.4.170",
+        "p3x-redis-ui-server": "^2020.4.168",
         "typeface-roboto": "0.0.75"
     },
     "build": {
@@ -107,9 +107,5 @@
                 "DISABLE_WAYLAND": 1
             }
         }
-    },
-    "collective": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/p3x-redis-ui"
     }
 }
