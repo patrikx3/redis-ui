@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-ui
+  namespace: redis-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: redis-ui
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: redis-ui
+    spec:
+      containers:
+      - name: redis-ui
+        image: patrikx3/p3x-redis-ui
+        ports:
+        - name: redis-ui
+          containerPort: 7843
+
+        volumeMounts:
+        - name: redis-ui-settings
+          mountPath: /settings/.p3xrs-conns.json
+          subPath: .p3xrs-conns.json
+
+      volumes:
+      - name: redis-ui-settings
+        configMap:
+          name: redis-ui-settings
