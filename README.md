@@ -114,6 +114,19 @@ wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.y
 docker-compose up
 ```
 
+### Kubernetes
+A complete example of deployment redis-ui in kubernetes using raw manifests
+https://github.com/patrikx3/redis-ui/blob/master/k8s
+
+```bash
+kubectl apply -f namespace.yaml
+# Do not forget to edit redis host and password configuration
+kubectl apply -f configmap.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
+```
+
 ### Bare
 
 ```bash

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-ui-settings
+  namespace: redis-ui
+data:
+  .p3xrs-conns.json: |
+    {
+      "list": [
+        {
+          "name": "cluster",
+          "host": "YOUR_REDIS_HOST",
+          "port": 6379,
+          "password": "YOUR_REDIS_PASSWORD",
+          "cluster": true,
+          "nodes": []
+        }
+      ]
+    }
