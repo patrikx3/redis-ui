@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.219
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.220
 
 
 
@@ -127,7 +127,7 @@ docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 784
 The GUI will be @ http://localhost:7843
 
 ### Kubernetes
-A complete example of deployment redis-ui in kubernetes using raw manifests
+A complete example of deployment `p3x-redis-ui` in kubernetes using raw manifests
 https://github.com/patrikx3/redis-ui/blob/master/k8s
 
 ```bash
@@ -305,7 +305,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.219
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.220
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
