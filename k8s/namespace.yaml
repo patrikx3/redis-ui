@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: redis-ui
+  name: p3x-redis-ui
