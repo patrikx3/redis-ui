@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.213
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.214
 
 
 
@@ -103,7 +103,7 @@ https://electronjs.org/apps/p3x-redis-ui
 
 https://hub.docker.com/r/patrikx3/p3x-redis-ui
 
-### Compose
+#### Compose
 https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
   
 
@@ -112,6 +112,15 @@ wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.y
 # You might want to tune the settings folder in the docker-compose.yml.
 # the /home/user/p3x-redis-ui-settings settings folder in yml should be set by yourself.
 docker-compose up
+```
+
+#### Bare
+
+```bash
+# you can tune the settings folder
+# in the -v first part is where you can set your own folder
+mkdir -p ./p3x-redis-ui-settings
+docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
 ```
 
 ### Kubernetes
@@ -125,15 +134,6 @@ kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
-```
-
-### Bare
-
-```bash
-# you can tune the settings folder
-# in the -v first part is where you can set your own folder
-mkdir -p ./p3x-redis-ui-settings
-docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
 ```
 
 The GUI will be @ http://localhost:7843
@@ -303,7 +303,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.213
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.214
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
