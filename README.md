@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.220
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.222
 
 
 
@@ -47,13 +47,24 @@ Some of the features are coming below.
 👷 **The first full complete version was created in 20 days in September of 2018.** 
 -->
 
+## Donated-Ware features
+The `p3x-redis-ui+` version has additional features.   
+The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@gmail.com) and can donate @ https://paypal.me/patrikx3  
+  
+The features that are only working in the donated-ware version:
+* JSON viewer
+* JSON editor
+
+#### Plus function problems
+Given, I do not have a full fledged server and to maintain the servers it costs money, it is possible, sometimes the server goes down. It is rare, but it will be back up probably in 5-10 minutes. If there is a problem that is longer, please contact me.
+
 ## Warning
 If you are reading the `readme` fom Docker, the links are not working, please read the `readme` from GitHub or Corifeus @ 
 * https://corifeus.com/redis-ui
 * https://github.com/patrikx3/redis-ui
    
 ## The online current version
-https://p3x.redis.patrikx3.com  
+https://p3x.redis.patrikx3.com  - this is the plus version
 
 This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.   
   
@@ -305,7 +316,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.220
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.222
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
