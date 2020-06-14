@@ -1,23 +1,25 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: redis-ui-ingress
-  namespace: redis-ui
+  name: p3x-redis-ui-ingress
+  namespace: p3x-redis-ui
   annotations:
     kubernetes.io/ingress.class: nginx
+
     # cert-manager support
     # cert-manager.io/cluster-issuer: letsencrypt
+
     # oauth2-proxy support
     # nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
     # nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
 spec:
   # tls:
-  # - hosts: [redis-ui.example.com]
-  #   secretName: redis-ui-tls
+  # - hosts: [p3x-redis-ui.example.com]
+  #   secretName: p3x-redis-ui-tls
   rules:
-  - host: redis-ui.example.com
+  - host: p3x-redis-ui.example.com
     http:
       paths:
       - backend:
-          serviceName: redis-ui-service
+          serviceName: p3x-redis-ui-service
           servicePort: 7843
