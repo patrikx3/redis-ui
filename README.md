@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.229
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.230
 
 
 
@@ -166,6 +166,7 @@ kubectl apply -f ingress.yaml
 * **Does not work with sentinel**
 * **Has experimental cluster support**
   * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) of the cluster function.
+* Able to monitor all channel messages on the console by using a checkbox.
 * Works with multiple languages
 * Works as a backend
 * Works as a desktop via Electron
@@ -203,7 +204,6 @@ kubectl apply -f ingress.yaml
     * For big key set to be usable paging should be a maximum 100 keys / page, though for 50 is the sweetest spot
   * This application is not recommended with over 100k keys, because it might just crash the NodeJs server. I can understand there are use cases where you need over 100k keys, but this is not that p3x-redis-ui. 
     * This app including functions like sorting and tree options that are fancy vs large sets ...
-* Able to monitor all channel messages on the console by using a checkbox.
 
 This software is more functional than fast ...
 
@@ -322,7 +322,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.229
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.230
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
