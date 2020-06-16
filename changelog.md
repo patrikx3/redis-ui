@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.4.233
+* FEATURE: Add format JSON to data.
+* FEATURE: Settings for JSON format 2 or 4 spaces.
+* BUGFIX: JSONEditor was not working as the app was overriding the document mousemove/mousedown/mouseup.
+
 ### v2020.4.226
 * BUGFIX: Enable donate-ware plus functions.
 
@@ -308,7 +313,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.230
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.233
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
