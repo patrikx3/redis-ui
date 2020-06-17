@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.4.264
+* FEATURE: default paging default increased from 50 to 250
+* FEATURE: layout for the string key editor, position change about is valid json switch
+
 ### v2020.4.259
 * FEATURE: Enable/disable animation on AngularJs/AngularJs Material in the settings / tree settings popup. The default is animation disabled from now.
 
@@ -330,7 +334,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.259
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.264
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
