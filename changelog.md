@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.4.272
+* FEATURE: GUI align layout on confirm popup (reverse button order)
+* FEATURE: keep the search box content so keeps in new requets will be filtered with this search box content 
+* BUGFIX: fix crash during rename, delete, set ttl key with a big open tree, for now there is a fix, but check if it is crashing again, until i find a 100% solution 
+
 ### v2020.4.264
 * FEATURE: default paging default increased from 50 to 250
 * FEATURE: layout for the string key editor, position change about is valid json switch
@@ -334,7 +339,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.264
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.272
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
