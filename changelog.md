@@ -5,8 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
-### Snapshot
+### v2020.4.284
+* FEATURE: Toast dismiss on click
 * FEATURE: Remove AngularJs being slow in the paging count redis settings
+* FEATURE: the tabs content is scrollable, so the tab labels are not scrollable anymore, so you always keep the tab labels to be shown
+* BUGFIX: More intelligent error handling
 
 ### v2020.4.277
 * BUGFIX: Remove sensitive data from Google analytics
@@ -348,7 +351,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.280
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.284
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

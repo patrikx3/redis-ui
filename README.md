@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.280
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.284
 
 
 
@@ -211,7 +211,7 @@ kubectl apply -f ingress.yaml
 * Maximum keys for this App
   * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
     * In that case, loading all keys into the browser takes about maximum 5-15 seconds
-    * For big key set to be usable paging should be a maximum 100 keys / page, though for 50 is the sweetest spot
+    * For big key set to be usable paging should be a maximum 500 keys / page, though for 250 is the sweetest spot
   * This application is not recommended with over 100k keys, because it might just crash the NodeJs server. I can understand there are use cases where you need over 100k keys, but this is not that p3x-redis-ui. 
     * This app including functions like sorting and tree options that are fancy vs large sets ...
 
@@ -332,7 +332,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.280
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.284
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
