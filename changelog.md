@@ -6,7 +6,11 @@
 [//]: #@corifeus-header:end
 
 ### Snapshot
-* FEATURE: in progress trying to enable ACE work with JSON Editor
+* BUGFIX: In small screen, cancel text is not hidden and missing tooltip
+* BUGFIX: Renamed Edit JSON Tree label to Edit JSON (with 4 sub-types: tree, view, preview, code)
+
+### v2020.4.295
+* FEATURE: Enable code editor in JSON Editor when switching type to code, it is working with dark mode as well
 
 ### v2020.4.292
 * BUGFIX: More intelligent error handling
@@ -359,7 +363,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.292
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.295
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
