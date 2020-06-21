@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.284
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.4.292
 
 
 
@@ -172,7 +172,6 @@ kubectl apply -f ingress.yaml
 ## Features 
 
 * To make more responsive the GUI, start with search in a key set, instead of loading every keys...
-* https://github.com/josdejong/jsoneditor has no dark variant, so it is always light
 * Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
 * Please, check out your Redis use case, if this program can cover your requirements
 * Does not handle binary data
@@ -332,7 +331,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.284
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.4.292
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
