@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### #2020.4.299
+* FEATURE: JSON editor in code mode for light theme using the github theme instead of the jsoneditor theme. 
+
 ### #2020.4.297
 * BUGFIX: In small screen, cancel text is not hidden and missing tooltip
 * BUGFIX: Renamed Edit JSON Tree label to Edit JSON (with 4 sub-types: tree, code, view, preview)
