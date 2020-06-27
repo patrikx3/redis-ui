@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: p3x-redis-ui-service
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: p3x-redis-ui-service
+spec:
+  ports:
+  - name: p3x-redis-ui
+    targetPort: p3x-redis-ui
+    port: 7843
+  selector:
+    app.kubernetes.io/name: p3x-redis-ui

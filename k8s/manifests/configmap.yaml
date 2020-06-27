@@ -11,7 +11,7 @@ data:
           "name": "cluster",
           "host": "YOUR_REDIS_HOST",
           "port": 6379,
-          "password": "YOUR_REDIS_PASSWORD_OR_EMPTY"
+          "password": "YOUR_REDIS_PASSWORD_OR_EMPTY",
         }
       ],
       "license": ""
