@@ -25,11 +25,11 @@ connections: []
 
 ingress:
   enabled: false
-  # annotations:
+  annotations: {}
   #   kubernetes.io/ingress.class: nginx
   #   cert-manager.io/cluster-issuer: letsencrypt
-  # paths: [/]
-  # hosts: [host]
-  # tls:
+  paths: [/]
+  hosts: []
+  tls: []
   # - hosts: [host]
   #   secretName: host-tls
