@@ -20,6 +20,8 @@ spec:
         ports:
         - name: p3x-redis-ui
           containerPort: 7843
+        resources:
+{{ toYaml .Values.resources | indent 10 }}
         volumeMounts:
         - name: p3x-redis-ui-settings
           mountPath: /settings/.p3xrs-conns.json

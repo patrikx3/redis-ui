@@ -6,14 +6,22 @@ image:
 
 replicas: 1
 
-connections: []
-# - name:
-#   host:
-#   port:
-#   password:
-#   azure: false
-#   cluster: false
-#   awsElastiCache: false
+resources: {}
+  # requests:
+  #   cpu: 100m
+  #   memory: 100M
+  # limits:
+  #   cpu: 200m
+  #   memory: 200M
+
+connections: # []
+- name:
+  host:
+  port:
+  password:
+  azure: false
+  cluster: false
+  awsElastiCache: false
 
 ingress:
   enabled: false
