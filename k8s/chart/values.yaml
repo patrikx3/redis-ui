@@ -14,14 +14,14 @@ resources: {}
   #   cpu: 200m
   #   memory: 200M
 
-connections: # []
-- name:
-  host:
-  port:
-  password:
-  azure: false
-  cluster: false
-  awsElastiCache: false
+connections: []
+# - name:
+#  host:
+#  port:
+#  password:
+#  azure: false
+#  cluster: false
+#  awsElastiCache: false
 
 ingress:
   enabled: false
