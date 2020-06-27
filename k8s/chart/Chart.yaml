@@ -1,0 +1,4 @@
+apiVersion: v1
+description: P3X Redis UI Helm chart
+name: p3x-redis-ui
+version: 0.0.1
