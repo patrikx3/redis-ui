@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: p3x-redis-ui-settings
+  namespace: {{ .Release.Namespace }}
+data:
+  .p3xrs-conns.json: |
+    {
+      "list": [
+        {{- if .Values.connections }}
+        {{- $length := .Values.connections | len }}
+        {{- range $index, $connection := .Values.connections }}
+          {
+            "name": "{{ $connection.name }}",
+            "host": "{{ $connection.host }}",
+            "port": {{ $connection.port }},
+            "password": "{{ $connection.password }}",
+            "azure": {{ $connection.azure | default false }},
+            "cluster": {{ $connection.cluster | default false }},
+            "awsElastiCache": {{ $connection.awsElastiCache | default false }}
+          }
+          {{- if ne $length ($index | add1) }}
+            ,
+          {{- end -}}
+        {{- end -}}
+        {{- end -}}
+      ],
+      "license": ""
+    }

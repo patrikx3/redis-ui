@@ -1,0 +1,27 @@
+
+image:
+  repository: patrikx3/p3x-redis-ui
+  tag: latest
+  pullPolicy: Always
+
+replicas: 1
+
+connections: []
+# - name:
+#   host:
+#   port:
+#   password:
+#   azure: false
+#   cluster: false
+#   awsElastiCache: false
+
+ingress:
+  enabled: false
+  # annotations:
+  #   kubernetes.io/ingress.class: nginx
+  #   cert-manager.io/cluster-issuer: letsencrypt
+  # paths: [/]
+  # hosts: [host]
+  # tls:
+  # - hosts: [host]
+  #   secretName: host-tls

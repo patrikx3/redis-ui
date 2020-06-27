@@ -156,8 +156,9 @@ docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 784
 The GUI will be @ http://localhost:7843
 
 ### Kubernetes
+
 A complete example of deployment `p3x-redis-ui` in kubernetes using raw manifests
-https://github.com/patrikx3/redis-ui/blob/master/k8s
+https://github.com/patrikx3/redis-ui/blob/master/k8s/manifests
 
 ```bash
 kubectl apply -f namespace.yaml
@@ -168,7 +169,14 @@ kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
 
-  
+Helm chart `p3x-redis-ui` deployment in kubernetes
+https://github.com/patrikx3/redis-ui/blob/master/k8s/chart
+
+```bash
+helm template -f values.yaml release --namespace namespace . > generated.yaml
+kubectl apply -f generated.yaml
+```
+
 ## Features 
 
 * To make more responsive the GUI, start with search in a key set, instead of loading every keys...
