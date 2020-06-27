@@ -13,8 +13,9 @@ data:
           {
             "name": "{{ $connection.name }}",
             "host": "{{ $connection.host }}",
-            "port": {{ $connection.port }},
+            "port": {{ $connection.port | default 6379 }},
             "password": "{{ $connection.password }}",
+            "nodes": [],
             "azure": {{ $connection.azure | default false }},
             "cluster": {{ $connection.cluster | default false }},
             "awsElastiCache": {{ $connection.awsElastiCache | default false }}
@@ -25,5 +26,5 @@ data:
         {{- end -}}
         {{- end -}}
       ],
-      "license": ""
+      "license": "{{ .Values.license }}"
     }

@@ -4,7 +4,17 @@ image:
   tag: latest
   pullPolicy: Always
 
+license:
+
 replicas: 1
+
+resources: {}
+  # requests:
+  #   cpu: 100m
+  #   memory: 100M
+  # limits:
+  #   cpu: 200m
+  #   memory: 200M
 
 connections: []
 # - name:
@@ -17,11 +27,11 @@ connections: []
 
 ingress:
   enabled: false
-  # annotations:
+  annotations: {}
   #   kubernetes.io/ingress.class: nginx
   #   cert-manager.io/cluster-issuer: letsencrypt
-  # paths: [/]
-  # hosts: [host]
-  # tls:
+  paths: [/]
+  hosts: []
+  tls: []
   # - hosts: [host]
   #   secretName: host-tls
