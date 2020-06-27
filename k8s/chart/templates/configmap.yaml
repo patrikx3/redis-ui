@@ -15,6 +15,7 @@ data:
             "host": "{{ $connection.host }}",
             "port": {{ $connection.port | default 6379 }},
             "password": "{{ $connection.password }}",
+            "nodes": [],
             "azure": {{ $connection.azure | default false }},
             "cluster": {{ $connection.cluster | default false }},
             "awsElastiCache": {{ $connection.awsElastiCache | default false }}
