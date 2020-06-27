@@ -16,12 +16,12 @@ resources: {}
 
 connections: []
 # - name:
-#  host:
-#  port:
-#  password:
-#  azure: false
-#  cluster: false
-#  awsElastiCache: false
+#   host:
+#   port:
+#   password:
+#   azure: false
+#   cluster: false
+#   awsElastiCache: false
 
 ingress:
   enabled: false
