@@ -4,6 +4,8 @@ image:
   tag: latest
   pullPolicy: Always
 
+license:
+
 replicas: 1
 
 resources: {}

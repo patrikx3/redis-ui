@@ -25,5 +25,5 @@ data:
         {{- end -}}
         {{- end -}}
       ],
-      "license": ""
+      "license": "{{ .Values.license }}"
     }
