@@ -1,8 +1,8 @@
 
 image:
   repository: patrikx3/p3x-redis-ui
-  tag: 2020.4.307
-  pullPolicy: IfNotPresent
+  tag: latest
+  pullPolicy: Always
 
 replicas: 1
 
