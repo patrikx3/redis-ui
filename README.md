@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.10.105
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.10.107
 
 
 
@@ -180,6 +180,7 @@ kubectl apply -f generated.yaml
 
 ## Features 
 
+* There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
 * To make more responsive the GUI, start with search in a key set, instead of loading every keys...
 * Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
 * Please, check out your Redis use case, if this program can cover your requirements
@@ -219,7 +220,7 @@ kubectl apply -f generated.yaml
 * Maximum keys for this App
   * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
     * In that case, loading all keys into the browser takes about maximum 5-15 seconds
-    * For big key set to be usable paging should be a maximum 500 keys / page, though for 250 is the sweetest spot
+    * For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
   * This application is not recommended with over 100k keys, because it might just crash the NodeJs server. I can understand there are use cases where you need over 100k keys, but this is not that p3x-redis-ui. 
     * This app including functions like sorting and tree options that are fancy vs large sets ...
 
@@ -248,9 +249,7 @@ This software is more functional than fast ...
     
 **The sweet spot for the key count is around 10-20k including key sorting with max 100 key / page and still the app is very responsive. If you have a huge key set, make sure to search on the server and it will be very responsive.**  
 Above 10-20k key count as the key large set grows the GUI latency is including as well.    
-    
-        
-Of course, we could set a limit and the UI would be always responsive, but there was no request of this feature.
+
   
 # TODO
 [The to do readme](todo.md) 
@@ -340,7 +339,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.105
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.107
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
