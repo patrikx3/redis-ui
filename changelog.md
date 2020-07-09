@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### V2020.10.112
+* BUGFIX: The new key count limit feature was crashing, found a good solution.
+* BUGFIX: On search, was not resetting the page (sometimes was showing invalid page)
+
 ### v2020.10.107
 * FEATURE: Allow paging to 1000 items (from 500 - since deferred rendering is faster)
 * FEATURE: Limit max key count in the tree settings or the settings page (The maximum key count value must be an integer between 100 and 100000)
@@ -385,7 +389,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.109
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.112
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
