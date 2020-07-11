@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.10.148
+* BUGFIX: Was missing to copy icon and function in the key value editor popup
+* BUGFIX: Was missing the JSON viewer in the key value editor popup
+
 ### v2020.10.141
 * FEATURE: You can change the language from the WEB GUI via using a helper Express app in Electron at 7845 port, the menu is not needed (ALT) - this is issue is not present in web version
 
@@ -415,7 +419,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.143
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.148
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
