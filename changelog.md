@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.10.121
+* FEATURE: Enable JSON Viewer and JSON Format in all versions (donated, non donated) 
+
 ### v2020.10.119
 * FEATURE: By default enable key sorting with natural compare
 * BUGFIX: The main page with the tree layout, was constructed with debounce, now it is instant.
@@ -393,7 +396,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.119
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.121
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
