@@ -10,6 +10,9 @@ process.on('uncaughtException', function (err) {
 const boot = require('p3x-redis-ui-server/src/lib/boot')
 boot()
 
+const bootElectronControl = require('./express/boot')
+bootElectronControl()
+
 require('./electron/global.js');
 
 
