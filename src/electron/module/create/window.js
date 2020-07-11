@@ -8,6 +8,7 @@ function createWindow() {
         icon: global.p3xre.iconFile,
         title: global.p3xre.strings.title,
         backgroundColor: 'black',
+        autoHideMenuBar: true,
         webPreferences: {
             webviewTag: true,
             nodeIntegration: true,
@@ -16,6 +17,7 @@ function createWindow() {
         }
     });
 
+    //global.p3xre.mainWindow.setAutoHideMenuBar(false)
 
     global.p3xre.setVisible(true);
 
@@ -104,7 +106,7 @@ function createWindow() {
             // let log_message = "Download speed: " + progressObj.bytesPerSecond;
             // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
             // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
-    
+
             global.p3xre.mainWindow.webContents.send('p3x-action', {
                 action: 'toast',
                 message: p3xre.strings.updater["download-progress"]({
