@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron');
+const {ipcRenderer, shell} = require('electron');
 
 
 let domReady = false
@@ -78,12 +78,21 @@ window.p3xreRun = async function () {
 
         //global.p3xre.webview.src = 'http://localhost:7844';
 
-        global.p3xre.webview.addEventListener("dom-ready", async function () {
+        global.p3xre.webview.addEventListener("dom-ready", function () {
             domReady = true
             if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
                 global.p3xre.webview.openDevTools();
             }
         })
+
+        global.p3xre.webview.addEventListener('new-window', function (event) {
+
+            event.preventDefault()
+            shell.openExternal(event.url)
+
+        });
+
+
 
         if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
             console.log('development mode')
