@@ -11,10 +11,10 @@ const boot = () => {
     app.post('/api/set-language', (req, res) => {
         const key = req.body.language
 
-        global.p3xre.currentTranslation = key;
-        global.p3xre.conf.set('current-translation', key)
-        global.p3xre.strings = require('../strings/' + key)
-        require('../electron/module/create/menu')()
+        require('../lib/set-language')({
+            key: key
+        })
+
         res.send({
             status: 'ok'
         })

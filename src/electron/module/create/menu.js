@@ -198,14 +198,13 @@ function mainMenu() {
     for (let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
         const clickFunction = (key) => {
             return () => {
-                global.p3xre.currentTranslation = key;
-                global.p3xre.conf.set('current-translation', key)
-                global.p3xre.strings = require('../../../strings/' + key)
+
+                require('../../../lib/set-language')({
+                    key: key
+                })
                 global.p3xre.mainWindow.webContents.send('p3x-set-language', {
                     translation: key
                 })
-                //console.warn('set language', key)
-                mainMenu()
             }
         }
         template[languageIndex].submenu.push({
