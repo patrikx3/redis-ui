@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.10.170
+# 📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron) v2020.10.172
 
 
 
@@ -47,7 +47,11 @@ Some of the features are coming below.
 👷 **The first full complete version was created in 20 days in September of 2018.** 
 -->
 
+<!--
 ## Donated-Ware features
+  
+**Until further notice, all donated-ware features are enabled for free. Please, test out your use case, how the JSON editor is helping you. Let us know!**
+
 The `p3x-redis-ui+` version has additional features.   
 The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@gmail.com) and can donate @ https://paypal.me/patrikx3  
   
@@ -75,6 +79,8 @@ Given, I do not have a full fledged server and to maintain the servers it costs 
 ### Contributors license
 Contributors get plus donate license for free for a year.    
 Contributors, that created features that are working only in the donate-ware version get a license for life.  
+  
+-->  
   
 ## Warning
 If you are reading the `readme` fom Docker, the links are not working, please read the `readme` from GitHub or Corifeus @ 
@@ -222,8 +228,6 @@ kubectl apply -f generated.yaml
   * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
     * For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
 
-This software is more functional than fast ...
-  
 # TODO
 [The to do readme](todo.md) 
 
@@ -312,7 +316,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.170
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.172
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
