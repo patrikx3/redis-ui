@@ -12,7 +12,7 @@ if (currentTranslation === undefined) {
 
 global.p3xre = {
     dev: process.env.NODE_ENV === 'development',
-    iconFile: `${__dirname}/images/256x256.png`,
+    iconFile: `${__dirname}/images/128x128.png`,
     mainWindow: undefined,
     pkg: pkg,
     indexHtml: 'file://' + __dirname + '/window/main/index.html',
