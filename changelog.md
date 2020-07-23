@@ -5,9 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### Snapshot
+* The APPImage snakc bar is clickable to hide the toast.
+
 ### v2020.10.315
 * FEATURE: Matrix theme - in progress.
-* FEATURE: On the key page the set ttl is a dialog now, and you can covert text to seconds (eg. 1d -> 86400)
+* FEATURE: On the key page the set ttl is a dialog now, and you can convert text to seconds (eg. 1d -> 86400)
 
 ### v2020.10.313
 * BUGFIX: Set TTL function was throwing an error.
@@ -460,7 +463,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.315
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.316
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
