@@ -5,8 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.10.327
+* CHORE: AngularJs Material v1.2.0 is changing the theme, probably wait until the new release is fixed. The colors are off after upgrade.
+* FEATURE: Dark toast has a white border.
+
 ### v2020.10.325
-* The Electron snack bar is clickable to hide the toast. (is always black, not themed)
+* FEATURE: The Electron snack bar is clickable to hide the toast. (is always black, not themed)
 
 ### v2020.10.315
 * FEATURE: Matrix theme - in progress.
@@ -463,7 +467,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.325
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.327
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
