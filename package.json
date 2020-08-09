@@ -1,7 +1,7 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2020.10.331",
-    "description": "📡 P3X Redis UI handles huge key sets, is functional and works on the web and desktop (Electron)",
+    "version": "2020.10.332",
+    "description": "📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron)",
     "corifeus": {
         "snap": true,
         "icon": "fas fa-database",
@@ -79,8 +79,8 @@
         "cors": "^2.8.5",
         "electron-updater": "^4.3.4",
         "express": "^4.17.1",
-        "p3x-redis-ui-material": "^2020.10.320",
-        "p3x-redis-ui-server": "^2020.10.158",
+        "p3x-redis-ui-material": "^2020.10.321",
+        "p3x-redis-ui-server": "^2020.10.159",
         "typeface-roboto": "0.0.75"
     },
     "build": {
