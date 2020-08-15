@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.332
+# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.335
 
 
 
@@ -195,7 +195,7 @@ kubectl apply -f generated.yaml
 * Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
 * Please, check out your Redis use case, if this program can cover your requirements
 * Does not handle binary data
-* **Does not work with sentinel**
+* **Does not work with sentinel**, but it will be developed at some point of time
 * **Has experimental cluster support**
   * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) of the cluster function.
 * Able to monitor all channel messages on the console by using a checkbox.
@@ -321,7 +321,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.332
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.335
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

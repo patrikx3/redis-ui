@@ -1,7 +1,7 @@
 
-@license p3x-redis-ui v2020.10.331
+@license p3x-redis-ui v2020.10.335
   
-📡 P3X Redis UI handles huge key sets, is functional and works on the web and desktop (Electron)
+📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron)
 
 https://corifeus.com/redis-ui
 
