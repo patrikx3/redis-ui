@@ -80,7 +80,7 @@ window.p3xreRun = async function () {
 
         global.p3xre.webview.addEventListener("dom-ready", function () {
             domReady = true
-            if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
+            if (process.env.hasOwnProperty('NODE_ENV') && (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
                 global.p3xre.webview.openDevTools();
             }
         })

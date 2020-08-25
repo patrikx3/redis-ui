@@ -19,6 +19,7 @@ global.p3xre = {
     strings: require('../strings/' + currentTranslation + '/index'),
     currentTranslation: currentTranslation,
     conf: conf,
+    setLanguage: require('../lib/set-language')
 }
 
 global.p3xre.setVisible = (visible = true) => {

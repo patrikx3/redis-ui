@@ -10,17 +10,13 @@ process.on('uncaughtException', function (err) {
 const boot = require('p3x-redis-ui-server/src/lib/boot')
 boot()
 
-const bootElectronControl = require('./express/boot')
-bootElectronControl()
-
 require('./electron/global.js');
-
 
 const {app, ipcMain} = require('electron')
 
 //app.commandLine.appendSwitch("ignore-certificate-errors");
 
-if (process.env.NODE_ENV === 'development') {
+if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
     app.commandLine.appendSwitch('remote-debugging-port', '9222')
 }
 
