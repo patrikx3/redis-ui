@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2020.10.354",
+    "version": "2020.10.357",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron)",
     "corifeus": {
         "snap": true,
@@ -10,7 +10,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v12.18.3",
+        "nodejs": "v12.18.4",
         "reponame": "redis-ui",
         "opencollective": false
     },
@@ -59,9 +59,9 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2020.10.109",
-        "electron": "^10.1.1",
-        "electron-builder": "^22.8.0",
+        "corifeus-builder": "^2020.10.113",
+        "electron": "^10.1.3",
+        "electron-builder": "^22.8.1",
         "rimraf": "^3.0.2"
     },
     "engines": {
@@ -72,12 +72,12 @@
         "angular": "^1.8.0",
         "angular-animate": "^1.8.0",
         "angular-aria": "^1.8.0",
-        "angular-material": "^1.2.0",
+        "angular-material": "^1.2.1",
         "angular-messages": "^1.8.0",
         "configstore": "^4.0.0",
-        "electron-updater": "^4.3.4",
-        "p3x-redis-ui-material": "^2020.10.410",
-        "p3x-redis-ui-server": "^2020.10.174",
+        "electron-updater": "^4.3.5",
+        "p3x-redis-ui-material": "^2020.10.416",
+        "p3x-redis-ui-server": "^2020.10.177",
         "typeface-roboto": "0.0.75"
     },
     "build": {
