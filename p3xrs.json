@@ -10,6 +10,13 @@
         },
         "static-info": "This is the best configuration, if it starts with ~, then it is in resolve the path in the node_modules, otherwise it resolves to the current process current working directory.",
         "static": "~p3x-redis-ui-material/dist",
-        "license-key": "future-use"
+        "license-key": "future-use",
+        "treeDividers": [
+            ":",
+            "/",
+            "|",
+            "-",
+            "@"
+        ]
     }
 }
