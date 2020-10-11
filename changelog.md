@@ -5,22 +5,22 @@
                         
 [//]: #@corifeus-header:end
 
-## v2020.10.371
+### v2020.10.371
 * FEATURE: Replaced the AngularJs Treecontrol leaf icons to FontAwesome.
 
-## v2020.10.367
+### v2020.10.367
 * BUGFIX: The `set` type key was not showing the data.
 
-## v2020.10.365
+### v2020.10.365
 * FEATURE: Tree divider is configurable in `p3xrs.json` as an array of characters. It can be disabled by setting an empty array, otherwise it will use the default `:`, `/`, `|`, `-`, `@`. 
 
-## v2020.10.363
+### v2020.10.363
 * FEATURE: Tree divider as a selector popup beside the tree divider input for common scenarios.
 
-## v2020.10.361
+### v2020.10.361
 * BUGFIX: Azure/Google/Amazon database count fix.
 
-## v2020.10.359
+### v2020.10.359
 * FEATURE: Enable the database selector via a hack (probing until a db index is found wrong) for Azure/Google/Amazon.
 
 ### v2020.10.350
@@ -498,7 +498,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.371
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.372
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
