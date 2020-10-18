@@ -7,6 +7,28 @@ process.on('uncaughtException', function (err) {
     process.exit(-1)
 });
 
+let findFreePort = require('find-port-free-sync');
+let available = false;
+const maxTries = 100
+let tries = 0
+do {
+    try {
+        tries++
+        global.p3xrsElectronPort = findFreePort({
+            start: 10000,
+            end: 60000
+        });
+        console.log('trying open port', global.p3xrsElectronPort)
+        available = true
+    } catch(e) {
+        console.warn(e)
+    }
+} while (!available && tries < maxTries)
+
+if (!available) {
+    throw new Error(`Could not find an open port by trying ${maxTries}.`)
+}
+
 const boot = require('p3x-redis-ui-server/src/lib/boot')
 boot()
 
@@ -53,4 +75,3 @@ app.on('activate', function () {
         createWindow();
     }
 });
-

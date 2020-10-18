@@ -101,7 +101,11 @@ window.p3xreRun = async function () {
 //            console.log(global.p3xre.webview)
 //            console.log(global.p3xre.webview.src)
         } else {
-            global.p3xre.webview.src = 'http://localhost:7844';
+
+            const urlParams = new URLSearchParams(global.location.search)
+            const port = urlParams.get('port')
+
+            global.p3xre.webview.src = 'http://localhost:' + port;
         }
 
 

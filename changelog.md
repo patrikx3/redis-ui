@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2020.10.421
+* FEATURE: On Electron, now, finds an open port and load the app from that port. Before, it was using fixed 7844 port, but you could not use the app at the same time with multiple users. Now, it does.
+
 ### v2020.10.418
 * BUGFIX: Electron and Web version was using different versioning, now, it is matched.
 
@@ -537,7 +540,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.418
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.421
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

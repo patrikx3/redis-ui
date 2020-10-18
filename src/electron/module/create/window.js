@@ -12,6 +12,7 @@ function createWindow() {
         webPreferences: {
             webviewTag: true,
             nodeIntegration: true,
+            worldSafeExecuteJavaScript: false,
 //            allowRunningInsecureContent: true,
 //            webSecurity: false,
         }
@@ -21,7 +22,7 @@ function createWindow() {
 
     global.p3xre.setVisible(true);
 
-    global.p3xre.mainWindow.loadURL(global.p3xre.indexHtml);
+    global.p3xre.mainWindow.loadURL(`${global.p3xre.indexHtml}?port=${global.p3xrsElectronPort}`);
 
 
     if (global.p3xre.dev) {
