@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.429
+# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.430
 
 
 
@@ -44,7 +44,7 @@ https://nodejs.org/en/download/package-manager/
   
 Some of the features are coming below. 
   
-The best use case for this Redis GUI, if you manage tons of JSON, as it includes JSONEditor and ACE.
+The best use case for this Redis GUI, if you manage tons of JSON, as it includes JSONEditor and ACE. Check out the different options in the edit json button dialog. :)
 
 <!--
 👷 **The first full complete version was created in 20 days in September of 2018.** 
@@ -322,7 +322,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.429
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.430
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
