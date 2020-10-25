@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.467
+# 📡 P3X Redis UI is a very functional handy database GUI and works on the responsive web and desktop (Electron) v2020.10.469
 
 
 
@@ -188,16 +188,15 @@ kubectl apply -f generated.yaml
 
 ## Features 
 
-* In a sub-directory, you can use Nginx or Ingress to rewrite your paths.
+* In a sub-directory, you can use Nginx/Ingress to rewrite your paths.
   * https://github.com/patrikx3/redis-ui/issues/43
 * To show the menu in the desktop version, click ALT
 * There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
-* To make more responsive the GUI, start with search in a key set, instead of loading every keys...
 * Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
 * Please, check out your Redis use case, if this program can cover your requirements
 * Does not handle binary data
 * **Does not work with sentinel**, but it will be developed at some point of time
-* **Has experimental cluster support**
+* **Has cluster support**
   * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) of the cluster function.
 * Able to monitor all channel messages on the console by using a checkbox.
 * Works with multiple languages
@@ -206,7 +205,6 @@ kubectl apply -f generated.yaml
   * Linux
   * Windows
   * macOS
-* I took very careful of the error handling (as much I can find errors)
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
 * Able to use the console and interact with Redis
@@ -226,11 +224,9 @@ kubectl apply -f generated.yaml
   * Search mode
     * the search keys starts with a string key
     * the search keys includes a string in the key
-* From 320px width, it is supposed to be 100% responsive
-* There is a key sorting function, which has a penalty, because it sorts with natural compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
-* Maximum keys for this App
-  * This application is usable up to 100k keys - given it pre-loads all keys and related info at once plus sorting - with natural comparing ...
-    * For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
+* The app is responsive, it works on a phone/tablet as well
+* There is a key sorting function, which has a penalty, because it sorts with natural-compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
+* For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
 
 # TODO
 [The to do readme](todo.md) 
@@ -322,7 +318,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.467
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.469
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
