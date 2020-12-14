@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2020.10.530
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2020.10.533
 
 
 
@@ -191,6 +191,7 @@ kubectl apply -f generated.yaml
 
 ## Features 
 
+* In the connections, you can enable read only mode, which means, the user will not be able to modify via gui and the console is disabled. Only pub/sub monitor and select database is allowed. 
 * In a sub-directory, you can use Nginx/Ingress to rewrite your paths.
   * https://github.com/patrikx3/redis-ui/issues/43
 * To show the menu in the desktop version, click ALT
@@ -321,7 +322,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.530
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2020.10.533
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
