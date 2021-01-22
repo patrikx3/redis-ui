@@ -5,9 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
-### 2021.4.101
+### v2021.4.101
 * FEATURE: Font styling.
-* FEATURE: On loading keys, now the overlay is removed (https://github.com/patrikx3/redis-ui-material/pull/5)
+* FEATURE: On loading keys, the loading indicator overlay is removed (https://github.com/patrikx3/redis-ui-material/pull/5)
 
 ### v2020.10.533
 * FEATURE: Allow by connection to be read only mode (GUI elements removed and console is disabled, only pub/sub monitor or select database allowed)
@@ -655,7 +655,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.4.101
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.4.102
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
