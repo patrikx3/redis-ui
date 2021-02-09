@@ -1,5 +1,5 @@
-os: osx
-osx_image: xcode8
+#os: osx
+#osx_image: xcode8
 language: node_js
 cache:
   npm: false
@@ -7,8 +7,8 @@ node_js:
 - lts/*
 before_script:
 - npm install -g grunt-cli npm
-- export CSC_IDENTITY_AUTO_DISCOVERY=false
-- npm run publish-osx
+#- export CSC_IDENTITY_AUTO_DISCOVERY=false
+#- npm run publish-osx
 env:
   global:
     secure: ECk/gRFAcvpx4owMF07xlpktN5+6DNaSCUKoMGobTlPz0HMTwGeYB7CcnyeXwv3e+vmZcwyC+U9Yvf932lqHx4wJ1p3LUdBuskFpLXEax1CJeEVp7DRwRKQYPzshT/g1Jh9RJvKHPi6+O70MmkfeAMZ2aLOMznu4TwFDUygBgc7c3fkpCUN0mGqC9mugrITtV24X+ttfJ0cij38WzdYC2n30KTX4tnHRgKyp9mrvNU1lrgaYYEZHo4JsNjJar+huFzdAuB3dEkhqm6z9ScPD6Kg2/b7EPs8Ga3SQs9MhrhbIbuijT4r2Nee8ehzmkOdvSXjAb+KaOpVnpeOvD3IjGKW11zTVnAICdmry76IaLm7NEFYe8SmvsjzbrTCp5WTBr9qYbwSjw4c2K3e7qoA4Wnh/0jyIxDmwz//DdWngS1uSq97ivXBoJ04mMteovsNz+auFMXe1J0HLGV69aCuUzx0jdXnzXJCCMdpwt+Po+THR/wAxya/giW5F2zBDlk8TV19jebD2qCx7rCdqfY8ZwTxHGXfbGe9wMuCh8YWJN12/arNO+PkP0am3PvHDjMzeOAKAJF/eqlMfXDM/9SX6KFAUwSDhRhB2IOg4cjcLUTJhubi1waXZD57UG3/8xAqZXBuZNjPNmSBtCR5fzQSL2ITBfjXMPrBOekG1GYgF33g=
