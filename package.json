@@ -62,7 +62,7 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2021.4.102",
+        "corifeus-builder": "^2021.4.115",
         "electron": "^11.2.3",
         "electron-builder": "^22.9.1",
         "rimraf": "^3.0.2"
