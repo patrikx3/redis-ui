@@ -20,6 +20,7 @@ connections: []
 # - name:
 #   host:
 #   port:
+#   id: (unique)
 #   password:
 #   azure: false
 #   cluster: false
