@@ -130,6 +130,48 @@ function mainMenu() {
             submenu: []
         },
         {
+            label: global.p3xre.strings.menu.settings.title,
+            submenu: [
+                {
+                    label: global.p3xre.strings.menu.settings.hideMenu,
+                    type: 'checkbox',
+                    checked: global.p3xre.optionToHideMenu,
+                    click: () => {
+                        try {
+
+                            global.p3xre.optionToHideMenu = !global.p3xre.optionToHideMenu
+                            global.p3xre.conf.set('option-to-hide-menu', global.p3xre.optionToHideMenu,);
+
+                            if (!global.p3xre.optionToHideMenu) {
+                                global.p3xre.mainWindow.setAutoHideMenuBar(false)
+                                global.p3xre.mainWindow.setMenuBarVisibility(true)
+                            } else {
+                                const message = `
+${global.p3xre.strings.menu.settings.optionToHideMenuState.yes}
+
+${global.p3xre.strings.message.restart}
+`
+
+                                dialog.showMessageBox( global.p3xre.mainWindow, {
+                                    type: 'info',
+//                                title: global.p3x.onenote.lang.dialog.minimizationBehavior.title,
+                                    message: message,
+                                    buttons: [global.p3xre.strings.button.ok]
+                                }).then(() => {
+                                    require('../../../lib/relaunch')()
+                                }).catch(e => console.error(e))
+
+                            }
+
+
+                        } catch(e) {
+                            console.error(e)
+                        }
+                    }
+                },
+            ]
+        },
+        {
             role: 'help',
             submenu: [
 
@@ -194,7 +236,7 @@ function mainMenu() {
         },
     ]
 
-    const languageIndex = template.length - 1 - 2
+    const languageIndex = template.length - 1 - 3
     for (let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
         const clickFunction = (key) => {
             return () => {

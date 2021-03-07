@@ -12,6 +12,12 @@ module.exports = {
         },
         'update-downloaded': '更新已下载。您可以重新启动应用程序应用更新。'
     },
+    button: {
+        ok: '好的',
+    },
+    message: {
+        restart: '请稍候，应用程序正在重新启动。',
+    },
     menu: {
         main: {
             home: '主页',
@@ -47,6 +53,13 @@ module.exports = {
                 en: '英语 / English',
                 zn: '中文 / Chinese'
             }
+        },
+        settings: {
+            title: '设定值',
+            hideMenu: '隐藏主菜单（与ALT一起显示）',
+            optionToHideMenuState: {
+                yes: '重新启动后，它将隐藏菜单并在ALT上显示。',
+            },
         },
         help: {
             changelog: '更新日志',

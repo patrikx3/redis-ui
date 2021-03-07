@@ -8,7 +8,7 @@ function createWindow() {
         icon: global.p3xre.iconFile,
         title: global.p3xre.strings.title,
         backgroundColor: 'black',
-        autoHideMenuBar: true,
+        autoHideMenuBar: global.p3xre.optionToHideMenu,
         webPreferences: {
             webviewTag: true,
             nodeIntegration: true,

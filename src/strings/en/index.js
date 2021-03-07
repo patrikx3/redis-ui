@@ -12,6 +12,12 @@ module.exports = {
         },
         'update-downloaded': 'Update downloaded. You may restart the app to update.'
     },
+    button: {
+      ok: 'OK',
+    },
+    message: {
+        restart: 'Please hang on, the application is restarting.',
+    },
     menu: {
         main: {
             home: 'Home',
@@ -51,6 +57,13 @@ module.exports = {
                 en: 'English',
                 zn: 'Chinese / 中文'
             }
+        },
+        settings: {
+            title: 'Settings',
+            hideMenu: 'Hide main menu (show with ALT)',
+            optionToHideMenuState: {
+                yes: 'After restart, it will hide the menu and show on ALT.',
+            },
         },
         help: {
             changelog: 'Change log',
