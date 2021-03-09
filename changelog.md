@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### v2021.4.160
-* BUGFIX: Connection error (was on an open connection, then switching to a invalid configuration and as it was on the console, it kept on console, when there was no connection, so this view was invalid, shoul not show any view where there is no connection) 
+* BUGFIX: Connection error (was on an open connection, then switching to a invalid configuration and as it was on the console, it kept on console, when there was no connection, so this view was invalid, should not show any view where there is no connection) 
 
 ### v2021.4.158
 * FEATURE: Added `username` for Redis configuration to work with since Redis v6 ACL
