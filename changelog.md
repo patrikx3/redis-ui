@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### v2021.4.158
-* FEATURE: Added `username` for Redis configuration to work with since Redis v6
+* FEATURE: Added `username` for Redis configuration to work with since Redis v6 ACL
 
 ### v2021.4.156
 * BUGFIX: Hardening the server.
