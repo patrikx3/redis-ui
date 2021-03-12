@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2021.4.162
+* FEATURE: Moved the hash/list/set/stream/zset pager component from spaghetti code to a real component
+
 ### v2021.4.160
 * BUGFIX: Connection error (was on an open connection, then switching to a invalid configuration and as it was on the console, it kept on console, when there was no connection, so this view was invalid, should not show any view where there is no connection) 
 
@@ -703,7 +706,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.4.160
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.4.162
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
