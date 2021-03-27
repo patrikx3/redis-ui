@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2021.4.164
+* BUGFIX: The `ioredis` `db` configuration is giving an error.  (https://github.com/luin/ioredis/issues/1310)
+
 ### v2021.4.162
 * FEATURE: Moved the hash/list/set/stream/zset pager component from spaghetti code to a real component
 
