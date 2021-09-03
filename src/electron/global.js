@@ -1,8 +1,8 @@
-const configstore = require('configstore');
 
 const pkg = require('../../package.json');
 
-const conf = new configstore(pkg.name);
+const Store = require('electron-store');
+const conf = new Store();
 
 let currentTranslation = conf.get('current-translation')
 
