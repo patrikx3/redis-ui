@@ -13,7 +13,7 @@ function createWindow() {
             webviewTag: true,
             nodeIntegration: true,
             contextIsolation: false,
-
+            nativeWindowOpen: true,
             worldSafeExecuteJavaScript: false,
 //            allowRunningInsecureContent: true,
 //            webSecurity: false,
