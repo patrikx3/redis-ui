@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2021.10.129",
+    "version": "2021.10.133",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -62,8 +62,8 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2021.10.122",
-        "electron": "^14.0.0",
+        "corifeus-builder": "^2021.10.126",
+        "electron": "^14.0.1",
         "electron-builder": "^22.11.7",
         "rimraf": "^3.0.2"
     },
@@ -78,11 +78,11 @@
         "angular-aria": "^1.8.2",
         "angular-material": "^1.2.3",
         "angular-messages": "^1.8.2",
-        "electron-store": "^8.0.0",
+        "electron-store": "^8.0.1",
         "electron-updater": "^4.3.9",
         "get-port": "^5.1.1",
-        "p3x-redis-ui-material": "^2021.10.123",
-        "p3x-redis-ui-server": "^2021.10.120"
+        "p3x-redis-ui-material": "^2021.10.127",
+        "p3x-redis-ui-server": "^2021.10.124"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
