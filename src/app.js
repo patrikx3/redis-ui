@@ -8,7 +8,7 @@ process.on('uncaughtException', function (err) {
 });
 
 const execAsync = async() => {
-    let getPort = require('get-port');
+    let getPort = require('corifeus-utils').network.getPort
     let available = false;
     const maxTries = 100
     let tries = 0
