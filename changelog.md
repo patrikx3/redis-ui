@@ -5,7 +5,8 @@
                         
 [//]: #@corifeus-header:end
 
-### v2021.10.125 - 9/10/2021
+### v2021.10.125
+Released on 9/10/2021
 * BUGFIX: Toast layout was wrong.
 
 ### v2021.10.123
