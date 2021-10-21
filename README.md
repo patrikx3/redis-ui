@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2021.10.152
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2021.10.154
 
 
 
@@ -213,10 +213,7 @@ kubectl apply -f generated.yaml
   * Windows
   * macOS
 * Starts with no settings without config, or setup your own config
-* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage
-* Able to use the console and interact with Redis
-  * TAB or SHIFT + TAB completion like bash is enabled
-  * Cursor UP or DOWN history is enabled
+* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage* 
 * Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
 * It is based on Redis-Commander and phpRedisAdmin
 * You can select the database via console or the drop down.
@@ -234,6 +231,11 @@ kubectl apply -f generated.yaml
 * The app is responsive, it works on a phone/tablet as well
 * There is a key sorting function, which has a penalty, because it sorts with natural-compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
 * For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
+<!--
+* Able to use the console and interact with Redis
+    * TAB or SHIFT + TAB completion like bash is enabled
+    * Cursor UP or DOWN history is enabled
+-->
 
 # TODO
 [The to do readme](todo.md) 
@@ -325,7 +327,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.152
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.154
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
