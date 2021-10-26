@@ -13,8 +13,6 @@ Released on 10/26/2021
 Released on 10/26/2021
 * FEATURE: Changed the `change-log.md` file name.
 
-
-
 ### v2021.10.183
 Released on 10/26/2021
 * FEATURE: Console history is working using local storage, so that history is kept indefinite with 20 entries
@@ -781,7 +779,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.195
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.196
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
