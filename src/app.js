@@ -37,7 +37,7 @@ const execAsync = async() => {
 
     require('./electron/global.js');
 
-    const {app, ipcMain} = require('electron')
+    const { app, ipcMain, shell } = require('electron')
 
 //app.commandLine.appendSwitch("ignore-certificate-errors");
 
@@ -77,6 +77,30 @@ const execAsync = async() => {
             createWindow();
         }
     });
+
+    app.on('web-contents-created', (createEvent, contents) => {
+
+        contents.on('new-window', newEvent => {
+            console.log("Blocked by 'new-window'")
+            newEvent.preventDefault();
+        });
+
+        /*
+        contents.on('will-navigate', newEvent => {
+            console.log("Blocked by 'will-navigate'")
+            newEvent.preventDefault()
+        });
+         */
+
+        contents.setWindowOpenHandler(({ url }) => {
+            setImmediate(() => {
+                shell.openExternal(url);
+            });
+            return { action: 'allow' }
+        })
+
+    });
+
 
 }
 execAsync()

@@ -85,12 +85,18 @@ window.p3xreRun = async function () {
             }
         })
 
+
+
+        // must to remove this code
+
+        /*
         global.p3xre.webview.addEventListener('new-window', function (event) {
 
             event.preventDefault()
             shell.openExternal(event.url)
 
         });
+         */
 
 
 

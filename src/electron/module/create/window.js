@@ -20,6 +20,14 @@ function createWindow() {
         }
     });
 
+    /*
+    global.p3xre.mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+        console.log('url', url)
+        return { action: 'deny' }
+    })
+     */
+
+
     //global.p3xre.mainWindow.setAutoHideMenuBar(false)
 
     global.p3xre.setVisible(true);
