@@ -178,7 +178,7 @@ ${global.p3xre.strings.message.restart}
                 {
                     label: global.p3xre.strings.menu.help.changelog,
                     click: () => {
-                        shell.openExternal('https://github.com/patrikx3/redis-ui/blob/master/changelog.md#change-log')
+                        shell.openExternal('https://github.com/patrikx3/redis-ui/blob/master/change-log.md#change-log')
                     }
                 },
 
