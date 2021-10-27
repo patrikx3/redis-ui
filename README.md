@@ -11,7 +11,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2021.10.198
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2021.10.202
 
 
 
@@ -25,7 +25,7 @@
 
 ### Built on NodeJs
 ```txt
-v14.18.1
+v16.13.0
 ```
 
 
@@ -142,8 +142,11 @@ It then actually integrates itself into the menus and it will auto update itself
 ### On ElectronJs  
 (The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
 https://electronjs.org/apps/p3x-redis-ui  
-    
-### Start up with a server or via a browser and NodeJs/NPM
+
+### CLI
+ 
+Start up with a server or via a browser and NodeJs/NPM.
+  
 [Start up with a server readme](artifacts/readme/start-up-server.md)
 
 [Some description about the config file readme](p3xrs.json)
@@ -332,7 +335,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.198
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.202
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
