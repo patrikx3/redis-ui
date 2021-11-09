@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2021.10.219
+Released on 11/09/2021
+* BUGFIX: There was a major bottleneck in the GUI (was using `setInterval` infinity loop instead of `setTimeout`)
+* CHORE: Upgraded all deps
+
 ### v2021.10.210
 Released on 10/27/2021
 * BUGFIX: Redis settings dialog was refreshing the tree twice.
@@ -795,7 +800,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.217
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.219
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
