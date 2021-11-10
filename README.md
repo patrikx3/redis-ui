@@ -14,6 +14,8 @@
 # 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2021.10.219
 
 
+# Warning
+2021. November 17. - All patrikx3.com, corifeus.com and sub-domains are offline. There is electricity upgrade. Will come back again on 2021. November 18.
 
 **Bugs are evident™ - MATRIX️**
     
