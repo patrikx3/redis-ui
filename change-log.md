@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2021.10.239
+Released on 11/12/2021
+* FEATURE: Command listing does not need an option (if disabled on the server, no error).
+
 ### v2021.10.237
 Released on 11/12/2021
 * FEATURE: Refactored the connection, disable AWS, Azure, and all others. Now, it always probes the database listing. Can also disable the command listing.
@@ -812,7 +816,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.237
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.239
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
