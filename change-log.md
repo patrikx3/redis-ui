@@ -5,9 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
-### v2021.10.241
+### v2021.10.245
 Released on 11/12/2021
-* FEATURE: Big dialog width is fixed when content changes.
+* FEATURE: The more complex dialogs width is fixed when content changes.
+* FEATURE: The server is more intelligent to find out which features on different Redis instances are working or not (because of this, no more connection options to set if Azure / Aws / Google / DigitalOcean).
 
 ### v2021.10.239
 Released on 11/12/2021
@@ -820,7 +821,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.241
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.243
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
