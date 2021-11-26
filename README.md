@@ -83,12 +83,7 @@ Contributors, that created features that are working only in the donate-ware ver
   
 -->  
   
-## Warning
-If you are reading the `readme` fom Docker, the links are not working, please read the `readme` from GitHub or Corifeus @ 
-* https://corifeus.com/redis-ui
-* https://github.com/patrikx3/redis-ui
-   
-## Warning Warning 
+## Warning 
 It is not recommend to generate the configuration `JSON` via a text editor. The perfect solution is to generate the configuration in the GUI, then apply for example in Kubernetes.
 
 ## The online current version
