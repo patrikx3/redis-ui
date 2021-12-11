@@ -52,6 +52,7 @@ module.exports = {
             translation: {
                 en: '英语 / English',
                 zn: '中文 / Chinese'
+                ru: '俄语 / Russian'
             }
         },
         settings: {

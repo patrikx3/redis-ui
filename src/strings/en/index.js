@@ -56,6 +56,7 @@ module.exports = {
                 // eg. Inglés / English
                 en: 'English',
                 zn: 'Chinese / 中文'
+                ru: 'Russian / Русский'
             }
         },
         settings: {
