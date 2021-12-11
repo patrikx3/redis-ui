@@ -55,8 +55,8 @@ module.exports = {
                 // When you translate the english name, keep the Language in English
                 // eg. Inglés / English
                 en: 'Английский / English',
-                zn: 'Китайский / 中文'
-                ru: 'Русский'
+                zn: 'Китайский / 中文',
+                ru: 'Русский / Russian'
             }
         },
         settings: {
