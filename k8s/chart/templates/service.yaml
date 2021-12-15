@@ -6,9 +6,15 @@ metadata:
   labels:
     app.kubernetes.io/name: p3x-redis-ui-service
 spec:
+  type: {{ .Values.service.type }}
   ports:
   - name: p3x-redis-ui
     targetPort: p3x-redis-ui
     port: 7843
+    {{- if eq .Values.service.type "NodePort" }}
+    nodePort: {{ .Values.service.nodePort }}
+    {{- else if eq .Values.service.type "ClusterIP" }}
+    nodePort: null
+    {{- end }}
   selector:
     app.kubernetes.io/name: p3x-redis-ui

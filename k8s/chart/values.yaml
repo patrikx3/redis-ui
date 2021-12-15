@@ -31,6 +31,10 @@ connections: []
 #     id:
 #     password:
 
+service:
+  type: ClusterIP
+#  nodePort: 30200 If type is NodePort
+
 ingress:
   enabled: false
   annotations: {}
