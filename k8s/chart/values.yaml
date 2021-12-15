@@ -25,6 +25,15 @@ connections: []
 #   azure: false
 #   cluster: false
 #   awsElastiCache: false
+#   nodes: If you configure a cluster
+#   - host:
+#     port:
+#     id:
+#     password:
+
+service:
+  type: ClusterIP
+#  nodePort: 30200 If type is NodePort
 
 ingress:
   enabled: false
