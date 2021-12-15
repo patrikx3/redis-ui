@@ -25,6 +25,11 @@ connections: []
 #   azure: false
 #   cluster: false
 #   awsElastiCache: false
+#   nodes: If you configure a cluster
+#   - host:
+#     port:
+#     id:
+#     password:
 
 ingress:
   enabled: false

@@ -19,7 +19,23 @@ data:
             "nodes": [],
             "azure": {{ $connection.azure | default false }},
             "cluster": {{ $connection.cluster | default false }},
-            "awsElastiCache": {{ $connection.awsElastiCache | default false }}
+            "awsElastiCache": {{ $connection.awsElastiCache | default false }},
+            "nodes": [
+              {{- if $connection.nodes }}
+              {{- $nodeLength := $connection.nodes | len }}
+              {{- range $nodeIndex, $node := $connection.nodes }}
+                {
+                  "host": "{{ $node.host }}",
+                  "port": {{ $node.port }},
+                  "id": "{{ $node.id }}",
+                  "password": "{{ $node.password }}"
+                }
+                {{- if ne $nodeLength ($nodeIndex | add1) }}
+                  ,
+                {{- end -}}
+              {{- end -}}
+              {{- end -}}
+            ]
           }
           {{- if ne $length ($index | add1) }}
             ,
