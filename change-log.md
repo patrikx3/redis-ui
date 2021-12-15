@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2021.10.259
+Released on 12/15/2021
+* BUGFIX: Had to twice click on the search icon.
+
+
 ### v2021.10.254
 Released on 12/11/2021
 * FEATURE: Russian translation
@@ -833,7 +838,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.257
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2021.10.258
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
