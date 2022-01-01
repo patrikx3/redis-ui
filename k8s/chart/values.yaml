@@ -45,3 +45,5 @@ ingress:
   tls: []
   # - hosts: [host]
   #   secretName: host-tls
+
+nodeSelector: {}
