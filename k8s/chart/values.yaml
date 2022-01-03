@@ -1,8 +1,8 @@
 
 image:
-  repository: patrikx3/p3x-redis-ui
-  tag: latest
-  pullPolicy: Always
+    repository: patrikx3/p3x-redis-ui
+    tag: latest
+    pullPolicy: Always
 
 license:
 
@@ -14,7 +14,7 @@ resources: {}
   #   memory: 100M
   # limits:
   #   cpu: 200m
-  #   memory: 200M
+#   memory: 200M
 
 connections: []
 # - name:
@@ -32,16 +32,18 @@ connections: []
 #     password:
 
 service:
-  type: ClusterIP
+    type: ClusterIP
 #  nodePort: 30200 If type is NodePort
 
 ingress:
-  enabled: false
-  annotations: {}
-  #   kubernetes.io/ingress.class: nginx
-  #   cert-manager.io/cluster-issuer: letsencrypt
-  paths: [/]
-  hosts: []
-  tls: []
-  # - hosts: [host]
-  #   secretName: host-tls
+    enabled: false
+    annotations: {}
+    #   kubernetes.io/ingress.class: nginx
+    #   cert-manager.io/cluster-issuer: letsencrypt
+    paths: [/]
+    hosts: []
+    tls: []
+    # - hosts: [host]
+    #   secretName: host-tls
+
+nodeSelector: {}
