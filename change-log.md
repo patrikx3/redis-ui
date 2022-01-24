@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2022.4.106
+Released on 01/24/2022
+* BUGFIX: Initial blurred window/tab is not working properly on the tree control.
+
 ### v2022.4.104
 Released on 01/05/2022
 * BUGFIX: Initial blurred window is not working properly on the tree control. 
@@ -841,7 +845,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2022.4.104
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2022.4.106
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
