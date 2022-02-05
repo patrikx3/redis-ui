@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### v2022.4.116
-Released (02/05/2022)
+Released on 02/05/2022
 * CHORE: Upgraded to latest versions
 
 ### v2022.4.108
