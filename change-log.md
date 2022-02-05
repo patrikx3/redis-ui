@@ -7,7 +7,7 @@
 
 ### v2022.4.116
 Released (02/05/2022)
-* CHORE: Upgrade to altest versions
+* CHORE: Upgraded to latest versions
 
 ### v2022.4.108
 Released on 01/24/2022
