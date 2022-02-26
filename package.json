@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2022.4.116",
+    "version": "2022.4.119",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v16.13.2",
+        "nodejs": "v16.14.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -62,9 +62,9 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2022.4.108",
-        "electron": "^17.0.0",
-        "electron-builder": "^22.14.5",
+        "corifeus-builder": "^2022.4.111",
+        "electron": "^17.1.0",
+        "electron-builder": "^22.14.13",
         "rimraf": "^3.0.2"
     },
     "engines": {
@@ -72,17 +72,17 @@
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "@fontsource/roboto": "^4.5.2",
+        "@fontsource/roboto": "^4.5.3",
         "angular": "^1.8.2",
         "angular-animate": "^1.8.2",
         "angular-aria": "^1.8.2",
         "angular-material": "^1.2.4",
         "angular-messages": "^1.8.2",
-        "corifeus-utils": "^2022.4.107",
+        "corifeus-utils": "^2022.4.110",
         "electron-store": "^8.0.1",
-        "electron-updater": "^4.6.1",
-        "p3x-redis-ui-material": "^2022.4.112",
-        "p3x-redis-ui-server": "^2022.4.112"
+        "electron-updater": "^4.6.5",
+        "p3x-redis-ui-material": "^2022.4.114",
+        "p3x-redis-ui-server": "^2022.4.114"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
