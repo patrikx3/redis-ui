@@ -71,7 +71,7 @@ require('./angular')
 
 window.p3xreRun = async function () {
 
-
+    
     document.title = `${p3xre.strings.title} v${p3xre.pkg.version}`
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");

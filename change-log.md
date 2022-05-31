@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2022.4.123
+Released on 05/31/2022
+* CHORE: Upgraded to the latest versions
+
 ### v2022.4.116
 Released on 02/05/2022
 * CHORE: Upgraded to latest versions
@@ -854,7 +858,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2022.4.122
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2022.4.124
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

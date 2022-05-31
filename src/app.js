@@ -7,6 +7,7 @@ process.on('uncaughtException', function (err) {
     process.exit(-1)
 });
 
+
 const execAsync = async() => {
     let getPort = require('corifeus-utils').network.getPort
     let available = false;
@@ -38,8 +39,6 @@ const execAsync = async() => {
     require('./electron/global.js');
 
     const { app, ipcMain, shell } = require('electron')
-
-//app.commandLine.appendSwitch("ignore-certificate-errors");
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
         app.commandLine.appendSwitch('remote-debugging-port', '9222')
