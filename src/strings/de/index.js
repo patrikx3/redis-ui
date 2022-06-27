@@ -21,7 +21,7 @@ module.exports = {
     menu: {
         main: {
             home: 'Startseite',
-            console: 'Kosnole',
+            console: 'Konsole',
             settings: 'Einstellungen',
             overview: 'Übersicht',
             quit: 'Verlassen',
@@ -33,7 +33,7 @@ module.exports = {
             cut: 'Ausschneiden',
             copy: 'Kopieren',
             paste: 'Einfügen',
-            pasteandmatchstyle: 'Paste and match style',
+            pasteandmatchstyle: 'Einfügen und Stil anpassen',
             delete: 'Löschen',
             selectall: 'Alles auswählen',
         },
