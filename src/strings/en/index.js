@@ -1,8 +1,8 @@
 module.exports = {
     title: 'P3X Redis UI',
     updater: {
-        'checking-for-update': 'Checking for update ...',
-        'update-available': 'Downloading latest release ...',
+        'checking-for-update': 'Checking for update...',
+        'update-available': 'Downloading latest release...',
         'update-not-available': 'No new update available.',
         error: (opts) => {
             return `Error in auto-updater: ${opts.errorMessage}`
@@ -16,7 +16,7 @@ module.exports = {
       ok: 'OK',
     },
     message: {
-        restart: 'Please hang on, the application is restarting.',
+        restart: 'Please wait, the application is restarting.',
     },
     menu: {
         main: {
@@ -54,6 +54,7 @@ module.exports = {
             translation: {
                 // When you translate the english name, keep the Language in English
                 // eg. Inglés / English
+                de: 'German / Deutsch',
                 en: 'English',
                 zn: 'Chinese / 中文',
                 ru: 'Russian / Русский'
