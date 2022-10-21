@@ -1,9 +1,9 @@
 module.exports = {
     title: 'P3X Redis UI',
     updater: {
-        'checking-for-update': '检查更新 ...',
+        'checking-for-update': '检查更新...',
         'update-available': '下载最新稳定发行版本...',
-        'update-not-available': '没有需要更新的 ...',
+        'update-not-available': '没有需要更新的.',
         error: (opts) => {
             return `自动更新异常: ${opts.errorMessage}`
         },

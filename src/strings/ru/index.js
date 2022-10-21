@@ -1,8 +1,8 @@
 module.exports = {
     title: 'P3X Redis UI',
     updater: {
-        'checking-for-update': 'Проверяем наличие обновлений ...',
-        'update-available': 'Скачиваем последний релиз ...',
+        'checking-for-update': 'Проверяем наличие обновлений...',
+        'update-available': 'Скачиваем последний релиз...',
         'update-not-available': 'Обновления не найдены.',
         error: (opts) => {
             return `Error in auto-updater: ${opts.errorMessage}`
