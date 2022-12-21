@@ -7,7 +7,7 @@ on:
     schedule:
         - cron: '0 0 1 * *'
     push:
-        branches: [ master, docker-buildx ]
+        branches: [ master ]
     pull_request:
         branches: [ master ]
 
@@ -55,8 +55,8 @@ jobs:
               run: |
                 docker buildx build . \
                     --platform linux/amd64,linux/arm64,linux/arm/v7 \
-                    -t bi0416/p3x-redis-ui:latest \
-                    -t bi0416/p3x-redis-ui:$version \
+                    -t patrikx3/p3x-redis-ui:latest \
+                    -t patrikx3/p3x-redis-ui:$version \
                     --push
               env:
                   version: ${{ steps.package-version.outputs.current-version}}
