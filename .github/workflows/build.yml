@@ -30,3 +30,33 @@ jobs:
             - run: npm i -g grunt-cli
             - run: npm install
             - run: grunt
+    deploy-image:
+
+        runs-on: ubuntu-latest
+
+        needs: [ build ]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: get-npm-version
+              id: package-version
+              uses: martinbeentjes/npm-get-version-action@main
+            - name: Set up QEMU
+              uses: docker/setup-qemu-action@v2
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v2
+            - name: Login to Docker Hub
+              uses: docker/login-action@v2
+              with:
+                  username: ${{ secrets.DOCKERHUB_USERNAME }}
+                  password: ${{ secrets.DOCKERHUB_TOKEN }}
+            - name: Build Image
+              run: |
+                docker buildx build . \
+                    --platform linux/amd64,linux/arm64,linux/arm/v7 \
+                    -t patrikx3/p3x-redis-ui:latest \
+                    -t patrikx3/p3x-redis-ui:$version \
+                    --push
+              env:
+                  version: ${{ steps.package-version.outputs.current-version}}
