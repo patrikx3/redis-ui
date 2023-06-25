@@ -2,8 +2,8 @@
 #docker build -t patrikx3/p3x-redis-ui .
 ##docker tag IMAGE_ID patrikx3/p3x-redis-ui:latest
 #docker push patrikx3/p3x-redis-ui:latest
-#docker tag patrikx3/p3x-redis-ui:latest patrikx3/p3x-redis-ui:2020.10.2020.10.313
-#docker push patrikx3/p3x-redis-ui:2020.10.2020.10.313
+#docker tag patrikx3/p3x-redis-ui:latest patrikx3/p3x-redis-ui:2023.4.102
+#docker push patrikx3/p3x-redis-ui:2023.4.102
 #docker images
 #docker rmi -f IMAGE_ID
 FROM node:slim
