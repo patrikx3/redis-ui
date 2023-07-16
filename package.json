@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2023.10.107",
+    "version": "2023.10.113",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -26,6 +26,8 @@
         "build": "electron-builder --ia32 --x64  build/dist",
         "build-test": "electron-builder build/dist",
         "publish-electron": "rimraf dist && mkdirp ./dist/__appImage-x64 && mkdirp ./dist/__appImage-ia32 && electron-builder -p onTagOrDraft --linux",
+        "publish-electron-dep": "rm -rf dist && electron-builder --linux deb --publish=always",
+        "publish-electron-rpm": "rm -rf dist && electron-builder --linux rpm --publish=always",
         "publish-windows": "rimraf dist && electron-builder -p always --windows",
         "publish-osx": "rimraf dist && electron-builder -p always",
         "publish-electron-snap": "rimraf dist && mkdir -p ./dist/__snap-amd64 && electron-builder --linux snap -p never",
@@ -62,8 +64,8 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2023.10.113",
-        "electron": "^25.2.0",
+        "corifeus-builder": "^2023.10.121",
+        "electron": "^25.3.0",
         "electron-builder": "^24.4.0",
         "rimraf": "^5.0.1"
     },
@@ -78,11 +80,11 @@
         "angular-aria": "^1.8.2",
         "angular-material": "^1.2.4",
         "angular-messages": "^1.8.3",
-        "corifeus-utils": "^2023.10.115",
+        "corifeus-utils": "^2023.10.123",
         "electron-store": "^8.1.0",
         "electron-updater": "^6.1.1",
-        "p3x-redis-ui-material": "^2023.10.107",
-        "p3x-redis-ui-server": "^2023.10.107"
+        "p3x-redis-ui-material": "^2023.10.114",
+        "p3x-redis-ui-server": "^2023.10.114"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
