@@ -220,7 +220,6 @@ kubectl apply -f generated.yaml
 * Works as a desktop via Electron
   * Linux
   * Windows
-  * macOS
 * Starts with no settings without config, or setup your own config
 * Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage* 
 * Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
