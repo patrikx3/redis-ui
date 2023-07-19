@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2023.10.117",
+    "version": "2023.10.123",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -25,12 +25,9 @@
         "test": "grunt",
         "build": "electron-builder --ia32 --x64  build/dist",
         "build-test": "electron-builder build/dist",
-        "publish-electron": "rimraf dist && mkdirp ./dist/__appImage-x64 && mkdirp ./dist/__appImage-ia32 && electron-builder -p onTagOrDraft --linux",
-        "publish-electron-dep": "rm -rf dist && electron-builder --linux deb --publish=always",
-        "publish-electron-rpm": "rm -rf dist && electron-builder --linux rpm --publish=always",
+        "publish-electron": "rm -rf dist && electron-builder --p onTagOrDraft --linux --armv7l --arm64 --linux AppImage deb rpm --x64",
         "publish-windows": "rimraf dist && electron-builder -p always --windows",
-        "publish-osx": "rimraf dist && electron-builder -p always",
-        "publish-electron-snap": "rimraf dist && mkdir -p ./dist/__snap-amd64 && electron-builder --linux snap -p never",
+        "publish-electron-snap": "rimraf dist && electron-builder --linux snap -p never",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js"
     },
     "repository": {
@@ -64,7 +61,7 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "corifeus-builder": "^2023.10.125",
+        "corifeus-builder": "^2023.10.127",
         "electron": "^25.3.0",
         "electron-builder": "^24.4.0",
         "rimraf": "^5.0.1"
@@ -83,8 +80,8 @@
         "corifeus-utils": "^2023.10.128",
         "electron-store": "^8.1.0",
         "electron-updater": "^6.1.1",
-        "p3x-redis-ui-material": "^2023.10.118",
-        "p3x-redis-ui-server": "^2023.10.118"
+        "p3x-redis-ui-material": "^2023.10.122",
+        "p3x-redis-ui-server": "^2023.10.122"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
@@ -97,7 +94,7 @@
         ],
         "icon": "src/electron/images/",
         "appId": "p3x.redis-ui.electron",
-        "productName": "P3X Redis UI",
+        "productName": "P3X-Redis-UI",
         "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
         "win": {
             "icon": "src/electron/images/",
