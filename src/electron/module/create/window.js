@@ -106,7 +106,7 @@ function createWindow() {
         })
     })
     autoUpdater.on('error', (error) => {
-        console.error(e)
+        console.error(error)
         /*
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
