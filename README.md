@@ -138,6 +138,8 @@ $HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage &
 It then actually integrates itself into the menus and it will auto update itself.
 -->
 
+### On ElectronJs  
+The app can be found on [ElectronJs Apps](https://electronjs.org/apps) and search for `P3X`, you will find it.
 
 ### CLI
  
