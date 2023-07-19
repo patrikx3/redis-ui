@@ -77,6 +77,8 @@ function createWindow() {
 
     const {autoUpdater} = require("electron-updater");
 
+    autoUpdater.channel = "latest"
+
     autoUpdater.on('checking-for-update', () => {
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
