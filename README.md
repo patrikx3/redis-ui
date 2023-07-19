@@ -138,9 +138,6 @@ $HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage &
 It then actually integrates itself into the menus and it will auto update itself.
 -->
 
-### On ElectronJs  
-(The GitHub versions are always instant, while the ElectronJs Apps releases are delayed.)  
-https://electronjs.org/apps/p3x-redis-ui  
 
 ### CLI
  

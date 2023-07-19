@@ -89,7 +89,8 @@
             {
                 "provider": "github",
                 "owner": "patrikx3",
-                "repo": "redis-ui"
+                "repo": "redis-ui",
+                "channel": "latest"
             }
         ],
         "icon": "src/electron/images/",
