@@ -28,6 +28,13 @@ function createWindow() {
      */
 
 
+    global.p3xre.mainWindow.webContents.on("did-attach-webview", (_, contents) => {
+        contents.setWindowOpenHandler((details) => {
+            global.p3xre.mainWindow.webContents.send('p3x-new-window', details);
+            return { action: 'deny' }
+        })
+      })
+
     //global.p3xre.mainWindow.setAutoHideMenuBar(false)
 
     global.p3xre.setVisible(true);
@@ -76,8 +83,6 @@ function createWindow() {
 
 
     const {autoUpdater} = require("electron-updater");
-
-    autoUpdater.channel = "latest"
 
     autoUpdater.on('checking-for-update', () => {
         global.p3xre.mainWindow.webContents.send('p3x-action', {

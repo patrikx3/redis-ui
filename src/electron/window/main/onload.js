@@ -52,6 +52,10 @@ ipcRenderer.on('p3x-menu', function (event, data) {
     */
 })
 
+ipcRenderer.on('p3x-new-window', function (event, data) {
+    shell.openExternal(data.url)
+})
+
 
 ipcRenderer.on('p3x-action', function (event, data) {
     switch (data.action) {
