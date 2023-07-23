@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2023.10.222
+Relesed on 07/23/2023
+* BUGFIX: Key url was not loading
+* FEATURE: Added a quick console input, that is an overlay for running commands
+
 ### v2023.10.220
 Relesed on 07/20/2023
 * CHORE: Updated Electron
@@ -878,7 +883,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2023.10.220
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2023.10.222
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
