@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2023.10.230",
+    "version": "2023.10.232",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -27,6 +27,7 @@
         "build-test": "electron-builder build/dist",
         "publish-electron": "rm -rf dist && electron-builder --p onTagOrDraft --linux --armv7l --arm64 --linux AppImage deb rpm --x64",
         "publish-windows": "rimraf dist && electron-builder -p always --windows",
+        "publish-windows-store": "rimraf dist && electron-builder --windows",
         "publish-electron-snap": "rimraf dist && electron-builder --linux snap -p never",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js"
     },
@@ -80,8 +81,8 @@
         "corifeus-utils": "^2023.10.128",
         "electron-store": "^8.1.0",
         "electron-updater": "^6.1.2",
-        "p3x-redis-ui-material": "^2023.10.133",
-        "p3x-redis-ui-server": "^2023.10.133"
+        "p3x-redis-ui-material": "^2023.10.134",
+        "p3x-redis-ui-server": "^2023.10.134"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
