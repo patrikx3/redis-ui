@@ -39,6 +39,7 @@ const execAsync = async() => {
     require('./electron/global.js');
 
     const { app, ipcMain, shell } = require('electron')
+    app.disableHardwareAcceleration()
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
         app.commandLine.appendSwitch('remote-debugging-port', '9222')
