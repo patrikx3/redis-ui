@@ -45,7 +45,7 @@ The best use case for this Redis GUI, if you manage tons of JSON, as it includes
 
 
 ## Code certificate for Windows  
-Right now, when I run the app in Windows, it says my app is not certified. To make it valid, I have to pay about $300-$400 to make it certified for the first time for a year. Please donate, so, I can buy the free app to be certified and will give no prompts from Windows.
+Right now, when I run the app in Windows, it says my app is not certified. To make it valid, I have to pay about $300-$400 to make it certified for the first time for a year. Please donate, so, I can buy the free app to be certified and will give no prompts from Windows. On the other side, in Linux, there is no problem like this.
 
 <!--
 👷 **The first full complete version was created in 20 days in September of 2018.** 
