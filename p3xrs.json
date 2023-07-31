@@ -1,5 +1,5 @@
 {
-    "p3xrs": {
+    "p3xrs": {  
         "http": {
             "port-info": "this is ommitted, it will be default 7843",
             "port": 7843
