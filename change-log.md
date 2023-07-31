@@ -5,7 +5,7 @@
                         
 [//]: #@corifeus-header:end
 
-### v2023.10.241
+### v2023.10.243
 Relesed on 07/31/2023
 * BUGFIX: The quick console sidenav backdrop was not showing, when animation was disabled.
 
