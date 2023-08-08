@@ -242,9 +242,6 @@ kubectl apply -f generated.yaml
 * For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
 
 
-# TODO
-[The to do readme](todo.md) 
-
 # Change log
 [The change log readme](change-log.md) 
 
