@@ -23,7 +23,6 @@ jobs:
 
   deploy-image:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - name: get-npm-version
@@ -48,7 +47,6 @@ jobs:
 
   package-and-release-macos:
     runs-on: macos-latest
-    needs: deploy-image
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
@@ -73,7 +71,6 @@ jobs:
 
   package-and-release-windows:
     runs-on: windows-latest
-    needs: deploy-image
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
