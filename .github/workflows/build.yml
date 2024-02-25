@@ -1,14 +1,9 @@
-name: build
+name: Build and Release on Tag
 
 on:
-  schedule:
-    - cron: '0 0 1 * *'
   push:
-    branches: [ master ]
     tags:
       - 'v*'
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -72,6 +67,6 @@ jobs:
             dist/*.dmg
             dist/*.zip
             dist/*.blockmap
-            dist/*.yml
+            dist/latest-mac.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
