@@ -64,10 +64,10 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: |
-            dist/mac/*.dmg
-            dist/mac/*.zip
-            dist/mac/*.blockmap
-            dist/mac/latest-mac.yml
+            dist/*.dmg
+            dist/*.zip
+            dist/*.blockmap
+            dist/latest-mac.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -84,6 +84,9 @@ jobs:
         run: npm install
       - name: Build and package Windows app
         run: npm run publish-windows
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Windows build to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
