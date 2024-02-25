@@ -8,7 +8,7 @@
 ### v2024.4.126
 Released on 02/25/2024
 * FEATURE: Build MacOS on Intel and Apple silicon.
-* FEATURE: The build for MacOS and Windows is delpoyed using GitHub Actions.
+* FEATURE: The build for MacOS and Windows is deployed using GitHub Actions.
 
 ### v2024.4.115
 Released on 02/25/2024
