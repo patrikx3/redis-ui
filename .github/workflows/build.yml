@@ -69,7 +69,7 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: |
-            dist/mac/*.dmg
-            dist/mac/*.zip
+            dist/*.dmg
+            dist/*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

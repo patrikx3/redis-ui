@@ -113,8 +113,13 @@
         },
         "mac": {
             "target": [
-              "dmg",
-              "zip"
+                {
+                  "target": "default",
+                  "arch": [
+                    "x64",
+                    "arm64"
+                  ]
+                }
             ]
         },
         "snap": {
