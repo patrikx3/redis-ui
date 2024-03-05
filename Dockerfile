@@ -6,7 +6,7 @@
 #docker push patrikx3/p3x-redis-ui:2023.4.102
 #docker images
 #docker rmi -f IMAGE_ID
-FROM node:slim
+FROM node:lts-slim
 ENV COMPOSER_PROCESS_TIMEOUT=3600
 ENV DEBIAN_FRONTEND=noninteractive
 ENV P3XRS_DOCKER_HOME=/settings

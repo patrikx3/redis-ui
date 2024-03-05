@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### Unreleased
+* FEATURE: Switch from Docker `node:slim` which is latest version, now, we use the LTS version called `node:lts-slim`
+* FEATURE: Docker compose `yml` file is updated to version 3.
+
 ### v2024.4.136
 Released on 03/05/2024
 * BUGFIX: In Docker, it was not working with the readonly option.

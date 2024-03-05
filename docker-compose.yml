@@ -1,9 +1,9 @@
 # docker-compose up
-registry:
+version: '3'
+services:
+  registry:
     image: patrikx3/p3x-redis-ui:latest
     ports:
-        - 7843:7843
+      - "7843:7843"
     volumes:
-        # here you can set your own /home/user/p3x-redis-ui-settings folder
-        - /home/user/p3x-redis-ui-settings:/settings
-
+      - /home/user/p3x-redis-ui-settings:/settings
