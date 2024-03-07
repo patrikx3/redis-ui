@@ -5,9 +5,14 @@
                         
 [//]: #@corifeus-header:end
 
-### Unreleased
-* FEATURE: Switch from Docker `node:slim` which is latest version, now, we use the LTS version called `node:lts-slim`
+### v2024.4.138
+Released on 03/07/2024
+* FEATURE: Switch from Docker `node:slim` which is latest version, now, we use the LTS version called `node:lts-slim`.
 * FEATURE: Docker compose `yml` file is updated to version 3.
+* FEATURE: Disabled the license feature in the server, a bit increased the speed of the server - using less processing.
+* CHORE: Updated the Redis v7.0.15 commands, when from the server commands are not available, it has to be manually to be copied to the code, so that the console autocomplete will work.
+* BUGFIX: The `quit` command is disabled.
+* BUGFIX: Fixed a version error, that in NPM version was different from released in Github.
 
 ### v2024.4.136
 Released on 03/05/2024
@@ -957,7 +962,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.136
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.138
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

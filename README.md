@@ -8,7 +8,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.136
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.138
 
 
 
@@ -295,9 +295,11 @@ By default, only English is created, but given all strings are from a `JS` file,
 For a new language:
 Add into `redis-ui-material/src/main.js`.
 
+# Solution
+  
 This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
-
-### Reference for Socket.IO speed
+  
+## Reference for Socket.IO speed
 https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
 
 
@@ -330,7 +332,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.136
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.138
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
