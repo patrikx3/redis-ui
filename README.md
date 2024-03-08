@@ -87,22 +87,22 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2024-21490
   * https://scout.docker.com/vulnerabilities/id/CVE-2024-21490
     * This affects versions of the package angular from 1.3.0. A regular expression used to split the value of the ng-srcset directive is vulnerable to super-linear runtime due to backtracking. With a large carefully-crafted input, this can result in catastrophic backtracking and cause a denial of service. Note: This package is EOL and will not receive any updates to address this issue. Users should migrate to @angular/core.
-  * We do not using the `ng-srcset`.
+  * We do not using the `ng-srcset` directive.
 
 * CVE-2023-26118⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26118
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the element due to the usage of an insecure regular expression in the input[url] functionality. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We are not using the HTML `input[url]`.
+  * We are not using the HTML `input[url]` directive.
 
 * CVE-2023-26117⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26117
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the $resource service due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We do not using the `$resource` function.
+  * We do not using the `$resource` service.
 
 * CVE-2023-26116⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26116
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * Sometimes, we do use the `angular.copy()`, but we are not using Regexp in this way, only data. For other cloning, we are using `lodash` clone function.
+  * We do not use the `angular.copy()` function, we are using the `lodash` deep clone function.
 
 * CVE-2022-25869
   * https://scout.docker.com/vulnerabilities/id/CVE-2022-25869
@@ -112,7 +112,7 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2022-25844
   * https://scout.docker.com/vulnerabilities/id/CVE-2022-25844
     * AngularJS lets users write client-side web applications. The package angular after 1.7.0 is vulnerable to Regular Expression Denial of Service (ReDoS) by providing a custom locale rule that makes it possible to assign the parameter in posPre: ' '.repeat() of NUMBER_FORMATS.PATTERNS[1].posPre with a very high value. Note: 1. This package has been deprecated and is no longer maintained. 2. The vulnerable versions are 1.7.0 and higher.
-  * We are not using a Regular Expression in this way.
+  * We are not using a Regular Expression in this way (custom locale).
 
 
 ## The online current version
@@ -126,7 +126,7 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 
 
 ### Screenshots
-[Screenshots readme](artifacts/readme/screenshots.md)
+[Screenshots readme](https://github.com/patrikx3/redis-ui/blob/master/artifacts/readme/screenshots.md)
 
 ## Releases
 
