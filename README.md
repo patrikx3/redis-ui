@@ -97,12 +97,12 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2023-26117⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26117
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the $resource service due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We do not using the `$resource` service.
+  * We are not using the `$resource` service.
 
 * CVE-2023-26116⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26116
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We do not using the `angular.copy()` function, we are using the `lodash` deep clone function.
+  * We are not using the `angular.copy()` function, we are using the `lodash` deep clone function.
 
 * CVE-2022-25869
   * https://scout.docker.com/vulnerabilities/id/CVE-2022-25869
