@@ -87,7 +87,7 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2024-21490
   * https://scout.docker.com/vulnerabilities/id/CVE-2024-21490
     * This affects versions of the package angular from 1.3.0. A regular expression used to split the value of the ng-srcset directive is vulnerable to super-linear runtime due to backtracking. With a large carefully-crafted input, this can result in catastrophic backtracking and cause a denial of service. Note: This package is EOL and will not receive any updates to address this issue. Users should migrate to @angular/core.
-  * We do not using the `ng-srcset` directive.
+  * We are not using the `ng-srcset` directive.
 
 * CVE-2023-26118⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26118
@@ -102,7 +102,7 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2023-26116⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26116
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We do not use the `angular.copy()` function, we are using the `lodash` deep clone function.
+  * We do not using the `angular.copy()` function, we are using the `lodash` deep clone function.
 
 * CVE-2022-25869
   * https://scout.docker.com/vulnerabilities/id/CVE-2022-25869
