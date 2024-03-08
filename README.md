@@ -8,7 +8,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.140
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.141
 
 
 
@@ -82,6 +82,38 @@ Contributors, that created features that are working only in the donate-ware ver
   
 ## Warning 
 It is not recommend to generate the configuration `JSON` via a text editor. The perfect solution is to generate the configuration in the GUI, then apply for example in Kubernetes.
+
+### AngularJs Vulnerabilities
+* CVE-2024-21490
+  * https://scout.docker.com/vulnerabilities/id/CVE-2024-21490
+    * This affects versions of the package angular from 1.3.0. A regular expression used to split the value of the ng-srcset directive is vulnerable to super-linear runtime due to backtracking. With a large carefully-crafted input, this can result in catastrophic backtracking and cause a denial of service. Note: This package is EOL and will not receive any updates to address this issue. Users should migrate to @angular/core.
+  * We do not using the `ng-srcset`.
+
+* CVE-2023-26118⁠
+  * https://scout.docker.com/vulnerabilities/id/CVE-2023-26118
+    * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the element due to the usage of an insecure regular expression in the input[url] functionality. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
+  * We are not using the HTML `input[url]`.
+
+* CVE-2023-26117⁠
+  * https://scout.docker.com/vulnerabilities/id/CVE-2023-26117
+    * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the $resource service due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
+  * We do not using the `$resource` function.
+
+* CVE-2023-26116⁠
+  * https://scout.docker.com/vulnerabilities/id/CVE-2023-26116
+    * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
+  * We sometimes we do use the `angular.copy()`, but we are not using Regexp in this way, only data.
+
+* CVE-2022-25869
+  * https://scout.docker.com/vulnerabilities/id/CVE-2022-25869
+    * All versions of package angular are vulnerable to Cross-site Scripting (XSS) due to insecure page caching in the Internet Explorer browser, which allows interpolation of  `<textarea>` elements. NPM package angular is deprecated. Those who want to receive security updates should use the actively maintained package @angular/core.
+  * Please, do not use Internet Explorer.
+
+* CVE-2022-25844
+  * https://scout.docker.com/vulnerabilities/id/CVE-2022-25844
+    * AngularJS lets users write client-side web applications. The package angular after 1.7.0 is vulnerable to Regular Expression Denial of Service (ReDoS) by providing a custom locale rule that makes it possible to assign the parameter in posPre: ' '.repeat() of NUMBER_FORMATS.PATTERNS[1].posPre with a very high value. Note: 1. This package has been deprecated and is no longer maintained. 2. The vulnerable versions are 1.7.0 and higher.
+  * We are not using a Regular Expression in this way.
+
 
 ## The online current version
 https://p3x.redis.patrikx3.com  <!-- - this is the plus version -->
@@ -332,7 +364,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.140
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.141
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

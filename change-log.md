@@ -8,6 +8,10 @@
 ### Unreleased
 None.  
   
+### v2024.4.141
+Released on 03/08/2024
+* BUGFIX: Added info to the vulnerabilities, that the scout is showing and provided info as well.
+
 ### v2024.4.140
 Released on 03/08/2024
 * BUGFIX: Some hover states in the buttons in the material GUI were not hovering, now it works.
@@ -969,7 +973,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.140
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.141
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
