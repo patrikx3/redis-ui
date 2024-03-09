@@ -90,7 +90,7 @@ It is not recommend to generate the configuration `JSON` via a text editor. The 
 * CVE-2023-26118⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26118
     * All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the element due to the usage of an insecure regular expression in the input[url] functionality. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.
-  * We are not using the HTML `input[url]` directive.
+  * We are not using the HTML `input[url]` directive, if we do, we limit the URL to be maximum 2048 characters, so there is no ReDoS...
 
 * CVE-2023-26117⁠
   * https://scout.docker.com/vulnerabilities/id/CVE-2023-26117
