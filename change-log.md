@@ -6,8 +6,14 @@
 [//]: #@corifeus-header:end
 
 ### Unreleased
-None.  
-  
+None
+
+### v2024.4.149
+Released on 03/09/2024
+* FEATURE: In the string type, you can upload and download a buffer.
+* FEATURE: When uploading, it allows up to 256MB, but Redis can restrict this size.
+
+
 ### v2024.4.148
 Released on 03/09/2024
 * CHORE: Update all packages.
@@ -977,7 +983,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.148
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.149
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
