@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.151
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.152
 
 
 
@@ -82,7 +82,7 @@ Contributors, that created features that are working only in the donate-ware ver
 It is not recommend to generate the configuration `JSON` via a text editor. The perfect solution is to generate the configuration in the GUI, then apply for example in Kubernetes.
 
 ### AngularJs Vulnerabilities
-[README and comments](https://github.com/patrikx3/redis-ui/blob/master/artifacts/readme/angularjs.md)
+[README and comments](artifacts/readme/angularjs.md)
 
 
 ## The online current version
@@ -96,7 +96,7 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 
 
 ### Screenshots
-[Screenshots readme](https://github.com/patrikx3/redis-ui/blob/master/artifacts/readme/screenshots.md)
+[Screenshots readme](artifacts/readme/screenshots.md)
 
 ## Releases
 
@@ -334,7 +334,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.151
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.152
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
