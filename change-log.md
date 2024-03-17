@@ -8,6 +8,10 @@
 ### Unreleased
 None
 
+### v2024.4.156
+Released on 03/17/2024
+* FEATURE: Modified the tree hover behavior.
+
 ### v2024.4.155
 Released on 03/10/2024
 * BUGFIX: Setting the buffer and then again upload trying, it is not working. Now, it is always uploading (at least, it tries).
@@ -1000,7 +1004,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.155
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.156
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
