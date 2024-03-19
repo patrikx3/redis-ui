@@ -17,3 +17,6 @@
 /dist
 /.github
 /.vscode
+/.flatpak-builder
+/.build
+/repo

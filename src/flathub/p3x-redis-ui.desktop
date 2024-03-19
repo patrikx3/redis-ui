@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=P3X Redis UI
+Comment=P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app
+Icon=com.patrikx3.redis-ui
+Exec=run.sh
+Categories=Development

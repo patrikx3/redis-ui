@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <name>P3X Redis UI</name>
+  <id>com.patrikx3.redis-ui</id>
+  <summary>P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app</summary>
+  <url type="homepage">https://corifeus.com/redis-ui</url>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  
+  <description>
+    <p>
+    P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview.png</image>
+      <caption>Example 1</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-2.png</image>
+      <caption>Example 2</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-3.png</image>
+      <caption>Example 3</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-4.png</image>
+      <caption>Example 4</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-5.png</image>
+      <caption>Example 5</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.corifeus.com/git/redis-ui/artifacts/preview-images/preview-6.png</image>
+      <caption>Example 6</caption>
+    </screenshot>
+
+  </screenshots>
+  <releases>
+    <release version="2024.4.159" date="2024-03-19"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+  <developer_name>patrikx3</developer_name>
+  <launchable type="desktop-id">com.patrikx3.redis-ui.desktop</launchable>
+</component>
