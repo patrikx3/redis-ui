@@ -4924,15 +4924,15 @@ p-try@^2.0.0:
   resolved "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-p3x-redis-ui-material@^2024.4.148:
-  version "2024.4.148"
-  resolved "https://registry.npmjs.org/p3x-redis-ui-material/-/p3x-redis-ui-material-2024.4.148.tgz#299a65e86aa1d04a3b9db775fb23c16e8d15dd8c"
-  integrity sha512-sYHse6L7ziCylmfeUthK2v7ajStnfBGK/3DX0bfcg0vJO9r/mVqh3W8Bw/mXNaTXfLWqnJlFPIz3myW61N/dpw==
-
-p3x-redis-ui-server@^2024.4.149:
+p3x-redis-ui-material@^2024.4.149:
   version "2024.4.149"
-  resolved "https://registry.npmjs.org/p3x-redis-ui-server/-/p3x-redis-ui-server-2024.4.149.tgz#db13933d941d10a2002c32f2aeb8f4eb5f13ca2c"
-  integrity sha512-DZu6AKDAHvgl37ZRkEzr3vWXeqk8WfaODqP+H77hWteWiTWlabnyXW/jvKymafzv7EU9sVK5Xxjd0RYxtROASw==
+  resolved "https://registry.npmjs.org/p3x-redis-ui-material/-/p3x-redis-ui-material-2024.4.149.tgz#54d4b6948a7a73c9777fa6553476998213c9f654"
+  integrity sha512-EsnlhKnzJthLIFhQnngbpmDO4mUK3vz8IrWYPy0656G35lxmUx5TQ0zMNqiZuwgmAmnQXJ2Vky4gZJwkGhQOBg==
+
+p3x-redis-ui-server@^2024.4.150:
+  version "2024.4.150"
+  resolved "https://registry.npmjs.org/p3x-redis-ui-server/-/p3x-redis-ui-server-2024.4.150.tgz#9f10965b30a3853fbc9e0dd31bfcb176b0ec0973"
+  integrity sha512-q6c6erS7vsaVr2nHr1nbP+aQkyq5XQ5LKNgcKcstbSffEMlJh0nyRjFR0EyE9OBq6csF2MaBzABoQmN+xonEgg==
   dependencies:
     chalk "^4.1.2"
     commander "^12.0.0"
