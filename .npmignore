@@ -20,3 +20,5 @@
 /.flatpak-builder
 /.build
 /repo
+/generated-sources.json
+/com.patrikx3.redis-ui.yml
