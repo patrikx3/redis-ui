@@ -112,8 +112,9 @@ The main source installer is the `AppImage`, so, the themes are not implemented 
 You download from the releases page and install as:
   
 ```sh
-wget https://github.com/patrikx3/onenote/releases/download/v2024.4.160/P3X-OneNote-2024.4.160-x86_64.flatpak
-flatpak install ./P3X-OneNote-2024.4.160-x86_64.flatpak
+wget https://github.com/patrikx3/redis-ui/releases/download/v2024.4.165/P3X-Redis-UI-2024.4.165-x86_64.flatpak
+flatpak install ./P3X-Redis-UI-2024.4.165-x86_64.flatpak
+flatpak run com.patrikx3.redis-ui
 ```
 
 
