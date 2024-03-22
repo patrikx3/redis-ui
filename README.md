@@ -98,6 +98,56 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 ### Screenshots
 [Screenshots readme](artifacts/readme/screenshots.md)
 
+## Features 
+
+* In the string key, you can upload and download a buffer.
+* The console history is kept indefinite in the local storage
+* Redis 6 with TLS is enabled with this information:
+  * https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/
+* You can override the server port via an environment variable `P3XRS_PORT`
+* In the connections, you can enable read only mode, which means, the user will not be able to modify via gui and the console (only pub/sub monitor and select database is allowed) is disabled. 
+* In a sub-directory, you can use Nginx/Ingress to rewrite your paths.
+  * https://github.com/patrikx3/redis-ui/issues/43
+* To show the menu in the desktop version, click ALT
+* There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
+* Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
+* Please, check out your Redis use case, if this program can cover your requirements
+* Does not handle binary data
+* **Does not work with sentinel**, but it will be developed at some point of time
+* **Has cluster support**
+  * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) (now -> [@devthejo](https://github.com/devthejo)) of the cluster function.
+* Able to monitor all channel messages on the console by using a checkbox.
+* Works with multiple languages
+* Works as a backend
+* Works as a desktop via Electron
+  * Linux
+  * Windows
+  * MacOS (Intel & Apple silicon)
+* Starts with no settings without config, or setup your own config
+* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage* 
+* Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
+* It is based on Redis-Commander and phpRedisAdmin
+* You can select the database via console or the drop down.
+   * The database select drop down shows if the checked database is empty or filled, so you can always know which is filled
+* Save button to save the db
+* Full statistics pages, can be useful
+* This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
+* Dark - Dracula / light themes
+* Search
+  * Client side mode searching in keys - small key set
+  * Server side mode searching in keys - large key set
+  * Search mode
+    * the search keys starts with a string key
+    * the search keys includes a string in the key
+* The app is responsive, it works on a phone/tablet as well
+* There is a key sorting function, which has a penalty, because it sorts with natural-compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
+* For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
+
+
+## Change log
+[The change log readme](change-log.md) 
+
+
 ## Releases
 
 ### Snap
@@ -209,54 +259,6 @@ helm template -f values.yaml release --namespace namespace . > generated.yaml
 kubectl apply -f generated.yaml
 ```
 
-## Features 
-
-* In the string key, you can upload and download a buffer.
-* The console history is kept indefinite in the local storage
-* Redis 6 with TLS is enabled with this information:
-  * https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/
-* You can override the server port via an environment variable `P3XRS_PORT`
-* In the connections, you can enable read only mode, which means, the user will not be able to modify via gui and the console (only pub/sub monitor and select database is allowed) is disabled. 
-* In a sub-directory, you can use Nginx/Ingress to rewrite your paths.
-  * https://github.com/patrikx3/redis-ui/issues/43
-* To show the menu in the desktop version, click ALT
-* There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
-* Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
-* Please, check out your Redis use case, if this program can cover your requirements
-* Does not handle binary data
-* **Does not work with sentinel**, but it will be developed at some point of time
-* **Has cluster support**
-  * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) (now -> [@devthejo](https://github.com/devthejo)) of the cluster function.
-* Able to monitor all channel messages on the console by using a checkbox.
-* Works with multiple languages
-* Works as a backend
-* Works as a desktop via Electron
-  * Linux
-  * Windows
-  * MacOS (Intel & Apple silicon)
-* Starts with no settings without config, or setup your own config
-* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage* 
-* Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
-* It is based on Redis-Commander and phpRedisAdmin
-* You can select the database via console or the drop down.
-   * The database select drop down shows if the checked database is empty or filled, so you can always know which is filled
-* Save button to save the db
-* Full statistics pages, can be useful
-* This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
-* Dark - Dracula / light themes
-* Search
-  * Client side mode searching in keys - small key set
-  * Server side mode searching in keys - large key set
-  * Search mode
-    * the search keys starts with a string key
-    * the search keys includes a string in the key
-* The app is responsive, it works on a phone/tablet as well
-* There is a key sorting function, which has a penalty, because it sorts with natural-compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
-* For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
-
-
-# Change log
-[The change log readme](change-log.md) 
 
 # Contributors
 [The contributors readme](contributors.md)
