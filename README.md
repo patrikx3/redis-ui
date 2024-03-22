@@ -117,7 +117,8 @@ flatpak install ./P3X-Redis-UI-2024.4.165-x86_64.flatpak
 flatpak run com.patrikx3.redis-ui
 ```
 
-
+Besides the menu is integrated.
+ 
 
 ### AppImage, dep, rpm
 
