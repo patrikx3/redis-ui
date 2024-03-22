@@ -99,7 +99,7 @@
             }
         ],
         "icon": "src/electron/images/",
-        "appId": "p3x.redis-ui.electron",
+        "appId": "com.patrikx3.redis-ui",
         "productName": "P3X-Redis-UI",
         "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
         "win": {
