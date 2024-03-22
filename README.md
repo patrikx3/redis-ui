@@ -114,7 +114,7 @@ You download from the releases page and install as:
 ```sh
 wget https://github.com/patrikx3/redis-ui/releases/download/v2024.4.165/P3X-Redis-UI-2024.4.165-x86_64.flatpak
 flatpak install ./P3X-Redis-UI-2024.4.165-x86_64.flatpak
-flatpak run com.patrikx3.redis-ui
+flatpak run com.patrikx3.redis_ui
 ```
 
 Besides the menu is integrated.
