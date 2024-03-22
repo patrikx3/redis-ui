@@ -109,6 +109,12 @@ The main source installer is the `AppImage`, so, the themes are not implemented 
 [![LINK](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
 
 ## Flathub
+You download from the releases page and install as:
+  
+```sh
+wget https://github.com/patrikx3/onenote/releases/download/v2024.4.160/P3X-OneNote-2024.4.160-x86_64.flatpak
+flatpak install ./P3X-OneNote-2024.4.160-x86_64.flatpak
+```
 
 
 

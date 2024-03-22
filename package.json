@@ -31,6 +31,7 @@
         "publish-windows-store": "rimraf dist && electron-builder --windows",
         "publish-electron-snap": "rimraf dist && electron-builder --linux snap -p never",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
+        "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak --x64 --arm64",
         "publish-macos": "electron-builder --mac --publish never"
     },
     "repository": {
