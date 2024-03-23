@@ -149,7 +149,10 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 
 
 ## Releases
-
+  
+https://github.com/patrikx3/redis-ui/releases  
+  
+  
 ### Snap
 
 <!--
@@ -172,8 +175,6 @@ Besides the menu is integrated.
 
 ### AppImage, dep, rpm
 
-https://github.com/patrikx3/redis-ui/releases  
-  
 AppImage, dep and rpm auto update itself.  
   
 #### To integrate into the menu using AppImage
