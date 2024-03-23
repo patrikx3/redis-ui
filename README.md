@@ -148,7 +148,7 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 [The change log readme](change-log.md) 
 
 
-## Releases
+## Releases / Downloadable installer
   
 https://github.com/patrikx3/redis-ui/releases  
   
