@@ -57,7 +57,6 @@ The best use case for this Redis GUI, if you manage tons of JSON, as it includes
 * There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
 * Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
 * Please, check out your Redis use case, if this program can cover your requirements
-* Handles binary data
 * **Does not work with sentinel**, but it will be developed at some point of time
 * **Has cluster support**
   * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) (now -> [@devthejo](https://github.com/devthejo)) of the cluster function.
