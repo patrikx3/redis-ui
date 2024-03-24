@@ -100,7 +100,7 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 
 ## Features 
 
-* Copying to the clipboard, it is only working with text. Buffer/binary data wil not work. Use the download buffer button.
+* Copying to the clipboard, it is only working with text. Binary data wil not work. Use the download binary button.
 * If you are using a value that is bigger than 0.5MB, it will say `[object ArrayBuffer]`, that is ok, for big values, use a buffer (set buffer, download buffer)
 * You can download and upload buffer files in string, hash, list, set and zset 
 * The console history is kept indefinite in the local storage
