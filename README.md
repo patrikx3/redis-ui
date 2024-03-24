@@ -36,7 +36,7 @@ v20.11.1
   
 Some of the features are coming below. 
   
-The best use case for this Redis GUI, if you manage tons of JSON, as it includes JSONEditor and ACE. Check out the different options in the edit json button dialog. :)
+The best use case for this Redis GUI, if you manage tons of JSON, as it includes JSONEditor and ACE. Check out the different options in the edit json button dialog, besides, you can upload and download binary data as well.
 
 
 ## Features 
