@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.175
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.176
 
 
 
@@ -41,6 +41,7 @@ The best use case for this Redis GUI, if you manage tons of JSON, as it includes
 
 ## Features 
 
+* Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, an it says `[object ArrayBuffer]`, as you save a text and it will not work anymore after you download the binary data
 * Copying to the clipboard, it is only working with text. Binary data wil not work. Use the download binary button.
 * If you are using a value that is bigger than 0.5MB, it will say `[object ArrayBuffer]`, that is ok, for big values, use binary (upload binary, download binary)
 * You can download and upload binary files in string, hash, list, set and zset 
@@ -355,7 +356,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.175
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.176
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
