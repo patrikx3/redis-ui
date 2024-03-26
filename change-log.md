@@ -8,6 +8,10 @@
 ### Unreleased
 None
 
+### v2024.4.179
+Released on 03/26/2024
+* BUGFIX: In the quick console, it was always reloading the redis key and associated data, which is bad when we are using a 5MB binary data. Redis key data refresh is manual now only.
+
 ### v2024.4.178
 Released on 03/25/2024
 * BUGFIX: In strings type, the editing when validate JSON enabled it was not working as expected.
@@ -1062,7 +1066,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.178
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.179
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
