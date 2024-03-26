@@ -8,6 +8,7 @@
 ### v2024.4.181
 Released on 03/26/2024
 * FEATURE: The default theme is basaed on the preference of the light/dark of the host. (Enterprise / Dark enterprise as default now)
+* FEATURE: Added SNAP ARM 32bit version
 
 ### v2024.4.180
 Released on 03/26/2024
