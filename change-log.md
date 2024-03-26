@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### Unreleased
-None
+* FEATURE: The text area is using Roboto Mono font style.
 
 ### v2024.4.179
 Released on 03/26/2024
