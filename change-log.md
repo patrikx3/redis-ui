@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### Unreleased
+* FEATURE: Removed the Overview menu in the Electron main menu as it was not used.
+
 ### v2024.4.186
 Released on 03/27/2024
 * CHORE: Corifeus release.

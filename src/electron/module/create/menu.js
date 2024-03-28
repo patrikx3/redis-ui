@@ -33,6 +33,7 @@ function mainMenu() {
                         })
                     }
                 },
+                /*
                 {
                     label: global.p3xre.strings.menu.main.overview,
                     click: () => {
@@ -41,6 +42,7 @@ function mainMenu() {
                         })
                     }
                 },
+                */
                 {type: 'separator'},
                 {
                     label: global.p3xre.strings.menu.main.quit,
