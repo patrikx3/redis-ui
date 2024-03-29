@@ -1,17 +1,17 @@
 {
     "p3xrs": {
-        
         "http": {
             "port-info": "this is ommitted, it will be default 7843",
-            "port": 7843
+            "port": 7843,
+            "bind-info": "the interface with listen to, could be 127.0.0.1 or 0.0.0.0 or specific interface",
+            "bind": "0.0.0.0"
         },
         "connections": {
             "home-dir-info": "if the dir config is empty or home, the connections are saved in the home folder, otherwise it will resolve the directory set as it is, either relative ./ or absolute starting with /. NodeJs will resolve this directory in p3xrs.connections.dir",
             "home-dir": "home"
         },
         "static-info": "This is the best configuration, if it starts with ~, then it is in resolve the path in the node_modules, otherwise it resolves to the current process current working directory.",
-        "static": "~p3x-redis-ui-material/dist",
-        "license-key": "MIT",
+        "static-disabled": "~p3x-redis-ui-material/dist",
         "treeDividers": [
             ":",
             "/",
