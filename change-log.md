@@ -5,10 +5,16 @@
                         
 [//]: #@corifeus-header:end
 
-### v2024.4.187
+### v2024.4.189
+Released on 03/29/2024
+* BUGFIX: In the console, if you keep the monitor on, it will not crash if you keep on the screen for a long time (as the output console could be too big), now, only keep the last 256 items in the console.
+
+### v2024.4.188
+Released on 03/28/2024
 * BUGFIX: AngularJs error fix.
 
 ### v2024.4.187
+Released on 03/28/2024
 * FEATURE: Removed the Overview menu in the Electron main menu as it was not used.
 * FEATURE: Sentinel support.
 
@@ -1084,7 +1090,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.188
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.189
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
