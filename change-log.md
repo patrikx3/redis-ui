@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### UnReleased
+* BUGFIX: Algorithm enhanced in TLS handling.
+
 ### v2024.4.193
 Released on 03/29/2024
 * BUGFIX: The connection dialog node index was wrongly named first, when the first on that list is the second as the main redis settings is the first node.
