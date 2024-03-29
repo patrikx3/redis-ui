@@ -217,6 +217,8 @@ Start up with a server or via a browser and NodeJs/NPM.
 
 [Some description about the config file readme](p3xrs.json)
 
+[Some description about the config connections readme](.p3xrs-conns.json)
+
 ### Docker 
 
 https://hub.docker.com/r/patrikx3/p3x-redis-ui

@@ -1,0 +1,117 @@
+{
+    "update": "2024-03-29T14:10:53.960Z",
+    "list": [
+        {
+            "name": "instance with ssh",
+            "host": "127.0.0.1",
+            "port": 6379,
+            "password": "private",
+            "askAuth": false,
+            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": false,
+            "sentinel": false,
+            "sentinelName": "",
+            "nodes": [],
+            "ssh": true,
+            "sshHost": "private",
+            "sshPort": 22,
+            "sshUsername": "private",
+            "sshPrivateKey": "private",
+            "tlsCrt": "",
+            "tlsKey": "",
+            "tlsCa": ""
+        },
+        {
+            "name": "instance with tls enabled",
+            "host": "127.0.0.1",
+            "port": 6379,
+            "password": "private",
+            "askAuth": false,
+            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": false,
+            "sentinel": false,
+            "sentinelName": "",
+            "nodes": [],
+            "ssh": false,
+            "sshHost": "",
+            "sshPort": 22,
+            "sshUsername": "",
+            "sshPrivateKey": "",
+            "tlsCrt": "private",
+            "tlsKey": "private",
+            "tlsCa": "private"
+        },
+        {
+            "name": "cluster",
+            "host": "127.0.0.1",
+            "port": 16379,
+            "password": "",
+            "askAuth": false,
+            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": true,
+            "sentinel": false,
+            "sentinelName": "",
+            "nodes": [
+                {
+                    "host": "127.0.0.1",
+                    "port": 16380,
+                    "id": "P3Xida495ac68e81010008b895f5389791d"
+                },
+                {
+                    "host": "127.0.0.1",
+                    "port": 16381,
+                    "id": "P3Xidb3a7ac68e81010000e194d77ccefaa"
+                }
+            ],
+            "ssh": false,
+            "sshHost": "",
+            "sshPort": 22,
+            "sshUsername": "",
+            "sshPrivateKey": "",
+            "tlsCrt": "",
+            "tlsKey": "",
+            "tlsCa": ""
+        },
+        {
+            "name": "sentinel",
+            "host": "127.0.0.1",
+            "port": 26379,
+            "password": "",
+            "askAuth": false,
+            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": false,
+            "sentinel": true,
+            "sentinelName": "sentinel",
+            "nodes": [
+                {
+                    "host": "127.0.0.1",
+                    "port": 26380,
+                    "id": "P3Xida495ac68e81010008b895f5389791d"
+                },
+                {
+                    "host": "127.0.0.1",
+                    "port": 26381,
+                    "id": "P3Xidb3a7ac68e81010000e194d77ccefaa"
+                }
+            ],
+            "ssh": false,
+            "sshHost": "",
+            "sshPort": 22,
+            "sshUsername": "",
+            "sshPrivateKey": "",
+            "tlsCrt": "",
+            "tlsKey": "",
+            "tlsCa": ""
+        }
+
+    ],
+    "license": "MIT"
+}
