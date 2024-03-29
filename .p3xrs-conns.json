@@ -85,11 +85,13 @@
                 {
                     "host": "127.0.0.1",
                     "port": 16380,
+                    "password": "",
                     "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 },
                 {
                     "host": "127.0.0.1",
                     "port": 16381,
+                    "password": "",
                     "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 }
             ],
@@ -119,11 +121,13 @@
                 {
                     "host": "127.0.0.1",
                     "port": 26380,
+                    "password": "",
                     "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 },
                 {
                     "host": "127.0.0.1",
                     "port": 26381,
+                    "password": "",
                     "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 }
             ],
