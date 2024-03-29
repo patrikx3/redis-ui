@@ -8,7 +8,7 @@
             "port": 6379,
             "password": "private",
             "askAuth": false,
-            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": false,
             "cluster": false,
@@ -30,7 +30,7 @@
             "port": 6379,
             "password": "private",
             "askAuth": false,
-            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": false,
             "cluster": false,
@@ -52,7 +52,7 @@
             "port": 16379,
             "password": "",
             "askAuth": false,
-            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": false,
             "cluster": true,
@@ -62,12 +62,12 @@
                 {
                     "host": "127.0.0.1",
                     "port": 16380,
-                    "id": "P3Xida495ac68e81010008b895f5389791d"
+                    "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 },
                 {
                     "host": "127.0.0.1",
                     "port": 16381,
-                    "id": "P3Xidb3a7ac68e81010000e194d77ccefaa"
+                    "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 }
             ],
             "ssh": false,
@@ -85,7 +85,7 @@
             "port": 26379,
             "password": "",
             "askAuth": false,
-            "id": "P3Xidb247cf58e81010004db4c77abe2121",
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": false,
             "cluster": false,
@@ -95,12 +95,12 @@
                 {
                     "host": "127.0.0.1",
                     "port": 26380,
-                    "id": "P3Xida495ac68e81010008b895f5389791d"
+                    "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 },
                 {
                     "host": "127.0.0.1",
                     "port": 26381,
-                    "id": "P3Xidb3a7ac68e81010000e194d77ccefaa"
+                    "id": "P3Xid-starts-with-and-indexing-unique-identifier"
                 }
             ],
             "ssh": false,
