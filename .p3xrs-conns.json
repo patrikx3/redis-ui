@@ -1,5 +1,6 @@
 {
     "update": "2024-03-29T14:10:53.960Z",
+    "license": "MIT",
     "list": [
         {
             "name": "instance with ssh",
@@ -112,6 +113,5 @@
             "tlsCa": ""
         }
 
-    ],
-    "license": "MIT"
+    ]
 }
