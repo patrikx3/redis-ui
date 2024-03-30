@@ -111,7 +111,7 @@
             "name": "sentinel",
             "host": "127.0.0.1",
             "port": 26379,
-            "password": "",
+            "password": "sentinel password",
             "askAuth": false,
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": false,
