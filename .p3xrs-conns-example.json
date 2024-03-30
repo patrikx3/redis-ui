@@ -128,7 +128,7 @@
             "cluster": false,
             "sentinel": false,
             "nodes": [],
-            "password": "g5N1BJWagebT72k7vgLEgUbBYoaqFupC",
+            "password": "private",
             "sshPrivateKey": "-----BEGIN OPENSSH PRIVATE KEY-----secure-----END OPENSSH PRIVATE KEY-----"
         },
         {
