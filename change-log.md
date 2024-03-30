@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### Unreleased
+* FEATURE: Fix redirection issue and add watch for connection state and if undefined go to the settings page.
+
 ### v2024.4.209
 Released on 03/30/2024
 * FEATURE: Change the connection error handling.
