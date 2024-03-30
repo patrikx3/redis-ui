@@ -34,7 +34,7 @@ v20.12.0
 
 `p3x-redis-ui` is a new Redis GUI which can serve as a backend server or as a desktop application.
   
-Some of the features are coming below. 
+Some of the features are coming below. This is open source software.
   
 The best use case for this Redis GUI, if you manage JSON, as it includes JSONEditor and ACE. Check out the different options in the edit json button dialog, besides, you can upload and download binary data. SSH, cluster, sentinel.
 
