@@ -1,0 +1,201 @@
+{
+    "update": "2024-03-30T07:14:37.928Z",
+    "list": [
+        {
+            "name": "localhost",
+            "host": "localhost",
+            "port": 6379,
+            "id": "P3Xid5a0dfde8c710100089fc907b54ac0d",
+            "cluster": false,
+            "sentinel": false,
+            "nodes": [],
+            "tlsWithoutCert": false,
+            "ssh": false,
+            "sshPort": 22
+        },
+        {
+            "name": "server prod",
+            "host": "secure",
+            "port": 6379,
+            "id": "P3Xida0d91ee8c71010000f522eeef7a348",
+            "cluster": false,
+            "sentinel": false,
+            "nodes": [],
+            "ssh": false,
+            "sshPort": 22,
+            "password": "secure"
+        },
+        {
+            "name": "server test",
+            "host": "secure",
+            "port": 6380,
+            "id": "P3Xid86322ee8c71010008c337ccb2c67ef",
+            "cluster": false,
+            "sentinel": false,
+            "nodes": [],
+            "askAuth": false,
+            "ssh": false,
+            "sshPort": 22,
+            "password": "secure"
+        },
+        {
+            "name": "server test with tls",
+            "host": "secure",
+            "password": "g5N1BJWagebT72k7vgLEgUbBYoaqFupC",
+            "port": 7379,
+            "askAuth": false,
+            "id": "P3Xid2dd6106a981010008259e3d1f3a201",
+            "sentinel": false,
+            "cluster": false,
+            "nodes": [],
+            "ssh": false,
+            "sshPort": 22,
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": false,
+            "tlsCrt": "-----BEGIN CERTIFICATE-----secure-----END CERTIFICATE-----",
+            "tlsKey": "-----BEGIN PRIVATE KEY-----secure-----END PRIVATE KEY-----",
+            "tlsCa": "-----BEGIN CERTIFICATE-----secure-----END CERTIFICATE-----"
+        },
+        {
+            "name": "vpn redis",
+            "host": "secure",
+            "port": 6379,
+            "id": "P3Xidf634827e881010008da44ae82969f5",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": false,
+            "nodes": [],
+            "ssh": false,
+            "sshPort": 22,
+            "sentinel": false
+        },
+        {
+            "name": "sentinel",
+            "host": "secure",
+            "port": 26379,
+            "askAuth": false,
+            "id": "P3Xid3862da58e81010008b1bd28b2142e3",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "cluster": false,
+            "sentinel": true,
+            "nodes": [
+                {
+                    "host": "secure",
+                    "port": 26380,
+                    "id": "P3Xid81e69c68e81010005182fd9e1d5261"
+                },
+                {
+                    "host": "secure",
+                    "port": 26381,
+                    "id": "P3Xid62099c68e81010000cf739e167e6a6"
+                }
+            ],
+            "ssh": false,
+            "sshPort": 22,
+            "sentinelName": "sentinel"
+        },
+        {
+            "name": "demona tunnel",
+            "host": "localhost",
+            "port": 6379,
+            "askAuth": false,
+            "id": "P3Xid13512e98e8101000aac09572042541",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": false,
+            "ssh": true,
+            "sshHost": "secure",
+            "sshPort": 22,
+            "sshUsername": "secure",
+            "cluster": false,
+            "sentinel": false,
+            "nodes": [],
+            "sshPassword": "",
+            "sshPrivateKey": "-----BEGIN RSA PRIVATE KEY-----secure-----END RSA PRIVATE KEY-----"
+        },
+        {
+            "name": "server test tunnel",
+            "host": "localhost",
+            "port": 6380,
+            "askAuth": false,
+            "id": "P3Xid1d5973b8e8101000430f568d12ecb5",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": true,
+            "ssh": true,
+            "sshHost": "secure",
+            "sshPort": 22,
+            "sshUsername": "redis-ui",
+            "cluster": false,
+            "sentinel": false,
+            "nodes": [],
+            "password": "g5N1BJWagebT72k7vgLEgUbBYoaqFupC",
+            "sshPrivateKey": "-----BEGIN OPENSSH PRIVATE KEY-----secure-----END OPENSSH PRIVATE KEY-----"
+        },
+        {
+            "name": "cluster",
+            "host": "localhost",
+            "port": 36379,
+            "askAuth": false,
+            "username": "",
+            "id": "P3Xid27bac4b8e8101000a4b8746ee66bc3",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": false,
+            "ssh": false,
+            "sshPort": 22,
+            "cluster": true,
+            "sentinel": false,
+            "nodes": [
+                {
+                    "host": "localhost",
+                    "port": 36380,
+                    "id": "P3Xid0af6c4b8e81010000e240e7a8ce7ac"
+                },
+                {
+                    "host": "localhost",
+                    "port": 36381,
+                    "id": "P3Xid3907c4b8e810100084704e45d3bd37"
+                }
+            ]
+        },
+        {
+            "name": "cluster grokzen",
+            "host": "localhost",
+            "port": 7000,
+            "askAuth": false,
+            "id": "P3Xid491fe7b8e81010008ba0f8c654ae0e",
+            "tlsWithoutCert": false,
+            "tlsRejectUnauthorized": false,
+            "ssh": false,
+            "sshPort": 22,
+            "cluster": true,
+            "sentinel": false,
+            "nodes": [
+                {
+                    "host": "localhost",
+                    "port": 7001,
+                    "id": "P3Xid8035e7b8e8101000836a3798403521"
+                },
+                {
+                    "host": "localhost",
+                    "port": 7002,
+                    "id": "P3Xidbbe6e7b8e810100007d8705d2db9a3"
+                },
+                {
+                    "host": "localhost",
+                    "port": 7003,
+                    "id": "P3Xiddd68e7b8e810100003921524ee5e38"
+                },
+                {
+                    "host": "localhost",
+                    "port": 7004,
+                    "id": "P3Xid73e9e7b8e810100006f8a0a1ab2c2b"
+                },
+                {
+                    "host": "localhost",
+                    "port": 7005,
+                    "id": "P3Xid1d5be7b8e810100009ae5b8ee7e201"
+                }
+            ]
+        }
+    ]
+}
