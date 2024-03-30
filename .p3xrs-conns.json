@@ -3,12 +3,13 @@
     "license": "MIT",
     "list": [
         {
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with ssh",
             "host": "127.0.0.1",
             "port": 6379,
             "password": "private",
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": false,
             "sentinel": false,
             "sentinelName": "",
@@ -26,12 +27,13 @@
             "tlsCa": ""
         },
         {
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with tls enabled",
             "host": "127.0.0.1",
             "port": 7379,
             "password": "private",
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": false,
             "sentinel": false,
             "sentinelName": "",
@@ -49,12 +51,13 @@
             "tlsCa": "private"
         },
         {
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with tls enabled without cert if it is valid",
             "host": "127.0.0.1",
             "port": 7379,
             "password": "private",
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": false,
             "sentinel": false,
             "sentinelName": "",
@@ -72,12 +75,13 @@
             "tlsCa": ""
         },        
         {
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "cluster",
             "host": "127.0.0.1",
             "port": 16379,
             "password": "",
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": true,
             "sentinel": false,
             "sentinelName": "",
@@ -108,12 +112,13 @@
             "tlsCa": ""
         },
         {
+            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "sentinel",
             "host": "127.0.0.1",
             "port": 26379,
             "password": "sentinel password",
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "cluster": false,
             "sentinel": true,
             "sentinelName": "sentinel",

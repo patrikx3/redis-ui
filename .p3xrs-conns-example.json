@@ -2,10 +2,11 @@
     "update": "2024-03-30T07:14:37.928Z",
     "list": [
         {
+            "id": "P3Xid5a0dfde8c710100089fc907b54ac0d",
             "name": "localhost",
             "host": "localhost",
             "port": 6379,
-            "id": "P3Xid5a0dfde8c710100089fc907b54ac0d",
+            "readonly": false,
             "cluster": false,
             "sentinel": false,
             "nodes": [],
@@ -14,10 +15,11 @@
             "sshPort": 22
         },
         {
+            "id": "P3Xida0d91ee8c71010000f522eeef7a348",
             "name": "server prod",
             "host": "secure",
             "port": 6379,
-            "id": "P3Xida0d91ee8c71010000f522eeef7a348",
+            "readonly": false,
             "cluster": false,
             "sentinel": false,
             "nodes": [],
@@ -26,10 +28,11 @@
             "password": "secure"
         },
         {
+            "id": "P3Xid86322ee8c71010008c337ccb2c67ef",
             "name": "server test",
             "host": "secure",
             "port": 6380,
-            "id": "P3Xid86322ee8c71010008c337ccb2c67ef",
+            "readonly": false,
             "cluster": false,
             "sentinel": false,
             "nodes": [],
@@ -39,12 +42,13 @@
             "password": "secure"
         },
         {
+            "id": "P3Xid2dd6106a981010008259e3d1f3a201",
             "name": "server test with tls",
             "host": "secure",
-            "password": "g5N1BJWagebT72k7vgLEgUbBYoaqFupC",
+            "password": "secure",
             "port": 7379,
+            "readonly": false,
             "askAuth": false,
-            "id": "P3Xid2dd6106a981010008259e3d1f3a201",
             "sentinel": false,
             "cluster": false,
             "nodes": [],
@@ -57,10 +61,11 @@
             "tlsCa": "-----BEGIN CERTIFICATE-----secure-----END CERTIFICATE-----"
         },
         {
+            "id": "P3Xidf634827e881010008da44ae82969f5",
             "name": "vpn redis",
             "host": "secure",
             "port": 6379,
-            "id": "P3Xidf634827e881010008da44ae82969f5",
+            "readonly": true,
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": true,
             "cluster": false,
@@ -70,11 +75,12 @@
             "sentinel": false
         },
         {
+            "id": "P3Xid3862da58e81010008b1bd28b2142e3",
             "name": "sentinel",
             "host": "secure",
             "port": 26379,
+            "readonly": true,
             "askAuth": false,
-            "id": "P3Xid3862da58e81010008b1bd28b2142e3",
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": true,
             "cluster": false,
@@ -96,11 +102,12 @@
             "sentinelName": "sentinel"
         },
         {
+            "id": "P3Xid13512e98e8101000aac09572042541",
             "name": "demona tunnel",
             "host": "localhost",
             "port": 6379,
             "askAuth": false,
-            "id": "P3Xid13512e98e8101000aac09572042541",
+            "readonly": true,
             "tlsWithoutCert": false,
             "tlsRejectUnauthorized": false,
             "ssh": true,
