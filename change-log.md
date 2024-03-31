@@ -5,12 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
-### Unreleased
-Released on x/x/x
+### v2024.4.214
+Released on 03/31/2024
 * FEATURE: On the settings page, show the connected clients count.
+* FEATURE: Show a disconnect button on the settings connections list.
+* FEATURE: The connection form fieldset border color is dark/light mode.
+* BUGFIX: In the string key on cancel it hide the value.
 
 ### v2024.4.213
-Released on 03/30/2024
+Released on 03/31/2024
 * BUGFIX: Fix memory leak.
 
 ### v2024.4.212
@@ -1167,7 +1170,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.213
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.214
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
