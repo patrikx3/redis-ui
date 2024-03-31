@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2024.4.217
+Released on 03/31/2024
+* BUGFIX: In the string key fix as it is automatically decide if it is buffer or string.
+
 ### v2024.4.215
 Released on 03/31/2024
 * FEATURE: On the settings page, show the connected clients count.
@@ -1170,7 +1174,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.215
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.217
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
