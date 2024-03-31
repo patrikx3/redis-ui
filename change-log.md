@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### Unreleased
+Released on x/x/x
+* FEATURE: On the settings page, show the connected clients count.
+
 ### v2024.4.213
 Released on 03/30/2024
 * BUGFIX: Fix memory leak.
