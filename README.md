@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.225
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.226
 
 
 
@@ -315,13 +315,14 @@ npm install
 
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
 
+[For a new language](https://github.com/patrikx3/redis-ui-material/blob/master/src/main.js)
 [English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
 [English strings, for the Electron](https://github.com/patrikx3/redis-ui/blob/master/src/strings/en/index.js)  
-[JSON Editor, to incorporate a new language](https://github.com/patrikx3/redis-ui-material/blob/master/src/angular/dialog/p3xr-dialog-json-editor.js)  
-[Moment a new language for Material (momentDateMap)](https://github.com/patrikx3/redis-ui-material/blob/master/src/core/settings.js)    
+  
 [Moment a new language for vendor (require moment/locale)](https://github.com/patrikx3/redis-ui-material/blob/master/src/vendor.js)    
+[JSON Editor, to incorporate a new language](https://github.com/patrikx3/redis-ui-material/blob/master/redis-ui-material/src/core/settings.js)  
+[Moment a new language for Material (momentDateMap)](https://github.com/patrikx3/redis-ui-material/blob/master/src/core/settings.js)    
 [Humanize duration](https://github.com/patrikx3/redis-ui-material/blob/master/redis-ui-material/src/core/settings.js)
-[For a new language](https://github.com/patrikx3/redis-ui-material/blob/master/redis-ui-material/src/main.js)
 
 # Solution
   
@@ -360,7 +361,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.225
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.226
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
