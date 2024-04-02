@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.227
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.228
 
 
 
@@ -105,9 +105,7 @@ The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@g
 The features that are only working in the donated-ware version:
 * JSON editor
 * Cluster
-* AWS ElastiCache
-* Gcloud memorystore
-* Azure Redis
+* Sentinel
 
 To check if your license is valid @  
 https://server.patrikx3.com/api/patrikx3/redis-ui/status/your-license-key
@@ -115,9 +113,11 @@ https://server.patrikx3.com/api/patrikx3/redis-ui/status/your-license-key
 #### New features
 Users, that donated, have a big chance that requests for new features will be implemented.
 
-##### Possible new features
+##### New features
 * SSH tunnel
 * Upload binary data
+
+##### To write
 * Collapse/expand recursively on individual leafs
 
 #### Plus function problems
@@ -361,7 +361,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.227
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.228
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
