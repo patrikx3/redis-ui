@@ -7,7 +7,7 @@
 
 ### v2024.4.228
 Released on 04/02/2024
-* BUGFIX: In the latest updates, it was not working the web UI.
+* BUGFIX: In the latest updates, instead of the web UI it was saying `operational`.
 
 ### v2024.4.227
 Released on 04/01/2024
