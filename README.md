@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.228
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.230
 
 
 
@@ -41,6 +41,7 @@ The best use case for this Redis GUI, if you manage JSON, as it includes JSONEdi
 
 ## Features 
 
+* Works with Pika, but it is not perfect
 * SSH tunnel is working with single instance (cluster and sentinel is not done).
 * Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, an it says `[object ArrayBuffer]`, as if you save a text and it will not work anymore after you download the binary data, that is because binary and text is different
 * Copying to the clipboard, it is only working with text. Binary data wil not work. Use the download binary button.
@@ -361,7 +362,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.228
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.230
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
