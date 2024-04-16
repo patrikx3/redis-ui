@@ -158,7 +158,14 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
 ## Releases / Downloadable installer
   
 https://github.com/patrikx3/redis-ui/releases  
+
+### Mac OS
+I am not an Apple guru, but I had to download the `zip` in `arm64` version an execute on the zip:  
+```bash
+xattr -c -r P3X-Redis-UI.app
+```
   
+Then it works.
   
 ### Snap
 
