@@ -32,7 +32,7 @@ v20.12.1
                         
 [//]: #@corifeus-header:end
 
-`p3x-redis-ui` is a new Redis GUI which can serve as a backend server or as a desktop application.
+`p3x-redis-ui` is a Redis GUI which can serve as a backend server on the web or as a desktop application.
   
 Some of the features are coming below. This is open source software.
   
@@ -43,7 +43,7 @@ The best use case for this Redis GUI, if you manage JSON, as it includes JSONEdi
 
 * Works with Pika, but it is not perfect
 * SSH tunnel is working with single instance (cluster and sentinel is not done).
-* Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, an it says `[object ArrayBuffer]`, as if you save a text and it will not work anymore after you download the binary data, that is because binary and text is different
+* Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, and it says `[object ArrayBuffer]`, as if you save a text and it will not work anymore after you download the binary data, that is because binary and text is different
 * Copying to the clipboard, it is only working with text. Binary data wil not work. Use the download binary button.
 * If you are using a value that is bigger than 256 kB, it will say `[object ArrayBuffer]`, that is ok, for big values, use binary (upload binary, download binary)
 * You can download and upload binary files in string, hash, list, set and zset 
