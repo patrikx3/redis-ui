@@ -159,14 +159,15 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
   
 https://github.com/patrikx3/redis-ui/releases  
 
-### Mac OS
+## MacOS  
+It is building on Intel and Apple silicon.  
+
+### Fix downloaded file from GitHub
 I am not an Apple guru, but I had to download the `zip` in `arm64` version an execute on the zip:  
 ```bash
 sudo xattr -rd com.apple.quarantine P3X-Redis-UI.app
-```
-  
-Then it works.
-  
+```  
+
 ### Snap
 
 <!--
