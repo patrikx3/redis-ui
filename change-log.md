@@ -6,15 +6,19 @@
 [//]: #@corifeus-header:end
 
 ### v2024.4.242
+Released on 04/25/2024
 * BUGFIX: Console is not available in read only mode.
 
 ### v2024.4.240
+Released on 04/25/2024
 * FEATURE: Disable `subscribe`, `monitor`, `quit`, `psubscribe` in the console. 
 
 ### v2024.4.238
+Released on 04/24/2024
 * BUGFIX: In the PubSub monitor with input, was not always working
 
 ### v2024.4.237
+Released on 04/24/2024
 * CHORE: Updated to Electron v30
 * CHORE: Updated packages to latest versions
 * FEATURE: In the PubSub monitor, an input can filter the patterns to receive.
