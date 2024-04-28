@@ -41,6 +41,7 @@ The best use case for this Redis GUI, if you manage JSON, as it includes JSONEdi
 
 ## Features 
 
+* The configuration is challenging because it originates from a shared web application. This setup ensures that passwords and sensitive data are secured through the use of a unique identifier for both the main configuration and the node configuration, along with an additional node ID that is used specifically for node passwords and related security measures.
 * Works with Pika, but it is not perfect
 * SSH tunnel is working with single instance (cluster and sentinel is not done).
 * Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, and it says `[object ArrayBuffer]`, as if you save a text and it will not work anymore after you download the binary data, that is because binary and text is different
