@@ -117,21 +117,21 @@ Contributors, that created features that are working only in the donate-ware ver
   
 -->  
   
-## Warning 
-It is not recommend to generate the configuration `JSON` via a text editor. The perfect solution is to generate the configuration in the GUI, then apply for example in Kubernetes.
+## Important Notice 
+To ensure accuracy and minimize errors, we strongly advise against manually creating the configuration `JSON` file using a text editor. Instead, utilize the GUI to generate the configuration, which can then be seamlessly integrated into systems like Kubernetes.
 
-### AngularJs Vulnerabilities
-[README and comments](artifacts/readme/angularjs.md)
+### Awareness of AngularJs Security Risks
+For detailed information on potential vulnerabilities and mitigation strategies, please refer to our [dedicated documentation](artifacts/readme/angularjs.md).
 
+## Access the Latest Online Version
+Explore the most current iteration of our project at [p3x.redis.patrikx3.com](https://p3x.redis.patrikx3.com) — this is the enhanced version.
 
-## The online current version
-https://p3x.redis.patrikx3.com  <!-- - this is the plus version -->
-
-This Redis database every day in the morning European time CET restores some data, so you may do whatever you want to do.   
+### Operational Insights:
+- **Data Restoration:** Our Redis database automatically restores certain datasets every morning at CET, offering a fresh start daily. Feel free to experiment as needed.
   
-Besides, you could experience the test app to exit for 1 second, because it could auto update itself. It auto updates itself when the code from Git changes.
+- **Application Stability:** You may notice brief downtime (about 1 second) in our test application, possibly due to automatic updates triggered by changes in the Git repository.
 
-Third, it is a snapshot, it is possible, that the features are different from GitHub or NPM as the releases are usually monthly or as they happen. 
+- **Version Consistency:** Please be aware that the live snapshot might differ from the versions available on GitHub or NPM. Updates and new features are typically released monthly or as developments occur.
 
 
 ### Screenshots
@@ -146,14 +146,17 @@ Third, it is a snapshot, it is possible, that the features are different from Gi
   
 https://github.com/patrikx3/redis-ui/releases  
 
-## MacOS  
-It is building on Intel and Apple silicon.  
+## MacOS Compatibility
+Our application supports builds for both Intel and Apple Silicon architectures.
 
-### Fix downloaded file from GitHub
-I am not an Apple guru, but I had to download the `zip` in `arm64` version an execute on the unzipped app:  
+### Handling Downloaded Files from GitHub
+Although I'm not an Apple expert, if you download the `zip` file for the `arm64` version, you'll need to execute the following command on the unzipped app to remove the quarantine attribute applied by macOS:
+
 ```bash
 sudo xattr -rd com.apple.quarantine P3X-Redis-UI.app
-```  
+```
+
+This command ensures that your system trusts the application, allowing it to run smoothly without security interruptions from macOS.
 
 ### Snap
 
