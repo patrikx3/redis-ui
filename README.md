@@ -32,65 +32,51 @@ v20.12.2
                         
 [//]: #@corifeus-header:end
 
-`p3x-redis-ui` is a Redis GUI which can serve as a backend server on the web or as a desktop application.
-  
-Some of the features are coming below. This is open source software.
-  
-The best use case for this Redis GUI, if you manage JSON, as it includes JSONEditor and ACE. Check out the different options in the edit json button dialog, besides, you can upload and download binary data. SSH, cluster, sentinel.
 
+**p3x-redis-ui** is a versatile Redis GUI that can function as either a backend server on the web or as a desktop application. This open-source software is particularly effective for managing JSON, featuring integration with JSONEditor and ACE. Explore a variety of options in the 'edit json' button dialog, which also supports uploading and downloading binary data. Additionally, it handles SSH, cluster, and sentinel configurations.
 
-## Features 
+## Features
 
-* The configuration is challenging because it originates from a shared web application. This setup ensures that passwords and sensitive data are secured through the use of a unique identifier for both the main configuration and the node configuration, along with an additional node ID that is used specifically for node passwords and related security measures.
-* Works with Pika, but it is not perfect
-* SSH tunnel is working with single instance (cluster and sentinel is not done).
-* Please, careful, the values can show, but if you want to use binary data, only save, when you uploaded, and it says `[object ArrayBuffer]`, as if you save a text and it will not work anymore after you download the binary data, that is because binary and text is different
-* Copying to the clipboard, it is only working with text. Binary data wil not work. Use the download binary button.
-* If you are using a value that is bigger than 256 kB, it will say `[object ArrayBuffer]`, that is ok, for big values, use binary (upload binary, download binary)
-* You can download and upload binary files in string, hash, list, set and zset 
-* The console history is kept indefinite in the local storage (last 20 entries)
-* Redis 6 with TLS is enabled with this information:
-  * https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/
-* You can override the server port via an environment variable `P3XRS_PORT`
-* You can override the server home directory via an environment variable `P3XRS_DOCKER_HOME`
-* In the connections, you can enable read only mode, which means, the user will not be able to modify via gui and the console (only pub/sub monitor and select database is allowed) is disabled. 
-* In a sub-directory, you can use Nginx/Ingress to rewrite your paths.
-  * https://github.com/patrikx3/redis-ui/issues/43
-* To show the menu in the desktop version, click ALT
-* There is a new feature in the settings/tree setting, which limits the received keys, the minimum is 100, the maximum is 100k, so there is no more crash, because of that
-* Since `v2020.4.189`, the tree can handle bigger key count, as of now, we are using deferred rendering for the tree - only rendering what is in the viewport, so it should be much faster versus rendering everything at once 
-* Please, check out your Redis use case, if this program can cover your requirements
-* **Does work with sentinel**, but it is new, so please file issues with errors, I will fix it quickly
-* **Has cluster support**
-  * Thanks so much for the awesome contribution by [@idetoile](https://github.com/idetoile) (now -> [@devthejo](https://github.com/devthejo)) of the cluster function.
-* Able to monitor all channel messages on the console by using a checkbox.
-* Works with multiple languages
-* Works as a backend
-* Works as a desktop via Electron
-  * Linux
-  * Windows
-  * MacOS (Intel & Apple silicon)
-* Starts with no settings without config, or setup your own config
-* Able to create, test, save, delete multiple connections or a readonly connections setup, for shared usage* 
-* Online you are able to choose the tree separator, for example :, /, -, space etc... or even empty separator
-* It is based on Redis-Commander and phpRedisAdmin
-* You can select the database via console or the drop down.
-   * The database select drop down shows if the checked database is empty or filled, so you can always know which is filled
-* Save button to save the db
-* Full statistics pages, can be useful
-* This is just a New Kind on the Block in the Redis world, so, of course, there are advantages and disadvantages in the other Redis GUIs
-* Dark - Dracula / light themes
-* Search
-  * Client side mode searching in keys - small key set
-  * Server side mode searching in keys - large key set
-  * Search mode
-    * the search keys starts with a string key
-    * the search keys includes a string in the key
-* The app is responsive, it works on a phone/tablet as well
-* There is a key sorting function, which has a penalty, because it sorts with natural-compare, which means it is more human display, then just raw characters, but up to 100k the keys is still ok. 
-* For big key set to be usable paging should be a maximum 1000 keys / page, though for 250 is the sweetest spot
+### Configuration and Security
+- **Secure Configuration:** Setup is intricate due to its roots in shared web applications, ensuring that passwords and sensitive data are safeguarded with unique identifiers for both main and node configurations. Node-specific IDs enhance security measures for node passwords.
 
+### Compatibility and Usage
+- **Redis Versions and TLS:** Supports Redis 6 with TLS, enhancing security and data integrity.
+  - For TLS configuration details, visit [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/).
+- **Pika Compatibility:** Compatible with Pika, though not perfectly optimized.
+- **SSH Tunneling:** Functional for single instances. Support for cluster and sentinel configurations is under development.
+- **Environmental Customizations:** Customize the server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME` environment variables.
 
+### Data Handling
+- **Binary Data Management:** Special care is needed when handling binary data to prevent issues. Use the download button for binary data; direct editing in text mode is not supported for binary content.
+- **Large Data Sets:** Handles values larger than 256 kB, indicated by `[object ArrayBuffer]`. For large values, utilize binary upload and download capabilities.
+- **Clipboard Operations:** Text copying is supported directly; binary data requires using the download functionality.
+
+### User Interface and Experience
+- **Desktop Shortcuts:** Access menus in the desktop version by pressing ALT.
+- **Responsive Design:** Fully responsive, ensuring usability on phones and tablets.
+- **Themes:** Choose between Dark - Dracula and light themes for personalized visual comfort.
+- **Data Visualization and Management:** 
+  - Tree view settings allow adjustments to key count from a minimum of 100 to a maximum of 100,000 to prevent crashes.
+  - Deferred rendering in the tree view enhances performance by rendering only what is visible in the viewport.
+
+### Advanced Features
+- **Monitoring and Logging:** Monitor all channel messages on the console with a simple checkbox. Console history is stored indefinitely in local storage, keeping the last 20 entries accessible.
+- **Database Interaction:** Select databases via the console or a dropdown menu, which also indicates whether databases are empty or filled.
+- **Search Functionality:**
+  - Client-side mode for searching small sets of keys.
+  - Server-side mode for efficient searching within large sets of keys.
+  - Search can be configured to start with a specific string or include a string within the keys.
+
+### Network Setup and Extensions
+- **Sub-directory Support:** Utilize Nginx/Ingress to rewrite paths when used in a sub-directory.
+  - For more information, see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43).
+
+### Contributions and Support
+- **Cluster Support:** Recently added and continuously improving. Contributions by [@devthejo](https://github.com/devthejo) have significantly enhanced this functionality.
+- **Community and Feedback:** As this tool evolves, feedback and issue reporting are highly valued to refine and improve the features.
+
+Redis UI provides a powerful interface for managing Redis databases with a focus on security, efficiency, and user experience. Whether you are dealing with small or large data sets, p3x-redis-ui offers robust solutions tailored to meet diverse operational needs.
 
 <!--
 👷 **The first full complete version was created in 20 days in September of 2018.** 
