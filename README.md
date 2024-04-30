@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.243
+# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app v2024.4.244
 
 
 
@@ -346,7 +346,7 @@ https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
 
 ---
 
-🙏 This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
+❤️ This is an open-source project. Star this repository, if you like it, or even donate to maintain the servers and the development. Thank you so much!
 
 Possible, this server, rarely, is down, please, hang on for 15-30 minutes and the server will be back up.
 
@@ -357,7 +357,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.243
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.244
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
