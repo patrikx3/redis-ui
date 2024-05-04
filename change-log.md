@@ -351,7 +351,7 @@ Relesed on 02/06/2024
 * CHORE: Update to latest version of 2024 and update all packages.
 
 
-## Older chage logs     
+## Older change logs     
 [Change log 2023](./change-log.2023.md)  
 [Change log 2022](./change-log.2022.md)  
 [Change log 2021](./change-log.2021.md)  
