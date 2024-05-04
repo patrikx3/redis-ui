@@ -325,7 +325,7 @@ By default, only English is created, but given all strings are from a `JS` file,
 
 # Solution
   
-This solution is not using REST at all, but instead uses Socket.IO 🤣, which is weird, but I like it, it is supposed to be more responsive, as there is no big overhead in the HTTP protocol.
+Interestingly, this solution doesn't employ REST; it opts for Socket.IO instead! 😄 It might seem a bit unconventional, but I actually appreciate the choice. Using Socket.IO is expected to be more responsive, as it avoids the significant overhead associated with the HTTP protocol. This approach should provide a smoother and faster interaction experience.
   
 ## Reference for Socket.IO speed
 https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
