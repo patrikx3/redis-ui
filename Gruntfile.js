@@ -8,6 +8,7 @@ module.exports = (grunt) => {
     loader.js({
         replacer: {
             type: 'p3x',
+            nodejsinfo: true,
         },
     });
 

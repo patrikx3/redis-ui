@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.251",
+    "version": "2024.4.252",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -85,7 +85,7 @@
         "angular-material": "^1.2.5",
         "angular-messages": "^1.8.3",
         "corifeus-utils": "^2024.4.123",
-        "electron-store": "^9.0.0",
+        "electron-store": "8.2.0",
         "electron-updater": "^6.1.8",
         "p3x-redis-ui-material": "^2024.4.236",
         "p3x-redis-ui-server": "^2024.4.233"
