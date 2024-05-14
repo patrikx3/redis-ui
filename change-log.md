@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+
+### v2024.4.253
+Released on 05/14/2024
+* BUGFIX: In readonly mode, I disabled the console, which was an error. Now you can in readonly, receive monitor patterns in the console.
+
 ### v2024.4.253
 Released on 05/13/2024
 * BUGFIX: The Electron app was not working.
