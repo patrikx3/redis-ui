@@ -68,10 +68,14 @@ jobs:
           security unlock-keychain -p actions temp.keychain
           security set-key-partition-list -S apple-tool:,apple: -s -k actions temp.keychain
       - name: Build and package macOS app
+        run: npm run publish-macos
+      - name: Notarize macOS app
         env:
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-        run: npm run publish-macos
+        run: |
+          npx electron-notarize --appBundleId=com.patrikx3.redis-ui --appPath=dist/mac/P3X-Redis-UI.app --appleId=$APPLE_ID --appleIdPassword=$APPLE_APP_SPECIFIC_PASSWORD
+
       - name: Upload macOS build to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
