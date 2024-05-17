@@ -68,6 +68,9 @@ jobs:
           security unlock-keychain -p actions temp.keychain
           security set-key-partition-list -S apple-tool:,apple: -s -k actions temp.keychain
       - name: Build and package macOS app
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
         run: npm run publish-macos
       - name: Notarize macOS app
         env:
