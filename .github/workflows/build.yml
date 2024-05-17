@@ -2,8 +2,8 @@ name: Build and Release on Tag
 
 on:
   push:
-    tags:
-      - 'v*'
+#    tags:
+#      - 'v*'
 
 jobs:
   build:

@@ -4,10 +4,17 @@
 <dict>
   <key>com.apple.security.app-sandbox</key>
   <true/>
+  <key>com.apple.security.application-groups</key>
+  <array>
+    <string>3GB3S9SH84.com.patrikx3.redis-ui</string>
+  </array>
   <key>com.apple.security.inherit</key>
   <true/>
   <key>com.apple.security.network.client</key>
   <true/>
+  <key>com.apple.security.network.server</key>
+  <true/>
+
   <!-- Add other entitlements as needed for child processes -->
 </dict>
 </plist>
