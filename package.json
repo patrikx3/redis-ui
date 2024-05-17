@@ -124,6 +124,8 @@
             "entitlements": "artifacts/entitlements/entitlements.plist",
             "entitlementsInherit": "artifacts/entitlements/entitlementsInherit.plist",
             "gatekeeperAssess": false,
+            "identity": "Apple Development: Patrik László (SAA68RR935)",
+            "teamID": "3GB3S9SH84",
             "notarize": {
                 "teamId": "3GB3S9SH84"
             },

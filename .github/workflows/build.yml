@@ -2,8 +2,8 @@ name: Build and Release on Tag
 
 on:
   push:
-#    tags:
-#      - 'v*'
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -72,7 +72,6 @@ jobs:
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-          DEBUG: "*"
         run: npm run publish-macos
 
       - name: Upload macOS build to GitHub Release
