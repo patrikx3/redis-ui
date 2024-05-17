@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.267",
+    "version": "2024.4.268",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -121,8 +121,8 @@
         "mac": {
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
-            "entitlements": "build/entitlements.plist",
-            "entitlementsInherit": "build/entitlements.plist",
+            "entitlements": "artifacts/entitlements/entitlements.plist",
+            "entitlementsInherit": "artifacts/entitlements/entitlementsInherit.plist",
             "gatekeeperAssess": false,
             "notarize": {
                 "teamId": "3GB3S9SH84"
