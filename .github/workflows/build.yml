@@ -70,14 +70,9 @@ jobs:
       - name: Build and package macOS app
         env:
           APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
         run: npm run publish-macos
-      - name: Notarize macOS app
-        env:
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-        run: |
-          npx electron-notarize --appBundleId=com.patrikx3.redis-ui --appPath=dist/mac/P3X-Redis-UI.app --appleId=$APPLE_ID --appleIdPassword=$APPLE_APP_SPECIFIC_PASSWORD
 
       - name: Upload macOS build to GitHub Release
         uses: softprops/action-gh-release@v1
