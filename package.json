@@ -121,8 +121,9 @@
         "mac": {
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
-            "entitlements": "artifacts/entitlements/entitlements.plist",
-            "entitlementsInherit": "artifacts/entitlements/entitlementsInherit.plist",
+            "icon": "artifacts/apple/icons/icon.icns",
+            "entitlements": "artifacts/apple/entitlements/entitlements.plist",
+            "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
             "gatekeeperAssess": false,
             "identity": "Patrik László (3GB3S9SH84)",
             "extendInfo": {
