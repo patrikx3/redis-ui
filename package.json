@@ -143,6 +143,9 @@
                 }
             ]
         },
+        "mas": {
+            "provisioningProfile": "p3xredisui.provisionprofile"
+          },
         "snap": {
             "environment": {
                 "DISABLE_WAYLAND": 1
