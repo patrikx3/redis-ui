@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  package-and-release-macos:
+  mac-release-and-publish-test-macos:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
