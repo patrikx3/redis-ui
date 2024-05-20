@@ -91,9 +91,10 @@
         "p3x-redis-ui-server": "^2024.4.233"
     },
     "build-save": {
+       
+        "afterSign": "scripts/notarize.js",
         "entitlements": "artifacts/apple/entitlements/entitlements.plist",
-        "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
-        "afterSign": "scripts/notarize.js"
+        "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
@@ -121,6 +122,7 @@
             "target": "appimage"
         },
         "mac": {
+          
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
             "icon": "artifacts/apple/icons/redis.icns",
@@ -134,7 +136,7 @@
             },
             "target": [
                 {
-                    "target": "default",
+                    "target": "mas-dev",
                     "arch": [
                         "universal"
                     ]
