@@ -55,9 +55,9 @@ jobs:
       - name: Build MAS Package
         run: npx electron-builder -m mas
         env:
-          CSC_LINK: file://$GITHUB_WORKSPACE/mac_app.p12
+          CSC_LINK: file://${{GITHUB_WORKSPACE}}/mac_app.p12
           CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
-          CSC_INSTALLER_LINK: file://$GITHUB_WORKSPACE/mac_installer.p12
+          CSC_INSTALLER_LINK: file://${{GITHUB_WORKSPACE}}/mac_installer.p12
           CSC_INSTALLER_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
           CSC_PROVISIONING_PROFILE: $(pwd)/p3xredisui.provisionprofile
           APPLEID: ${{ secrets.APPLE_ID }}
