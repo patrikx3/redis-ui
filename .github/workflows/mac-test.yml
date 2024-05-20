@@ -1,4 +1,4 @@
-name: Build and Release on Tag
+name: Mac OS Test
 
 on:
   push:
@@ -34,14 +34,3 @@ jobs:
           DEBUG: '*'
         run: npm run publish-macos
 
-      - name: Upload macOS build to GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref_name }}
-          files: |
-            dist/*.dmg
-            dist/*.zip
-            dist/*.blockmap
-            dist/latest-mac.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
