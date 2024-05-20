@@ -46,14 +46,8 @@ jobs:
         run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp p3xredisui.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
-
-      - name: Configure Electron Builder
-        run: |
-          npm install -g electron-builder
-          npx electron-builder install-app-deps
-
       - name: Build MAS Package
-        run: npx electron-builder -m mas --publish=never
+        run: npm runb publish-macos
         env:
           CSC_LINK: file://mac_app.p12
           CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
