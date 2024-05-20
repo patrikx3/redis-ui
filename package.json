@@ -66,12 +66,12 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.6.8",
+        "axios": "^1.7.1",
         "corifeus-builder": "^2024.4.140",
-        "electron": "^30.0.2",
+        "electron": "^30.0.6",
         "electron-builder": "^24.13.3",
         "node-fetch": "^3.3.2",
-        "rimraf": "^5.0.5"
+        "rimraf": "^5.0.7"
     },
     "engines": {
         "node": ">=12.13.0"
@@ -136,7 +136,7 @@
             },
             "target": [
                 {
-                    "target": "mas-dev",
+                    "target": "default",
                     "arch": [
                         "universal"
                     ]

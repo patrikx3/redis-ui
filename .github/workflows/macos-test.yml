@@ -1,36 +1,70 @@
-name: Build and Release on Tag
+name: Build MAS
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  package-and-release-macos:
+  build:
     runs-on: macos-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 'lts/*'
+          node-version: '14'
+
       - name: Install dependencies
         run: npm install
-      - name: Decode and Install Certificates
-        env:
-          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
-          CERTIFICATE_P12_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
-        run: |
-          echo $CERTIFICATE_P12_BASE64 | base64 --decode > certificate.p12
-          security create-keychain -p actions temp.keychain
-          security import certificate.p12 -k ~/Library/Keychains/temp.keychain -P "$CERTIFICATE_P12_PASSWORD" -T /usr/bin/codesign
-          security list-keychains -s temp.keychain
-          security default-keychain -s temp.keychain
-          security unlock-keychain -p actions temp.keychain
-          security set-key-partition-list -S apple-tool:,apple: -s -k actions temp.keychain
-      - name: Build and package macOS app
-        env:
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-          DEBUG: "*"
-        run: npm run publish-macos
 
+      - name: Decode certificates and profiles
+        run: |
+          echo $MAS_CERTIFICATE_P12 | base64 --decode > mac_app.p12
+          echo $MAS_INSTALLER_CERTIFICATE_P12 | base64 --decode > mac_installer.p12
+          echo $MAS_PROVISIONING_PROFILE | base64 --decode > p3xredisui.provisionprofile
+
+      - name: Install Certificate
+        run: |
+          security create-keychain -p actions build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p actions build.keychain
+          security import mac_app.p12 -k build.keychain -P "$MAS_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+          security import mac_installer.p12 -k build.keychain -P "$MAS_INSTALLER_CERTIFICATE_PASSWORD" -T /usr/bin/productsign
+          security set-key-partition-list -S apple-tool:,apple: -s -k actions build.keychain
+        env:
+          MAS_CERTIFICATE_PASSWORD: ${{ secrets.MAS_CERTIFICATE_PASSWORD }}
+          MAS_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.MAS_INSTALLER_CERTIFICATE_PASSWORD }}
+
+      - name: Setup Provisioning Profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp p3xredisui.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
+
+      - name: Configure Electron Builder
+        run: |
+          npm install -g electron-builder
+          npx electron-builder install-app-deps
+
+      - name: Build MAS Package
+        run: npx electron-builder -m mas
+        env:
+          CSC_LINK: file://$(pwd)/mac_app.p12
+          CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
+          CSC_INSTALLER_LINK: file://$(pwd)/mac_installer.p12
+          CSC_INSTALLER_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
+          CSC_PROVISIONING_PROFILE: $(pwd)/p3xredisui.provisionprofile
+          APPLEID: ${{ secrets.APPLE_ID }}
+          APPLEIDPASS: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: mas-build
+          path: dist/*.pkg

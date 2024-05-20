@@ -106,7 +106,6 @@ jobs:
       - name: Upload Windows build to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref_name }}
           files: |
             dist/*.exe
             dist/*.msi
