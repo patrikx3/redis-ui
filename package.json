@@ -128,6 +128,7 @@
             "icon": "artifacts/apple/icons/redis.icns",
             "gatekeeperAssess": false,
             "identity": "Patrik László (3GB3S9SH84)",
+            "provisioningProfile": "p3xredisui.provisionprofile",
             "extendInfo": {
                 "ElectronTeamID": "3GB3S9SH84"
             },
@@ -143,9 +144,6 @@
                 }
             ]
         },
-        "mas": {
-            "provisioningProfile": "p3xredisui.provisionprofile"
-          },
         "snap": {
             "environment": {
                 "DISABLE_WAYLAND": 1
