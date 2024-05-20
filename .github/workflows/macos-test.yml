@@ -53,7 +53,7 @@ jobs:
           npx electron-builder install-app-deps
 
       - name: Build MAS Package
-        run: npx electron-builder -m mas
+        run: npx electron-builder -m mas --publish=never
         env:
           CSC_LINK: file://mac_app.p12
           CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
@@ -62,9 +62,12 @@ jobs:
           CSC_PROVISIONING_PROFILE: $(pwd)/p3xredisui.provisionprofile
           APPLEID: ${{ secrets.APPLE_ID }}
           APPLEIDPASS: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: mas-build
           path: dist/*.pkg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

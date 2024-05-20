@@ -136,7 +136,7 @@
             },
             "target": [
                 {
-                    "target": "mas",
+                    "target": "default",
                     "arch": [
                         "universal"
                     ]
