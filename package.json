@@ -124,7 +124,7 @@
             "entitlements": "artifacts/entitlements/entitlements.plist",
             "entitlementsInherit": "artifacts/entitlements/entitlementsInherit.plist",
             "gatekeeperAssess": false,
-            "identity": "Developer ID Application: Patrik László (3GB3S9SH84)",
+            "identity": "Patrik László (3GB3S9SH84)",
             "extendInfo": {
                 "ElectronTeamID": "3GB3S9SH84"
             },
