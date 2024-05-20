@@ -29,16 +29,19 @@ jobs:
           echo "${{ secrets.MAS_CERTIFICATE_P12 }}" | base64 --decode > mac_app.p12
           echo "${{ secrets.MAS_INSTALLER_CERTIFICATE_P12 }}" | base64 --decode > mac_installer.p12
           echo "${{ secrets.MAS_PROVISIONING_PROFILE }}" | base64 --decode > p3xredisui.provisionprofile
-     
       - name: Install Certificate
         run: |
+          echo $CERTIFICATE_P12_BASE64 | base64 --decode > certificate.p12
           security create-keychain -p actions build.keychain
           security default-keychain -s build.keychain
           security unlock-keychain -p actions build.keychain
           security import mac_app.p12 -k build.keychain -P "$MAS_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
           security import mac_installer.p12 -k build.keychain -P "$MAS_INSTALLER_CERTIFICATE_PASSWORD" -T /usr/bin/productsign
+          security import certificate.p12 -k ~/Library/Keychains/temp.keychain -P "$CERTIFICATE_P12_PASSWORD" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple: -s -k actions build.keychain
         env:
+          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
+          CERTIFICATE_P12_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
           MAS_CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
           MAS_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
 
