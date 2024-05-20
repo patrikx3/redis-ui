@@ -16,3 +16,5 @@ node_modules/.yarn-integrity
 /.flatpak-builder
 /.build
 /repo
+
+.DS_Store
