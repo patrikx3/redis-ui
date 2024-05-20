@@ -49,6 +49,8 @@ jobs:
         run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp p3xredisui.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
+      - name: List Keychain Identities
+        run: security find-identity -v          
       - name: Build MAS Package
         run: npm run publish-macos
         env:
