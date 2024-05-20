@@ -58,6 +58,8 @@ jobs:
           APPLEIDPASS: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: List all files
+        run: ls -all -h
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
