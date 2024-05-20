@@ -7,7 +7,7 @@
 
 ### Unreleased
 
-### v2024.4.304
+### v2024.4.308
 Released on 05/20/2024
 * BUGFIX: The console button was always showing even though there was no connection
 * FEATURE: Enable universal build.
