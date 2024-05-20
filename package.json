@@ -93,8 +93,11 @@
     "build-save": {
        
         "afterSign": "scripts/notarize.js",
-        "entitlements": "artifacts/apple/entitlements/entitlements.plist",
-        "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist"
+        "mac": {
+            "entitlements": "artifacts/apple/entitlements/entitlements.plist",
+            "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
+            "provisioningProfile": "p3xredisui.provisionprofile"        
+        }
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
@@ -127,8 +130,7 @@
             "hardenedRuntime": true,
             "icon": "artifacts/apple/icons/redis.icns",
             "gatekeeperAssess": false,
-            "identity": "Patrik László (3GB3S9SH84)",
-            "provisioningProfile": "p3xredisui.provisionprofile",
+            "identity": "Patrik László (3GB3S9SH84)",           
             "extendInfo": {
                 "ElectronTeamID": "3GB3S9SH84"
             },
@@ -137,7 +139,7 @@
             },
             "target": [
                 {
-                    "target": "mas",
+                    "target": "default",
                     "arch": [
                         "universal"
                     ]
