@@ -26,10 +26,10 @@ jobs:
 
       - name: Decode certificates and profiles
         run: |
-          echo $MAS_CERTIFICATE_P12 | base64 --decode > mac_app.p12
-          echo $MAS_INSTALLER_CERTIFICATE_P12 | base64 --decode > mac_installer.p12
-          echo $MAS_PROVISIONING_PROFILE | base64 --decode > p3xredisui.provisionprofile
-
+          echo "${{ secrets.MAS_CERTIFICATE_P12 }}" | base64 --decode > mac_app.p12
+          echo "${{ secrets.MAS_INSTALLER_CERTIFICATE_P12 }}" | base64 --decode > mac_installer.p12
+          echo "${{ secrets.MAS_PROVISIONING_PROFILE }}" | base64 --decode > p3xredisui.provisionprofile
+     
       - name: Install Certificate
         run: |
           security create-keychain -p actions build.keychain
