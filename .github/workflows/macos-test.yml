@@ -47,7 +47,7 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp p3xredisui.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
       - name: Build MAS Package
-        run: npm runb publish-macos
+        run: npm run publish-macos
         env:
           CSC_LINK: file://mac_app.p12
           CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
