@@ -29,9 +29,9 @@ jobs:
           echo "${{ secrets.MAS_CERTIFICATE_P12 }}" | base64 --decode > mac_app.p12
           echo "${{ secrets.MAS_INSTALLER_CERTIFICATE_P12 }}" | base64 --decode > mac_installer.p12
           echo "${{ secrets.MAS_PROVISIONING_PROFILE }}" | base64 --decode > p3xredisui.provisionprofile
+          echo "${{ secrets.CERTIFICATE_P12_BASE64 }}" | base64 --decode > certificate.p12
       - name: Install Certificate
         run: |
-          echo $CERTIFICATE_P12_BASE64 | base64 --decode > certificate.p12
           security create-keychain -p actions build.keychain
           security default-keychain -s build.keychain
           security unlock-keychain -p actions build.keychain
