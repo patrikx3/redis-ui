@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.304",
+    "version": "2024.4.307",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -91,7 +91,9 @@
         "p3x-redis-ui-server": "^2024.4.233"
     },
     "build-save": {
-        "afterSign": "scripts/notarize.js"
+        "afterSign": "scripts/notarize.js",
+        "entitlements": "artifacts/apple/entitlements/entitlements.plist",
+        "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist"
     },
     "build": {
         "afterAllArtifactBuild": "./node_modules/corifeus-builder/src/utils/appimage/after-all-artifact-build.js",
@@ -122,8 +124,6 @@
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
             "icon": "artifacts/apple/icons/icon.icns",
-            "entitlements": "artifacts/apple/entitlements/entitlements.plist",
-            "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
             "gatekeeperAssess": false,
             "identity": "Patrik László (3GB3S9SH84)",
             "extendInfo": {
@@ -134,7 +134,7 @@
             },
             "target": [
                 {
-                    "target": "default",
+                    "target": "pkg",
                     "arch": [
                         "universal"
                     ]
