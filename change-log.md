@@ -5,7 +5,7 @@
                         
 [//]: #@corifeus-header:end
 
-### v2024.4.326
+### v2024.4.327
 Released on 05/21/2024
 * BUGFIX: Build problem
 
