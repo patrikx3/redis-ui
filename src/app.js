@@ -45,11 +45,13 @@ const execAsync = async() => {
         app.commandLine.appendSwitch('remote-debugging-port', '9222')
     }
 
-    const gotTheLock = app.requestSingleInstanceLock()
+    if (process.platform !== 'darwin' && process.platform !== 'mas') {
+        const gotTheLock = app.requestSingleInstanceLock()
 
-    if (!gotTheLock) {
-        app.quit()
-        return
+        if (!gotTheLock) {
+            app.quit()
+            return
+        }    
     }
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
@@ -62,6 +64,11 @@ const execAsync = async() => {
     app.on('ready', () => {
         createWindow();
 
+
+    globalShortcut.register('CmdOrCtrl+X', () => {
+        console.log('Global shortcut CmdOrCtrl+X triggered');
+        app.quit()
+    });
 
 //    ngivrSession.init();
     });
@@ -103,10 +110,6 @@ const execAsync = async() => {
 
 
 
-    globalShortcut.register('CmdOrCtrl+X', () => {
-        console.log('Global shortcut CmdOrCtrl+X triggered');
-        app.quit()
-    });
 
     app.on('will-quit', () => {
         // Unregister all shortcuts

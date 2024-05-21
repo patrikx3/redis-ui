@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.321",
+    "version": "2024.4.322",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -34,7 +34,8 @@
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
         "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak --x64 --arm64",
         "publish-macos": "electron-builder --mac --publish never",
-        "publish-macos-mas": "rimraf build  && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisui.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
+        "publish-macos-mas": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && mkdir build && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never",
+        "publish-macos-mas-save": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
     },
     "repository": {
         "type": "git",
@@ -147,10 +148,7 @@
             ]
         },
         "mas": {
-            "entitlements": "build/entitlements.mas.plist",
-            "entitlementsInherit": "build/entitlements.mas.plist",
-            "provisioningProfile": "build/p3xredisui.provisionprofile",
-            "type": "distribution"
+            "provisioningProfile": "build/p3xredisuimacos.provisionprofile"
         },
         "snap": {
             "environment": {
