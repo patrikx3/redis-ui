@@ -80,7 +80,6 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: |
-            dist/*.pkg
             dist/*.dmg
             dist/*.zip
             dist/*.blockmap

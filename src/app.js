@@ -38,7 +38,7 @@ const execAsync = async() => {
 
     require('./electron/global.js');
 
-    const { app, ipcMain, shell } = require('electron')
+    const { app, ipcMain, shell, globalShortcut } = require('electron')
     app.disableHardwareAcceleration()
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
@@ -102,5 +102,15 @@ const execAsync = async() => {
     });
 
 
+
+    globalShortcut.register('CmdOrCtrl+X', () => {
+        console.log('Global shortcut CmdOrCtrl+X triggered');
+        app.quit()
+    });
+
+    app.on('will-quit', () => {
+        // Unregister all shortcuts
+        globalShortcut.unregisterAll();
+    });
 }
 execAsync()

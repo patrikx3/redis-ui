@@ -1,5 +1,5 @@
 const {dialog, Menu} = require('electron')
-const {shell, app} = require('electron')
+const {shell, app, globalShortcut} = require('electron')
 
 
 function mainMenu() {
@@ -46,6 +46,7 @@ function mainMenu() {
                 {type: 'separator'},
                 {
                     label: global.p3xre.strings.menu.main.quit,
+                    accelerator: 'CmdOrCtrl+Q',
                     click: () => {
                         app.quit()
                     }
@@ -261,6 +262,7 @@ ${global.p3xre.strings.message.restart}
 
     const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
+
 }
 
 module.exports = mainMenu;
