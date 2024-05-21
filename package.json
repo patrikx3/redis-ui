@@ -124,19 +124,19 @@
             "icon": "../src/electron/images/",
             "target": "appimage"
         },
-        "mac": {        
+        "mac": {
+          
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
-            "icon": "artifacts/apple/icons/redis.icns",
             "gatekeeperAssess": false,
             "identity": "Patrik László (3GB3S9SH84)",           
-            "type": "distribution",
             "extendInfo": {
                 "ElectronTeamID": "3GB3S9SH84"
             },
             "notarize": {
                 "teamId": "3GB3S9SH84"
             },
+            "type": "distribution",
             "target": [
                 {
                     "target": "mas",
