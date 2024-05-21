@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.308",
+    "version": "2024.4.320",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -33,7 +33,8 @@
         "publish-electron-snap-arm64": "rimraf dist && electron-builder --linux snap -p never --arm64",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
         "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak --x64 --arm64",
-        "publish-macos": "electron-builder --mac --publish never"
+        "publish-macos": "electron-builder --mac --publish never",
+        "publish-macos-mas": "rimraf build  && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisui.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
     },
     "repository": {
         "type": "git",
@@ -67,6 +68,7 @@
     "license": "MIT",
     "devDependencies": {
         "axios": "^1.7.1",
+        "copyfiles": "^2.4.1",
         "corifeus-builder": "^2024.4.140",
         "electron": "^30.0.6",
         "electron-builder": "^24.13.3",
@@ -91,12 +93,11 @@
         "p3x-redis-ui-server": "^2024.4.233"
     },
     "build-save": {
-       
         "afterSign": "scripts/notarize.js",
         "mac": {
             "entitlements": "artifacts/apple/entitlements/entitlements.plist",
             "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
-            "provisioningProfile": "p3xredisui.provisionprofile"        
+            "provisioningProfile": "p3xredisui.provisionprofile"
         }
     },
     "build": {
@@ -125,26 +126,31 @@
             "target": "appimage"
         },
         "mac": {
-          
+            "icon": "artifacts/apple/icons/redis.icns",
             "category": "public.app-category.developer-tools",
             "hardenedRuntime": true,
             "gatekeeperAssess": false,
-            "identity": "Patrik László (3GB3S9SH84)",           
+            "identity": "Patrik László (3GB3S9SH84)",
             "extendInfo": {
                 "ElectronTeamID": "3GB3S9SH84"
             },
             "notarize": {
                 "teamId": "3GB3S9SH84"
             },
-            "type": "distribution",
             "target": [
                 {
-                    "target": "mas",
+                    "target": "default",
                     "arch": [
                         "universal"
                     ]
                 }
             ]
+        },
+        "mas": {
+            "entitlements": "build/entitlements.mas.plist",
+            "entitlementsInherit": "build/entitlements.mas.plist",
+            "provisioningProfile": "build/p3xredisui.provisionprofile",
+            "type": "distribution"
         },
         "snap": {
             "environment": {

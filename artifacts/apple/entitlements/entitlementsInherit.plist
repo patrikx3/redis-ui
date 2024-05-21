@@ -10,9 +10,16 @@
   <key>com.apple.security.network.server</key><true/>
   <key>com.apple.security.files.user-selected.read-write</key><true/>
   <key>com.apple.security.files.downloads.read-write</key><true/>
-    <key>com.apple.application-identifier</key>
+  <key>com.apple.application-identifier</key><string>me@patrikx3.com</string>
+  <key>com.apple.developer.team-identifier</key><string>3GB3S9SH84</string>
+  <key>com.apple.security.inherit</key><true/>
+  <key>keychain-access-groups</key>
+  <array>
+    <string>3GB3S9SH84.*</string>
+  </array>
+  <key>com.apple.security.application-groups</key>
+  <array>
     <string>3GB3S9SH84.com.patrikx3.redis-ui</string>
-    <key>com.apple.developer.team-identifier</key>
-    <string>3GB3S9SH84</string>
+  </array>
 </dict>
 </plist>
