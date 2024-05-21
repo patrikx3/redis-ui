@@ -45,13 +45,11 @@ const execAsync = async() => {
         app.commandLine.appendSwitch('remote-debugging-port', '9222')
     }
 
-    if (process.platform !== 'darwin' && process.platform !== 'mas') {
-        const gotTheLock = app.requestSingleInstanceLock()
+    const gotTheLock = app.requestSingleInstanceLock()
 
-        if (!gotTheLock) {
-            app.quit()
-            return
-        }    
+    if (!gotTheLock) {
+        app.quit()
+        return
     }
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.

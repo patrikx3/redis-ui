@@ -10,13 +10,14 @@ function createWindow() {
         backgroundColor: 'black',
         autoHideMenuBar: global.p3xre.optionToHideMenu,
         webPreferences: {
+            sandbox: false,
             webviewTag: true,
             nodeIntegration: true,
             contextIsolation: false,
             nativeWindowOpen: true,
-            worldSafeExecuteJavaScript: true,
-            allowRunningInsecureContent: false,
-            webSecurity: true,
+            worldSafeExecuteJavaScript: false,
+            allowRunningInsecureContent: true,
+            webSecurity: false,
         }
     });
 

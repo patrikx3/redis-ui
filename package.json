@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.4.322",
+    "version": "2024.4.327",
     "description": "📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
     "corifeus": {
         "description-snap": "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app",
@@ -34,7 +34,7 @@
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
         "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak --x64 --arm64",
         "publish-macos": "electron-builder --mac --publish never",
-        "publish-macos-mas": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && mkdir build && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never",
+        "publish-macos-mas": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && mkdir build && cp secure/apple/p3xredisuimacos.provisionprofile ./build && cp -R artifacts/apple/entitlements/ ./build  && electron-builder --mac mas --universal  --publish never",
         "publish-macos-mas-save": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
     },
     "repository": {
@@ -68,7 +68,7 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.7.1",
+        "axios": "^1.7.2",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2024.4.140",
         "electron": "^30.0.6",
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2024.4.123",
         "electron-store": "8.2.0",
         "electron-updater": "^6.1.8",
-        "p3x-redis-ui-material": "^2024.4.236",
-        "p3x-redis-ui-server": "^2024.4.233"
+        "p3x-redis-ui-material": "^2024.4.265",
+        "p3x-redis-ui-server": "^2024.4.253"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",
