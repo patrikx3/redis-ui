@@ -44,6 +44,7 @@ const execAsync = async() => {
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
         app.commandLine.appendSwitch('remote-debugging-port', '9222')
     }
+    //app.commandLine.appendSwitch('no-sandbox');
 
     const gotTheLock = app.requestSingleInstanceLock()
 
