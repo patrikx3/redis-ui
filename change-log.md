@@ -1,9 +1,17 @@
 [//]: #@corifeus-header
 
-# 📡 P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web or as a desktop app
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications
 
                         
 [//]: #@corifeus-header:end
+
+### v2024.10.106
+Released on 07/02/2024
+* CHORE: Updated all packages.
+
+### v2024.4.340
+Released on 06/09/2024
+* FEATURE: Further rounded components.
 
 ### v2024.4.329
 Released on 06/06/2024
@@ -421,7 +429,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com) and [corifeus.com
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.4.329
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2024.10.106
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
