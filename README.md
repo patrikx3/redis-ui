@@ -318,7 +318,7 @@ npm install
 
 By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
 
-[For a new language](https://github.com/patrikx3/redis-ui-material/blob/master/src/main.js)
+[For a new language](https://github.com/patrikx3/redis-ui-material/blob/master/src/main.js)  
 [English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
 [English strings, for the Electron](https://github.com/patrikx3/redis-ui/blob/master/src/strings/en/index.js)  
   
