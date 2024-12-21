@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.10.118",
+    "version": "2024.10.119",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -148,10 +148,7 @@
                     ]
                 }
             ]
-        },
-        "mas": {
-            "provisioningProfile": "build/p3xredisuimacos.provisionprofile"
-        },
+        },        
         "snap": {
             "environment": {
                 "DISABLE_WAYLAND": 1
