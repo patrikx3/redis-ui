@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.10.106",
+    "version": "2024.10.113",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v22.4.0",
+        "nodejs": "v22.12.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -68,20 +68,20 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.7.2",
+        "axios": "^1.7.9",
         "copyfiles": "^2.4.1",
-        "corifeus-builder": "^2024.10.105",
-        "electron": "^31.1.0",
-        "electron-builder": "^24.13.3",
+        "corifeus-builder": "^2024.10.111",
+        "electron": "^33.2.1",
+        "electron-builder": "^25.1.8",
         "node-fetch": "^3.3.2",
-        "rimraf": "^5.0.7"
+        "rimraf": "^6.0.1"
     },
     "engines": {
         "node": ">=12.13.0"
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "@fontsource/roboto": "^5.0.13",
+        "@fontsource/roboto": "^5.1.0",
         "angular": "^1.8.3",
         "angular-animate": "^1.8.3",
         "angular-aria": "^1.8.3",
@@ -89,10 +89,9 @@
         "angular-messages": "^1.8.3",
         "corifeus-utils": "^2024.10.126",
         "electron-store": "8.2.0",
-        "electron-updater": "^6.2.1",
-        "nan": "^2.20.0",
-        "p3x-redis-ui-material": "^2024.10.107",
-        "p3x-redis-ui-server": "^2024.10.108"
+        "electron-updater": "^6.3.9",
+        "p3x-redis-ui-material": "^2024.10.116",
+        "p3x-redis-ui-server": "^2024.10.116"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",
