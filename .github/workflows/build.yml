@@ -56,7 +56,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install dmg-license
 #      - name: Decode and Install Certificates
 #        env:
 #          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
