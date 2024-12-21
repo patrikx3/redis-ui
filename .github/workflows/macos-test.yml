@@ -1,0 +1,68 @@
+name: Build MAS
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install dmg-license
+#      - name: Decode certificates and profiles
+#        run: |
+#          echo "${{ secrets.MAS_CERTIFICATE_P12 }}" | base64 --decode > mac_app.p12
+#          echo "${{ secrets.MAS_INSTALLER_CERTIFICATE_P12 }}" | base64 --decode > mac_installer.p12
+#          echo "${{ secrets.MAS_PROVISIONING_PROFILE }}" | base64 --decode > p3xredisui.provisionprofile
+#          echo "${{ secrets.CERTIFICATE_P12_BASE64 }}" | base64 --decode > certificate.p12
+#      - name: Install Certificate
+#        run: |
+#          security create-keychain -p actions build.keychain
+#          security default-keychain -s build.keychain
+#          security unlock-keychain -p actions build.keychain
+#          security import mac_app.p12 -k build.keychain -P "$MAS_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+#          security import mac_installer.p12 -k build.keychain -P "$MAS_INSTALLER_CERTIFICATE_PASSWORD" -T /usr/bin/productsign
+#          security import certificate.p12 -k build.keychain -P "$CERTIFICATE_P12_PASSWORD" -T /usr/bin/codesign
+#          security set-key-partition-list -S apple-tool:,apple: -s -k actions build.keychain
+#        env:
+#          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
+#          CERTIFICATE_P12_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
+#          MAS_CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
+#          MAS_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
+#
+#      - name: Setup Provisioning Profile
+#        run: |
+#          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+#          cp p3xredisui.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
+#
+      - name: Build and package macOS app
+#        env:
+#          APPLE_ID: ${{ secrets.APPLE_ID }}
+#          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+#          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+#          DEBUG: "*"
+        run: npm run publish-macos
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: mas-build
+          path: dist/*.pkg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
