@@ -90,8 +90,8 @@
         "corifeus-utils": "^2024.10.126",
         "electron-store": "8.2.0",
         "electron-updater": "^6.3.9",
-        "p3x-redis-ui-material": "^2024.10.121",
-        "p3x-redis-ui-server": "^2024.10.122"
+        "p3x-redis-ui-material": "^2024.10.122",
+        "p3x-redis-ui-server": "^2024.10.123"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",

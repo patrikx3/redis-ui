@@ -5,7 +5,7 @@
                         
 [//]: #@corifeus-header:end
 
-### v2024.10.120
+### v2024.10.121
 Released on 12/21/2024
 * BUGFIX: Enable Mac OS build.
 
