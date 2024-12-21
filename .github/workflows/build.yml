@@ -56,6 +56,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+          rm -rf node_modules/cpu-features/
 #      - name: Decode and Install Certificates
 #        env:
 #          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
@@ -97,7 +98,11 @@ jobs:
         with:
           node-version: 'lts/*'
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          Remove-Item -Recurse -Force node_modules/cpu-features
+        shell: pwsh
+        
       - name: Build and package Windows app
         run: npm run publish-windows
         env:
