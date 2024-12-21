@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.10.114",
+    "version": "2024.10.115",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -32,7 +32,7 @@
         "publish-electron-snap": "rimraf dist && electron-builder --linux snap -p never --armv7l --x64",
         "publish-electron-snap-arm64": "rimraf dist && electron-builder --linux snap -p never --arm64",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
-        "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak --x64 --arm64",
+        "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak ",
         "publish-macos": "electron-builder --mac --publish never",
         "publish-macos-mas": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && mkdir build && cp secure/apple/p3xredisuimacos.provisionprofile ./build && cp -R artifacts/apple/entitlements/ ./build  && electron-builder --mac mas --universal  --publish never",
         "publish-macos-mas-save": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2024.10.126",
         "electron-store": "8.2.0",
         "electron-updater": "^6.3.9",
-        "p3x-redis-ui-material": "^2024.10.117",
-        "p3x-redis-ui-server": "^2024.10.118"
+        "p3x-redis-ui-material": "^2024.10.118",
+        "p3x-redis-ui-server": "^2024.10.119"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",
