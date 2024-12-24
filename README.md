@@ -32,6 +32,16 @@ v22.12.0
                         
 [//]: #@corifeus-header:end
 
+  
+### Powerful Online Networking Tool
+  
+Discover the powerful and free online networking tool at [network.corifeus.com](https://network.corifeus.com)  
+    
+**Free**   
+Designed for professionals and enthusiasts, this tool provides essential features for network analysis, troubleshooting, and management. You can also purchase this tool for integration or as a service.
+  
+  
+
 
 **p3x-redis-ui** is a versatile Redis GUI that can function as either a backend server on the web or as a desktop application. This open-source software is particularly effective for managing JSON, featuring integration with JSONEditor and ACE. Explore a variety of options in the 'edit json' button dialog, which also supports uploading and downloading binary data. Additionally, it handles SSH, cluster, and sentinel configurations.
 
@@ -166,7 +176,7 @@ This command ensures that your system trusts the application, allowing it to run
 The main source installer is the `AppImage`, so, the themes are not implemented (the main menus). If you want the themes to be implemented (dark vs light), I suggest using the `AppImage` as it supports the themes natively. Besides, the auto self update function is not implemented in `Snap`, only in `AppImage` version.  
 -->
 
-[![LINK](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
+[![LINK](https://cdn.corifeus.com/assets/svg/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
 
 ## Flathub
 You download from the releases page and install as:
