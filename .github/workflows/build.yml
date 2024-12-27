@@ -55,7 +55,7 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: |
-          npm install
+          yarn install
           rm -rf node_modules/cpu-features/
 #      - name: Decode and Install Certificates
 #        env:
