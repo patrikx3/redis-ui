@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2024.10.126",
+    "version": "2025.4.100",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -81,7 +81,7 @@
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "@fontsource/roboto": "^5.1.0",
+        "@fontsource/roboto": "^5.1.1",
         "angular": "^1.8.3",
         "angular-animate": "^1.8.3",
         "angular-aria": "^1.8.3",
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2024.10.126",
         "electron-store": "8.2.0",
         "electron-updater": "^6.3.9",
-        "p3x-redis-ui-material": "^2024.10.129",
-        "p3x-redis-ui-server": "^2024.10.130"
+        "p3x-redis-ui-material": "^2025.4.100",
+        "p3x-redis-ui-server": "^2025.4.100"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",

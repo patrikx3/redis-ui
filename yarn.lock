@@ -93,10 +93,10 @@
     minimatch "^9.0.3"
     plist "^3.1.0"
 
-"@fontsource/roboto@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.1.0.tgz#00230737ec09c60ae877a5e33d067c0607fdd5ba"
-  integrity sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==
+"@fontsource/roboto@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.1.1.tgz#64b3f819baf8d3bcfb48c0437ddc7e4118a6ab14"
+  integrity sha512-XwVVXtERDQIM7HPUIbyDe0FP4SRovpjF7zMI8M7pbqFp3ahLJsJTd18h+E6pkar6UbV3btbwkKjYARr5M+SQow==
 
 "@gar/promisify@^1.1.3":
   version "1.1.3"
@@ -1357,10 +1357,10 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-12.1.0.tgz#01423b36f501259fdaac4d0e4d60c96c991585d3"
-  integrity sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==
+commander@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-13.0.0.tgz#1b161f60ee3ceb8074583a0f95359a4f8701845c"
+  integrity sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==
 
 commander@^2.19.0, commander@^2.8.1:
   version "2.20.3"
@@ -4515,18 +4515,18 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-p3x-redis-ui-material@^2024.10.129:
-  version "2024.10.129"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2024.10.129.tgz#c26670d270afe663e3fc81e1c40d0561ddc84782"
-  integrity sha512-vYbrRqBWoF89tZUMpF2IPKf+Qed5rQylVQFqByBZzQaEpLVEmctEtR04/ZsaR7cqF3ijsOFwU5K/N6s4cS0y9w==
+p3x-redis-ui-material@^2025.4.100:
+  version "2025.4.100"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2025.4.100.tgz#0c3593b5a07695a7259a1bc25a79af5b144f4c77"
+  integrity sha512-8+4j2DXnx0KZTfWIdiEe45m8TnXUNVDbq+8fHT8tqRE1jSHab8ylc/nGMx9EaZ0h3tJKO3HIxLG8uYuqkn3dnQ==
 
-p3x-redis-ui-server@^2024.10.130:
-  version "2024.10.130"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2024.10.130.tgz#57d5640b29bf1a42872d105b62e458041e5fd59a"
-  integrity sha512-iY0w44IZdbgwDAsLYU8udvCpganl1BYbiaQarmzcmoB6KExVXVErHeKVs2cAL0XvJNH3DTHnWmwfcTd5s8TdMg==
+p3x-redis-ui-server@^2025.4.100:
+  version "2025.4.100"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2025.4.100.tgz#e6b958349512a843ade58ebc11c1bc64cf0a90be"
+  integrity sha512-clTWSHhmbBbC6MYGmOwjftT3rSi8q60YwGTOIJmHC/evorAkA3VAjuqwQOdFOH/NBPPw1IMuksb8ahTwUvQJhA==
   dependencies:
     chalk "^4.1.2"
-    commander "^12.1.0"
+    commander "^13.0.0"
     corifeus-utils "^2024.10.126"
     ioredis "^5.4.2"
     koa "^2.15.3"
