@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.4.101",
+    "version": "2025.4.102",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v22.12.0",
+        "nodejs": "v22.13.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -71,7 +71,7 @@
         "axios": "^1.7.9",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2024.10.202",
-        "electron": "^33.2.1",
+        "electron": "^33.3.1",
         "electron-builder": "^25.1.8",
         "node-fetch": "^3.3.2",
         "rimraf": "^6.0.1"
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2024.10.126",
         "electron-store": "8.2.0",
         "electron-updater": "^6.3.9",
-        "p3x-redis-ui-material": "^2025.4.101",
-        "p3x-redis-ui-server": "^2025.4.101"
+        "p3x-redis-ui-material": "^2025.4.102",
+        "p3x-redis-ui-server": "^2025.4.102"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",
