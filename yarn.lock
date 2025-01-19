@@ -4535,15 +4535,15 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-p3x-redis-ui-material@^2025.4.121:
-  version "2025.4.121"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2025.4.121.tgz#507f55ec64dd180cc711e743322883d7cb3d0f4b"
-  integrity sha512-A6vf25YvjsX1UkhGHzHti2zXQOqjahKRK62LR0gev+bY80/JXryID+aUYAVnjs4rklXapbRpBm4tLojDHbVK1g==
+p3x-redis-ui-material@^2025.4.124:
+  version "2025.4.124"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2025.4.124.tgz#7383f61bfb08ec465eb553e2e3b1be58a6b1c0bf"
+  integrity sha512-XVddlFWgVAOX+uOwl/9fwZdQBugqCaox2n8H7YnSIUCZLNvam1ueNRN1n/M/UzD26aVsdOHV/SXQvX3aEZBTGg==
 
-p3x-redis-ui-server@^2025.4.121:
-  version "2025.4.121"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2025.4.121.tgz#0d1dbbbf93f9b7a00e0d0cb21e5e8208b109de96"
-  integrity sha512-W6xo8o0euuAyQJsoyySvSRURHMugfDkkNqeooERiN7T2S4N6JOZTrS/PJ+ZHqJNW+ZpCN/14TlGBPFp+EgDBhg==
+p3x-redis-ui-server@^2025.4.124:
+  version "2025.4.124"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2025.4.124.tgz#2a697c03c1c2b87f28e9a4ea405e98fbad099cad"
+  integrity sha512-czknN5NAhiapiRUT8aeXzgE5gRD27GyCbqjTk7UblmIngR6TTdBBMbECzkCSQi0jDXfiICWoIWGSM3cScAErFg==
   dependencies:
     chalk "^4.1.2"
     commander "^13.0.0"
