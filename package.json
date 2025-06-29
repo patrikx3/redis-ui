@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.4.135",
+    "version": "2025.4.136",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -90,15 +90,32 @@
         "corifeus-utils": "^2025.4.123",
         "electron-store": "8.2.0",
         "electron-updater": "^6.6.2",
-        "p3x-redis-ui-material": "^2025.4.134",
-        "p3x-redis-ui-server": "^2025.4.133"
+        "p3x-redis-ui-material": "^2025.4.135",
+        "p3x-redis-ui-server": "^2025.4.134"
     },
     "build-save": {
-        "afterSign": "scripts/notarize.js",
         "mac": {
-            "entitlements": "artifacts/apple/entitlements/entitlements.plist",
-            "entitlementsInherit": "artifacts/apple/entitlements/entitlementsInherit.plist",
-            "provisioningProfile": "p3xredisui.provisionprofile"
+            "icon": "artifacts/apple/icons/redis.icns",
+            "category": "public.app-category.developer-tools",
+            "hardenedRuntime": true,
+            "gatekeeperAssess": false,
+            "identity": "Patrik László (3GB3S9SH84)",
+            "extendInfo": {
+                "ElectronTeamID": "3GB3S9SH84"
+            },
+            "notarize": {
+                "teamId": "3GB3S9SH84"
+            },
+            "target": [
+                {
+                    "target": "default",
+                    "arch": [
+                        "universal",
+                        "x64",
+                        "arm64"
+                    ]
+                }
+            ]
         }
     },
     "build": {
@@ -125,29 +142,6 @@
             "category": "Development",
             "icon": "../src/electron/images/",
             "target": "appimage"
-        },
-        "mac": {
-            "icon": "artifacts/apple/icons/redis.icns",
-            "category": "public.app-category.developer-tools",
-            "hardenedRuntime": true,
-            "gatekeeperAssess": false,
-            "identity": "Patrik László (3GB3S9SH84)",
-            "extendInfo": {
-                "ElectronTeamID": "3GB3S9SH84"
-            },
-            "notarize": {
-                "teamId": "3GB3S9SH84"
-            },
-            "target": [
-                {
-                    "target": "default",
-                    "arch": [
-                        "universal",
-                        "x64",
-                        "arm64"
-                    ]
-                }
-            ]
         },
         "snap": {
             "environment": {

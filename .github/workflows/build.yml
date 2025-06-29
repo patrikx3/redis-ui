@@ -45,18 +45,19 @@ jobs:
               -t patrikx3/p3x-redis-ui:${{ steps.package-version.outputs.current-version }} \
               --push
 
-  package-and-release-macos:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 'lts/*'
-      - name: Install dependencies
-        run: |
-          yarn install
-          rm -rf node_modules/cpu-features/
+#  package-and-release-macos:
+#    runs-on: macos-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Set up Node.js
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: 'lts/*'
+#      - name: Install dependencies
+#        run: |
+#          yarn install
+#          rm -rf node_modules/cpu-features/
+
 #      - name: Decode and Install Certificates
 #        env:
 #          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
@@ -69,25 +70,27 @@ jobs:
 #          security default-keychain -s temp.keychain
 #          security unlock-keychain -p actions temp.keychain
 #          security set-key-partition-list -S apple-tool:,apple: -s -k actions temp.keychain
-      - name: Build and package macOS app
+
+#      - name: Build and package macOS app
 #        env:
 #          APPLE_ID: ${{ secrets.APPLE_ID }}
 #          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
 #          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
 #          DEBUG: "*"
-        run: npm run publish-macos
 
-      - name: Upload macOS build to GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref_name }}
-          files: |
-            dist/*.dmg
-            dist/*.zip
-            dist/*.blockmap
-            dist/latest-mac.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: npm run publish-macos
+#
+#      - name: Upload macOS build to GitHub Release
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          tag_name: ${{ github.ref_name }}
+#          files: |
+#            dist/*.dmg
+#            dist/*.zip
+#            dist/*.blockmap
+#            dist/latest-mac.yml
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   package-and-release-windows:
     runs-on: windows-latest
