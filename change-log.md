@@ -5,6 +5,9 @@
                         
 [//]: #@corifeus-header:end
 
+### v2025.4.136
+Released on 06/29/2025
+* BUGFIX: https://github.com/patrikx3/redis-ui/issues/108
 
 ### v2025.4.129
 Released on 01/19/2025
