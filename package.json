@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.4.132",
+    "version": "2025.4.133",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v22.13.1",
+        "nodejs": "v22.16.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -68,11 +68,11 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.7.9",
+        "axios": "^1.10.0",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2025.4.135",
-        "electron": "^34.0.2",
-        "electron-builder": "^25.1.8",
+        "electron": "^37.1.0",
+        "electron-builder": "^26.0.12",
         "node-fetch": "^3.3.2",
         "rimraf": "^6.0.1"
     },
@@ -81,7 +81,7 @@
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "@fontsource/roboto": "^5.1.1",
+        "@fontsource/roboto": "^5.2.6",
         "angular": "^1.8.3",
         "angular-animate": "^1.8.3",
         "angular-aria": "^1.8.3",
@@ -89,9 +89,9 @@
         "angular-messages": "^1.8.3",
         "corifeus-utils": "^2025.4.123",
         "electron-store": "8.2.0",
-        "electron-updater": "^6.3.9",
-        "p3x-redis-ui-material": "^2025.4.129",
-        "p3x-redis-ui-server": "^2025.4.129"
+        "electron-updater": "^6.6.2",
+        "p3x-redis-ui-material": "^2025.4.131",
+        "p3x-redis-ui-server": "^2025.4.131"
     },
     "build-save": {
         "afterSign": "scripts/notarize.js",
