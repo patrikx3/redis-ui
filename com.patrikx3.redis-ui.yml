@@ -1,12 +1,12 @@
 
 app-id: com.patrikx3.redis-ui
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '24.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node18
+  - org.freedesktop.Sdk.Extension.node22
 command: run.sh
 separate-locales: false
 finish-args:
@@ -15,7 +15,7 @@ finish-args:
   - "--device=dri"
   - "--share=network"
 build-options:
-  append-path: /usr/lib/sdk/node18/bin
+  append-path: /usr/lib/sdk/node22/bin
   env:
     NPM_CONFIG_LOGLEVEL: info
 modules:

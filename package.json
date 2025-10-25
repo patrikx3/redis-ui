@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.10.105",
+    "version": "2025.10.107",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2025.4.123",
         "electron-store": "8.2.0",
         "electron-updater": "^6.6.2",
-        "p3x-redis-ui-material": "^2025.10.104",
-        "p3x-redis-ui-server": "^2025.10.104"
+        "p3x-redis-ui-material": "^2025.10.106",
+        "p3x-redis-ui-server": "^2025.10.106"
     },
     "build-save": {
         "mac": {
@@ -147,6 +147,23 @@
             "environment": {
                 "DISABLE_WAYLAND": 1
             }
+        },
+        "flatpak": {
+            "runtime": "org.freedesktop.Platform",
+            "runtimeVersion": "24.08",
+            "sdk": "org.freedesktop.Sdk",
+            "base": "org.electronjs.Electron2.BaseApp",
+            "baseVersion": "24.08",
+            "finishArgs": [
+                "--socket=wayland",
+                "--socket=x11",
+                "--share=ipc",
+                "--device=dri",
+                "--socket=pulseaudio",
+                "--filesystem=home",
+                "--share=network",
+                "--talk-name=org.freedesktop.Notifications"
+            ]
         }
     }
 }
