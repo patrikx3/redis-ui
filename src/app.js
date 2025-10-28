@@ -7,6 +7,18 @@ process.on('uncaughtException', function (err) {
     process.exit(-1)
 });
 
+const {app} = require('electron');
+// For Snap only: force X11 via --ozone-platform=x11 (matches Electron guidance)
+try {
+    const isSnap = Boolean(process.env.SNAP || process.env.SNAP_NAME);
+    const userSpecifiedOzone = app.commandLine.hasSwitch('ozone-platform');
+    if (isSnap && !userSpecifiedOzone) {
+        app.commandLine.appendSwitch('ozone-platform', 'x11');
+    }
+} catch (e) {
+    // best-effort; do not crash if something goes wrong here
+    console.error(e);
+}
 
 const execAsync = async() => {
     let getPort = require('corifeus-utils').network.getPort

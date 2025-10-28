@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.10.107",
+    "version": "2025.10.110",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -68,10 +68,10 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.12.2",
+        "axios": "^1.13.0",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2025.4.135",
-        "electron": "^38.4.0",
+        "electron": "^39.0.0",
         "electron-builder": "^26.0.12",
         "node-fetch": "^3.3.2",
         "rimraf": "^6.0.1"
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2025.4.123",
         "electron-store": "8.2.0",
         "electron-updater": "^6.6.2",
-        "p3x-redis-ui-material": "^2025.10.106",
-        "p3x-redis-ui-server": "^2025.10.106"
+        "p3x-redis-ui-material": "^2025.10.108",
+        "p3x-redis-ui-server": "^2025.10.108"
     },
     "build-save": {
         "mac": {
@@ -145,7 +145,7 @@
         },
         "snap": {
             "environment": {
-                "DISABLE_WAYLAND": 1
+                 "XDG_DATA_HOME": "$SNAP_USER_DATA/.local/share"
             }
         },
         "flatpak": {
