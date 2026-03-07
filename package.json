@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2025.10.110",
+    "version": "2026.4.100",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v24.10.0",
+        "nodejs": "v24.14.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -68,20 +68,20 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^1.13.0",
+        "axios": "^1.13.6",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2025.4.135",
-        "electron": "^39.0.0",
-        "electron-builder": "^26.0.12",
+        "electron": "^40.8.0",
+        "electron-builder": "^26.8.1",
         "node-fetch": "^3.3.2",
-        "rimraf": "^6.0.1"
+        "rimraf": "^6.1.3"
     },
     "engines": {
         "node": ">=12.13.0"
     },
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
-        "@fontsource/roboto": "^5.2.8",
+        "@fontsource/roboto": "^5.2.10",
         "angular": "^1.8.3",
         "angular-animate": "^1.8.3",
         "angular-aria": "^1.8.3",
@@ -89,9 +89,9 @@
         "angular-messages": "^1.8.3",
         "corifeus-utils": "^2025.4.123",
         "electron-store": "8.2.0",
-        "electron-updater": "^6.6.2",
-        "p3x-redis-ui-material": "^2025.10.108",
-        "p3x-redis-ui-server": "^2025.10.108"
+        "electron-updater": "^6.8.3",
+        "p3x-redis-ui-material": "^2026.4.100",
+        "p3x-redis-ui-server": "^2026.4.100"
     },
     "build-save": {
         "mac": {
@@ -145,7 +145,7 @@
         },
         "snap": {
             "environment": {
-                 "XDG_DATA_HOME": "$SNAP_USER_DATA/.local/share"
+                "XDG_DATA_HOME": "$SNAP_USER_DATA/.local/share"
             }
         },
         "flatpak": {

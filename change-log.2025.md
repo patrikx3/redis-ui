@@ -4,15 +4,51 @@
 
                         
 [//]: #@corifeus-header:end
-# Create a docker cluster for testing
 
-https://github.com/Grokzen/docker-redis-cluster  
-https://github.com/Grokzen/docker-redis-cluster/issues/69    
-    
-```bash
-docker run -e "IP=0.0.0.0" -p 7000:7000 -p 7001:7001 -p 7002:7002 -p 7003:7003 -p 7004:7004 -p 7005:7005 grokzen/redis-cluster:latest
-```
 
+### v2025.10.110
+Released on 10/28/2025
+* FEATURE: Fix built error.
+
+### v2025.10.108
+Released on 10/28/2025
+* FEATURE: Fix built error.
+
+### v2025.10.107
+Released on 10/25/2025
+* FEATURE: Moved buttons to left.
+
+### v2025.10.100
+Released on 10/11/2025
+* CHORE: Update all packages.
+
+### v2025.4.136
+Released on 06/29/2025
+* BUGFIX: https://github.com/patrikx3/redis-ui/issues/108
+
+### v2025.4.129
+Released on 01/19/2025
+* FEATURE: Downloading the key values was downloading as value and buffer at once, now it is only downloading the buffer and the frontend construct the value.
+
+### v2025.4.127
+Released on 01/19/2025
+* BUGFIX: Removing annoying toast/growl/button about network.corifeus.com
+
+### v2025.4.101
+Released on 01/05/2025
+* CHORE: Update all packages.
+
+
+
+## Older change logs     
+[Change log 2024](change-log.2024.md)  
+[Change log 2023](change-log.2023.md)  
+[Change log 2022](change-log.2022.md)  
+[Change log 2021](change-log.2021.md)  
+[Change log 2020](change-log.2020.md)  
+[Change log 2019](change-log.2019.md)  
+[Change log 2018](change-log.2018.md)  
+  
 [//]: #@corifeus-footer
 
 ---
@@ -67,3 +103,5 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 
 
 [//]: #@corifeus-footer:end
+
+

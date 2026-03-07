@@ -5,42 +5,14 @@
                         
 [//]: #@corifeus-header:end
 
-
-### v2025.10.110
-Released on 10/28/2025
-* FEATURE: Fix built error.
-
-### v2025.10.108
-Released on 10/28/2025
-* FEATURE: Fix built error.
-
-### v2025.10.107
-Released on 10/25/2025
-* FEATURE: Moved buttons to left.
-
-### v2025.10.100
-Released on 10/11/2025
-* CHORE: Update all packages.
-
-### v2025.4.136
-Released on 06/29/2025
-* BUGFIX: https://github.com/patrikx3/redis-ui/issues/108
-
-### v2025.4.129
-Released on 01/19/2025
-* FEATURE: Downloading the key values was downloading as value and buffer at once, now it is only downloading the buffer and the frontend construct the value.
-
-### v2025.4.127
-Released on 01/19/2025
-* BUGFIX: Removing annoying toast/growl/button about network.corifeus.com
-
-### v2025.4.101
-Released on 01/05/2025
+### v2026.4.100
+Released on 03/07/2026
 * CHORE: Update all packages.
 
 
 
 ## Older change logs     
+[Change log 2025](change-log.2025.md)  
 [Change log 2024](change-log.2024.md)  
 [Change log 2023](change-log.2023.md)  
 [Change log 2022](change-log.2022.md)  
@@ -94,7 +66,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2025.10.110
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.100
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

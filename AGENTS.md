@@ -4,15 +4,14 @@
 
                         
 [//]: #@corifeus-header:end
-# Create a docker cluster for testing
-
-https://github.com/Grokzen/docker-redis-cluster  
-https://github.com/Grokzen/docker-redis-cluster/issues/69    
-    
-```bash
-docker run -e "IP=0.0.0.0" -p 7000:7000 -p 7001:7001 -p 7002:7002 -p 7003:7003 -p 7004:7004 -p 7005:7005 grokzen/redis-cluster:latest
-```
-
+Exceptions
+- Always log a short context plus the full exception (stack trace included).
+- Never swallow errors. Rethrow or propagate unless explicitly safe to continue. Redact secrets.
+- Example (do this): `catch (e) { console.error('context: saving profile failed', e); throw e }`
+- Dont always try/catch, only when we needed, not always.
+ - Avoid micro try/catch. Do not wrap simple setters/state updates or single-line calls in individual try/catch blocks. Prefer a single, meaningful boundary (e.g., around a request handler or an async action) where you can add context and rethrow/propagate.
+ - Only catch when you will: (a) add context and rethrow; or (b) intentionally continue with a documented fallback that is safe. Otherwise, let errors bubble to the existing handler.
+ - Prefer optional chaining, guards, and validations over blanket try/catch.
 [//]: #@corifeus-footer
 
 ---
