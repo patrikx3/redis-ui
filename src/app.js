@@ -50,7 +50,7 @@ const execAsync = async() => {
 
     require('./electron/global.js');
 
-    const { app, ipcMain, shell, globalShortcut } = require('electron')
+    const { app, ipcMain, shell, globalShortcut, session } = require('electron')
     app.disableHardwareAcceleration()
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
@@ -71,8 +71,26 @@ const execAsync = async() => {
     })
 
     const createWindow = require('./electron/module/create/window');
+    const rendererCsp = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.google-analytics.com https://region1.google-analytics.com; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'";
 
     app.on('ready', () => {
+        session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+            const isLocalUi =
+                details.url.startsWith('http://localhost:') ||
+                details.url.startsWith('http://127.0.0.1:')
+
+            if (!isLocalUi || (details.resourceType !== 'mainFrame' && details.resourceType !== 'subFrame')) {
+                callback({ responseHeaders: details.responseHeaders })
+                return
+            }
+
+            const responseHeaders = details.responseHeaders || {}
+            delete responseHeaders['content-security-policy']
+            delete responseHeaders['Content-Security-Policy']
+            responseHeaders['Content-Security-Policy'] = [rendererCsp]
+            callback({ responseHeaders })
+        })
+
         createWindow();
 
 

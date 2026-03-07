@@ -1,7 +1,8 @@
 
 const pkg = require('../../package.json');
 
-const Store = require('electron-store');
+const electronStoreModule = require('electron-store');
+const Store = electronStoreModule.default || electronStoreModule;
 const conf = new Store();
 
 let currentTranslation = conf.get('current-translation')

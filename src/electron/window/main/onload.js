@@ -1,4 +1,5 @@
 const {ipcRenderer, shell} = require('electron');
+const http = require('node:http');
 
 
 let domReady = false
@@ -73,6 +74,40 @@ global.p3xre = {
 
 require('./angular')
 
+const isLocalHttpAvailable = (port, timeoutMs = 800) => {
+    return new Promise((resolve) => {
+        let settled = false
+        const done = (value) => {
+            if (settled) {
+                return
+            }
+            settled = true
+            resolve(value)
+        }
+
+        const request = http.request({
+            host: '127.0.0.1',
+            port: port,
+            path: '/',
+            method: 'GET',
+        }, () => {
+            done(true)
+            request.destroy()
+        })
+
+        request.on('error', () => {
+            done(false)
+        })
+
+        request.setTimeout(timeoutMs, () => {
+            request.destroy()
+            done(false)
+        })
+
+        request.end()
+    })
+}
+
 window.p3xreRun = async function () {
 
     
@@ -102,20 +137,31 @@ window.p3xreRun = async function () {
         });
          */
 
+        const urlParams = new URLSearchParams(global.location.search)
+        const port = urlParams.get('port')
+        const localServerUrl = 'http://localhost:' + port
+        const devServerUrl = 'http://localhost:8080'
+        const isDev = process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development'
 
+        global.p3xre.webview.addEventListener('did-fail-load', function (event) {
+            if (!isDev) {
+                return
+            }
+            if (event.errorCode === -102 && global.p3xre.webview.src.startsWith(devServerUrl)) {
+                console.warn('Dev server unavailable, switching webview to', localServerUrl)
+                global.p3xre.webview.src = localServerUrl
+            }
+        })
 
-        if (process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development') {
+        if (isDev) {
             console.log('development mode')
-            global.p3xre.webview.src = 'http://localhost:8080';
-//            global.p3xre.webview.src = 'https://patrikx3.com';
-//            console.log(global.p3xre.webview)
-//            console.log(global.p3xre.webview.src)
+            const devServerAvailable = await isLocalHttpAvailable(8080)
+            global.p3xre.webview.src = devServerAvailable ? devServerUrl : localServerUrl
+            if (!devServerAvailable) {
+                console.warn('Dev server http://localhost:8080 is not running, using', localServerUrl)
+            }
         } else {
-
-            const urlParams = new URLSearchParams(global.location.search)
-            const port = urlParams.get('port')
-
-            global.p3xre.webview.src = 'http://localhost:' + port;
+            global.p3xre.webview.src = localServerUrl
         }
 
 
@@ -175,3 +221,7 @@ window.p3xreRun = async function () {
 */
 
 }
+
+window.addEventListener('load', () => {
+    window.p3xreRun()
+})

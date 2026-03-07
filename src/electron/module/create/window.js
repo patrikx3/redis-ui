@@ -16,8 +16,8 @@ function createWindow() {
             contextIsolation: false,
             nativeWindowOpen: true,
             worldSafeExecuteJavaScript: false,
-            allowRunningInsecureContent: true,
-            webSecurity: false,
+            allowRunningInsecureContent: false,
+            webSecurity: true,
         }
     });
 

@@ -39,10 +39,15 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push Docker image
         run: |
-          docker buildx build . \
-              --platform linux/amd64,linux/arm64,linux/arm/v7 \
+          echo "Using Dockerfile:"
+          sed -n '1,20p' Dockerfile
+          docker buildx build \
+              --file ./Dockerfile \
+              --pull \
+              --platform linux/amd64,linux/arm64 \
               -t patrikx3/p3x-redis-ui:latest \
               -t patrikx3/p3x-redis-ui:${{ steps.package-version.outputs.current-version }} \
+              . \
               --push
 
   package-and-release-macos:
@@ -103,7 +108,9 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install
-          Remove-Item -Recurse -Force node_modules/cpu-features
+          if (Test-Path "node_modules/cpu-features") {
+            Remove-Item -Recurse -Force node_modules/cpu-features
+          }
         shell: pwsh
         
       - name: Build and package Windows app
@@ -121,4 +128,3 @@ jobs:
             dist/latest.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
