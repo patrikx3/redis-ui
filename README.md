@@ -37,6 +37,27 @@ v24.14.0
 
 **p3x-redis-ui** is a versatile Redis GUI that can function as either a backend server on the web or as a desktop application. This open-source software is particularly effective for managing JSON, featuring integration with JSONEditor and ACE. Explore a variety of options in the 'edit json' button dialog, which also supports uploading and downloading binary data. Additionally, it handles SSH, cluster, and sentinel configurations.
 
+## 30-Second Docker Quick Start
+
+```bash
+mkdir -p ./p3x-redis-ui-settings
+docker run -d \
+  --name p3x-redis-ui \
+  -p 7843:7843 \
+  -v $PWD/p3x-redis-ui-settings:/settings \
+  patrikx3/p3x-redis-ui
+```
+
+Open: `http://localhost:7843`
+
+## Adoption Notes (Downloads vs Redis Commander)
+
+`redis-commander` has significantly more Docker pulls mostly due to age, historical tutorial coverage, and automation pull volume in CI/Kubernetes.  
+`p3x-redis-ui` adoption is still strong, and growth can be improved with better discoverability and copy-paste-first docs.
+
+Detailed analysis and action plan:  
+[Adoption and Growth Notes](artifacts/readme/adoption-growth.md)
+
 ## Features
 
 ### Configuration and Security
