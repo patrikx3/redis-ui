@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.101
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.102
 
 
   
@@ -121,6 +121,70 @@ Contributors, that created features that are working only in the donate-ware ver
   
 ## Important Notice 
 To ensure accuracy and minimize errors, we strongly advise against manually creating the configuration `JSON` file using a text editor. Instead, utilize the GUI to generate the configuration, which can then be seamlessly integrated into systems like Kubernetes.
+
+## License Integration
+
+The app validates licenses through `network.corifeus.com` for product `p3x-redis-ui`.
+
+- Validation endpoint: `GET https://network.corifeus.com/public/license/check/:licenseKey`
+- Returned data is shown in `Settings -> License`:
+  - tier
+  - validity and status
+  - reason
+  - starts/expires/check timestamps
+  - days left
+  - enabled features
+- License key is never shown in full on the client; only masked form is displayed.
+- License state refresh runs every 60 minutes (server + client refresh flow).
+
+### Tier Feature Policy
+
+- `free`
+  - core Redis UI works normally
+  - connection `readonly` mode is not available
+  - `cluster` and `sentinel` connection modes are not available
+- `pro`
+  - includes free features
+  - connection `readonly` mode is available
+  - `Edit JSON`, `Upload binary`, `Download binary` are available
+  - `cluster` and `sentinel` are not available
+- `enterprise`
+  - includes free features
+  - connection `readonly` mode is not available
+  - `Edit JSON`, `Upload binary`, `Download binary` are available
+  - `cluster` and `sentinel` connection modes are available
+
+Enforcement:
+- backend enforces tier rules on connection save/connect/test paths
+- backend enforces Pro+ for binary value writes (`key-set`, `key-new-or-set`)
+- frontend mirrors the rules in UI controls (hide/disable + localized messages)
+- `--readonly-connections` (`-r`) is effective when active license tier is `pro` or `enterprise`
+
+### License Editing Policy (`p3xrs.json`)
+
+License editability is controlled by server config:
+
+- `p3xrs.licenseEditable` (recommended)
+- legacy fallback: `p3xrs.editableActive`
+- legacy fallback: `p3xrs.disabled` (inverted)
+
+If license editing is disabled:
+
+- the `Edit` button is disabled in the UI
+- the UI shows terminal-only notice (EN/ZH/RU)
+- server blocks license updates (`license_readonly`), so it cannot be bypassed from the browser/API
+
+Example:
+
+```json
+{
+  "p3xrs": {
+    "licenseEditable": false
+  }
+}
+```
+
+After changing `p3xrs.json`, restart the server.
 
 ### Awareness of AngularJs Security Risks
 For detailed information on potential vulnerabilities and mitigation strategies, please refer to our [dedicated documentation](artifacts/readme/angularjs.md).
@@ -294,13 +358,13 @@ If you develop on this app, you are required to test, that all JS you code write
 # terminal 1
 git clone https://github.com/patrikx3/redis-ui-material.git
 cd redis-ui-material
-npm install
+yarn install
 npm run dev
 
 # terminal 2
 git clone https://github.com/patrikx3/redis-ui-server.git
 cd redis-ui-server
-npm install
+yarn install
 npm run dev
 
 # if you are not working on Electron, at this point you can fire the browser
@@ -309,7 +373,7 @@ npm run dev
 # terminal 3 
 git clone https://github.com/patrikx3/redis-ui.git
 cd redis-ui
-npm install
+yarn install
 ./scripts/start-local.sh
 # or
 .\scripts\start-local.cmd
@@ -400,7 +464,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.101
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.102
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
@@ -409,4 +473,3 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 
 
 [//]: #@corifeus-footer:end
-

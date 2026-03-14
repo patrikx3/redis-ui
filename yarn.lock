@@ -1887,10 +1887,10 @@ electron-updater@^6.8.3:
     semver "~7.7.3"
     tiny-typed-emitter "^2.1.0"
 
-electron@^40.8.0:
-  version "40.8.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-40.8.0.tgz#d149210300bf7df95e5d3db4a40d388e12ef7549"
-  integrity sha512-WoPq0Nr9Yx3g7T6VnJXdwa/rr2+VRyH3a+K+ezfMKBlf6WjxE/LmhMQabKbb6yjm9RbZhJBRcYyoLph421O2mQ==
+electron@^41.0.2:
+  version "41.0.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-41.0.2.tgz#bfe2b9fa1782afe5566df9947fa822ad81b3b450"
+  integrity sha512-raotm/aO8kOs1jD8SI8ssJ7EKciQOY295AOOprl1TxW7B0At8m5Ae7qNU1xdMxofiHMR8cNEGi9PKD3U+yT/mA==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^24.9.0"
@@ -4351,15 +4351,15 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.101:
-  version "2026.4.101"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.101.tgz#20ad04a85a70956218a1962c87a052595cc64ce1"
-  integrity sha512-Td3r67H1OSXdYW7OiMNI89WmJjlz1oY+htApay3/4DgDboHi+21jYBSpuLyFm4QNr7tP6B0Mtl+aq5o0vedgoA==
+p3x-redis-ui-material@^2026.4.102:
+  version "2026.4.102"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.102.tgz#1bb8133e9193bcebda9e278314da01720fcb9c7b"
+  integrity sha512-vELPSS44EiJfCTwrEpKIO0ihbrdzDet35M6Q3z88nUkG4/s41pmy8MrkAZFymEQ4/3cHGuLcKTTx7N34j5CWfw==
 
-p3x-redis-ui-server@^2026.4.101:
-  version "2026.4.101"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.101.tgz#4b4a51b3b2c341f5823523568b39414112e48d4e"
-  integrity sha512-urVOD/9iqJfPErgay/qCgrXBAhaNH/dLG0f57axoXBCWFI4UZg1XuICeXyjxca6nqS6EV4jktusE9+TEgH91ng==
+p3x-redis-ui-server@^2026.4.102:
+  version "2026.4.102"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.102.tgz#b3a092ea40a1562b56a642ddbe40f5bfd44f8143"
+  integrity sha512-QIUHvruQiKvOOldUyviwzmLnYsfYXFxpWYNpHrY5pq9ew/w9ZxzpfU1AXsqIrwJDJ+RfVbh0pVImvl0lJjvTjQ==
   dependencies:
     chalk "^5.6.2"
     commander "^14.0.3"
