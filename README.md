@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.108
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.110
 
 
   
@@ -225,11 +225,13 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
   - Price: `€0/month`.
 - `pro`
   - Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary.
-  - Price: `€9/month (€90/year)`.
+  - Price: `€9/month + VAT (€90/year + VAT)`.
 - `enterprise`
   - Cluster and Sentinel, plus Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
-  - Price: `€49+/month (€490/year)`.
+  - Price: `€49+/month + VAT (€490/year + VAT)`.
 - Enterprise trial: `10 days` free for anyone with a real existing email address (non-test email).
+- VAT note: VAT is added to paid plan prices (`27%` in Hungary).
+- This policy matches the Tier policy popup information shown at initialization.
 - Note: license validation requires internet access.
 
 Enforcement:
@@ -542,7 +544,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.108
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.110
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
