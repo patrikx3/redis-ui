@@ -38,7 +38,10 @@
       "tier": "free",
       "features": [],
       "licenseStatus": "inactive",
-      "checkedAt": "2026-03-14T21:08:26.258Z",
+      "maxDevices": null,
+      "activeDevices": null,
+      "deviceLease": null,
+      "checkedAt": "2026-03-15T15:21:53.612Z",
       "licenseKey": ""
     }
   }
