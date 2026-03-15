@@ -45,7 +45,8 @@ const execAsync = async() => {
         throw new Error(`Could not find an open port by trying ${maxTries}.`)
     }
 
-    const boot = require('p3x-redis-ui-server/src/lib/boot')
+    let boot
+    boot = require('p3x-redis-ui-server/dist/lib/boot')
     boot()
 
     require('./electron/global.js');
