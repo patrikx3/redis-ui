@@ -19,6 +19,10 @@ webview {
     height: 100%;
 }
 
+webview.p3xre-webview-loading {
+    display: none;
+}
+
 #p3xre-loading-overlay {
     position: absolute;
     inset: 0;
@@ -31,8 +35,22 @@ webview {
     pointer-events: none;
 }
 
-#p3xre-loading-overlay .fa {
-    font-size: 128px;
+.p3xre-spinner {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.25);
+    border-top-color: #ffffff;
+    animation: p3xre-spin 0.9s linear infinite;
+}
+
+@keyframes p3xre-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #p3xre-loading-overlay.p3xre-hidden {

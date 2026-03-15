@@ -16,6 +16,18 @@ const setLoadingOverlayVisible = (visible) => {
     }
 }
 
+const setLoadingState = (loading) => {
+    setLoadingOverlayVisible(loading)
+    if (!global.p3xre || !global.p3xre.webview) {
+        return
+    }
+    if (loading) {
+        global.p3xre.webview.classList.add('p3xre-webview-loading')
+    } else {
+        global.p3xre.webview.classList.remove('p3xre-webview-loading')
+    }
+}
+
 let p3xSetLanguageWaiter
 ipcRenderer.on('p3x-set-language', (event, data) => {
     const callMe = () => {
@@ -86,7 +98,7 @@ global.p3xre = {
 
 require('./angular')
 
-const isLocalHttpAvailable = (port, timeoutMs = 800) => {
+const isLocalHttpAvailable = (port, timeoutMs = 800, host = '127.0.0.1') => {
     return new Promise((resolve) => {
         let settled = false
         const done = (value) => {
@@ -98,7 +110,7 @@ const isLocalHttpAvailable = (port, timeoutMs = 800) => {
         }
 
         const request = http.request({
-            host: '127.0.0.1',
+            host: host,
             port: port,
             path: '/',
             method: 'GET',
@@ -127,7 +139,7 @@ window.p3xreRun = async function () {
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
         loadingOverlay = document.getElementById('p3xre-loading-overlay')
-        setLoadingOverlayVisible(true)
+        setLoadingState(true)
 
         //global.p3xre.webview.src = 'http://localhost:7844';
 
@@ -136,6 +148,10 @@ window.p3xreRun = async function () {
             if (process.env.hasOwnProperty('NODE_ENV') && (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
                 global.p3xre.webview.openDevTools();
             }
+        })
+
+        global.p3xre.webview.addEventListener('did-start-loading', function () {
+            setLoadingState(true)
         })
 
 
@@ -153,7 +169,11 @@ window.p3xreRun = async function () {
 
         const urlParams = new URLSearchParams(global.location.search)
         const port = urlParams.get('port')
-        const localServerUrl = 'http://localhost:' + port
+        const localServerHosts = ['127.0.0.1', 'localhost']
+        const getLocalServerUrl = (host) => `http://${host}:${port}`
+        const isLocalServerUrl = (url) => localServerHosts.some((host) => url.startsWith(getLocalServerUrl(host)))
+        let currentLocalServerHostIndex = 0
+        const getCurrentLocalServerUrl = () => getLocalServerUrl(localServerHosts[currentLocalServerHostIndex])
         const devServerUrl = 'http://localhost:8080'
         const isDev = process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development'
         const retryableLoadErrors = new Set([-102, -105, -106, -118])
@@ -173,7 +193,7 @@ window.p3xreRun = async function () {
         const scheduleLocalServerRetry = () => {
             if (localServerLoadRetries >= maxLocalServerLoadRetries) {
                 console.error('local webview load failed: max retries reached', {
-                    localServerUrl: localServerUrl,
+                    localServerUrl: getCurrentLocalServerUrl(),
                     retries: localServerLoadRetries,
                 })
                 return
@@ -182,13 +202,20 @@ window.p3xreRun = async function () {
             localServerLoadRetries += 1
             clearLocalServerLoadRetryTimer()
             localServerLoadRetryTimer = setTimeout(async() => {
-                const localServerAvailable = await isLocalHttpAvailable(port)
-                if (localServerAvailable) {
+                const preferredHost = localServerHosts[currentLocalServerHostIndex]
+                const hostsToTry = [preferredHost, ...localServerHosts.filter((host) => host !== preferredHost)]
+                for (const host of hostsToTry) {
+                    const localServerAvailable = await isLocalHttpAvailable(port, 800, host)
+                    if (!localServerAvailable) {
+                        continue
+                    }
+                    currentLocalServerHostIndex = localServerHosts.indexOf(host)
+                    const activeLocalServerUrl = getCurrentLocalServerUrl()
                     console.warn('local webview retry succeeded', {
-                        localServerUrl: localServerUrl,
+                        localServerUrl: activeLocalServerUrl,
                         retries: localServerLoadRetries,
                     })
-                    global.p3xre.webview.src = localServerUrl
+                    global.p3xre.webview.src = activeLocalServerUrl
                     return
                 }
                 scheduleLocalServerRetry()
@@ -196,10 +223,10 @@ window.p3xreRun = async function () {
         }
 
         global.p3xre.webview.addEventListener('did-fail-load', function (event) {
-            setLoadingOverlayVisible(true)
+            setLoadingState(true)
             const currentSrc = global.p3xre.webview.src || ''
             const isDevSource = currentSrc.startsWith(devServerUrl)
-            const isLocalSource = currentSrc.startsWith(localServerUrl)
+            const isLocalSource = isLocalServerUrl(currentSrc)
 
             if (!retryableLoadErrors.has(event.errorCode)) {
                 console.error('webview load failed (non-retryable)', {
@@ -212,8 +239,9 @@ window.p3xreRun = async function () {
             }
 
             if (isDev && isDevSource) {
-                console.warn('Dev server unavailable, switching webview to', localServerUrl)
-                global.p3xre.webview.src = localServerUrl
+                const activeLocalServerUrl = getCurrentLocalServerUrl()
+                console.warn('Dev server unavailable, switching webview to', activeLocalServerUrl)
+                global.p3xre.webview.src = activeLocalServerUrl
                 scheduleLocalServerRetry()
                 return
             }
@@ -232,8 +260,8 @@ window.p3xreRun = async function () {
 
         global.p3xre.webview.addEventListener('did-finish-load', function () {
             const currentSrc = global.p3xre.webview.src || ''
-            if (currentSrc.startsWith(localServerUrl) || currentSrc.startsWith(devServerUrl)) {
-                setLoadingOverlayVisible(false)
+            if (isLocalServerUrl(currentSrc) || currentSrc.startsWith(devServerUrl)) {
+                setLoadingState(false)
             }
             clearLocalServerLoadRetryTimer()
         })
@@ -241,12 +269,12 @@ window.p3xreRun = async function () {
         if (isDev) {
             console.log('development mode')
             const devServerAvailable = await isLocalHttpAvailable(8080)
-            global.p3xre.webview.src = devServerAvailable ? devServerUrl : localServerUrl
+            global.p3xre.webview.src = devServerAvailable ? devServerUrl : getCurrentLocalServerUrl()
             if (!devServerAvailable) {
-                console.warn('Dev server http://localhost:8080 is not running, using', localServerUrl)
+                console.warn('Dev server http://localhost:8080 is not running, using', getCurrentLocalServerUrl())
             }
         } else {
-            global.p3xre.webview.src = localServerUrl
+            global.p3xre.webview.src = getCurrentLocalServerUrl()
         }
 
 

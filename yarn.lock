@@ -4370,15 +4370,15 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.116:
-  version "2026.4.116"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.116.tgz#f699c003631f1e6b292a4c67ed695d8f7bae98c4"
-  integrity sha512-WA0glaC6lNkpmYkEDDPlU1A4E6Fi4y/L7lcLmsXEvNf5VEERM3xducjD0KBUJZVyrzsBgfvnoi8LF3hoBSFcHw==
+p3x-redis-ui-material@^2026.4.118:
+  version "2026.4.118"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.118.tgz#03d5643f3a30520b4960a43568cc42989b274f2d"
+  integrity sha512-voHsJWmMNzZHp+HjDOHB5YcZ4JUgN65iJDz/jwwK08d8AGUF2vNL8jlj08iR8zhrOw1AKLh8HgsJPF3sS7vwBg==
 
-p3x-redis-ui-server@^2026.4.115:
-  version "2026.4.115"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.115.tgz#042bf42c043b27357b4118fc93c552f40adef1c9"
-  integrity sha512-KJ/vGjm1O6LguzrQKiGCl2Lhmw45moqxfOx0Wch2wVsq/g+klXt0xnf/ce+gv48F3elwK8WG16na5axAOpMWuA==
+p3x-redis-ui-server@^2026.4.116:
+  version "2026.4.116"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.116.tgz#f45c818457da1acdef2a2c3f24886c63d2ba905c"
+  integrity sha512-fYxQrTJmlWo5XVQR24exbD1nwBHm2OO6ir6Rp30pABh8N+kYFNcWbCUmszC4e/kdLlFQyuSn9vgtpF9MN5QchA==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"
