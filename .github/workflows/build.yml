@@ -130,6 +130,5 @@ jobs:
           overwrite_files: true
           files: |
             dist/*.exe
-            dist/*.msi
             dist/*.blockmap
             dist/latest.yml
