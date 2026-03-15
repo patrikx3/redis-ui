@@ -4,6 +4,11 @@ const http = require('node:http');
 
 let domReady = false
 let loadingOverlay
+let hasSuccessfulUiLoad = false
+let shellAutoReloadTimer
+const shellAutoReloadDelayMs = 3000
+const shellAutoReloadMaxAttempts = 1
+const shellAutoReloadAttemptKey = 'p3xre-shell-auto-reload-attempt'
 
 const setLoadingOverlayVisible = (visible) => {
     if (!loadingOverlay) {
@@ -26,6 +31,14 @@ const setLoadingState = (loading) => {
     } else {
         global.p3xre.webview.classList.remove('p3xre-webview-loading')
     }
+}
+
+const clearShellAutoReloadTimer = () => {
+    if (!shellAutoReloadTimer) {
+        return
+    }
+    clearTimeout(shellAutoReloadTimer)
+    shellAutoReloadTimer = undefined
 }
 
 let p3xSetLanguageWaiter
@@ -174,6 +187,19 @@ window.p3xreRun = async function () {
         const isLocalServerUrl = (url) => localServerHosts.some((host) => url.startsWith(getLocalServerUrl(host)))
         let currentLocalServerHostIndex = 0
         const getCurrentLocalServerUrl = () => getLocalServerUrl(localServerHosts[currentLocalServerHostIndex])
+        const reloadWebviewTo = (targetUrl) => {
+            const currentSrc = global.p3xre.webview.src || ''
+            if (currentSrc.startsWith(targetUrl)) {
+                if (typeof global.p3xre.webview.reloadIgnoringCache === 'function') {
+                    global.p3xre.webview.reloadIgnoringCache()
+                } else {
+                    const separator = targetUrl.includes('?') ? '&' : '?'
+                    global.p3xre.webview.src = `${targetUrl}${separator}_p3xre_reload=${Date.now()}`
+                }
+                return
+            }
+            global.p3xre.webview.src = targetUrl
+        }
         const devServerUrl = 'http://localhost:8080'
         const isDev = process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development'
         const retryableLoadErrors = new Set([-102, -105, -106, -118])
@@ -181,6 +207,29 @@ window.p3xreRun = async function () {
         const localServerLoadRetryDelayMs = 500
         let localServerLoadRetries = 0
         let localServerLoadRetryTimer
+        const scheduleShellAutoReload = () => {
+            clearShellAutoReloadTimer()
+            shellAutoReloadTimer = setTimeout(() => {
+                if (hasSuccessfulUiLoad) {
+                    return
+                }
+                const currentAttempt = Number(sessionStorage.getItem(shellAutoReloadAttemptKey) || '0')
+                if (currentAttempt >= shellAutoReloadMaxAttempts) {
+                    console.error('webview still not loaded after shell auto reload attempt', {
+                        attempts: currentAttempt,
+                    })
+                    return
+                }
+                const nextAttempt = currentAttempt + 1
+                sessionStorage.setItem(shellAutoReloadAttemptKey, String(nextAttempt))
+                console.warn('webview still loading, reloading shell', {
+                    attempt: nextAttempt,
+                    maxAttempts: shellAutoReloadMaxAttempts,
+                    delayMs: shellAutoReloadDelayMs,
+                })
+                global.location.reload()
+            }, shellAutoReloadDelayMs)
+        }
 
         const clearLocalServerLoadRetryTimer = () => {
             if (!localServerLoadRetryTimer) {
@@ -215,15 +264,41 @@ window.p3xreRun = async function () {
                         localServerUrl: activeLocalServerUrl,
                         retries: localServerLoadRetries,
                     })
-                    global.p3xre.webview.src = activeLocalServerUrl
+                    if (!hasSuccessfulUiLoad) {
+                        reloadWebviewTo(activeLocalServerUrl)
+                    }
                     return
                 }
                 scheduleLocalServerRetry()
             }, localServerLoadRetryDelayMs)
         }
 
+        global.p3xre.webview.addEventListener('console-message', function (event) {
+            console.log('webview console', {
+                level: event.level,
+                message: event.message,
+                line: event.line,
+                sourceId: event.sourceId,
+            })
+
+            // The app emits this when socket init is complete; treat it as a reliable UI-ready signal.
+            if (typeof event.message === 'string' && event.message.includes('p3xr-socket (socket) connected')) {
+                hasSuccessfulUiLoad = true
+                sessionStorage.removeItem(shellAutoReloadAttemptKey)
+                setLoadingState(false)
+                clearLocalServerLoadRetryTimer()
+                clearShellAutoReloadTimer()
+            }
+        })
+
         global.p3xre.webview.addEventListener('did-fail-load', function (event) {
+            // Subresource failures should not trigger shell fallback/reload logic.
+            if (event && event.isMainFrame === false) {
+                return
+            }
+
             setLoadingState(true)
+            scheduleShellAutoReload()
             const currentSrc = global.p3xre.webview.src || ''
             const isDevSource = currentSrc.startsWith(devServerUrl)
             const isLocalSource = isLocalServerUrl(currentSrc)
@@ -241,7 +316,7 @@ window.p3xreRun = async function () {
             if (isDev && isDevSource) {
                 const activeLocalServerUrl = getCurrentLocalServerUrl()
                 console.warn('Dev server unavailable, switching webview to', activeLocalServerUrl)
-                global.p3xre.webview.src = activeLocalServerUrl
+                reloadWebviewTo(activeLocalServerUrl)
                 scheduleLocalServerRetry()
                 return
             }
@@ -260,21 +335,42 @@ window.p3xreRun = async function () {
 
         global.p3xre.webview.addEventListener('did-finish-load', function () {
             const currentSrc = global.p3xre.webview.src || ''
-            if (isLocalServerUrl(currentSrc) || currentSrc.startsWith(devServerUrl)) {
-                setLoadingState(false)
+            const actualUrl = typeof global.p3xre.webview.getURL === 'function'
+                ? (global.p3xre.webview.getURL() || '')
+                : ''
+            const loadedUrl = actualUrl || currentSrc
+            const isErrorPage = loadedUrl.startsWith('chrome-error://')
+            const isUiLoaded = (isLocalServerUrl(loadedUrl) || loadedUrl.startsWith(devServerUrl)) && !isErrorPage
+
+            if (!isUiLoaded) {
+                console.warn('webview finished load but UI is not ready', {
+                    currentSrc: currentSrc,
+                    loadedUrl: loadedUrl,
+                    isErrorPage: isErrorPage,
+                })
+                return
             }
+
+            hasSuccessfulUiLoad = true
+            sessionStorage.removeItem(shellAutoReloadAttemptKey)
+            setLoadingState(false)
             clearLocalServerLoadRetryTimer()
+            clearShellAutoReloadTimer()
         })
 
         if (isDev) {
             console.log('development mode')
             const devServerAvailable = await isLocalHttpAvailable(8080)
             global.p3xre.webview.src = devServerAvailable ? devServerUrl : getCurrentLocalServerUrl()
+            scheduleShellAutoReload()
             if (!devServerAvailable) {
                 console.warn('Dev server http://localhost:8080 is not running, using', getCurrentLocalServerUrl())
+                scheduleLocalServerRetry()
             }
         } else {
             global.p3xre.webview.src = getCurrentLocalServerUrl()
+            scheduleLocalServerRetry()
+            scheduleShellAutoReload()
         }
 
 

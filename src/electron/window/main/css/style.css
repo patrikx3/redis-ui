@@ -20,7 +20,7 @@ webview {
 }
 
 webview.p3xre-webview-loading {
-    display: none;
+    visibility: hidden;
 }
 
 #p3xre-loading-overlay {
