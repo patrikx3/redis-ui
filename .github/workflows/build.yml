@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,9 +15,9 @@ jobs:
       matrix:
         node-version: ['lts/*']
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm i -g grunt-cli
@@ -24,16 +27,16 @@ jobs:
   deploy-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: get-npm-version
         id: package-version
-        uses: martinbeentjes/npm-get-version-action@main
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v4
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v4
       - name: Login to Docker Hub
-        uses: docker/login-action@v2
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -53,9 +56,9 @@ jobs:
   package-and-release-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
       - name: Install dependencies
@@ -86,23 +89,24 @@ jobs:
         run: npm run publish-macos
 #
       - name: Upload macOS build to GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.5.0
         with:
           tag_name: ${{ github.ref_name }}
+          token: ${{ github.token }}
+          fail_on_unmatched_files: true
+          overwrite_files: true
           files: |
             dist/*.dmg
             dist/*.zip
             dist/*.blockmap
             dist/latest-mac.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   package-and-release-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
       - name: Install dependencies
@@ -116,15 +120,16 @@ jobs:
       - name: Build and package Windows app
         run: npm run publish-windows
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Upload Windows build to GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.5.0
         with:
+          token: ${{ github.token }}
+          fail_on_unmatched_files: true
+          overwrite_files: true
           files: |
             dist/*.exe
             dist/*.msi
             dist/*.blockmap
             dist/latest.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
