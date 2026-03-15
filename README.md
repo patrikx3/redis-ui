@@ -34,6 +34,12 @@ v24.14.0
                         
 [//]: #@corifeus-header:end
 
+## Minimum Node.js Engine Requirement
+
+```txt
+v22.0.0
+```
+
 
 **p3x-redis-ui** is a versatile Redis GUI that can function as either a backend server on the web or as a desktop application. This open-source software is particularly effective for managing JSON, featuring integration with JSONEditor and ACE. Explore a variety of options in the 'edit json' button dialog, which also supports uploading and downloading binary data. Additionally, it handles SSH, cluster, and sentinel configurations.
 
