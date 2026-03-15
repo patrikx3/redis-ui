@@ -168,19 +168,6 @@ Config (`p3xrs.json`):
 }
 ```
 
-Compatibility with Redis Commander style config is supported too:
-
-```json
-{
-  "p3xrs": {
-    "server": {
-      "httpAuth": {
-        "passwordHash": "$2b$10$..."
-      }
-    }
-  }
-}
-```
 
 Generate BCrypt password hash:
 
