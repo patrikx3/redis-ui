@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.103
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.104
 
 
   
@@ -49,6 +49,13 @@ docker run -d \
 ```
 
 Open: `http://localhost:7843`
+
+Localization available in the UI:
+- English (`en`)
+- Chinese (`zn`)
+- Russian (`ru`)
+
+You can switch language in `Settings`.
 
 ## Adoption Notes (Downloads vs Redis Commander)
 
@@ -142,6 +149,66 @@ Contributors, that created features that are working only in the donate-ware ver
   
 ## Important Notice 
 To ensure accuracy and minimize errors, we strongly advise against manually creating the configuration `JSON` file using a text editor. Instead, utilize the GUI to generate the configuration, which can then be seamlessly integrated into systems like Kubernetes.
+
+## Optional HTTP Basic Authentication
+
+The server can protect both HTTP routes and Socket.IO with HTTP Basic authentication.
+
+Config (`p3xrs.json`):
+
+```json
+{
+  "p3xrs": {
+    "httpAuth": {
+      "enabled": true,
+      "username": "admin",
+      "passwordHash": "$2b$10$..."
+    }
+  }
+}
+```
+
+Compatibility with Redis Commander style config is supported too:
+
+```json
+{
+  "p3xrs": {
+    "server": {
+      "httpAuth": {
+        "passwordHash": "$2b$10$..."
+      }
+    }
+  }
+}
+```
+
+Generate BCrypt password hash:
+
+```bash
+node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p myplainpass
+```
+
+Environment variables:
+
+- `HTTP_USER`
+- `HTTP_PASSWORD`
+- `HTTP_PASSWORD_HASH`
+- `HTTP_PASSWORD_HASH_FILE`
+- `HTTP_AUTH_ENABLED` (`true|false`)
+
+CLI options:
+
+- `--http-auth-enable`
+- `--http-auth-disable`
+- `--http-auth-username`
+- `--http-auth-password`
+- `--http-auth-password-hash`
+- `--http-auth-password-hash-file`
+
+Notes:
+
+- `passwordHash` is preferred over plain `password`.
+- Use HTTPS/reverse proxy TLS when HTTP auth is enabled.
 
 ## License Integration
 
@@ -485,7 +552,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.103
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.104
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

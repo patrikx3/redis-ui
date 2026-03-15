@@ -1,25 +1,45 @@
 {
-    "p3xrs": {
-        "http": {
-            "port-info": "this is ommitted, it will be default 7843",
-            "port": 7843,
-            "bind-info": "the interface with listen to, could be 127.0.0.1 or 0.0.0.0 or specific interface",
-            "bind": "0.0.0.0"
-        },
-        "connections": {
-            "home-dir-info": "if the dir config is empty or home, the connections are saved in the home folder, otherwise it will resolve the directory set as it is, either relative ./ or absolute starting with /. NodeJs will resolve this directory in p3xrs.connections.dir",
-            "home-dir": "home"
-        },
-        "static-info": "This is the best configuration, if it starts with ~, then it is in resolve the path in the node_modules, otherwise it resolves to the current process current working directory.",
-        "static": "~p3x-redis-ui-material/dist",
-        "licenseEditable": true,
-        "licenseKey": "",
-        "treeDividers": [
-            ":",
-            "/",
-            "|",
-            "-",
-            "@"
-        ]
+  "p3xrs": {
+    "http": {
+      "port-info": "this is ommitted, it will be default 7843",
+      "port": 7843,
+      "bind-info": "the interface with listen to, could be 127.0.0.1 or 0.0.0.0 or specific interface",
+      "bind": "0.0.0.0"
+    },
+    "connections": {
+      "home-dir-info": "if the dir config is empty or home, the connections are saved in the home folder, otherwise it will resolve the directory set as it is, either relative ./ or absolute starting with /. NodeJs will resolve this directory in p3xrs.connections.dir",
+      "home-dir": "home"
+    },
+    "static-info": "This is the best configuration, if it starts with ~, then it is in resolve the path in the node_modules, otherwise it resolves to the current process current working directory.",
+    "static": "~p3x-redis-ui-material/dist",
+    "httpAuth-info": "Optional HTTP Basic auth for HTTP + Socket.IO. Prefer passwordHash (bcrypt).",
+    "httpAuth-passwordHash-info": "Generate bcrypt hash with: node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p \"your-password\". If passwordHash is set, plain password is not needed (leave password empty).",
+    "httpAuth": {
+      "enabled": false,
+      "username": "admin",
+      "password": "",
+      "passwordHash": ""
+    },
+    "licenseEditable": true,
+    "licenseKey": "",
+    "treeDividers": [
+      ":",
+      "/",
+      "|",
+      "-",
+      "@"
+    ],
+    "license": {
+      "status": "ok",
+      "action": "check",
+      "valid": false,
+      "reason": "LICENSE_MISSING",
+      "product": "p3x-redis-ui",
+      "tier": "free",
+      "features": [],
+      "licenseStatus": "inactive",
+      "checkedAt": "2026-03-14T21:08:26.258Z",
+      "licenseKey": ""
     }
+  }
 }
