@@ -3,6 +3,18 @@ const http = require('node:http');
 
 
 let domReady = false
+let loadingOverlay
+
+const setLoadingOverlayVisible = (visible) => {
+    if (!loadingOverlay) {
+        return
+    }
+    if (visible) {
+        loadingOverlay.classList.remove('p3xre-hidden')
+    } else {
+        loadingOverlay.classList.add('p3xre-hidden')
+    }
+}
 
 let p3xSetLanguageWaiter
 ipcRenderer.on('p3x-set-language', (event, data) => {
@@ -114,6 +126,8 @@ window.p3xreRun = async function () {
     document.title = `${p3xre.strings.title} v${p3xre.pkg.version}`
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
+        loadingOverlay = document.getElementById('p3xre-loading-overlay')
+        setLoadingOverlayVisible(true)
 
         //global.p3xre.webview.src = 'http://localhost:7844';
 
@@ -142,15 +156,86 @@ window.p3xreRun = async function () {
         const localServerUrl = 'http://localhost:' + port
         const devServerUrl = 'http://localhost:8080'
         const isDev = process.env.hasOwnProperty('NODE_ENV') && process.env.NODE_ENV === 'development'
+        const retryableLoadErrors = new Set([-102, -105, -106, -118])
+        const maxLocalServerLoadRetries = 60
+        const localServerLoadRetryDelayMs = 500
+        let localServerLoadRetries = 0
+        let localServerLoadRetryTimer
 
-        global.p3xre.webview.addEventListener('did-fail-load', function (event) {
-            if (!isDev) {
+        const clearLocalServerLoadRetryTimer = () => {
+            if (!localServerLoadRetryTimer) {
                 return
             }
-            if (event.errorCode === -102 && global.p3xre.webview.src.startsWith(devServerUrl)) {
+            clearTimeout(localServerLoadRetryTimer)
+            localServerLoadRetryTimer = undefined
+        }
+
+        const scheduleLocalServerRetry = () => {
+            if (localServerLoadRetries >= maxLocalServerLoadRetries) {
+                console.error('local webview load failed: max retries reached', {
+                    localServerUrl: localServerUrl,
+                    retries: localServerLoadRetries,
+                })
+                return
+            }
+
+            localServerLoadRetries += 1
+            clearLocalServerLoadRetryTimer()
+            localServerLoadRetryTimer = setTimeout(async() => {
+                const localServerAvailable = await isLocalHttpAvailable(port)
+                if (localServerAvailable) {
+                    console.warn('local webview retry succeeded', {
+                        localServerUrl: localServerUrl,
+                        retries: localServerLoadRetries,
+                    })
+                    global.p3xre.webview.src = localServerUrl
+                    return
+                }
+                scheduleLocalServerRetry()
+            }, localServerLoadRetryDelayMs)
+        }
+
+        global.p3xre.webview.addEventListener('did-fail-load', function (event) {
+            setLoadingOverlayVisible(true)
+            const currentSrc = global.p3xre.webview.src || ''
+            const isDevSource = currentSrc.startsWith(devServerUrl)
+            const isLocalSource = currentSrc.startsWith(localServerUrl)
+
+            if (!retryableLoadErrors.has(event.errorCode)) {
+                console.error('webview load failed (non-retryable)', {
+                    errorCode: event.errorCode,
+                    errorDescription: event.errorDescription,
+                    validatedURL: event.validatedURL,
+                    currentSrc: currentSrc,
+                })
+                return
+            }
+
+            if (isDev && isDevSource) {
                 console.warn('Dev server unavailable, switching webview to', localServerUrl)
                 global.p3xre.webview.src = localServerUrl
+                scheduleLocalServerRetry()
+                return
             }
+
+            if (isLocalSource) {
+                console.warn('local webview load failed, retrying', {
+                    errorCode: event.errorCode,
+                    errorDescription: event.errorDescription,
+                    validatedURL: event.validatedURL,
+                    retry: localServerLoadRetries + 1,
+                    maxRetries: maxLocalServerLoadRetries,
+                })
+                scheduleLocalServerRetry()
+            }
+        })
+
+        global.p3xre.webview.addEventListener('did-finish-load', function () {
+            const currentSrc = global.p3xre.webview.src || ''
+            if (currentSrc.startsWith(localServerUrl) || currentSrc.startsWith(devServerUrl)) {
+                setLoadingOverlayVisible(false)
+            }
+            clearLocalServerLoadRetryTimer()
         })
 
         if (isDev) {
