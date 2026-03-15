@@ -220,11 +220,14 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
 
 ### Tier Feature Policy
 
-- `free`: core Redis UI only; no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary.
+- `free`
+  - core Redis UI only; no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary.
   - Price: `€0/month`.
-- `pro`: Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary.
+- `pro`
+  - Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary.
   - Price: `€9/month (€90/year)`.
-- `enterprise`: Cluster and Sentinel, plus Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
+- `enterprise`
+  - Cluster and Sentinel, plus Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
   - Price: `€49+/month (€490/year)`.
 - Enterprise trial: `10 days` free for anyone with a real existing email address (non-test email).
 - Note: license validation requires internet access.
