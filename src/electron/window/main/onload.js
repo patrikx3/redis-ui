@@ -164,7 +164,10 @@ window.p3xreRun = async function () {
         })
 
         global.p3xre.webview.addEventListener('did-start-loading', function () {
-            setLoadingState(true)
+            // Keep shell loader for initial boot only; Angular route changes can also emit this.
+            if (!hasSuccessfulUiLoad) {
+                setLoadingState(true)
+            }
         })
 
 
