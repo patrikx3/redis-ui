@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2026.4.123",
+    "version": "2026.4.124",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -66,7 +66,7 @@
         "redis-desktop"
     ],
     "author": "Patrik Laszlo <alabard@gmail.com>",
-    "license": "MIT",
+    "license": "SEE LICENSE IN LICENSE",
     "devDependencies": {
         "axios": "^1.13.6",
         "copyfiles": "^2.4.1",
@@ -90,8 +90,8 @@
         "corifeus-utils": "^2025.4.123",
         "electron-store": "^11.0.2",
         "electron-updater": "^6.8.3",
-        "p3x-redis-ui-material": "^2026.4.125",
-        "p3x-redis-ui-server": "^2026.4.123"
+        "p3x-redis-ui-material": "^2026.4.126",
+        "p3x-redis-ui-server": "^2026.4.124"
     },
     "build-save": {
         "mac": {
@@ -130,7 +130,7 @@
         "icon": "src/electron/images/",
         "appId": "com.patrikx3.redis-ui",
         "productName": "P3X-Redis-UI",
-        "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 as MIT license",
+        "copyright": "(c) Copyright P3X / Corifeus / PatrikX3 - Free: MIT, Pro/Enterprise: Commercial",
         "win": {
             "icon": "src/electron/images/",
             "target": "nsis"
