@@ -6,7 +6,7 @@
 [//]: #@corifeus-header:end
 
 ### v2026.4.125
-Released on 03/12/2026
+Released on 03/21/2026
 * FEATURE: Added localization support for 18 new languages: Bulgarian (bg), Czech (cs), German (de), Greek (el), Spanish (es), French (fr), Hungarian (hu), Italian (it), Japanese (ja), Dutch (nl), Polish (pl), Portuguese (pt-PT), Romanian (ro), Slovak (sk), Serbian (sr), Swedish (sv), Turkish (tr), Ukrainian (uk).
 
 ### v2026.4.124
