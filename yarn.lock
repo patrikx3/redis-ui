@@ -1897,10 +1897,10 @@ electron-updater@^6.8.3:
     semver "~7.7.3"
     tiny-typed-emitter "^2.1.0"
 
-electron@^41.0.2:
-  version "41.0.2"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-41.0.2.tgz#bfe2b9fa1782afe5566df9947fa822ad81b3b450"
-  integrity sha512-raotm/aO8kOs1jD8SI8ssJ7EKciQOY295AOOprl1TxW7B0At8m5Ae7qNU1xdMxofiHMR8cNEGi9PKD3U+yT/mA==
+electron@^41.0.3:
+  version "41.0.3"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-41.0.3.tgz#fa8864adacf903b986cd1d532db130f070e320f1"
+  integrity sha512-IDjx8liW1q+r7+MOip5W1Eo1eMwJzVObmYrd9yz2dPCkS7XlgLq3qPVMR80TpiROFp73iY30kTzMdpA6fEVs3A==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^24.9.0"
@@ -3038,10 +3038,10 @@ into-stream@^3.1.0:
     from2 "^2.1.1"
     p-is-promise "^1.1.0"
 
-ioredis@^5.10.0:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.10.0.tgz#a745ffec754e79435a60cad166076bd33c811aca"
-  integrity sha512-HVBe9OFuqs+Z6n64q09PQvP1/R4Bm+30PAyyD4wIEqssh3v9L21QjCVk4kRLucMBcDokJTcLjsGeVRlq/nH6DA==
+ioredis@^5.10.1:
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.10.1.tgz#6082781d8aec8d51ee4936bf81d0610404db1e3d"
+  integrity sha512-HuEDBTI70aYdx1v6U97SbNx9F1+svQKBDo30o0b9fw055LMepzpOOd0Ccg9Q6tbqmBSJaMuY0fB7yw9/vjBYCA==
   dependencies:
     "@ioredis/commands" "1.5.1"
     cluster-key-slot "^1.1.0"
@@ -4370,22 +4370,22 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.126:
-  version "2026.4.126"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.126.tgz#656e779daf523081e1a381d153b6bdedfc08536d"
-  integrity sha512-4B/HxVAtEkW1um3cxTiPujzjiAy1UqPtyANTpykUulTDwiQJZWgek3uAQnfAD8zmiheSZuSu+dSZofn7K6gntQ==
+p3x-redis-ui-material@^2026.4.127:
+  version "2026.4.127"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.127.tgz#a3e7d270faa588dade9430163e32f7a23f80c023"
+  integrity sha512-lVdcqamq+oNwJxvLo2rqFtvqYCLUc0aML8M5yK/rX9OrQphmT65Rv0ACVc0O87Xo3JOXH/zA2eTtZdaWENJqBA==
 
-p3x-redis-ui-server@^2026.4.124:
-  version "2026.4.124"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.124.tgz#09f7c218f62c39a58dfc4120308d0774e265da92"
-  integrity sha512-pHtjjfkj2jnbSehcaPoT94LxFhmCZ6Lov6oeV5zb152/jJiQHXyoWg7VcEbtaqWasria0hY8YuFiqTLqfG2T+g==
+p3x-redis-ui-server@^2026.4.125:
+  version "2026.4.125"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.125.tgz#b59fd2a3a01774adce3607303b8c16f204209082"
+  integrity sha512-iYafO7qqQ/JjTXTTsaraWYPbsugWgmz62kyvUjBGTDnnzbyNWM0PyUvikBBm5Qav50p8Syj0zf4/cXP8HF45LA==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"
     commander "^14.0.3"
     corifeus-utils "^2025.4.123"
     express "^5.2.1"
-    ioredis "^5.10.0"
+    ioredis "^5.10.1"
     lodash "^4.17.23"
     socket.io "^4.8.3"
     tunnel-ssh "^5.2.0"

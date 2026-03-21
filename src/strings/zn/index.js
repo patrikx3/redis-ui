@@ -50,9 +50,27 @@ module.exports = {
         language: {
             title: '语言 / Language',
             translation: {
+                bg: 'Български / Bulgarian',
+                cs: 'Čeština / Czech',
+                de: 'Deutsch / German',
+                el: 'Ελληνικά / Greek',
                 en: '英语 / English',
+                es: 'Español / Spanish',
+                fr: 'Français / French',
+                hu: 'Magyar / Hungarian',
+                it: 'Italiano / Italian',
+                ja: '日本語 / Japanese',
+                nl: 'Nederlands / Dutch',
+                pl: 'Polski / Polish',
+                'pt-PT': 'Português / Portuguese',
+                ro: 'Română / Romanian',
+                ru: 'Русский / Russian',
+                sk: 'Slovenčina / Slovak',
+                sr: 'Српски / Serbian',
+                sv: 'Svenska / Swedish',
+                tr: 'Türkçe / Turkish',
+                uk: 'Українська / Ukrainian',
                 zn: '中文 / Chinese',
-                ru: '俄语 / Russian'
             }
         },
         settings: {

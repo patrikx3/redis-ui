@@ -54,9 +54,27 @@ module.exports = {
             translation: {
                 // When you translate the english name, keep the Language in English
                 // eg. Inglés / English
+                bg: 'Български / Bulgarian',
+                cs: 'Čeština / Czech',
+                de: 'Deutsch / German',
+                el: 'Ελληνικά / Greek',
                 en: 'English',
-                zn: 'Chinese / 中文',
-                ru: 'Russian / Русский'
+                es: 'Español / Spanish',
+                fr: 'Français / French',
+                hu: 'Magyar / Hungarian',
+                it: 'Italiano / Italian',
+                ja: '日本語 / Japanese',
+                nl: 'Nederlands / Dutch',
+                pl: 'Polski / Polish',
+                'pt-PT': 'Português / Portuguese',
+                ro: 'Română / Romanian',
+                ru: 'Русский / Russian',
+                sk: 'Slovenčina / Slovak',
+                sr: 'Српски / Serbian',
+                sv: 'Svenska / Swedish',
+                tr: 'Türkçe / Turkish',
+                uk: 'Українська / Ukrainian',
+                zn: '中文 / Chinese',
             }
         },
         settings: {
