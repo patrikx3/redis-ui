@@ -449,54 +449,6 @@ kubectl apply -f generated.yaml
 # Contributors
 [The contributors readme](contributors.md)
 
-# Development
-
-For file names do not use camelCase, but use kebab-case. Folder should be named as kebab-case as well. As you can see, all code filenames are using it like that, please do not change that.
-Please apply the `.editorconfig` settings in your IDE.
-
-It creates a package that allows you to compose `p3x-redis-ui-server` and `p3x-redis-ui-material` into one:
-
-[Server on GitHub](https://github.com/patrikx3/redis-ui-server)  
-[Client on GitHub](https://github.com/patrikx3/redis-ui-material)
-
-If you develop on this app, you are required to test, that all JS you code write is working with Electron (as the embedded Electron NodeJs version is usually below the real NodeJs). Once the server and client is running as above, you clone this repo and test like this:
-```bash
-# terminal 1
-git clone https://github.com/patrikx3/redis-ui-material.git
-cd redis-ui-material
-yarn install
-npm run dev
-
-# terminal 2
-git clone https://github.com/patrikx3/redis-ui-server.git
-cd redis-ui-server
-yarn install
-npm run dev
-
-# if you are not working on Electron, at this point you can fire the browser
-# @ http://localhost:8080/
-
-# terminal 3 
-git clone https://github.com/patrikx3/redis-ui.git
-cd redis-ui
-yarn install
-./scripts/start-local.sh
-# or
-.\scripts\start-local.cmd
-```
-
-### Development of the translations
-
-By default, only English is created, but given all strings are from a `JS` file, it is very quick to spawn another language eg. German, French, Spanish etc ...
-
-[For a new language](https://github.com/patrikx3/redis-ui-material/blob/master/src/main.js)  
-[English strings, for the web UI](https://github.com/patrikx3/redis-ui-material/blob/master/src/strings/en/strings.js)   
-[English strings, for the Electron](https://github.com/patrikx3/redis-ui/blob/master/src/strings/en/index.js)  
-  
-[Moment a new language for vendor (require moment/locale)](https://github.com/patrikx3/redis-ui-material/blob/master/src/vendor.js)    
-[JSON Editor, to incorporate a new language](https://github.com/patrikx3/redis-ui-material/blob/master/redis-ui-material/src/core/settings.js)  
-[Moment a new language for Material (momentDateMap)](https://github.com/patrikx3/redis-ui-material/blob/master/src/core/settings.js)    
-[Humanize duration](https://github.com/patrikx3/redis-ui-material/blob/master/redis-ui-material/src/core/settings.js)
 
 # Solution
   
