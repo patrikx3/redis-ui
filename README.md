@@ -31,17 +31,16 @@ v24.14.0
 
 # 📝 Description
 
-                        
+
 [//]: #@corifeus-header:end
 
-## Minimum Node.js Engine Requirement
+**p3x-redis-ui** is a versatile Redis GUI that works as a web-based server application or a standalone desktop app. It excels at managing JSON data through integrated JSONEditor and ACE editors, supports uploading and downloading binary data, and handles SSH, cluster, and sentinel configurations.
+
+### Minimum Node.js Version
 
 ```txt
 v22.0.0
 ```
-
-
-**p3x-redis-ui** is a versatile Redis GUI that can function as either a backend server on the web or as a desktop application. This open-source software is particularly effective for managing JSON, featuring integration with JSONEditor and ACE. Explore a variety of options in the 'edit json' button dialog, which also supports uploading and downloading binary data. Additionally, it handles SSH, cluster, and sentinel configurations.
 
 ## 30-Second Docker Quick Start
 
@@ -56,100 +55,66 @@ docker run -d \
 
 Open: `http://localhost:7843`
 
-Localization available in the UI:
-- English (`en`)
-- Bulgarian (`bg`)
-- Czech (`cs`)
-- German (`de`)
-- Greek (`el`)
-- Spanish (`es`)
-- French (`fr`)
-- Hungarian (`hu`)
-- Italian (`it`)
-- Japanese (`ja`)
-- Dutch (`nl`)
-- Polish (`pl`)
-- Portuguese (`pt-PT`)
-- Romanian (`ro`)
-- Russian (`ru`)
-- Slovak (`sk`)
-- Serbian (`sr`)
-- Swedish (`sv`)
-- Turkish (`tr`)
-- Ukrainian (`uk`)
-- Chinese (`zn`)
+### Supported Languages
 
-You can switch language in `Settings`.
+Switch language in `Settings`:
 
-## Adoption Notes (Downloads vs Redis Commander)
+English (`en`), Bulgarian (`bg`), Czech (`cs`), German (`de`), Greek (`el`), Spanish (`es`), French (`fr`), Hungarian (`hu`), Italian (`it`), Japanese (`ja`), Dutch (`nl`), Polish (`pl`), Portuguese (`pt-PT`), Romanian (`ro`), Russian (`ru`), Slovak (`sk`), Serbian (`sr`), Swedish (`sv`), Turkish (`tr`), Ukrainian (`uk`), Chinese (`zn`)
 
-`redis-commander` has significantly more Docker pulls mostly due to age, historical tutorial coverage, and automation pull volume in CI/Kubernetes.  
-`p3x-redis-ui` adoption is still strong, and growth can be improved with better discoverability and copy-paste-first docs.
+## Screenshots
 
-Detailed analysis and action plan:  
-[Adoption and Growth Notes](artifacts/readme/adoption-growth.md)
+[View screenshots](artifacts/readme/screenshots.md)
 
 ## Features
 
-### Configuration and Security
-- **Secure Configuration:** Setup is intricate due to its roots in shared web applications, ensuring that passwords and sensitive data are safeguarded with unique identifiers for both main and node configurations. Node-specific IDs enhance security measures for node passwords.
-
-### Compatibility and Usage
-- **Redis Versions and TLS:** Supports Redis 6 with TLS, enhancing security and data integrity.
-  - For TLS configuration details, visit [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/).
-- **Pika Compatibility:** Compatible with Pika, though not perfectly optimized.
-- **SSH Tunneling:** Functional for single instances, cluster, and sentinel configurations.
-- **Environmental Customizations:** Customize the server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME` environment variables.
+### Compatibility
+- **Redis 6+ with TLS** — see [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/) for setup details
+- **Pika compatible** (not fully optimized)
+- **SSH tunneling** for single instances, cluster, and sentinel
+- **Environment variables:** customize server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME`
 
 ### Data Handling
-- **Binary Data Management:** Special care is needed when handling binary data to prevent issues. Use the download button for binary data; direct editing in text mode is not supported for binary content.
-- **Large Data Sets:** Handles values larger than 256 kB, indicated by `[object ArrayBuffer]`. For large values, utilize binary upload and download capabilities.
-- **Clipboard Operations:** Text copying is supported directly; binary data requires using the download functionality.
+- **Binary data:** use the download button for binary content; direct text editing is not supported for binary values
+- **Large values (>256 kB):** shown as `[object ArrayBuffer]`; use binary upload/download
+- **Clipboard:** text can be copied directly; binary data requires the download button
 
-### User Interface and Experience
-- **Desktop Shortcuts:** Access menus in the desktop version by pressing ALT.
-- **Responsive Design:** Fully responsive, ensuring usability on phones and tablets.
-- **Themes:** Choose between Dark - Dracula and light themes for personalized visual comfort.
-- **Data Visualization and Management:** 
-  - Tree view settings allow adjustments to key count from a minimum of 100 to a maximum of 100,000 to prevent crashes.
-  - Deferred rendering in the tree view enhances performance by rendering only what is visible in the viewport.
+### User Interface
+- **Responsive design:** works on phones, tablets, and desktops
+- **Themes:** Dark (Dracula) and Light
+- **Desktop shortcuts:** press ALT to access menus in the desktop version
+- **Tree view:** adjustable key count (100–100,000) with deferred rendering for performance
 
-### Advanced Features
-- **Monitoring and Logging:** Monitor all channel messages on the console with a simple checkbox. Console history is stored indefinitely in local storage, keeping the last 20 entries accessible.
-- **Database Interaction:** Select databases via the console or a dropdown menu, which also indicates whether databases are empty or filled.
-- **Search Functionality:**
-  - Client-side mode for searching small sets of keys.
-  - Server-side mode for efficient searching within large sets of keys.
-  - Search can be configured to start with a specific string or include a string within the keys.
+### Console and Search
+- **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
+- **Database selection:** choose databases via the console or dropdown (shows empty/filled status)
+- **Search modes:** client-side for small key sets, server-side for large key sets; search by prefix or substring
 
-### Network Setup and Extensions
-- **Sub-directory Support:** Utilize Nginx/Ingress to rewrite paths when used in a sub-directory.
-  - For more information, see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43).
+### Networking
+- **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
+- **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
-### Contributions and Support
-- **Cluster Support:** Recently added and continuously improving. Contributions by [@devthejo](https://github.com/devthejo) have significantly enhanced this functionality.
-- **Community and Feedback:** As this tool evolves, feedback and issue reporting are highly valued to refine and improve the features.
-
-Redis UI provides a powerful interface for managing Redis databases with a focus on security, efficiency, and user experience. Whether you are dealing with small or large data sets, p3x-redis-ui offers robust solutions tailored to meet diverse operational needs.
+### Security
+- **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
+- **AngularJS security:** see [dedicated documentation](artifacts/readme/angularjs.md) for vulnerability details and mitigation strategies
 
 <!--
-👷 **The first full complete version was created in 20 days in September of 2018.** 
+👷 **The first full complete version was created in 20 days in September of 2018.**
 -->
 
 <!--
 ## Donated-Ware features
-  
+
 **Until further notice, all donated-ware features are enabled for free. Please, test out your use case, how the JSON editor is helping you. Let us know!**
 
-The `p3x-redis-ui+` version has additional features.   
-The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@gmail.com) and can donate @ https://paypal.me/patrikx3  
-  
+The `p3x-redis-ui+` version has additional features.
+The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@gmail.com) and can donate @ https://paypal.me/patrikx3
+
 The features that are only working in the donated-ware version:
 * JSON editor
 * Cluster
 * Sentinel
 
-To check if your license is valid @  
+To check if your license is valid @
 https://server.patrikx3.com/api/patrikx3/redis-ui/status/your-license-key
 
 #### New features
@@ -166,17 +131,18 @@ Users, that donated, have a big chance that requests for new features will be im
 Given, I do not have a full fledged server and to maintain the servers it costs money, it is possible, sometimes the server goes down. It is rare, but it will be back up probably in 5-10 minutes. If there is a problem that is longer, please contact me.
 
 ### Contributors license
-Contributors get plus donate license for free for a year.    
-Contributors, that created features that are working only in the donate-ware version get a license for life.  
-  
--->  
-  
-## Important Notice 
-To ensure accuracy and minimize errors, we strongly advise against manually creating the configuration `JSON` file using a text editor. Instead, utilize the GUI to generate the configuration, which can then be seamlessly integrated into systems like Kubernetes.
+Contributors get plus donate license for free for a year.
+Contributors, that created features that are working only in the donate-ware version get a license for life.
+
+-->
+
+## Important Notice
+
+Do not manually create the configuration `JSON` file with a text editor. Use the GUI to generate it instead — the resulting file can then be deployed to systems like Kubernetes.
 
 ## Optional HTTP Basic Authentication
 
-The server can protect both HTTP routes and Socket.IO with HTTP Basic authentication.
+Protect both HTTP routes and Socket.IO with HTTP Basic authentication.
 
 Config (`p3xrs.json`):
 
@@ -192,8 +158,7 @@ Config (`p3xrs.json`):
 }
 ```
 
-
-Generate BCrypt password hash:
+Generate a BCrypt password hash:
 
 ```bash
 node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p myplainpass
@@ -219,7 +184,7 @@ CLI options:
 Notes:
 
 - `passwordHash` is preferred over plain `password`.
-- Use HTTPS/reverse proxy TLS when HTTP auth is enabled.
+- Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
 
 ## License Integration
 
@@ -227,58 +192,54 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
 
 - Validation endpoint: `GET https://network.corifeus.com/public/license/check/:licenseKey`
 - Returned data is shown in `Settings -> License`:
-  - tier
-  - validity and status
-  - reason
-  - starts/expires/check timestamps
-  - days left
+  - tier, validity and status, reason
+  - starts/expires/check timestamps, days left
   - enabled features
-- License key is never shown in full on the client; only masked form is displayed.
-- License state refresh runs every 60 minutes (server + client refresh flow).
+- License key is displayed only in masked form on the client.
+- License state refreshes every 60 minutes (server + client refresh flow).
+- License validation requires internet access.
 
 ### Tier Feature Policy
 
 - `free`
-  - core Redis UI only; no SSH tunneling, no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary.
+  - Core Redis UI only; no SSH tunneling, no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary.
   - Price: `0 HUF/month (€0/month)`.
 - `pro`
   - SSH tunneling, Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary.
   - Base price: `1,200 HUF/month (€3/month)` or `12,000 HUF/year (€30/year)`.
   - Total with `27%` VAT: `1,500 HUF/month (€3.81/month)` or `15,200 HUF/year (€38.10/year)`.
 - `enterprise`
-  - SSH tunneling, Cluster and Sentinel, plus Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
+  - SSH tunneling, Cluster and Sentinel, Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
   - Base price: `3,600 HUF/month (€9/month)` or `36,000 HUF/year (€90/year)`.
   - Total with `27%` VAT: `4,600 HUF/month (€11.43/month)` or `45,700 HUF/year (€114.30/year)`.
-- Yearly rule: yearly price is `10x` the monthly price.
-- Default license includes `5 seats`; if you need more seats, contact us at [`support@corifeus.com`](mailto:support@corifeus.com).
-- Enterprise trial: `10 days` free for anyone with a real existing email address (non-test email).
-- Billing info in e-mail: `Name, Billing e-mail, Country code, Postal code, City, Address, VAT ID (optional)`.
-- Payment note: PayPal payment is accepted only in `HUF` (Hungarian forint).
-- VAT note: VAT is added to paid plan prices (`27%` in Hungary).
+- Yearly price is `10x` the monthly price.
+- Default license includes `5 seats`; for more seats, contact [`support@corifeus.com`](mailto:support@corifeus.com).
+- Enterprise trial: `10 days` free with a valid email address.
+- Billing info required: `Name, Billing e-mail, Country code, Postal code, City, Address, VAT ID (optional)`.
+- PayPal payment accepted only in `HUF` (Hungarian forint).
+- VAT (`27%` in Hungary) is added to paid plan prices.
+- Invoice/license communication is in English; invoice currency is HUF.
 - Contact: [`support@corifeus.com`](mailto:support@corifeus.com).
-- Invoice/license e-mail communication is in English. Invoice currency is HUF.
-- This policy matches the Tier policy popup information shown at initialization.
-- Note: license validation requires internet access.
 
 Enforcement:
-- backend enforces tier rules on connection save/connect/test paths
-- backend enforces Pro+ for binary value writes (`key-set`, `key-new-or-set`)
-- frontend mirrors the rules in UI controls (hide/disable + localized messages)
-- `--readonly-connections` (`-r`) is effective when active license tier is `pro` or `enterprise`
+- Backend enforces tier rules on connection save/connect/test paths
+- Backend enforces Pro+ for binary value writes (`key-set`, `key-new-or-set`)
+- Frontend mirrors the rules in UI controls (hide/disable + localized messages)
+- `--readonly-connections` (`-r`) requires `pro` or `enterprise` tier
 
 ### License Editing Policy (`p3xrs.json`)
 
 License editability is controlled by server config:
 
 - `p3xrs.licenseEditable` (recommended)
-- legacy fallback: `p3xrs.editableActive`
-- legacy fallback: `p3xrs.disabled` (inverted)
+- Legacy fallback: `p3xrs.editableActive`
+- Legacy fallback: `p3xrs.disabled` (inverted)
 
 If license editing is disabled:
 
 - the `Edit` button is disabled in the UI
-- the UI shows terminal-only notice (EN/ZH/RU)
-- server blocks license updates (`license_readonly`), so it cannot be bypassed from the browser/API
+- the UI shows a terminal-only notice (EN/ZH/RU)
+- the server blocks license updates (`license_readonly`), preventing bypass from browser/API
 
 Example:
 
@@ -290,154 +251,74 @@ Example:
 }
 ```
 
-After changing `p3xrs.json`, restart the server.
+Restart the server after changing `p3xrs.json`.
 
-### Awareness of AngularJs Security Risks
-For detailed information on potential vulnerabilities and mitigation strategies, please refer to our [dedicated documentation](artifacts/readme/angularjs.md).
+## Live Demo
 
-## Access the Latest Online Version
-Explore the most current iteration of our project at [p3x.redis.patrikx3.com](https://p3x.redis.patrikx3.com)
+Try the latest version at [p3x.redis.patrikx3.com](https://p3x.redis.patrikx3.com).
 
-### Operational Insights:
-- **Data Restoration:** Our Redis database automatically restores certain datasets every morning at CET, offering a fresh start daily. Feel free to experiment as needed.
-  
-- **Application Stability:** You may notice brief downtime (about 1 second) in our test application, possibly due to automatic updates triggered by changes in the Git repository.
+- **Daily data reset:** the Redis database restores certain datasets every morning (CET)
+- **Brief downtime:** occasional ~1 second interruptions may occur due to automatic updates from Git changes
+- **Version differences:** the live instance may differ from the GitHub or NPM release; updates are typically published monthly
 
-- **Version Consistency:** Please be aware that the live snapshot might differ from the versions available on GitHub or NPM. Updates and new features are typically released monthly or as developments occur.
+## Installation
 
+### Releases / Downloads
 
-### Screenshots
-[Screenshots readme](artifacts/readme/screenshots.md)
+https://github.com/patrikx3/redis-ui/releases
 
+### CLI (Node.js / NPM)
 
-## Change log
-[The change log readme](change-log.md) 
+Start the server via Node.js/NPM and access it in a browser.
 
+[Server startup guide](artifacts/readme/start-up-server.md)
 
-## Releases / Downloadable installer
-  
-https://github.com/patrikx3/redis-ui/releases  
+[Config file reference](p3xrs.json)
 
-## MacOS Compatibility
-Our application supports builds for both Intel and Apple Silicon architectures.
+[Connection config reference](.p3xrs-conns.json)
 
-  
-### Handling Downloaded Files from GitHub
-Although I'm not an Apple expert, if you download the `zip` file for the `arm64` version, you'll need to execute the following command on the unzipped app to remove the quarantine attribute applied by macOS:
+[Example connection config](.p3xrs-conns-example.json)
 
-```bash
-sudo xattr -rd com.apple.quarantine P3X-Redis-UI.app
-```
-
-This command ensures that your system trusts the application, allowing it to run smoothly without security interruptions from macOS.
-
-
-### Snap
-
-<!--
-The main source installer is the `AppImage`, so, the themes are not implemented (the main menus). If you want the themes to be implemented (dark vs light), I suggest using the `AppImage` as it supports the themes natively. Besides, the auto self update function is not implemented in `Snap`, only in `AppImage` version.  
--->
-
-[![LINK](https://cdn.corifeus.com/assets/svg/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
-
-## Flathub
-You download from the releases page and install as:
-  
-```sh
-wget https://github.com/patrikx3/redis-ui/releases/download/v${VERSION}/P3X-Redis-UI-${VERSION}-x86_64.flatpak
-flatpak install ./P3X-Redis-UI-${VERSION}-x86_64.flatpak
-flatpak run com.patrikx3.redis_ui
-```
-
-Besides the menu is integrated.
- 
-
-### AppImage, dep, rpm
-
-AppImage, dep and rpm auto update itself.  
-  
-<!-- 
-#### To integrate into the menu using AppImage
-Execute:
-```bash
-sudo add-apt-repository ppa:appimagelauncher-team/stable
-sudo apt-get update
-sudo apt-get install appimagelauncher
-```
--->  
-
-#### After downloading the AppImage, make it an executable.
-```bash
-mkdir -p $HOME/opt
-mv ~/Downloads/p3x-redis-ui-a.b.c-x86_64.AppImage $HOME/opt/
-chmod +x $HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage
-# Then you can run it
-$HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage &
-```
-
-
-<!--
-It then actually integrates itself into the menus and it will auto update itself.
--->
-
-### On ElectronJs  
-The app can be found on [ElectronJs Apps](https://electronjs.org/apps) and search for `P3X`, you will find it.
-
-### CLI
- 
-Start up with a server or via a browser and NodeJs/NPM.
-  
-[Start up with a server readme](artifacts/readme/start-up-server.md)
-
-[Some description about the config file readme](p3xrs.json)
-
-[Some description about the config connections readme](.p3xrs-conns.json)
-
-[Example of config connections](.p3xrs-conns-example.json)
-
-
-### Docker 
+### Docker
 
 https://hub.docker.com/r/patrikx3/p3x-redis-ui
 
 #### Compose
-https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml  
-  
-  
+
+https://github.com/patrikx3/redis-ui/blob/master/docker-compose.yml
 
 ```bash
 wget https://raw.githubusercontent.com/patrikx3/redis-ui/master/docker-compose.yml
-# You might want to tune the settings folder in the docker-compose.yml.
-# the /home/user/p3x-redis-ui-settings settings folder in yml should be set by yourself.
+# Adjust the settings folder path in docker-compose.yml as needed.
 docker-compose up
 ```
 
-#### Bare
+#### Standalone
 
 ```bash
-# you can tune the settings folder
-# in the -v first part is where you can set your own folder
 mkdir -p ./p3x-redis-ui-settings
 docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 7843:7843 -t -i patrikx3/p3x-redis-ui
 ```
 
-The GUI will be @ http://localhost:7843
+The GUI will be at http://localhost:7843
 
 ### Kubernetes
 
-A complete example of deployment `p3x-redis-ui` in kubernetes using raw manifests
+#### Raw Manifests
+
 https://github.com/patrikx3/redis-ui/blob/master/k8s/manifests
 
 ```bash
 kubectl apply -f namespace.yaml
-# Do not forget to edit redis host and password configuration
+# Edit redis host and password in configmap.yaml first
 kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
 
-Helm chart `p3x-redis-ui` deployment in kubernetes
+#### Helm Chart
+
 https://github.com/patrikx3/redis-ui/blob/master/k8s/chart
 
 ```bash
@@ -445,36 +326,97 @@ helm template -f values.yaml release --namespace namespace . > generated.yaml
 kubectl apply -f generated.yaml
 ```
 
+### Desktop Applications
 
-# Contributors
-[The contributors readme](contributors.md)
+#### macOS
 
+Supports both Intel and Apple Silicon builds. If you download the `zip` for the `arm64` version, remove the quarantine attribute:
 
-# Solution
-  
-Interestingly, this solution doesn't employ REST; it opts for Socket.IO instead! 😄 It might seem a bit unconventional, but I actually appreciate the choice. Using Socket.IO is expected to be more responsive, as it avoids the significant overhead associated with the HTTP protocol. This approach should provide a smoother and faster interaction experience.
-  
-## Reference for Socket.IO speed
-https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks
+```bash
+sudo xattr -rd com.apple.quarantine P3X-Redis-UI.app
+```
 
+#### Snap
 
-# URL links
+<!--
+The main source installer is the `AppImage`, so, the themes are not implemented (the main menus). If you want the themes to be implemented (dark vs light), I suggest using the `AppImage` as it supports the themes natively. Besides, the auto self update function is not implemented in `Snap`, only in `AppImage` version.
+-->
 
-[P3X Redis UI playground](https://www.patrikx3.com/en/front/playground/19/p3x-reds-ui#PG19)  
-  
-[Corifeus P3X Redis UI](https://corifeus.com/redis-ui/)  
-  
-[AlternativeTo Redis UI](https://alternativeto.net/software/p3x-redis-ui/)  
+[![LINK](https://cdn.corifeus.com/assets/svg/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
 
-[NPM P3X Redis UI](https://www.npmjs.com/package/p3x-redis-ui)
+#### Flatpak
 
+Download from the releases page and install:
+
+```sh
+wget https://github.com/patrikx3/redis-ui/releases/download/v${VERSION}/P3X-Redis-UI-${VERSION}-x86_64.flatpak
+flatpak install ./P3X-Redis-UI-${VERSION}-x86_64.flatpak
+flatpak run com.patrikx3.redis_ui
+```
+
+The application menu is automatically integrated.
+
+#### AppImage, deb, rpm
+
+These packages support automatic updates.
+
+<!--
+#### To integrate into the menu using AppImage
+Execute:
+```bash
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt-get update
+sudo apt-get install appimagelauncher
+```
+-->
+
+After downloading the AppImage, make it executable:
+
+```bash
+mkdir -p $HOME/opt
+mv ~/Downloads/p3x-redis-ui-a.b.c-x86_64.AppImage $HOME/opt/
+chmod +x $HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage
+$HOME/opt/p3x-redis-ui-a.b.c-x86_64.AppImage &
+```
+
+<!--
+It then actually integrates itself into the menus and it will auto update itself.
+-->
+
+#### ElectronJs
+
+The app is listed on [ElectronJs Apps](https://electronjs.org/apps) — search for `P3X`.
+
+## Architecture
+
+This application uses Socket.IO instead of REST for client-server communication. While unconventional, Socket.IO provides better responsiveness by avoiding HTTP protocol overhead, resulting in a smoother interaction experience.
+
+[REST vs WebSocket benchmarks](https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks)
+
+## Adoption Notes
+
+`redis-commander` has more Docker pulls due to its longer history and presence in tutorials/CI pipelines. `p3x-redis-ui` adoption continues to grow steadily.
+
+[Detailed analysis and action plan](artifacts/readme/adoption-growth.md)
+
+## Change Log
+
+[View change log](change-log.md)
+
+## Contributors
+
+[View contributors](contributors.md)
+
+## Links
+
+[P3X Redis UI playground](https://www.patrikx3.com/en/front/playground/19/p3x-reds-ui#PG19)
+[Corifeus P3X Redis UI](https://corifeus.com/redis-ui/)
+[AlternativeTo](https://alternativeto.net/software/p3x-redis-ui/)
+[NPM](https://www.npmjs.com/package/p3x-redis-ui)
 [Snap Store](https://snapcraft.io/p3x-redis-ui)
-
-[Github.IO Page](https://patrikx3.github.io/redis-ui/)  
-    
-[Web development coding](https://corifeus.eu/)   
-   
-[Webfejlesztés](https://corifeus.hu/)  
+[GitHub Pages](https://patrikx3.github.io/redis-ui/)
+[Web development](https://corifeus.eu/)
+[Webfejlesztés](https://corifeus.hu/)
   
 
 [//]: #@corifeus-footer
