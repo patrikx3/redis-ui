@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     title: 'P3X Redis UI',
     updater: {
         'checking-for-update': '更新を確認中 ...',

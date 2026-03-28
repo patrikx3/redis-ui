@@ -93,6 +93,13 @@ English (`en`), Bulgarian (`bg`), Czech (`cs`), German (`de`), Greek (`el`), Spa
 - **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
 - **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
+### Modern Angular Frontend
+The UI has been fully migrated from AngularJS (1.x) to **Angular 21** — the current long-term support release. This migration delivers major improvements across the board:
+- **~1.6 MB smaller bundle** — removed jQuery, moment.js, and the AngularJS/Angular compatibility layer
+- **AOT compilation** — faster startup and smaller runtime footprint
+- **Web Worker tree building** — key sorting and tree construction run off the main thread, keeping the UI responsive even with large key sets
+- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material 3
+
 ### Security
 - **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
 - **AngularJS security:** see [dedicated documentation](artifacts/readme/angularjs.md) for vulnerability details and mitigation strategies

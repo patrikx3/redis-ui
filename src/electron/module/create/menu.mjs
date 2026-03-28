@@ -1,5 +1,4 @@
-const {dialog, Menu} = require('electron')
-const {shell, app, globalShortcut} = require('electron')
+import { dialog, Menu, shell, app, globalShortcut } from 'electron'
 
 
 function mainMenu() {
@@ -14,14 +13,6 @@ function mainMenu() {
                     click: () => {
                         global.p3xre.mainWindow.webContents.send('p3x-menu', {
                             action: 'main.statistics'
-                        })
-                    }
-                },
-                {
-                    label: global.p3xre.strings.menu.main.console,
-                    click: () => {
-                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
-                            action: 'console'
                         })
                     }
                 },
@@ -139,7 +130,7 @@ function mainMenu() {
                     label: global.p3xre.strings.menu.settings.hideMenu,
                     type: 'checkbox',
                     checked: global.p3xre.optionToHideMenu,
-                    click: () => {
+                    click: async () => {
                         try {
 
                             global.p3xre.optionToHideMenu = !global.p3xre.optionToHideMenu
@@ -160,8 +151,9 @@ ${global.p3xre.strings.message.restart}
 //                                title: global.p3x.onenote.lang.dialog.minimizationBehavior.title,
                                     message: message,
                                     buttons: [global.p3xre.strings.button.ok]
-                                }).then(() => {
-                                    require('../../../lib/relaunch')()
+                                }).then(async () => {
+                                    const { default: relaunch } = await import('../../../lib/relaunch.mjs')
+                                    relaunch()
                                 }).catch(e => console.error(e))
 
                             }
@@ -224,8 +216,9 @@ ${global.p3xre.strings.message.restart}
                 {type: 'separator'},
                 {
                     label: global.p3xre.strings.menu.help.checkUpdates,
-                    click: () => {
-                        const {autoUpdater} = require("electron-updater");
+                    click: async () => {
+                        const electronUpdater = await import('electron-updater')
+                        const autoUpdater = electronUpdater.default ? electronUpdater.default.autoUpdater : electronUpdater.autoUpdater
                         autoUpdater.checkForUpdatesAndNotify();
                     }
                 }
@@ -242,9 +235,8 @@ ${global.p3xre.strings.message.restart}
     const languageIndex = template.length - 1 - 3
     for (let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
         const clickFunction = (key) => {
-            return () => {
-
-                require('../../../lib/set-language')({
+            return async () => {
+                await global.p3xre.setLanguage({
                     key: key
                 })
                 global.p3xre.mainWindow.webContents.send('p3x-set-language', {
@@ -265,4 +257,4 @@ ${global.p3xre.strings.message.restart}
 
 }
 
-module.exports = mainMenu;
+export default mainMenu;

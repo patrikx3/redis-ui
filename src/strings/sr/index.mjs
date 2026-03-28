@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     title: 'P3X Redis UI',
     updater: {
         'checking-for-update': '\u041F\u0440\u043E\u0432\u0435\u0440\u0430 \u0430\u0436\u0443\u0440\u0438\u0440\u0430\u045A\u0430 ...',

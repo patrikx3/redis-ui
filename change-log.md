@@ -5,6 +5,33 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.201
+Released on 03/28/2026
+* PERF: Replaced moment.js with dayjs (~400KB savings).
+* PERF: Removed jQuery dependency, use native DOM (~180KB savings).
+* PERF: Switched to AOT compilation, removed @angular/compiler (~1MB savings).
+* PERF: Offloaded key sorting and tree building to a Web Worker for non-blocking UI.
+* BUGFIX: Fixed race condition causing empty keys and statistics on initial production load (missing await on async data load, Web Worker concurrent request handling).
+* BUGFIX: Fixed p3xrDevMode reference error in production build.
+* BUGFIX: Fixed Angular Linker (babel) for AOT-compatible node_modules.
+* REFACTOR: Hidden p3xr global from browser console via ProvidePlugin.
+
+### v2026.4.200
+Released on 03/27/2026
+* FEATURE: Migrated layout component (header/footer toolbars) from AngularJS to Angular Material.
+* FEATURE: Migrated error page from AngularJS to Angular.
+* FEATURE: Excluded migrated AngularJS components (layout, settings, error) from grunt injector to reduce bundle size.
+* FEATURE: Header and footer toolbars now use per-theme colors matching the original AngularJS Layout sub-theme palettes.
+* FEATURE: Added elevation shadow on header (8dp) and footer (8dp upward) toolbars.
+* FEATURE: Footer responsive breakpoints match AngularJS originals (Theme at 600px, Donate/Connection at 720px, Language/GitHub/Disconnect at 960px).
+* FEATURE: Button hover effect on header/footer toolbars with theme-aware colors.
+* FEATURE: Uniform icon-to-text gap (4px) for both Font Awesome and Material icons in toolbars.
+* FEATURE: Neutralized Angular Material 3 purple-tinted surface colors for all light and dark themes (inputs, dialogs, selects use neutral grey).
+* FEATURE: Version/SNAPSHOT label color matches toolbar text color per theme.
+* BUGFIX: Fixed infinite renderView recursion caused by Angular JIT compiler fetching index.html as template via webpack historyApiFallback (switched to build-time template inlining with require()).
+* BUGFIX: Fixed NG0313 duplicate DatePipe conflict in SettingsComponent.
+* BUGFIX: Fixed NG0304 unknown element warnings for AngularJS directives in hybrid mode (CUSTOM_ELEMENTS_SCHEMA).
+
 ### v2026.4.125
 Released on 03/21/2026
 * FEATURE: Added localization support for 18 new languages: Bulgarian (bg), Czech (cs), German (de), Greek (el), Spanish (es), French (fr), Hungarian (hu), Italian (it), Japanese (ja), Dutch (nl), Polish (pl), Portuguese (pt-PT), Romanian (ro), Slovak (sk), Serbian (sr), Swedish (sv), Turkish (tr), Ukrainian (uk).

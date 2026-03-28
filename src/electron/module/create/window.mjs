@@ -1,8 +1,11 @@
-const {app, BrowserWindow, Menu} = require('electron')
+import { app, BrowserWindow, Menu } from 'electron'
+import electronUpdater from 'electron-updater'
+const { autoUpdater } = electronUpdater
+import mainMenu from './menu.mjs'
 
 function createWindow() {
 
-    require('./menu')()
+    mainMenu()
 
     global.p3xre.mainWindow = new BrowserWindow({
         icon: global.p3xre.iconFile,
@@ -83,8 +86,6 @@ function createWindow() {
     })
 
 
-    const {autoUpdater} = require("electron-updater");
-
     autoUpdater.on('checking-for-update', () => {
         global.p3xre.mainWindow.webContents.send('p3x-action', {
             action: 'toast',
@@ -155,4 +156,4 @@ function createWindow() {
 
 }
 
-module.exports = createWindow;
+export default createWindow;

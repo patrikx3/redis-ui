@@ -7,7 +7,7 @@ require('angular-material');
 global.p3xre.ng = angular.module('p3x-redis-ui', [
     'ngMaterial', 'ngMessages'
 ]);
-require('./angular/toast');
+await import('./angular/toast/index.mjs');
 
 global.p3xre.ng.run((p3xToast) => {
     global.p3xre.toast = p3xToast;

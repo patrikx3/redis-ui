@@ -1,3 +1,5 @@
+import { app, ipcMain, shell, globalShortcut, session } from 'electron'
+
 process.on("unhandledRejection", (err, promise) => {
     console.error(new Date().toLocaleString(), 'unhandledRejection', err, promise);
 });
@@ -7,7 +9,6 @@ process.on('uncaughtException', function (err) {
     process.exit(-1)
 });
 
-const {app} = require('electron');
 // For Snap only: force X11 via --ozone-platform=x11 (matches Electron guidance)
 try {
     const isSnap = Boolean(process.env.SNAP || process.env.SNAP_NAME);
@@ -21,7 +22,8 @@ try {
 }
 
 const execAsync = async() => {
-    let getPort = require('corifeus-utils').network.getPort
+    const corifeusUtils = await import('corifeus-utils')
+    const getPort = (corifeusUtils.default || corifeusUtils).network.getPort
     let available = false;
     const maxTries = 100
     let tries = 0
@@ -45,13 +47,12 @@ const execAsync = async() => {
         throw new Error(`Could not find an open port by trying ${maxTries}.`)
     }
 
-    let boot
-    boot = require('p3x-redis-ui-server/dist/lib/boot')
+    const bootModule = await import('p3x-redis-ui-server/dist/lib/boot.mjs')
+    const boot = bootModule.default
     boot()
 
-    require('./electron/global.js');
+    await import('./electron/global.mjs');
 
-    const { app, ipcMain, shell, globalShortcut, session } = require('electron')
     app.disableHardwareAcceleration()
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {
@@ -71,8 +72,8 @@ const execAsync = async() => {
         //global.p3xre.mainWindow.webContents.reload();
     })
 
-    const createWindow = require('./electron/module/create/window');
-    const rendererCsp = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.google-analytics.com https://region1.google-analytics.com; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'";
+    const { default: createWindow } = await import('./electron/module/create/window.mjs');
+    const rendererCsp = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.google-analytics.com https://region1.google-analytics.com; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'";
 
     app.on('ready', () => {
         session.defaultSession.webRequest.onHeadersReceived((details, callback) => {

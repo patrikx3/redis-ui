@@ -1897,10 +1897,10 @@ electron-updater@^6.8.3:
     semver "~7.7.3"
     tiny-typed-emitter "^2.1.0"
 
-electron@^41.0.3:
-  version "41.0.3"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-41.0.3.tgz#fa8864adacf903b986cd1d532db130f070e320f1"
-  integrity sha512-IDjx8liW1q+r7+MOip5W1Eo1eMwJzVObmYrd9yz2dPCkS7XlgLq3qPVMR80TpiROFp73iY30kTzMdpA6fEVs3A==
+electron@^41.1.0:
+  version "41.1.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-41.1.0.tgz#21eff66ca8b86ae4c1c06512cf00bfae02e5edb4"
+  integrity sha512-0XRFyxRqetmqtkkBvV++wGbHYJ7bD++f6EgJW8y9kX4pPRagwlmKDtzqXZhKiu0DIQppm3sXxzHWK9GYP91OKQ==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^24.9.0"
@@ -3524,6 +3524,11 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
+lodash-es@^4.17.23:
+  version "4.17.23"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.23.tgz#58c4360fd1b5d33afc6c0bbd3d1149349b1138e0"
+  integrity sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==
+
 lodash.defaults@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
@@ -3548,11 +3553,6 @@ lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@~4.17
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
-
-lodash@^4.17.23:
-  version "4.17.23"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.23.tgz#f113b0378386103be4f6893388c73d0bde7f2c5a"
-  integrity sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==
 
 log-symbols@^4.1.0:
   version "4.1.0"
@@ -4370,15 +4370,15 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.127:
-  version "2026.4.127"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.127.tgz#a3e7d270faa588dade9430163e32f7a23f80c023"
-  integrity sha512-lVdcqamq+oNwJxvLo2rqFtvqYCLUc0aML8M5yK/rX9OrQphmT65Rv0ACVc0O87Xo3JOXH/zA2eTtZdaWENJqBA==
+p3x-redis-ui-material@^2026.4.201:
+  version "2026.4.201"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.201.tgz#68b9977f153c73f7ead0e81b28f50fd4665b227c"
+  integrity sha512-shuWwfDe3nbjkp6YwhNwTsgnImPsVrJZqQhoNT3R0LKo3g9iDJ9uyBJjnduTBzjNk6YNKPFL9meyW7ThKZupVg==
 
-p3x-redis-ui-server@^2026.4.125:
-  version "2026.4.125"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.125.tgz#b59fd2a3a01774adce3607303b8c16f204209082"
-  integrity sha512-iYafO7qqQ/JjTXTTsaraWYPbsugWgmz62kyvUjBGTDnnzbyNWM0PyUvikBBm5Qav50p8Syj0zf4/cXP8HF45LA==
+p3x-redis-ui-server@^2026.4.203:
+  version "2026.4.203"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.203.tgz#44eb25d7ebe31ab50803d4b497b96d3ce793fbe8"
+  integrity sha512-rFtpYD2eIr31C9AODSDnS2/zAzFLSk8QgdUAgzZJ5UQM0zE0fOF9UrwHaNaZmjYtY0Uqlxl9wC2sldvASgq1tg==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"
@@ -4386,7 +4386,7 @@ p3x-redis-ui-server@^2026.4.125:
     corifeus-utils "^2025.4.123"
     express "^5.2.1"
     ioredis "^5.10.1"
-    lodash "^4.17.23"
+    lodash-es "^4.17.23"
     socket.io "^4.8.3"
     tunnel-ssh "^5.2.0"
 

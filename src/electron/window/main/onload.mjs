@@ -43,7 +43,7 @@ const clearShellAutoReloadTimer = () => {
 
 let p3xSetLanguageWaiter
 ipcRenderer.on('p3x-set-language', (event, data) => {
-    const callMe = () => {
+    const callMe = async () => {
         if (domReady === false) {
             clearTimeout(p3xSetLanguageWaiter)
             setTimeout(callMe, 250)
@@ -51,7 +51,8 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
         }
         const translation = data.translation
         //console.warn('p3x-set-language', data)
-        global.p3xre.strings = require('../../../strings/' + translation + '/index')
+        const stringsModule = await import(`../../../strings/${translation}/index.mjs`)
+        global.p3xre.strings = stringsModule.default
         // global.p3xre.webview.getWebContents().executeJavaScript is different!!! - getWebContents deprecated, removed
         global.p3xre.webview.executeJavaScript(`window.p3xrBooter=(()=>{void 0===window.p3xrSetLanguage?setTimeout(()=>{window.p3xrBooter()},500):window.p3xrSetLanguage("${translation}")}),window.p3xrBooter();`)
     }
@@ -103,13 +104,16 @@ ipcRenderer.on('p3x-action', function (event, data) {
     }
 })
 
+const pkg = require('../../../../package.json')
+const enStrings = await import('../../../strings/en/index.mjs')
+
 global.p3xre = {
     webview: undefined,
-    pkg: require('../../../../package'),
-    strings: require('../../../strings/en/index')
+    pkg: pkg,
+    strings: enStrings.default
 };
 
-require('./angular')
+await import('./angular.mjs')
 
 const isLocalHttpAvailable = (port, timeoutMs = 800, host = '127.0.0.1') => {
     return new Promise((resolve) => {
@@ -147,7 +151,7 @@ const isLocalHttpAvailable = (port, timeoutMs = 800, host = '127.0.0.1') => {
 
 window.p3xreRun = async function () {
 
-    
+
     document.title = `${p3xre.strings.title} v${p3xre.pkg.version}`
     try {
         global.p3xre.webview = document.getElementById("p3xre-redis-ui-electron");
