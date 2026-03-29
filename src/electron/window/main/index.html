@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; frame-src http://localhost:* http://127.0.0.1:*; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'none'">
 
     <link rel="stylesheet" href="../../../../node_modules/@fontsource/roboto/300.css"/>
     <link rel="stylesheet" href="../../../../node_modules/@fontsource/roboto/400.css"/>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <!-- last -->
-    <script type="module" src="./onload.mjs"></script>
+    <script src="./onload.mjs"></script>
 
 </head>
 
@@ -29,8 +29,7 @@
     <span class="p3xre-spinner" aria-hidden="true"></span>
 </div>
 
-<!--- webprefrences all lowercase -->
-<webview id="p3xre-redis-ui-electron" src="./webview-placeholder.html" nodeintegration webpreferences="contextisolation=no,nativeWindowOpen=true"></webview>
+<iframe id="p3xre-redis-ui-electron" src="about:blank"></iframe>
 
 
 </body>

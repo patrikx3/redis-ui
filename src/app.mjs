@@ -134,7 +134,7 @@ const execAsync = async() => {
             setImmediate(() => {
                 shell.openExternal(url);
             });
-            return { action: 'allow' }
+            return { action: 'deny' }
         })
 
     });

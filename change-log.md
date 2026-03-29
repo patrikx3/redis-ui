@@ -5,6 +5,28 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.303
+Released on 03/29/2026
+* FEATURE: Add functionality to promote GitHub draft release to published.
+* FEATURE: Replace AngularJS shell with vanilla toast notifications.
+* FEATURE: Offload key sorting and tree building to Web Worker for improved responsiveness.
+* PERF: Switch to AOT compilation, remove @angular/compiler (~1MB savings).
+* PERF: Remove jQuery dependency, use native DOM (~180KB savings).
+* PERF: Replace moment.js with dayjs (~400KB savings).
+* BUGFIX: Add ChangeDetectorRef to all BreakpointObserver subscriptions and fix MDC typography.
+* BUGFIX: Resolve race condition causing empty keys and statistics on initial load.
+* BUGFIX: Add Angular Linker (babel) for AOT-compatible node_modules.
+* BUGFIX: Fix search enter, tree refresh, socket tick, and remove deprecated animations.
+* BUGFIX: Fix accordion elevation, dark border subtle, layout padding, and list weight.
+* BUGFIX: Refactor test-connection settlement logic to prevent double-emit.
+* REFACTOR: Migrate from AngularJS hybrid to standalone Angular.
+* REFACTOR: Extract Redis commands into MainCommandService.
+* REFACTOR: Remove legacy AngularJS source files and unused Angular styles.
+* REFACTOR: Migrate codebase from CommonJS to ES modules.
+* REFACTOR: Remove console menu item from main menu.
+* DOCS: Rewrite and reorganize README for clarity and conciseness.
+* DOCS: Update Angular and Angular Material references to remove version numbers.
+
 ### v2026.4.302
 Released on 03/29/2026
 * FEATURE: Offload key sorting and tree building to a Web Worker for improved responsiveness.
@@ -158,7 +180,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.302
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.303
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

@@ -14,7 +14,6 @@ function createWindow() {
         autoHideMenuBar: global.p3xre.optionToHideMenu,
         webPreferences: {
             sandbox: false,
-            webviewTag: true,
             nodeIntegration: true,
             contextIsolation: false,
             nativeWindowOpen: true,
@@ -32,12 +31,7 @@ function createWindow() {
      */
 
 
-    global.p3xre.mainWindow.webContents.on("did-attach-webview", (_, contents) => {
-        contents.setWindowOpenHandler((details) => {
-            global.p3xre.mainWindow.webContents.send('p3x-new-window', details);
-            return { action: 'deny' }
-        })
-      })
+    // Handle new-window requests from iframe content via the main window's web-contents-created handler in app.mjs
 
     //global.p3xre.mainWindow.setAutoHideMenuBar(false)
 

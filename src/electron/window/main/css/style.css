@@ -14,14 +14,15 @@ body {
     position: relative;
 }
 
-webview {
+#p3xre-redis-ui-electron {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-webview.p3xre-webview-loading {
+#p3xre-redis-ui-electron.p3xre-webview-loading {
     visibility: hidden;
 }
 
