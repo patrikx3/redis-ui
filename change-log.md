@@ -5,6 +5,17 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.308
+Released on 03/29/2026
+* FEATURE: Added RedisJSON module support with key read/write operations, viewer, and editor.
+* FEATURE: Added ReJSON as a licensed feature.
+* FEATURE: Added dark scrollbar styling.
+* REFACTOR: Enabled OnPush change detection for main components for better performance.
+* REFACTOR: Replaced detectChanges with markForCheck in breakpoint observers.
+* BUGFIX: Resolved race condition causing empty keys and statistics on initial load.
+* BUGFIX: Fixed ChangeDetectorRef handling in BreakpointObserver subscriptions and MDC typography.
+* CHORE: Dropped armv7l (32-bit ARM) build targets.
+
 ### v2026.4.307
 Released on 03/29/2026
 * FEATURE: Replaced inline JSON editor with interactive tree view and dialog editor for improved usability.
@@ -216,7 +227,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.307
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.308
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
