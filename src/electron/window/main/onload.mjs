@@ -55,6 +55,14 @@ ipcRenderer.on('p3x-new-window', function (event, data) {
     shell.openExternal(data.url)
 })
 
+// Listen for theme changes from the Angular app (iframe) to sync dark mode on the shell
+window.addEventListener('message', (event) => {
+    if (event.data?.type === 'p3x-theme-change') {
+        document.body.classList.remove('p3xr-theme-dark', 'p3xr-theme-light')
+        document.body.classList.add(event.data.dark ? 'p3xr-theme-dark' : 'p3xr-theme-light')
+    }
+})
+
 
 const pkg = require('../../../../package.json')
 const enStrings = await import('../../../strings/en/index.mjs')

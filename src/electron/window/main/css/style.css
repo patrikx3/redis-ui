@@ -103,3 +103,27 @@ body {
 @keyframes p3xre-toast-out {
     to { opacity: 0; transform: translateY(16px); }
 }
+
+/* -- Dark mode scrollbar ------------------------------------------------- */
+
+body.p3xr-theme-dark * {
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+body.p3xr-theme-dark *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+body.p3xr-theme-dark *::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body.p3xr-theme-dark *::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+body.p3xr-theme-dark *::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
