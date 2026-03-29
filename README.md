@@ -34,7 +34,7 @@ v24.14.1
                         
 [//]: #@corifeus-header:end
 
-**p3x-redis-ui** is a versatile Redis GUI that works as a web-based server application or a standalone desktop app. It excels at managing JSON data through integrated JSONEditor and ACE editors, supports uploading and downloading binary data, and handles SSH, cluster, and sentinel configurations.
+**p3x-redis-ui** is a versatile Redis GUI that works as a web-based server application or a standalone desktop app. It excels at managing JSON data through an integrated CodeMirror editor with GitHub dark/light themes, supports uploading and downloading binary data, and handles SSH, cluster, and sentinel configurations.
 
 ### Minimum Node.js Version
 
@@ -106,7 +106,7 @@ The UI has been fully migrated from AngularJS (1.x) to **Angular** — the curre
 - **ReJSON (JSON data type)** — view, create, edit, and download JSON documents stored with `JSON.SET` (Pro/Enterprise)
 - **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
 - **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
-- **ACE editor integration** — edit JSON documents in a full-featured code editor dialog
+- **CodeMirror 6 editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
