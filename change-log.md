@@ -5,6 +5,25 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.304
+Released on 03/29/2026
+* REFACTOR: Migrated from AngularJS hybrid to standalone Angular with vanilla toast notifications.
+* REFACTOR: Migrated entire codebase from CommonJS to ES modules (server and client).
+* REFACTOR: Migrated Electron webview to iframe with postMessage communication.
+* PERF: Switched to AOT compilation, removing @angular/compiler (~1MB savings).
+* PERF: Removed jQuery dependency, using native DOM (~180KB savings).
+* PERF: Replaced moment.js with dayjs (~400KB savings).
+* FEATURE: Offloaded key sorting and tree building to a Web Worker for smoother UI.
+* FEATURE: Added functionality to promote GitHub draft releases to published.
+* BUGFIX: Resolved race condition causing empty keys and statistics on initial load.
+* BUGFIX: Fixed ChangeDetectorRef in all BreakpointObserver subscriptions and MDC typography.
+* BUGFIX: Fixed search enter, tree refresh, and socket tick issues.
+* BUGFIX: Fixed test-connection settlement logic to prevent double-emit.
+* BUGFIX: Fixed p3xrDevMode reference error in production build.
+* BUGFIX: Fixed accordion elevation, dark border, layout padding, and list weight.
+* REFACTOR: Removed legacy AngularJS source files and console menu item from main menu.
+* CHORE: Dropped armv7l (32-bit ARM) build targets.
+
 ### v2026.4.303
 Released on 03/29/2026
 * FEATURE: Add functionality to promote GitHub draft release to published.
@@ -180,7 +199,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.303
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.304
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
