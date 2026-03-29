@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.318
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.319
 
 
   
@@ -169,6 +169,20 @@ Notes:
 - `passwordHash` is preferred over plain `password`.
 - Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
 
+## All Features Are Free
+
+All features including SSH tunneling, Cluster/Sentinel, ReJSON, binary upload/download, and readonly connections are available for free. No license required.
+
+### Redis 8 ReJSON Support
+
+P3X Redis UI supports the **ReJSON** module (built into Redis 8) for the JSON data type.
+
+- Auto-detects the ReJSON module on connection via `MODULE LIST`
+- JSON keys appear in the tree with a `</>` icon
+- Create, view, edit, format, copy, and download JSON documents
+- JSON type is available in the "Add Key" dialog when the module is detected
+
+<!--
 ## License Integration
 
 The app validates licenses through `network.corifeus.com` for product `p3x-redis-ui`.
@@ -211,15 +225,6 @@ Enforcement:
 - Frontend mirrors the rules in UI controls (hide/disable + localized messages)
 - `--readonly-connections` (`-r`) requires `pro` or `enterprise` tier
 
-### Redis 8 ReJSON Support
-
-P3X Redis UI supports the **ReJSON** module (built into Redis 8) for the JSON data type. This feature requires a **Pro** or **Enterprise** license.
-
-- Auto-detects the ReJSON module on connection via `MODULE LIST`
-- JSON keys appear in the tree with a `</>` icon
-- Create, view, edit, format, copy, and download JSON documents
-- JSON type is available in the "Add Key" dialog when the module is detected and the license tier allows it
-
 ### License Editing Policy (`p3xrs.json`)
 
 License editability is controlled by server config:
@@ -245,6 +250,7 @@ Example:
 ```
 
 Restart the server after changing `p3xrs.json`.
+-->
 
 ## Live Demo
 
@@ -470,7 +476,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.318
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.319
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
