@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.305
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.306
 
 
   
@@ -179,14 +179,14 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
 ### Tier Feature Policy
 
 - `free`
-  - Core Redis UI only; no SSH tunneling, no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary.
+  - Core Redis UI only; no SSH tunneling, no Readonly connection mode, no Cluster/Sentinel, no Edit JSON/Upload binary/Download binary, no ReJSON.
   - Price: `0 HUF/month (€0/month)`.
 - `pro`
-  - SSH tunneling, Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary.
+  - SSH tunneling, Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary, ReJSON (JSON data type).
   - Base price: `1,200 HUF/month (€3/month)` or `12,000 HUF/year (€30/year)`.
   - Total with `27%` VAT: `1,500 HUF/month (€3.81/month)` or `15,200 HUF/year (€38.10/year)`.
 - `enterprise`
-  - SSH tunneling, Cluster and Sentinel, Edit JSON, Upload binary, Download binary; `--readonly-connections`/`-r` also works.
+  - SSH tunneling, Cluster and Sentinel, Edit JSON, Upload binary, Download binary, ReJSON (JSON data type); `--readonly-connections`/`-r` also works.
   - Base price: `3,600 HUF/month (€9/month)` or `36,000 HUF/year (€90/year)`.
   - Total with `27%` VAT: `4,600 HUF/month (€11.43/month)` or `45,700 HUF/year (€114.30/year)`.
 - Yearly price is `10x` the monthly price.
@@ -201,8 +201,18 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
 Enforcement:
 - Backend enforces tier rules on connection save/connect/test paths
 - Backend enforces Pro+ for binary value writes (`key-set`, `key-new-or-set`)
+- Backend enforces Pro+ for ReJSON (JSON data type) operations (`key-get`, `key-new-or-set`, `key-json-set`)
 - Frontend mirrors the rules in UI controls (hide/disable + localized messages)
 - `--readonly-connections` (`-r`) requires `pro` or `enterprise` tier
+
+### Redis 8 ReJSON Support
+
+P3X Redis UI supports the **ReJSON** module (built into Redis 8) for the JSON data type. This feature requires a **Pro** or **Enterprise** license.
+
+- Auto-detects the ReJSON module on connection via `MODULE LIST`
+- JSON keys appear in the tree with a `</>` icon
+- Create, view, edit, format, copy, and download JSON documents
+- JSON type is available in the "Add Key" dialog when the module is detected and the license tier allows it
 
 ### License Editing Policy (`p3xrs.json`)
 
@@ -454,7 +464,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.305
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.306
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
