@@ -5,7 +5,29 @@
                         
 [//]: #@corifeus-header:end
 
-### v2026.4.202
+### v2026.4.302
+Released on 03/29/2026
+* FEATURE: Offload key sorting and tree building to a Web Worker for improved responsiveness.
+* FEATURE: Replace AngularJS shell with vanilla toast notifications.
+* PERF: Switch to AOT compilation, removing @angular/compiler (~1MB savings).
+* PERF: Remove jQuery dependency, use native DOM (~180KB savings).
+* PERF: Replace moment.js with dayjs (~400KB savings).
+* REFACTOR: Complete migration from AngularJS hybrid to standalone Angular.
+* REFACTOR: Migrate codebase from CommonJS to ES modules across all packages.
+* REFACTOR: Remove legacy AngularJS source files.
+* REFACTOR: Remove console menu item from main menu.
+* REFACTOR: Extract Redis commands into MainCommandService.
+* BUGFIX: Resolve race condition causing empty keys and statistics on initial load.
+* BUGFIX: Add ChangeDetectorRef to all BreakpointObserver subscriptions and fix MDC typography.
+* BUGFIX: Fix search enter, tree refresh, socket tick, and remove deprecated animations.
+* BUGFIX: Fix accordion elevation, dark border subtle, layout padding, and list weight.
+* BUGFIX: Refactor test-connection settlement logic to prevent double-emit.
+* BUGFIX: Fix p3xrDevMode reference error in production build.
+* BUGFIX: Add Angular Linker (babel) for AOT-compatible node_modules.
+* DOCS: Rewrite and reorganize README for clarity and conciseness.
+* CHORE: Simplify license and add auto-changelog support.
+
+### v2026.4.201
 Released on 03/29/2026
 * FEATURE: Replaced AngularJS toast in Electron shell with vanilla HTML toast (black background, white text, click-to-dismiss, auto-dismiss after 5s).
 * FEATURE: Removed AngularJS dependency from Electron shell (angular, angular-material, angular-animate, angular-aria, angular-messages).
@@ -136,7 +158,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.125
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.302
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

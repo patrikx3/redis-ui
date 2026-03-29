@@ -1,9 +1,4 @@
-P3X Redis UI License
-
-Copyright (c) Patrik Laszlo / PatrikX3 / Corifeus
-
-
-FREE TIER - MIT LICENSE
+MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,28 +17,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-PRO AND ENTERPRISE TIERS - COMMERCIAL LICENSE
-
-A valid purchased license key is required to use Pro or Enterprise features.
-These features include but are not limited to:
-
-  Pro: SSH tunneling, Readonly connection mode, Edit JSON, Upload binary,
-  Download binary.
-
-  Enterprise: All Pro features plus Cluster and Sentinel connections,
-  --readonly-connections/-r flag.
-
-Terms:
-
-  1. A license key is required for each installation (per seat).
-  2. License keys are non-transferable.
-  3. All payments are non-refundable.
-  4. License validation requires internet access.
-  5. Unauthorized use of Pro or Enterprise features without a valid license
-     is prohibited.
-
-For pricing, trial information, and purchasing, please refer to the README
-at https://github.com/patrikx3/redis-ui#tier-feature-policy or contact
-support@corifeus.com.
