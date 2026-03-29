@@ -5,6 +5,14 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.314
+Released on 03/29/2026
+* FEATURE: Added RedisJSON module support with key read/write operations and free viewing of RedisJSON keys.
+* FEATURE: Replaced ACE and jsoneditor with CodeMirror 6 editor, refactored JSON viewer to use mat-tree, added wrap toggle, theme colors, and OnPush change detection for console.
+* BUGFIX: Added dark scrollbar styling and theme sync to the Electron shell.
+* BUGFIX: Handle untagged draft releases and add worker-src CSP directive for blob workers.
+* DOCS: Updated pro and enterprise license pricing.
+
 ### v2026.4.313
 Released on 03/29/2026
 * FEATURE: Redesigned stream key view with structured field/value display, JSON detection, copy per entry/field, and integrated JSON viewer.
@@ -254,7 +262,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.313
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.314
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

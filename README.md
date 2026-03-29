@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.313
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.314
 
 
   
@@ -189,12 +189,12 @@ The app validates licenses through `network.corifeus.com` for product `p3x-redis
   - Price: `0 HUF/month (€0/month)`.
 - `pro`
   - SSH tunneling, Readonly connection mode (including `--readonly-connections`/`-r`), Edit JSON, Upload binary, Download binary, ReJSON (JSON data type).
-  - Base price: `1,200 HUF/month (€3/month)` or `12,000 HUF/year (€30/year)`.
-  - Total with `27%` VAT: `1,500 HUF/month (€3.81/month)` or `15,200 HUF/year (€38.10/year)`.
+  - Base price: `400 HUF/month (€1/month)` or `4,000 HUF/year (€10/year)`.
+  - Total with `27%` VAT: `500 HUF/month (€1.27/month)` or `5,100 HUF/year (€12.70/year)`.
 - `enterprise`
   - SSH tunneling, Cluster and Sentinel, Edit JSON, Upload binary, Download binary, ReJSON (JSON data type); `--readonly-connections`/`-r` also works.
-  - Base price: `3,600 HUF/month (€9/month)` or `36,000 HUF/year (€90/year)`.
-  - Total with `27%` VAT: `4,600 HUF/month (€11.43/month)` or `45,700 HUF/year (€114.30/year)`.
+  - Base price: `1,200 HUF/month (€3/month)` or `12,000 HUF/year (€30/year)`.
+  - Total with `27%` VAT: `1,500 HUF/month (€3.81/month)` or `15,200 HUF/year (€38.10/year)`.
 - Yearly price is `10x` the monthly price.
 - Default license includes `5 seats`; for more seats, contact [`support@corifeus.com`](mailto:support@corifeus.com).
 - Enterprise trial: `10 days` free with a valid email address.
@@ -470,7 +470,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.313
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.314
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
