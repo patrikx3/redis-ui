@@ -7,8 +7,19 @@
 
 ### v2026.4.306
 Released on 03/29/2026
-* CHORE: Improved changelog generation tooling and updated v2026.4.303 entry.
-* CHORE: Aligned redis-ui-material submodule version to v2026.4.306.
+* FEATURE: Added Redis 8 ReJSON (JSON data type) support — view, create, edit, format, copy, and download JSON documents.
+* FEATURE: Auto-detect Redis modules on connection via MODULE LIST.
+* FEATURE: JSON keys shown in tree with dedicated icon.
+* FEATURE: JSON type available in Add Key dialog (Pro/Enterprise only).
+* REFACTOR: Migrated Electron webview to iframe with postMessage communication for improved stability.
+* REFACTOR: Enabled OnPush change detection on key components to eliminate NG0100 errors.
+* REFACTOR: Replaced detectChanges with markForCheck in all BreakpointObserver subscriptions.
+* BUGFIX: Fixed Electron app intermittent loading spinner (race condition with server startup).
+* BUGFIX: Fixed search filter not triggering on page load when restored from cookie.
+* BUGFIX: Fixed "undefined:" key prefix in Add Key dialog when opened from root.
+* CHORE: Added feature-pro-rejson-required and invalid-json-value error strings to all 21 languages.
+* CHORE: Updated README with ReJSON tier policy documentation.
+* CHORE: Dropped armv7l (32-bit ARM) build targets.
 
 ### v2026.4.305
 Released on 03/29/2026
