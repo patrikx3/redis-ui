@@ -66,8 +66,8 @@ body {
 
 #p3xre-toast-container {
     position: fixed;
-    bottom: 16px;
-    right: 16px;
+    bottom: 8px;
+    right: 8px;
     z-index: 9999;
     display: flex;
     flex-direction: column-reverse;
@@ -78,7 +78,7 @@ body {
 .p3xre-toast {
     background: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 4px;
     font-size: 13px;
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
