@@ -5,6 +5,16 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.307
+Released on 03/29/2026
+* FEATURE: Replaced inline JSON editor with interactive tree view and dialog editor for improved usability.
+* PERF: Switched to AOT compilation, removing @angular/compiler (~1MB bundle savings).
+* PERF: Removed jQuery dependency, replaced with native DOM APIs (~180KB savings).
+* PERF: Replaced moment.js with dayjs (~400KB savings).
+* REFACTOR: Simplified Webpack optimization and chunk splitting configuration by build mode.
+* BUGFIX: Fixed Webpack runtime chunk issue in production builds.
+* BUGFIX: Added Angular Linker (Babel) for AOT-compatible node_modules resolution.
+
 ### v2026.4.306
 Released on 03/29/2026
 * FEATURE: Added Redis 8 ReJSON (JSON data type) support — view, create, edit, format, copy, and download JSON documents.
@@ -206,7 +216,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.306
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.307
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

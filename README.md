@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.306
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.307
 
 
   
@@ -101,6 +101,12 @@ The UI has been fully migrated from AngularJS (1.x) to **Angular** — the curre
 - **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
 - **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
 - **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
+
+### Redis 8 Module Support
+- **ReJSON (JSON data type)** — view, create, edit, and download JSON documents stored with `JSON.SET` (Pro/Enterprise)
+- **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
+- **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
+- **ACE editor integration** — edit JSON documents in a full-featured code editor dialog
 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
@@ -464,7 +470,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.306
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.307
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
