@@ -3,7 +3,6 @@
     <title></title>
     <meta content="">
 
-
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'none'">
@@ -14,8 +13,6 @@
     <link rel="stylesheet" href="../../../../node_modules/@fontsource/roboto/500.css"/>
     <link rel="stylesheet" href="../../../../node_modules/@fontsource/roboto/700.css"/>
 
-    <link rel="stylesheet" href="../../../../node_modules/angular/angular-csp.css">
-    <link rel="stylesheet" href="../../../../node_modules/angular-material/angular-material.css">
     <link rel="icon" type="image/png" href="../../images/128x128.png"/>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
@@ -24,7 +21,9 @@
 
 </head>
 
-<body id="p3x-redis-ui">
+<body>
+
+<div id="p3xre-toast-container"></div>
 
 <div id="p3xre-loading-overlay" aria-hidden="true">
     <span class="p3xre-spinner" aria-hidden="true"></span>

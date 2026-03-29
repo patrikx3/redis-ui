@@ -96,14 +96,6 @@ ipcRenderer.on('p3x-new-window', function (event, data) {
 })
 
 
-ipcRenderer.on('p3x-action', function (event, data) {
-    switch (data.action) {
-        case 'toast':
-            p3xre.toast.action(data.message)
-            break;
-    }
-})
-
 const pkg = require('../../../../package.json')
 const enStrings = await import('../../../strings/en/index.mjs')
 
@@ -111,9 +103,18 @@ global.p3xre = {
     webview: undefined,
     pkg: pkg,
     strings: enStrings.default
-};
+}
 
-await import('./angular.mjs')
+const { p3xToast } = await import('./ui.mjs')
+global.p3xre.toast = p3xToast
+
+ipcRenderer.on('p3x-action', function (event, data) {
+    switch (data.action) {
+        case 'toast':
+            p3xre.toast.action(data.message)
+            break;
+    }
+})
 
 const isLocalHttpAvailable = (port, timeoutMs = 800, host = '127.0.0.1') => {
     return new Promise((resolve) => {

@@ -5,6 +5,17 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.202
+Released on 03/29/2026
+* FEATURE: Replaced AngularJS toast in Electron shell with vanilla HTML toast (black background, white text, click-to-dismiss, auto-dismiss after 5s).
+* FEATURE: Removed AngularJS dependency from Electron shell (angular, angular-material, angular-animate, angular-aria, angular-messages).
+* FEATURE: Added AGENTS.md folder structure documentation for all three packages (redis-ui, redis-ui-material, redis-ui-server).
+* FEATURE: Updated README.md architecture section with full repository structure tree and communication flow diagram.
+* BUGFIX: Fixed BreakpointObserver not triggering UI updates — added explicit ChangeDetectorRef.detectChanges() to all 13 components using breakpoint subscriptions.
+* BUGFIX: Fixed MDC list item text clipping — allow text wrapping and auto-height for mat-list-item elements.
+* BUGFIX: Fixed Angular Material letter-spacing — reset MDC typography tracking CSS variables to use Roboto's natural kerning.
+* REFACTOR: Updated README.md to replace "deferred rendering" with "CDK virtual scrolling" and document recent architectural changes (AOT, Web Worker, ESM backend, dayjs).
+
 ### v2026.4.201
 Released on 03/28/2026
 * PERF: Replaced moment.js with dayjs (~400KB savings).
@@ -26,7 +37,7 @@ Released on 03/27/2026
 * FEATURE: Footer responsive breakpoints match AngularJS originals (Theme at 600px, Donate/Connection at 720px, Language/GitHub/Disconnect at 960px).
 * FEATURE: Button hover effect on header/footer toolbars with theme-aware colors.
 * FEATURE: Uniform icon-to-text gap (4px) for both Font Awesome and Material icons in toolbars.
-* FEATURE: Neutralized Angular Material 3 purple-tinted surface colors for all light and dark themes (inputs, dialogs, selects use neutral grey).
+* FEATURE: Neutralized Angular Material purple-tinted surface colors for all light and dark themes (inputs, dialogs, selects use neutral grey).
 * FEATURE: Version/SNAPSHOT label color matches toolbar text color per theme.
 * BUGFIX: Fixed infinite renderView recursion caused by Angular JIT compiler fetching index.html as template via webpack historyApiFallback (switched to build-time template inlining with require()).
 * BUGFIX: Fixed NG0313 duplicate DatePipe conflict in SettingsComponent.

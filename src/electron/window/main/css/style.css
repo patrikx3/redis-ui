@@ -6,6 +6,8 @@ body {
     height: 100%;
     overflow: hidden;
     background: #000;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -22,6 +24,8 @@ webview {
 webview.p3xre-webview-loading {
     visibility: hidden;
 }
+
+/* -- Loading overlay --------------------------------------------------- */
 
 #p3xre-loading-overlay {
     position: absolute;
@@ -57,5 +61,44 @@ webview.p3xre-webview-loading {
     display: none;
 }
 
-.p3xre-toast-default .md-toast-content {
+/* -- Toast ------------------------------------------------------------- */
+
+#p3xre-toast-container {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.p3xre-toast {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: p3xre-toast-in 0.25s forwards;
+    max-width: 400px;
+    word-break: break-word;
+}
+
+.p3xre-toast.p3xre-toast-out {
+    animation: p3xre-toast-out 0.2s forwards;
+}
+
+@keyframes p3xre-toast-in {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes p3xre-toast-out {
+    to { opacity: 0; transform: translateY(16px); }
 }

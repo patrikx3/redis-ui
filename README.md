@@ -82,7 +82,7 @@ English (`en`), Bulgarian (`bg`), Czech (`cs`), German (`de`), Greek (`el`), Spa
 - **Responsive design:** works on phones, tablets, and desktops
 - **Themes:** Dark (Dracula) and Light
 - **Desktop shortcuts:** press ALT to access menus in the desktop version
-- **Tree view:** adjustable key count (100–100,000) with deferred rendering for performance
+- **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
 
 ### Console and Search
 - **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
@@ -94,54 +94,24 @@ English (`en`), Bulgarian (`bg`), Czech (`cs`), German (`de`), Greek (`el`), Spa
 - **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
 ### Modern Angular Frontend
-The UI has been fully migrated from AngularJS (1.x) to **Angular 21** — the current long-term support release. This migration delivers major improvements across the board:
+The UI has been fully migrated from AngularJS (1.x) to **Angular** — the current long-term support release. This migration delivers major improvements across the board:
 - **~1.6 MB smaller bundle** — removed jQuery, moment.js, and the AngularJS/Angular compatibility layer
-- **AOT compilation** — faster startup and smaller runtime footprint
-- **Web Worker tree building** — key sorting and tree construction run off the main thread, keeping the UI responsive even with large key sets
-- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material 3
+- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack` AngularWebpackPlugin
+- **Web Worker tree building** — key sorting and tree construction run off the main thread via inline Blob Workers, keeping the UI responsive even with large key sets
+- **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
+- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
+- **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
+
+### ES Modules Backend
+The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
 
 ### Security
 - **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
-- **AngularJS security:** see [dedicated documentation](artifacts/readme/angularjs.md) for vulnerability details and mitigation strategies
 
 <!--
 👷 **The first full complete version was created in 20 days in September of 2018.**
 -->
 
-<!--
-## Donated-Ware features
-
-**Until further notice, all donated-ware features are enabled for free. Please, test out your use case, how the JSON editor is helping you. Let us know!**
-
-The `p3x-redis-ui+` version has additional features.
-The donation is $1/month. Please contact at [alabard@gmail.com](mailto:alabard@gmail.com) and can donate @ https://paypal.me/patrikx3
-
-The features that are only working in the donated-ware version:
-* JSON editor
-* Cluster
-* Sentinel
-
-To check if your license is valid @
-https://server.patrikx3.com/api/patrikx3/redis-ui/status/your-license-key
-
-#### New features
-Users, that donated, have a big chance that requests for new features will be implemented.
-
-##### New features
-* SSH tunnel
-* Upload binary data
-
-##### To write
-* Collapse/expand recursively on individual leafs
-
-#### Plus function problems
-Given, I do not have a full fledged server and to maintain the servers it costs money, it is possible, sometimes the server goes down. It is rare, but it will be back up probably in 5-10 minutes. If there is a problem that is longer, please contact me.
-
-### Contributors license
-Contributors get plus donate license for free for a year.
-Contributors, that created features that are working only in the donate-ware version get a license for life.
-
--->
 
 ## Important Notice
 
@@ -399,6 +369,19 @@ The app is listed on [ElectronJs Apps](https://electronjs.org/apps) — search f
 This application uses Socket.IO instead of REST for client-server communication. While unconventional, Socket.IO provides better responsiveness by avoiding HTTP protocol overhead, resulting in a smoother interaction experience.
 
 [REST vs WebSocket benchmarks](https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks)
+
+
+### Communication Flow
+
+```
+Browser / Electron App
+        ↓
+redis-ui-material (Angular + Angular Material)
+        ↓ Socket.IO + HTTP
+redis-ui-server (Express + ioredis)
+        ↓
+Redis Instance (standalone / cluster / sentinel, optional SSH tunnel)
+```
 
 ## Adoption Notes
 
