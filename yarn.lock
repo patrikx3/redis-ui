@@ -4278,9 +4278,9 @@ p-timeout@^2.0.1:
     p-finally "^1.0.0"
 
 p3x-redis-ui-material@^2026.4.304:
-  version "2026.4.304"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.304.tgz#d7735795021a04d8f028f60886315feae4173ef0"
-  integrity sha512-YyY0BnakNLoYesPvZm//LQkX92iBJQoKShEYCx8okde3znLMDR4qvtsAf2bd4Vs1OEYNknsHZIXi9y3fFBwgsg==
+  version "2026.4.313"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.313.tgz#622e7987819d3770970c877b619d189a6e55d24b"
+  integrity sha512-6qQ5z/KaqTQ12NJ0I19PZMPpEJjZ1JP1XEcW0RTqoeuNW5z3hrfw6ccrl/7nHcCurvQKSKU6KZQSvhYD+tkJpw==
   dependencies:
     dayjs "^1.11.20"
 
