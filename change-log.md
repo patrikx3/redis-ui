@@ -5,6 +5,19 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.324
+Released on 03/30/2026
+* FEATURE: Replaced ACE and jsoneditor with CodeMirror 6 editor, refactored JSON viewer to mat-tree, and redesigned stream view with JSON tree, wrap toggle, and theme colors.
+* FEATURE: Made all features free by enabling enterprise mode for everyone.
+* FEATURE: Expanded to 54 locales with 4 new languages (Bosnian, Sinhala, Swahili, Tamil), fixed locale wiring, and widened the language menu.
+* FEATURE: Added translated display labels for stream duplicate field entries.
+* BUGFIX: Fixed stream view to use translated strings for tooltips and labels.
+* PERF: Removed unused AngularJS files and cleaned up dead code.
+* REFACTOR: Removed unused Angular components, wrappers, and utilities.
+* REFACTOR: Simplified scrollbar theming and stream key styles after JSON tree migration.
+* DOCS: Updated README to reflect CodeMirror editor integration.
+* DOCS: Removed obsolete AngularJS CVE documentation and license requirement references.
+
 ### v2026.4.323
 Released on 03/30/2026
 * FEATURE: Added custom humanize-duration language support for 13 locales.
@@ -303,7 +316,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.323
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.324
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
