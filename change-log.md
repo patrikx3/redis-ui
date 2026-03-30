@@ -5,6 +5,13 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.325
+Released on 03/30/2026
+* FEATURE: Added Info page with keyboard shortcuts (Electron-only), command palette (Ctrl+K), about dialog, and supported languages overview.
+* FEATURE: Added custom humanize-duration languages for 13 locales.
+* PERF: Reverted production splitChunks optimization that was inflating total bundle size.
+* DOCS: Updated supported languages documentation to 54 locales.
+
 ### v2026.4.324
 Released on 03/30/2026
 * FEATURE: Replaced ACE and jsoneditor with CodeMirror 6 editor, refactored JSON viewer to mat-tree, and redesigned stream view with JSON tree, wrap toggle, and theme colors.
@@ -316,7 +323,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.324
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.325
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
