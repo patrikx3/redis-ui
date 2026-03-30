@@ -5,6 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.322
+Released on 03/30/2026
+* FEATURE: Expanded to 54 locales with 33 new locale folders and 4 new languages (Bosnian, Sinhala, Swahili, Tamil), fixed locale wiring, and widened language menu.
+* PERF: Reverted production splitChunks that was inflating total bundle size.
+* REFACTOR: Removed unused Angular components, wrappers, utilities, and legacy AngularJS files.
+
 ### v2026.4.321
 Released on 03/29/2026
 * CHORE: Improved publish script dependency update reliability.
@@ -292,7 +298,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.321
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.322
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
