@@ -5,6 +5,17 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.326
+Released on 03/30/2026
+* FEATURE: Auto theme support that follows the system dark/light preference with a real-time listener, translated to 54 languages.
+* FEATURE: All features are now free by enabling enterprise mode for everyone and removing license requirements.
+* FEATURE: Expanded locale support to 54 locales with 4 new languages (Bosnian, Sinhala, Swahili, Tamil), fixed locale wiring, and widened the language menu.
+* FEATURE: Added translated display labels and tooltips for stream duplicate field entries.
+* BUGFIX: Fixed corrupted ZXQP3XTOKEN placeholders in 20 locale files by replacing them with proper English values.
+* BUGFIX: Fixed Electron detection to use navigator.userAgent instead of process.versions.
+* REFACTOR: Removed unused Angular components, wrappers, and utilities.
+* REFACTOR: Simplified scrollbar theming.
+
 ### v2026.4.325
 Released on 03/30/2026
 * FEATURE: Added Info page with keyboard shortcuts (Electron-only), command palette (Ctrl+K), about dialog, and supported languages overview.
@@ -323,7 +334,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.325
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.326
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
