@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.322
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.323
 
 
   
@@ -57,9 +57,9 @@ Open: `http://localhost:7843`
 
 ### Supported Languages
 
-Switch language in `Settings`:
+Switch language in `Settings` — **54 languages** covering 88+ countries:
 
-English (`en`), Bulgarian (`bg`), Czech (`cs`), German (`de`), Greek (`el`), Spanish (`es`), French (`fr`), Hungarian (`hu`), Italian (`it`), Japanese (`ja`), Dutch (`nl`), Polish (`pl`), Portuguese (`pt-PT`), Romanian (`ro`), Russian (`ru`), Slovak (`sk`), Serbian (`sr`), Swedish (`sv`), Turkish (`tr`), Ukrainian (`uk`), Chinese (`zn`)
+Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`bs`), Bulgarian (`bg`), Chinese (`zn`), Chinese - Hong Kong (`zh-HK`), Chinese - Taiwan (`zh-TW`), Croatian (`hr`), Czech (`cs`), Danish (`da`), Dutch (`nl`), English (`en`), Estonian (`et`), Filipino (`fil`), Finnish (`fi`), French (`fr`), Georgian (`ka`), German (`de`), Greek (`el`), Hebrew (`he`), Hungarian (`hu`), Armenian (`hy`), Indonesian (`id`), Italian (`it`), Japanese (`ja`), Kazakh (`kk`), Khmer (`km`), Korean (`ko`), Kyrgyz (`ky`), Lithuanian (`lt`), Macedonian (`mk`), Malay (`ms`), Nepali (`ne`), Norwegian (`no`), Polish (`pl`), Portuguese (`pt-PT`), Portuguese - Brazil (`pt-BR`), Romanian (`ro`), Russian (`ru`), Serbian (`sr`), Sinhala (`si`), Slovak (`sk`), Slovenian (`sl`), Spanish (`es`), Swahili (`sw`), Swedish (`sv`), Tajik (`tg`), Tamil (`ta`), Thai (`th`), Turkish (`tr`), Ukrainian (`uk`), Vietnamese (`vi`)
 
 ## Screenshots
 
@@ -476,7 +476,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.322
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.323
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
