@@ -42,6 +42,29 @@ const getStoredUiState = () => {
     return stored
 }
 
+const getUiStorageBootstrapValue = () => {
+    try {
+        return Buffer.from(JSON.stringify(getStoredUiState()), 'utf8').toString('base64url')
+    } catch (e) {
+        console.warn('p3xre: could not encode iframe UI storage bootstrap', e)
+        return ''
+    }
+}
+
+const getIframeUrlWithUiState = (baseUrl) => {
+    try {
+        const url = new URL(baseUrl)
+        const bootstrap = getUiStorageBootstrapValue()
+        if (bootstrap) {
+            url.searchParams.set('p3xreUiStorage', bootstrap)
+        }
+        return url.toString()
+    } catch (e) {
+        console.warn('p3xre: could not append iframe UI storage bootstrap to url', e)
+        return baseUrl
+    }
+}
+
 const syncIframeUiState = () => {
     if (!global.p3xre || !global.p3xre.iframe) {
         return
@@ -220,7 +243,7 @@ window.p3xreRun = async function () {
             serverUrl = await waitForServer(getCurrentLocalServerUrl())
         }
 
-        global.p3xre.iframe.src = serverUrl
+        global.p3xre.iframe.src = getIframeUrlWithUiState(serverUrl)
 
     } catch (e) {
         console.error(e);
