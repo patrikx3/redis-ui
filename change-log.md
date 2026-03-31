@@ -5,6 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.329
+Released on 03/31/2026
+* FEATURE: Added connection groups with collapsible headers, group toggle, and localStorage persistence, translated to 54 languages.
+* FEATURE: Added Redis Commands reference button in the console that opens redis.io documentation in a new tab.
+* BUGFIX: Fixed connection list to show flat list with dividers when group mode is off and grouped with headers when on.
+* BUGFIX: Simplified connection dialog by replacing group checkbox with a plain group input field.
+* BUGFIX: Fixed expand/collapse all for OnPush change detection.
+* DOCS: Added connection groups feature to README.
+
 ### v2026.4.328
 Released on 03/31/2026
 * PERF: Removed TTL pipeline from key info retrieval to reduce server load.
@@ -338,7 +347,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.328
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.329
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

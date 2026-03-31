@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.328
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.329
 
 
   
@@ -83,6 +83,11 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 - **Themes:** Dark (Dracula) and Light
 - **Desktop shortcuts:** press ALT to access menus in the desktop version
 - **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
+
+### Connection Management
+- **Connection groups:** organize connections into named groups with collapsible headers in Settings
+- **Group toggle:** enable/disable grouped view with a single click — persisted in localStorage
+- **Group field:** optional group name in the connection dialog with autocomplete from existing groups
 
 ### Console and Search
 - **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
@@ -476,7 +481,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.328
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.329
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
