@@ -5,6 +5,17 @@
                         
 [//]: #@corifeus-header:end
 
+Now I can see what's already been covered. The new commits since v2026.4.334 in the material repo are:
+- `e166cd1 feat: migrate i18n from global p3xr.strings to reactive i18n service`
+- `db22c02 feat: improve console toolbar layout and mobile responsiveness`
+
+The `01023b2 feat: enhance language menu...` was already in v2026.4.334. So the two above are the new ones.
+
+### v2026.4.335
+Released on 03/31/2026
+* FEATURE: Migrated i18n from global p3xr.strings to reactive i18n service.
+* FEATURE: Improved console toolbar layout and mobile responsiveness.
+
 ### v2026.4.334
 Released on 03/31/2026
 * FEATURE: Enhanced language menu with keyboard navigation and unlocked all features.
@@ -376,7 +387,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.334
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.335
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
