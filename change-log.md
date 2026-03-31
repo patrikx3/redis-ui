@@ -5,6 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.330
+Released on 03/31/2026
+* FEATURE: Added auto theme that follows system dark/light preference with real-time listener, translated to 54 languages.
+* FEATURE: Expanded localization to 54 locales by adding 33 new locale folders with language labels.
+* BUGFIX: Made keyboard shortcuts context-aware, requiring an active connection and showing a toast when not connected.
+* BUGFIX: Fixed corrupted translation placeholders in 20 locale files by replacing them with English values.
+* PERF: Reverted tree TTL indicator and TTL pipeline from key info to reduce server load and avoid stale TTL mismatch.
+* DOCS: Updated supported languages to 54 locales in README.
+
 ### v2026.4.329
 Released on 03/31/2026
 * FEATURE: Added connection groups with collapsible headers, group toggle, and localStorage persistence, translated to 54 languages.
@@ -347,7 +356,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.329
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.330
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
