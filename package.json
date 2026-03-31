@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2026.4.333",
+    "version": "2026.4.334",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",

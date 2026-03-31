@@ -5,6 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.334
+Released on 03/31/2026
+* FEATURE: Enhanced language menu with keyboard navigation and unlocked all features.
+* FEATURE: Forced donated flag to true for free enterprise tier.
+* PERF: Removed TTL pipeline from getKeysInfo to reduce server load.
+
 ### v2026.4.333
 Released on 03/31/2026
 * BUGFIX: Passed UI state through iframe URL for consistent navigation state.
@@ -370,7 +376,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.333
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.334
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
