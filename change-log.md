@@ -5,6 +5,20 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.336
+Released on 04/01/2026
+* FEATURE: Connection groups with collapsible headers, group toggle, and localStorage persistence across 54 language translations.
+* FEATURE: Drag-and-drop reordering for connection groups.
+* FEATURE: Keyboard shortcuts and automatic theme switching based on system preference.
+* FEATURE: Language menu with keyboard navigation, search filter, and unlocked features.
+* FEATURE: Redis Commands reference button in console opens redis.io documentation.
+* FEATURE: Free enterprise tier now includes all donated features.
+* BUGFIX: Context-aware shortcuts require active connection, navigate to home, and show toast when not connected.
+* BUGFIX: Flat list with dividers when group mode is off, grouped with headers when on.
+* BUGFIX: Persist and bootstrap grouped settings correctly in Electron.
+* PERF: Removed TTL pipeline from key info lookups to reduce server load.
+* DOCS: Added keyboard shortcuts, theme auto-switch, and drag-drop documentation to README.
+
 Now I can see what's already been covered. The new commits since v2026.4.334 in the material repo are:
 - `e166cd1 feat: migrate i18n from global p3xr.strings to reactive i18n service`
 - `db22c02 feat: improve console toolbar layout and mobile responsiveness`
@@ -387,7 +401,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.335
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.336
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

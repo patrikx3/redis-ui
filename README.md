@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.335
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.336
 
 
   
@@ -80,12 +80,25 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 
 ### User Interface
 - **Responsive design:** works on phones, tablets, and desktops
-- **Themes:** Dark (Dracula) and Light
+- **Themes:** Dark (Dracula) and Light with **auto-switch** that follows your system's dark/light preference in real time
+- **Theme auto-switch:** defaults to system preference on first visit; manually selecting a theme overrides auto mode
+- **Info page:** dedicated page with keyboard shortcuts reference, about section (version, Redis info, links), and supported languages list
+- **Command palette:** VS Code-style quick command palette (`Ctrl+K` in Electron) with search and keyboard navigation
 - **Desktop shortcuts:** press ALT to access menus in the desktop version
 - **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
 
+### Keyboard Shortcuts (Electron Desktop)
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+R` / `F5` | Refresh current view |
+| `Ctrl+F` | Focus search input |
+| `Ctrl+N` | New key dialog |
+| `Ctrl+K` | Command palette |
+| `Ctrl+D` | Disconnect |
+
 ### Connection Management
 - **Connection groups:** organize connections into named groups with collapsible headers in Settings
+- **Drag-and-drop:** reorder connections within a group and reorder groups themselves by dragging headers
 - **Group toggle:** enable/disable grouped view with a single click — persisted in localStorage
 - **Group field:** optional group name in the connection dialog with autocomplete from existing groups
 
@@ -481,7 +494,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.335
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.336
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
