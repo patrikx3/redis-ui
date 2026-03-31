@@ -5,6 +5,10 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.328
+Released on 03/31/2026
+* PERF: Removed TTL pipeline from key info retrieval to reduce server load.
+
 ### v2026.4.326
 Released on 03/30/2026
 * FEATURE: Auto theme support that follows the system dark/light preference with a real-time listener, translated to 54 languages.
@@ -334,7 +338,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.326
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.328
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
