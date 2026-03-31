@@ -2,10 +2,14 @@
 try {
 const {ipcRenderer, shell} = require('electron');
 const http = require('node:http');
+const StoreModule = require('electron-store');
+const Store = StoreModule.default || StoreModule;
+const uiStateStore = new Store();
 
 let domReady = false
 let loadingOverlay
 let hasSuccessfulUiLoad = false
+const UI_STORAGE_KEY = 'ui-storage'
 
 const setLoadingOverlayVisible = (visible) => {
     if (!loadingOverlay) {
@@ -27,6 +31,27 @@ const setLoadingState = (loading) => {
         global.p3xre.iframe.classList.add('p3xre-webview-loading')
     } else {
         global.p3xre.iframe.classList.remove('p3xre-webview-loading')
+    }
+}
+
+const getStoredUiState = () => {
+    const stored = uiStateStore.get(UI_STORAGE_KEY)
+    if (!stored || typeof stored !== 'object' || Array.isArray(stored)) {
+        return {}
+    }
+    return stored
+}
+
+const syncIframeUiState = () => {
+    if (!global.p3xre || !global.p3xre.iframe) {
+        return
+    }
+    try {
+        global.p3xre.iframe.name = JSON.stringify({
+            p3xreUiStorage: getStoredUiState(),
+        })
+    } catch (e) {
+        console.warn('p3xre: could not sync iframe UI storage bootstrap', e)
     }
 }
 
@@ -57,9 +82,26 @@ ipcRenderer.on('p3x-new-window', function (event, data) {
 
 // Listen for theme changes from the Angular app (iframe) to sync dark mode on the shell
 window.addEventListener('message', (event) => {
+    const fromIframe = Boolean(global.p3xre?.iframe?.contentWindow) && event.source === global.p3xre.iframe.contentWindow
+
     if (event.data?.type === 'p3x-theme-change') {
+        if (!fromIframe) {
+            return
+        }
         document.body.classList.remove('p3xr-theme-dark', 'p3xr-theme-light')
         document.body.classList.add(event.data.dark ? 'p3xr-theme-dark' : 'p3xr-theme-light')
+        return
+    }
+
+    if (event.data?.type === 'p3x-ui-storage-set') {
+        if (!fromIframe || typeof event.data.key !== 'string' || typeof event.data.value !== 'string') {
+            return
+        }
+
+        const uiState = getStoredUiState()
+        uiState[event.data.key] = event.data.value
+        uiStateStore.set(UI_STORAGE_KEY, uiState)
+        syncIframeUiState()
     }
 })
 
@@ -125,6 +167,7 @@ window.p3xreRun = async function () {
         global.p3xre.iframe = document.getElementById("p3xre-redis-ui-electron");
         loadingOverlay = document.getElementById('p3xre-loading-overlay')
         setLoadingState(true)
+        syncIframeUiState()
 
         const urlParams = new URLSearchParams(global.location.search)
         const port = urlParams.get('port')
