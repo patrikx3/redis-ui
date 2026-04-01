@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.344
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.346
 
 
   
@@ -66,6 +66,13 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 [View screenshots](artifacts/readme/screenshots.md)
 
 ## Features
+
+### AI-Powered Redis Query Translation
+- **Natural language queries:** type plain English (or any language) in the console — if Redis doesn't recognize the command, it's automatically translated to a valid Redis command via AI and executed
+- **Multilingual:** understands 50+ languages, explanations are returned in the language you type in
+- **Context-aware:** sends Redis version, loaded modules, and available RediSearch indexes to the AI for accurate command generation
+- **Bring your own key:** optionally set your own free Groq API key in Settings for better performance (get one at [console.groq.com](https://console.groq.com))
+- **`ai:` prefix:** explicitly trigger AI translation by starting your input with `ai:`
 
 ### Compatibility
 - **Redis 6+ with TLS** — see [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/) for setup details
@@ -209,6 +216,78 @@ Notes:
 
 - `passwordHash` is preferred over plain `password`.
 - Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
+
+## AI Configuration
+
+The AI query translation feature works out of the box — natural language queries are automatically translated to Redis commands via the Groq API.
+
+### Using Your Own API Key
+
+By default, the AI uses the server-provided API key. You can optionally set your own free Groq API key for better performance:
+
+1. Get a free key at [console.groq.com](https://console.groq.com) (no credit card required)
+2. Set it via the **AI Settings** panel in the Settings page, or:
+
+Config (`p3xrs.json`):
+
+```json
+{
+  "p3xrs": {
+    "groqApiKey": "gsk_your_key_here"
+  }
+}
+```
+
+CLI option:
+
+```bash
+p3xrs --groq-api-key gsk_your_key_here
+```
+
+### Disabling API Key Editing
+
+To prevent users from changing the API key (e.g. on a public instance), use readonly mode:
+
+Config (`p3xrs.json`):
+
+```json
+{
+  "p3xrs": {
+    "groqApiKey": "gsk_your_key_here",
+    "groqApiKeyReadonly": true
+  }
+}
+```
+
+CLI options:
+
+```bash
+p3xrs --groq-api-key gsk_your_key_here --groq-api-key-readonly
+```
+
+Or combine with readonly connections (`-r`) which also hides the AI Settings edit button:
+
+```bash
+p3xrs -r --groq-api-key gsk_your_key_here
+```
+
+Example systemd service (public instance with readonly connections and custom API key):
+
+```ini
+[Unit]
+Description=p3x-redis-ui
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/p3x-redis-ui
+ExecStart=/var/p3x-redis-ui-server/bin/p3xrs.mjs -r --groq-api-key gsk_your_key_here --config /home/user/p3x-redis-ui/p3xrs.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ## All Features Are Free
 
@@ -509,7 +588,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.344
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.346
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
