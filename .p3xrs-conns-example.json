@@ -4,6 +4,7 @@
         {
             "id": "P3Xid5a0dfde8c710100089fc907b54ac0d",
             "name": "localhost",
+            "group": "Local",
             "host": "localhost",
             "port": 6379,
             "readonly": false,
@@ -17,6 +18,7 @@
         {
             "id": "P3Xida0d91ee8c71010000f522eeef7a348",
             "name": "server prod",
+            "group": "Production",
             "host": "secure",
             "port": 6379,
             "readonly": false,
@@ -30,6 +32,7 @@
         {
             "id": "P3Xid86322ee8c71010008c337ccb2c67ef",
             "name": "server test",
+            "group": "Production",
             "host": "secure",
             "port": 6380,
             "readonly": false,
@@ -44,6 +47,7 @@
         {
             "id": "P3Xid2dd6106a981010008259e3d1f3a201",
             "name": "server test with tls",
+            "group": "TLS",
             "host": "secure",
             "password": "secure",
             "port": 7379,
@@ -63,6 +67,7 @@
         {
             "id": "P3Xidf634827e881010008da44ae82969f5",
             "name": "vpn redis",
+            "group": "VPN",
             "host": "secure",
             "port": 6379,
             "readonly": true,
@@ -77,6 +82,7 @@
         {
             "id": "P3Xid3862da58e81010008b1bd28b2142e3",
             "name": "sentinel",
+            "group": "Cluster & Sentinel",
             "host": "secure",
             "port": 26379,
             "readonly": true,
@@ -104,6 +110,7 @@
         {
             "id": "P3Xid13512e98e8101000aac09572042541",
             "name": "demona tunnel",
+            "group": "SSH",
             "host": "localhost",
             "port": 6379,
             "askAuth": false,
@@ -122,6 +129,7 @@
         },
         {
             "name": "server test tunnel",
+            "group": "SSH",
             "host": "localhost",
             "port": 6380,
             "askAuth": false,
@@ -140,6 +148,7 @@
         },
         {
             "name": "cluster",
+            "group": "Cluster & Sentinel",
             "host": "localhost",
             "port": 36379,
             "askAuth": false,
@@ -166,6 +175,7 @@
         },
         {
             "name": "cluster grokzen",
+            "group": "Cluster & Sentinel",
             "host": "localhost",
             "port": 7000,
             "askAuth": false,

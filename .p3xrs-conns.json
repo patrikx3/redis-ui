@@ -5,6 +5,7 @@
         {
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with ssh",
+            "group": "Production",
             "host": "127.0.0.1",
             "port": 6379,
             "password": "private",
@@ -29,6 +30,7 @@
         {
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with tls enabled",
+            "group": "Production",
             "host": "127.0.0.1",
             "port": 7379,
             "password": "private",
@@ -53,6 +55,7 @@
         {
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "instance with tls enabled without cert if it is valid",
+            "group": "TLS",
             "host": "127.0.0.1",
             "port": 7379,
             "password": "private",
@@ -77,6 +80,7 @@
         {
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "cluster",
+            "group": "Cluster & Sentinel",
             "host": "127.0.0.1",
             "port": 16379,
             "password": "",
@@ -114,6 +118,7 @@
         {
             "id": "P3Xid-starts-with-and-indexing-unique-identifier",
             "name": "sentinel",
+            "group": "Cluster & Sentinel",
             "host": "127.0.0.1",
             "port": 26379,
             "password": "sentinel password",
