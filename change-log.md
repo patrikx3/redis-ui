@@ -5,6 +5,21 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.338
+Released on 04/01/2026
+* FEATURE: Migrated i18n from global p3xr.strings to a reactive i18n service for better modularity.
+* FEATURE: Language menu now supports keyboard navigation, search filtering, and unlocked all language features.
+* FEATURE: Improved console toolbar layout and mobile responsiveness.
+* FEATURE: Free enterprise tier now automatically enables donated/unlocked status.
+* BUGFIX: Keyboard shortcuts are now context-aware — require active connection, navigate to home, and show toast when not connected.
+* BUGFIX: Fixed flat list with dividers when group mode is off, and grouped with headers when on.
+* BUGFIX: Fixed bootstrap and persistence of grouped settings in Electron.
+* BUGFIX: Removed checkbox from connection dialog, keeping plain group input field.
+* PERF: Removed TTL pipeline from getKeysInfo to reduce server load.
+* DOCS: Added group field to connection config examples in README.
+* DOCS: Merged duplicate Redis 8 ReJSON sections in README.
+* DOCS: Added keyboard shortcuts, theme auto-switch, and drag-drop documentation to README.
+
 ### v2026.4.337
 Released on 04/01/2026
 * FEATURE: Key export/import — export all keys as JSON with base64 binary data and TTL preservation, import with preview dialog, CDK virtual scrolling, translated Redis type labels, and conflict handling (overwrite or skip).
@@ -400,7 +415,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.337
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.338
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
