@@ -3,9 +3,7 @@ import electronUpdater from 'electron-updater'
 const { autoUpdater } = electronUpdater
 import mainMenu from './menu.mjs'
 
-function createWindow() {
-
-    mainMenu()
+async function createWindow() {
 
     global.p3xre.mainWindow = new BrowserWindow({
         icon: global.p3xre.iconFile,
@@ -34,6 +32,8 @@ function createWindow() {
     // Handle new-window requests from iframe content via the main window's web-contents-created handler in app.mjs
 
     //global.p3xre.mainWindow.setAutoHideMenuBar(false)
+
+    await mainMenu()
 
     global.p3xre.setVisible(true);
 

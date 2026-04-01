@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.346
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.348
 
 
   
@@ -221,32 +221,56 @@ Notes:
 
 The AI query translation feature works out of the box — natural language queries are automatically translated to Redis commands via the Groq API.
 
-### Using Your Own API Key
+### How It Works
 
-By default, the AI uses the server-provided API key. You can optionally set your own free Groq API key for better performance:
+By default, AI queries are routed through `network.corifeus.com`, which handles the Groq API call. No configuration needed.
 
-1. Get a free key at [console.groq.com](https://console.groq.com) (no credit card required)
-2. Set it via the **AI Settings** panel in the Settings page, or:
+If you set your own Groq API key, you can choose to:
+- **Keep routing via `network.corifeus.com`** (default) — your key is used but queries still go through the proxy for analytics
+- **Route directly to Groq** — toggle "Route via network.corifeus.com" OFF in AI Settings to bypass the proxy entirely
+
+### AI Settings in the UI
+
+The **Settings** page has an **AI Settings** panel with:
+- **AI Enabled** — toggle AI on/off (enabled by default)
+- **Route via network.corifeus.com** — toggle routing (only visible with a valid Groq API key)
+- **Groq API Key** — set via the Edit button (validated against Groq before saving)
+
+### Configuration Options
+
+**Recommended:** Configure AI settings via the GUI first (Settings > AI Settings). Once configured, you can optionally add `groqApiKeyReadonly: true` to `p3xrs.json` or `--groq-api-key-readonly` CLI flag to lock the settings.
+
+All settings can also be configured via `p3xrs.json` or CLI options.
 
 Config (`p3xrs.json`):
 
 ```json
 {
   "p3xrs": {
-    "groqApiKey": "gsk_your_key_here"
+    "groqApiKey": "gsk_your_key_here",
+    "aiEnabled": true,
+    "aiUseOwnKey": false
   }
 }
 ```
 
-CLI option:
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `groqApiKey` | string | `""` | Your Groq API key (get free at [console.groq.com](https://console.groq.com)) |
+| `aiEnabled` | boolean | `true` | Enable/disable AI query translation |
+| `aiUseOwnKey` | boolean | `false` | `true` = route directly to Groq, `false` = route via network.corifeus.com |
+| `groqApiKeyReadonly` | boolean | `false` | Lock all AI settings (toggles disabled, Edit hidden) |
+
+CLI options:
 
 ```bash
 p3xrs --groq-api-key gsk_your_key_here
+p3xrs --groq-api-key-readonly
 ```
 
-### Disabling API Key Editing
+### Readonly Mode
 
-To prevent users from changing the API key (e.g. on a public instance), use readonly mode:
+To prevent users from changing AI settings (e.g. on a public instance):
 
 Config (`p3xrs.json`):
 
@@ -259,19 +283,19 @@ Config (`p3xrs.json`):
 }
 ```
 
-CLI options:
+CLI:
 
 ```bash
 p3xrs --groq-api-key gsk_your_key_here --groq-api-key-readonly
 ```
 
-Or combine with readonly connections (`-r`) which also hides the AI Settings edit button:
+Or combine with readonly connections (`-r`) which also disables AI settings:
 
 ```bash
 p3xrs -r --groq-api-key gsk_your_key_here
 ```
 
-Example systemd service (public instance with readonly connections and custom API key):
+Example systemd service (public instance):
 
 ```ini
 [Unit]
@@ -282,7 +306,7 @@ After=network.target
 Type=simple
 User=user
 WorkingDirectory=/home/user/p3x-redis-ui
-ExecStart=/var/p3x-redis-ui-server/bin/p3xrs.mjs -r --groq-api-key gsk_your_key_here --config /home/user/p3x-redis-ui/p3xrs.json
+ExecStart=/var/p3x-redis-ui-server/bin/p3xrs.mjs -r --groq-api-key-readonly --config /home/user/p3x-redis-ui/p3xrs.json
 Restart=on-abort
 
 [Install]
@@ -588,7 +612,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.346
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.348
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

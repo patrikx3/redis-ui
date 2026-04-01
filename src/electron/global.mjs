@@ -33,6 +33,7 @@ global.p3xre = {
     conf: conf,
     setLanguage: setLanguage,
     optionToHideMenu: optionToHideMenu,
+    iframeReady: false,
 }
 
 global.p3xre.setVisible = (visible = true) => {

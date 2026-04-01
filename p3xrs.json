@@ -20,6 +20,11 @@
       "password": "",
       "passwordHash": ""
     },
+    "ai-info": "Configure AI via the GUI first (Settings > AI Settings), then optionally add groqApiKeyReadonly to lock settings. Get a free Groq API key at https://console.groq.com",
+    "groqApiKey": "",
+    "aiEnabled": true,
+    "aiUseOwnKey": false,
+    "groqApiKeyReadonly": false,
     "licenseEditable": true,
     "licenseKey": "",
     "treeDividers": [

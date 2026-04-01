@@ -5,6 +5,16 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.348
+Released on 04/01/2026
+* FEATURE: Direct Groq API support — redis-ui-server can call Groq directly with your own API key, no network.corifeus.com dependency needed.
+* FEATURE: AI Settings panel — enable/disable AI, route toggle (network.corifeus.com vs direct Groq), API key management with remote validation.
+* FEATURE: AI routing control — choose between routing through network.corifeus.com (default) or directly to Groq with your own API key.
+* FEATURE: Readonly AI settings — `--groq-api-key-readonly` CLI flag and `groqApiKeyReadonly` config to lock AI settings on public instances.
+* FEATURE: Electron language menu fix — Language submenu now appears after iframe loads, not on boot.
+* BUGFIX: Console text selection no longer collapses embedded console.
+* BUGFIX: AI results display with proper formatting (no duplicate commands, no empty lines).
+
 ### v2026.4.346
 Released on 04/01/2026
 * FEATURE: AI-powered natural language to Redis command translation — type plain text in the console and it auto-detects, translates via Groq AI, and executes the Redis command.
@@ -449,7 +459,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.346
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.348
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

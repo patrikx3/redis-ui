@@ -53,6 +53,15 @@ const execAsync = async() => {
 
     await import('./electron/global.mjs');
 
+    // Rebuild menu with Language submenu once iframe is ready
+    ipcMain.on('p3x-iframe-ready', async () => {
+        if (!global.p3xre.iframeReady) {
+            global.p3xre.iframeReady = true
+            const { default: mainMenu } = await import('./electron/module/create/menu.mjs')
+            mainMenu()
+        }
+    });
+
     // Handle language change from web UI (renderer → main process)
     ipcMain.on('p3x-set-language-from-web', async (event, data) => {
         if (data?.key && global.p3xre?.setLanguage) {

@@ -2770,6 +2770,11 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
+groq-sdk@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/groq-sdk/-/groq-sdk-1.1.2.tgz#99483254ae83e4d4bcf6481cb7c1342c340be2a8"
+  integrity sha512-CZO0XUQQDhn43ri1+lZHxZKpb+bGutgTvFmCJtooexiitGmPqhm1hntOT3nCoaq07e+OpeokVnfUs0i/oQuUaQ==
+
 grunt-cli@~1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/grunt-cli/-/grunt-cli-1.4.3.tgz#22c9f1a3d2780bf9b0d206e832e40f8f499175ff"
@@ -4439,10 +4444,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.344:
-  version "2026.4.344"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.344.tgz#bdd25fe7393e084f5a2bdc5a0036a160342e3fc9"
-  integrity sha512-oGAP7y7H9KODxQsJb0fJ4bEkXGhnjcTl8Qxyk7UnspE77l/gC9wDMBLd2yMPkvCrhQK6VoG1OiccMzXdeh1H/g==
+p3x-redis-ui-material@^2026.4.346:
+  version "2026.4.346"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.346.tgz#8be36e8b1e5f0d781e574ccb322750757a4c9f22"
+  integrity sha512-Ha3+3Qa0gMJifEJBzR9aHrzPijXgELBxg03qClF5VpL+Oz6ANdwmd3V6AlMf45u50f3lo2Q4uj5hYxk1Y4yF/A==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -4453,16 +4458,17 @@ p3x-redis-ui-material@^2026.4.344:
     dayjs "^1.11.20"
     uplot "^1.6.32"
 
-p3x-redis-ui-server@^2026.4.308:
-  version "2026.4.308"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.308.tgz#c4f0d0bf49ec75449e1672ec5ade1ad88dd8ee13"
-  integrity sha512-HtHxgEeWuwMb9ZOR5JghE2WnPoP4X0MisCKkz1j3eImAHSTbroxPkhknYJFz3yGBQTowTdf0Q8nuN+CIFaGGLw==
+p3x-redis-ui-server@^2026.4.309:
+  version "2026.4.309"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.309.tgz#a30856d1f854dfa4d04dd0ac6350609a711bdfbc"
+  integrity sha512-18q2kMhl5Cgfc3wrinT5bYsLPF2imHZF3JOYC81UA25qX0vhvsyi2ByfJ5YGKjQTFBLIz01+oUeBjiYtQcKRig==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"
     commander "^14.0.3"
     corifeus-utils "^2025.4.123"
     express "^5.2.1"
+    groq-sdk "^1.1.2"
     ioredis "^5.10.1"
     lodash-es "^4.18.0"
     socket.io "^4.8.3"

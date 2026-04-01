@@ -4,6 +4,7 @@ const setLanguage = async (opts) => {
     global.p3xre.conf.set('current-translation', key)
     const stringsModule = await import(`../strings/${key}/index.mjs`)
     global.p3xre.strings = stringsModule.default
+    global.p3xre.iframeReady = true
     const { default: mainMenu } = await import('../electron/module/create/menu.mjs')
     mainMenu()
 }

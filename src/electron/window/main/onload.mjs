@@ -83,7 +83,7 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
     const callMe = async () => {
         if (domReady === false) {
             clearTimeout(p3xSetLanguageWaiter)
-            setTimeout(callMe, 250)
+            p3xSetLanguageWaiter = setTimeout(callMe, 250)
             return;
         }
         const translation = data.translation
@@ -232,6 +232,7 @@ window.p3xreRun = async function () {
             }
             hasSuccessfulUiLoad = true
             setLoadingState(false)
+            ipcRenderer.send('p3x-iframe-ready')
         })
 
         let serverUrl

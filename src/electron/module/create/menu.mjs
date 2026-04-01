@@ -119,10 +119,10 @@ async function mainMenu() {
                 }
             ]
         },
-        {
+        ...(global.p3xre.iframeReady ? [{
             label: global.p3xre.strings.menu.language.title,
             submenu: []
-        },
+        }] : []),
         {
             label: global.p3xre.strings.menu.settings.title,
             submenu: [
@@ -232,7 +232,13 @@ ${global.p3xre.strings.message.restart}
         },
     ]
 
-    const languageIndex = template.length - 1 - 3
+    // Find the Language menu entry by its empty submenu (only present when iframe is ready)
+    const languageEntry = template.find(t => t.submenu && Array.isArray(t.submenu) && t.submenu.length === 0)
+    if (!languageEntry) {
+        const menu = Menu.buildFromTemplate(template)
+        Menu.setApplicationMenu(menu)
+        return
+    }
     // Always use English translation list for native language names
     const enStrings = (await import('../../../strings/en/index.mjs')).default
     const languageList = enStrings.menu.language.translation
@@ -249,7 +255,7 @@ ${global.p3xre.strings.message.restart}
         }
         const nativeName = (languageList[translationKey] || translationKey).split(' / ')[0]
         const menuLabel = translationKey === 'en' ? 'English' : nativeName + ' / Language'
-        template[languageIndex].submenu.push({
+        languageEntry.submenu.push({
             label: menuLabel,
             type: 'radio',
             checked: global.p3xre.currentTranslation === translationKey,

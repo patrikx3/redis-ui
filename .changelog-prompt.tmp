@@ -1,7 +1,13 @@
-Generate a changelog entry for version v2026.4.346 of P3X Redis UI.
+Generate a changelog entry for version v2026.4.348 of P3X Redis UI.
 Based on these recent git commits across the project repos, write changelog bullet points.
 
 ## redis-ui
+e47184cf chore: bump version to v2026.4.347
+bae7e837 docs: expand AI settings documentation and add config fields
+aa69134c feat(electron): defer language menu until iframe is ready
+c225758c chore: improve changelog generation and update release notes
+3daa98d9 chore: bump version to v2026.4.346
+ef045712 chore: update changelog for v2026.4.346
 077eebb9 chore: bump version to v2026.4.345
 9479b604 docs: add AI configuration section to README
 1b2227f4 docs: add AI-powered Redis query translation feature to README
@@ -16,24 +22,24 @@ eae27c0f chore: bump version to v2026.4.342
 ea6d1678 chore: update changelog for v2026.4.342
 2e7f8dda chore: bump version to v2026.4.341
 027369b2 docs: add RediSearch UI section to README
-730f8079 docs: add monitoring dashboard section to README
-5a0620ae docs: update README with hamburger menu and search-aware export
-87ed0a5b chore: bump version to v2026.4.340
-801ba159 chore: update changelog for v2026.4.340
-87521dfd chore: bump version to v2026.4.339
-b18d918c fix: use --gruntfile flag for submodule version bumps
 
 IMPORTANT: The following is the PREVIOUS version's changelog entry. Do NOT repeat any of these items. Only include changes that are NEW in this version:
 
-### v2026.4.344
+### v2026.4.346
 Released on 04/01/2026
-* BUGFIX: Bidirectional language sync between renderer and native menu with proper IPC handler.
-* BUGFIX: Language persistence in Electron and CodeMirror view deduplication.
+* FEATURE: AI-powered natural language to Redis command translation — type plain text in the console and it auto-detects, translates via Groq AI, and executes the Redis command.
+* FEATURE: Multilingual AI — understands 50+ languages, returns explanations in the language you type in.
+* FEATURE: Context-aware AI — sends Redis version, loaded modules, and RediSearch indexes for accurate command generation.
+* FEATURE: Bring your own Groq API key — optional free API key setting in Settings page with dialog, CLI (`--groq-api-key`), and readonly mode (`--groq-api-key-readonly`).
+* FEATURE: AI admin dashboard on network.corifeus.com — real-time metrics with DataGridPro, daily stats, top IPs, token usage, MongoDB persistence with 1-year TTL.
+* FEATURE: Auto-fallback — if Redis returns "unknown command" and input looks like natural language, silently routes to AI and auto-executes.
+* FEATURE: `ai:` prefix for explicit AI queries in console and search page.
+* BUGFIX: Console output area now allows text selection and copy without collapsing the embedded console.
 
 
 Rules:
 - Use this EXACT format:
-### v2026.4.346
+### v2026.4.348
 Released on 04/01/2026
 * CATEGORY: Description.
 
