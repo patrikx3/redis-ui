@@ -7,27 +7,22 @@
 
 ### v2026.4.337
 Released on 04/01/2026
-* CHORE: Release v2026.4.337.
+* FEATURE: Key export/import — export all keys as JSON with base64 binary data and TTL preservation, import with preview dialog, CDK virtual scrolling, translated Redis type labels, and conflict handling (overwrite or skip).
+* PERF: Batched key import using Redis pipelines (500 keys per batch) with proper per-key error handling.
+* FEATURE: Drag-and-drop reordering for connection group headers.
+* BUGFIX: Fixed auto-theme cookie persistence — auto mode now survives page reload.
+* BUGFIX: Fixed command palette dialog stacking on rapid Ctrl+K.
+* BUGFIX: Added Donate and Changelog links to Info page About section.
+* DOCS: Added key export/import feature to README.
 
 ### v2026.4.336
 Released on 04/01/2026
 * FEATURE: Connection groups with collapsible headers, group toggle, and localStorage persistence across 54 language translations.
-* FEATURE: Drag-and-drop reordering for connection groups.
-* FEATURE: Keyboard shortcuts and automatic theme switching based on system preference.
+* FEATURE: Drag-and-drop reordering for connections within groups.
+* FEATURE: Keyboard shortcuts (Ctrl+D disconnect, command palette) and automatic theme switching based on system preference.
 * FEATURE: Language menu with keyboard navigation, search filter, and unlocked features.
-* FEATURE: Redis Commands reference button in console opens redis.io documentation.
-* FEATURE: Free enterprise tier now includes all donated features.
 * BUGFIX: Context-aware shortcuts require active connection, navigate to home, and show toast when not connected.
-* BUGFIX: Flat list with dividers when group mode is off, grouped with headers when on.
 * BUGFIX: Persist and bootstrap grouped settings correctly in Electron.
-* PERF: Removed TTL pipeline from key info lookups to reduce server load.
-* DOCS: Added keyboard shortcuts, theme auto-switch, and drag-drop documentation to README.
-
-Now I can see what's already been covered. The new commits since v2026.4.334 in the material repo are:
-- `e166cd1 feat: migrate i18n from global p3xr.strings to reactive i18n service`
-- `db22c02 feat: improve console toolbar layout and mobile responsiveness`
-
-The `01023b2 feat: enhance language menu...` was already in v2026.4.334. So the two above are the new ones.
 
 ### v2026.4.335
 Released on 03/31/2026
