@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.340
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.342
 
 
   
@@ -79,9 +79,20 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 - **Clipboard:** text can be copied directly; binary data requires the download button
 
 ### Key Export / Import
-- **Export:** download all keys in the current database as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
+- **Export:** download keys as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
+- **Search-aware:** when a search is active, export only the matching results; otherwise export all keys in the current database
 - **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, CDK virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
-- **Buttons:** export (download) and import (upload) icons are in the tree controls toolbar next to the search and add key buttons
+- **Hamburger menu:** export and import actions are accessible from the `⋮` menu in the tree controls toolbar; the menu label dynamically shows the key count and whether it's exporting all keys or search results
+
+### Real-Time Monitoring Dashboard
+- **Live metrics:** memory usage, ops/sec, connected clients, hit rate, network I/O, expired/evicted keys — all updating in real time
+- **uPlot charts:** lightweight canvas charts (~35KB) for memory, ops/sec, clients, and network I/O with theme-aware colors
+- **Slow log viewer:** recent slow queries with execution duration
+- **Client list:** all connected Redis clients with address, database, current command, idle time, and kill button
+- **Memory top keys:** top 20 biggest keys by memory usage with byte sizes
+- **Auto-refresh:** toggle auto-polling for client list and memory top keys
+- **Pause/resume:** pause live updates without leaving the page
+- **Theme + language reactive:** charts reinitialize on theme or language change
 
 ### User Interface
 - **Responsive design:** works on phones, tablets, and desktops
@@ -124,6 +135,12 @@ The UI has been fully migrated from AngularJS (1.x) to **Angular** — the curre
 - **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
 - **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
 - **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
+
+### RediSearch Full-Text Search
+- **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
+- **Index management:** create indexes with schema builder (TEXT, NUMERIC, TAG, GEO, VECTOR fields), drop indexes with confirmation
+- **Index info:** view index metadata and statistics after running a search
+- **Module-aware:** header button automatically appears when the `search` module is loaded (Redis 8+ or Redis Stack)
 
 ### Redis 8 Module Support (ReJSON)
 - **ReJSON (JSON data type)** — view, create, edit, format, copy, and download JSON documents stored with `JSON.SET`
@@ -492,7 +509,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.340
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.342
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
