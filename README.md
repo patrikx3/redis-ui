@@ -125,9 +125,10 @@ The UI has been fully migrated from AngularJS (1.x) to **Angular** — the curre
 - **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
 - **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
 
-### Redis 8 Module Support
-- **ReJSON (JSON data type)** — view, create, edit, and download JSON documents stored with `JSON.SET` (Pro/Enterprise)
+### Redis 8 Module Support (ReJSON)
+- **ReJSON (JSON data type)** — view, create, edit, format, copy, and download JSON documents stored with `JSON.SET`
 - **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
+- **JSON keys** appear in the tree with a `</>` icon; JSON type is available in the "Add Key" dialog when the module is detected
 - **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
 - **CodeMirror 6 editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
 
@@ -196,14 +197,6 @@ Notes:
 
 All features including SSH tunneling, Cluster/Sentinel, ReJSON, binary upload/download, and readonly connections are available for free. No license required.
 
-### Redis 8 ReJSON Support
-
-P3X Redis UI supports the **ReJSON** module (built into Redis 8) for the JSON data type.
-
-- Auto-detects the ReJSON module on connection via `MODULE LIST`
-- JSON keys appear in the tree with a `</>` icon
-- Create, view, edit, format, copy, and download JSON documents
-- JSON type is available in the "Add Key" dialog when the module is detected
 
 <!--
 ## License Integration
