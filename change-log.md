@@ -7,7 +7,14 @@
 
 ### v2026.4.346
 Released on 04/01/2026
-* CHORE: Release v2026.4.346.
+* FEATURE: AI-powered natural language to Redis command translation — type plain text in the console and it auto-detects, translates via Groq AI, and executes the Redis command.
+* FEATURE: Multilingual AI — understands 50+ languages, returns explanations in the language you type in.
+* FEATURE: Context-aware AI — sends Redis version, loaded modules, and RediSearch indexes for accurate command generation.
+* FEATURE: Bring your own Groq API key — optional free API key setting in Settings page with dialog, CLI (`--groq-api-key`), and readonly mode (`--groq-api-key-readonly`).
+* FEATURE: AI admin dashboard on network.corifeus.com — real-time metrics with DataGridPro, daily stats, top IPs, token usage, MongoDB persistence with 1-year TTL.
+* FEATURE: Auto-fallback — if Redis returns "unknown command" and input looks like natural language, silently routes to AI and auto-executes.
+* FEATURE: `ai:` prefix for explicit AI queries in console and search page.
+* BUGFIX: Console output area now allows text selection and copy without collapsing the embedded console.
 
 ### v2026.4.344
 Released on 04/01/2026
