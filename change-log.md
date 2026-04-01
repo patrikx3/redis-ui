@@ -23,8 +23,6 @@ Released on 04/01/2026
 * BUGFIX: Modules tab in statistics now shows all loaded modules from MODULE LIST.
 * PERF: Batched key import using Redis pipelines (500 keys per batch).
 
-However, if you'd prefer to skip this version's changelog entirely (since it's purely internal build fixes which the rules say to skip), that would also be valid. Let me know which approach you prefer.
-
 ### v2026.4.338
 Released on 04/01/2026
 * FEATURE: Migrated i18n from global p3xr.strings to a reactive i18n service for better modularity.
