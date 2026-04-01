@@ -1,7 +1,7 @@
 import { dialog, Menu, shell, app, globalShortcut } from 'electron'
 
 
-function mainMenu() {
+async function mainMenu() {
 
 
     const template = [
@@ -233,7 +233,10 @@ ${global.p3xre.strings.message.restart}
     ]
 
     const languageIndex = template.length - 1 - 3
-    for (let translationKey of Object.keys(global.p3xre.strings.menu.language.translation)) {
+    // Always use English translation list for native language names
+    const enStrings = (await import('../../../strings/en/index.mjs')).default
+    const languageList = enStrings.menu.language.translation
+    for (let translationKey of Object.keys(languageList)) {
         const clickFunction = (key) => {
             return async () => {
                 await global.p3xre.setLanguage({
@@ -244,8 +247,10 @@ ${global.p3xre.strings.message.restart}
                 })
             }
         }
+        const nativeName = (languageList[translationKey] || translationKey).split(' / ')[0]
+        const menuLabel = translationKey === 'en' ? 'English' : nativeName + ' / Language'
         template[languageIndex].submenu.push({
-            label: global.p3xre.strings.menu.language.translation[translationKey],
+            label: menuLabel,
             type: 'radio',
             checked: global.p3xre.currentTranslation === translationKey,
             click: clickFunction(translationKey)

@@ -53,6 +53,17 @@ const execAsync = async() => {
 
     await import('./electron/global.mjs');
 
+    // Handle language change from web UI (renderer → main process)
+    ipcMain.on('p3x-set-language-from-web', async (event, data) => {
+        if (data?.key && global.p3xre?.setLanguage) {
+            try {
+                await global.p3xre.setLanguage({ key: data.key });
+            } catch (e) {
+                console.warn('p3xre: failed to set language from web UI', e);
+            }
+        }
+    });
+
     app.disableHardwareAcceleration()
 
     if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')) {

@@ -1996,10 +1996,10 @@ electron-updater@^6.8.3:
     semver "~7.7.3"
     tiny-typed-emitter "^2.1.0"
 
-electron@^41.1.0:
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-41.1.0.tgz#21eff66ca8b86ae4c1c06512cf00bfae02e5edb4"
-  integrity sha512-0XRFyxRqetmqtkkBvV++wGbHYJ7bD++f6EgJW8y9kX4pPRagwlmKDtzqXZhKiu0DIQppm3sXxzHWK9GYP91OKQ==
+electron@^41.1.1:
+  version "41.1.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-41.1.1.tgz#ec2016ad886b4377a4b643fa34fe9cbcd8d7f015"
+  integrity sha512-8bgvDhBjli+3Z2YCKgzzoBPh6391pr7Xv2h/tTJG4ETgvPvUxZomObbZLs31mUzYb6VrlcDDd9cyWyNKtPm3tA==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^24.9.0"
@@ -4439,10 +4439,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.340:
-  version "2026.4.340"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.340.tgz#f462feebedef1901d5163a60f77f189543ac5c98"
-  integrity sha512-TgBAnpsm5KDNDKlUmRidu9SSy2OaKh+Qdu27jdp4cygWGDt48pSBbf/37/d22dNiREdpcOypoODkIF5G8mS0xA==
+p3x-redis-ui-material@^2026.4.342:
+  version "2026.4.342"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.342.tgz#28e671cd0b0455252822d0986d777d4784e3cb36"
+  integrity sha512-qmHPsJE5sPkAZIx404iM517PNFXvEY0i7Rwfl9tl8X34lGR/GSoUXfoabF52UItC7fpqNdAN3009q9ACBs+g4w==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -4453,10 +4453,10 @@ p3x-redis-ui-material@^2026.4.340:
     dayjs "^1.11.20"
     uplot "^1.6.32"
 
-p3x-redis-ui-server@^2026.4.306:
-  version "2026.4.306"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.306.tgz#4f9a79fb187afb63bfcf1488a939e586756d5d88"
-  integrity sha512-ibCJcphffCFP/mAm0JIjABdkC1XrJ0dUdxa+LifLss1cb6wEnfyTWkZQoC6UKbpumLnLnZ4jZKpratgsTRDzmw==
+p3x-redis-ui-server@^2026.4.307:
+  version "2026.4.307"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.307.tgz#50708fb492c9c0ba4c66a48a9ff6af791161a0b0"
+  integrity sha512-x0SthcwvWZK7lS/fEPTYJ6V1DmGPCENKvC5pKJT3VHbvR1LGSmO+K9kqtP4ee6Imx+8qoyG7laN1djdEW+b5pg==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"

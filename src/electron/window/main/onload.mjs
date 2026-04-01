@@ -125,6 +125,11 @@ window.addEventListener('message', (event) => {
         uiState[event.data.key] = event.data.value
         uiStateStore.set(UI_STORAGE_KEY, uiState)
         syncIframeUiState()
+
+        // If language changed from the web UI, tell main process to update menus
+        if (event.data.key === 'p3xr-language') {
+            ipcRenderer.send('p3x-set-language-from-web', { key: event.data.value })
+        }
     }
 })
 
