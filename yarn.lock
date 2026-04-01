@@ -3591,10 +3591,10 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lodash-es@^4.17.23:
-  version "4.17.23"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.23.tgz#58c4360fd1b5d33afc6c0bbd3d1149349b1138e0"
-  integrity sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==
+lodash-es@^4.18.0:
+  version "4.18.0"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.18.0.tgz#553d0eca832a8d8702aefa2d1ffd19e115efe52d"
+  integrity sha512-koAgswPPA+UTaPN64Etp+PGP+WT6oqOS2NMi5yDkMaiGw9qY4VxQbQF0mtKMyr4BlTznWyzePV5UpECTJQmSUA==
 
 lodash.defaults@^4.2.0:
   version "4.2.0"
@@ -4429,10 +4429,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.334:
-  version "2026.4.334"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.334.tgz#89d1ed27231b967562248dc1d8460f1266d2520a"
-  integrity sha512-KyNRGZrlVqwNNDfcbVUKOCKvI8yirWnH1N4uBnKkhTybkBnPekmjoLhHkHvBs1rLVPdujnRQg/63aKrjereOFw==
+p3x-redis-ui-material@^2026.4.338:
+  version "2026.4.338"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.338.tgz#5e8905c977d834071e3c27a5ab4dfed1efd8266d"
+  integrity sha512-FUIv8SyaHaxa5Eti0TjRVNHLhHY5BRnhfGARlHIrUMevwbqDZ9KMm0jpCVMMeuudZzFVZ4BqkbCV53LO/I4j9Q==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -4442,10 +4442,10 @@ p3x-redis-ui-material@^2026.4.334:
     codemirror "^6.0.2"
     dayjs "^1.11.20"
 
-p3x-redis-ui-server@^2026.4.304:
-  version "2026.4.304"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.304.tgz#30d6a262bee870bd76760a89bc88b7aff1e218fd"
-  integrity sha512-+pNWmpDAAKpOGMuJkVGiuBFRXGrRvWGBVYlp6tgL+mDcim8heJWBbFhK4H/Bs7QxocysgXQokYTAqU81hluReQ==
+p3x-redis-ui-server@^2026.4.305:
+  version "2026.4.305"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.305.tgz#d48b9fa259580da1729c762df1ba0b16c7a0fe98"
+  integrity sha512-HVAPJM+Vb5wwoBhnMLJH/+L5q1L1tYFNTn8mGwMhKG4frJDdooNg/9+fIT0iruqTg9xWfoN1HmPugse4Ua0Eww==
   dependencies:
     bcryptjs "^3.0.3"
     chalk "^5.6.2"
@@ -4453,7 +4453,7 @@ p3x-redis-ui-server@^2026.4.304:
     corifeus-utils "^2025.4.123"
     express "^5.2.1"
     ioredis "^5.10.1"
-    lodash-es "^4.17.23"
+    lodash-es "^4.18.0"
     socket.io "^4.8.3"
     tunnel-ssh "^5.2.0"
 
