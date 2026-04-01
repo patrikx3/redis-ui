@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.336
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.337
 
 
   
@@ -77,6 +77,11 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 - **Binary data:** use the download button for binary content; direct text editing is not supported for binary values
 - **Large values (>256 kB):** shown as `[object ArrayBuffer]`; use binary upload/download
 - **Clipboard:** text can be copied directly; binary data requires the download button
+
+### Key Export / Import
+- **Export:** download all keys in the current database as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
+- **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, CDK virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
+- **Buttons:** export (download) and import (upload) icons are in the tree controls toolbar next to the search and add key buttons
 
 ### User Interface
 - **Responsive design:** works on phones, tablets, and desktops
@@ -494,7 +499,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.336
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.337
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

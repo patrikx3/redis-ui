@@ -1,0 +1,96 @@
+Generate a changelog entry for version v2026.4.337 of P3X Redis UI.
+Based on these recent git commits across the project repos, write changelog bullet points.
+
+## redis-ui
+075b739c docs: add key export/import feature documentation to README
+4731f683 chore: bump version to v2026.4.336
+0f782964 chore: update changelog for v2026.4.336
+a8bc9a37 docs: add keyboard shortcuts, theme auto-switch, drag-drop to README
+1b105b7f fix: smart changelog filtering via Claude prompt instead of pathspec
+cc9971a6 fix: exclude secure/ commits from changelog and release notes
+9490cc08 fix: use temp file for Claude changelog prompt to avoid shell escaping issues
+f5e7b283 chore: bump version to v2026.4.335
+a820d568 chore: update changelog for v2026.4.335
+717c7ff9 chore: bump version to v2026.4.334
+a9422d85 chore: update changelog for v2026.4.334
+9c8c361c chore: bump version to v2026.4.333
+39b35c7b chore: update changelog for v2026.4.333
+6b6c6def You've hit your limit · resets 12pm (Europe/Budapest)
+e66692d0 chore: update changelog for v2026.4.332
+e2a45871 bugfix: pass ui state through iframe url
+046c35c9 docs: clarify release build pipeline instructions in AGENTS.md
+adb78a38 You've hit your limit · resets 12pm (Europe/Budapest)
+a426956f chore: update changelog for v2026.4.331
+50f99268 bugfix: persist iframe ui state in electron
+
+## redis-ui-material
+045e7bb feat: key export/import with virtual scroll preview and translated types
+479b38d chore: bump version to v2026.4.332
+02bdec5 feat: add drag-and-drop reordering for connection groups
+6024d3b feat: keyboard shortcuts, theme auto-switch fixes, connection groups drag-drop
+648fafa chore: bump version to v2026.4.331 and update lodash
+e166cd1 feat: migrate i18n from global p3xr.strings to reactive i18n service
+db22c02 feat: improve console toolbar layout and mobile responsiveness
+01023b2 feat: enhance language menu with keyboard navigation and unlock all features
+8d43ae8 feat: add language search filter and early electron bootstrap capture
+2bf0923 You've hit your limit · resets 12pm (Europe/Budapest)
+1082ed4 You've hit your limit · resets 12pm (Europe/Budapest)
+58ef63f bugfix: bootstrap grouped settings in electron
+e18de74 bugfix: persist grouped settings in electron
+7f922e1 chore: bump version to v2026.4.327
+0268e66 fix: shortcuts context-aware - require connection, navigate to home, show toast when not connected
+0cf9c97 chore: bump version to v2026.4.326
+677db86 fix: flat list with dividers when group mode off, grouped with headers when on
+e12f756 chore: bump version to v2026.4.325
+b4ccc34 fix: remove checkbox from connection dialog, keep plain group input field
+33cb874 feat: connection groups with collapsible headers, group toggle, localStorage persistence, 54 language translations
+
+## redis-ui-server
+95823fd perf: batch key-import with pipelines and proper error handling
+46b9c20 feat: add key-export and key-import Socket.IO handlers
+bfc9f8a feat: add connections-reorder endpoint for drag-drop reordering
+41de2be chore(deps): update lodash-es to ^4.18.0
+d79d419 feat: force donated flag to true for free enterprise tier
+07de4b1 revert: remove TTL pipeline from getKeysInfo to reduce server load
+
+IMPORTANT: The following is the PREVIOUS version's changelog entry. Do NOT repeat any of these items. Only include changes that are NEW in this version:
+
+### v2026.4.336
+Released on 04/01/2026
+* FEATURE: Connection groups with collapsible headers, group toggle, and localStorage persistence across 54 language translations.
+* FEATURE: Drag-and-drop reordering for connection groups.
+* FEATURE: Keyboard shortcuts and automatic theme switching based on system preference.
+* FEATURE: Language menu with keyboard navigation, search filter, and unlocked features.
+* FEATURE: Redis Commands reference button in console opens redis.io documentation.
+* FEATURE: Free enterprise tier now includes all donated features.
+* BUGFIX: Context-aware shortcuts require active connection, navigate to home, and show toast when not connected.
+* BUGFIX: Flat list with dividers when group mode is off, grouped with headers when on.
+* BUGFIX: Persist and bootstrap grouped settings correctly in Electron.
+* PERF: Removed TTL pipeline from key info lookups to reduce server load.
+* DOCS: Added keyboard shortcuts, theme auto-switch, and drag-drop documentation to README.
+
+Now I can see what's already been covered. The new commits since v2026.4.334 in the material repo are:
+- `e166cd1 feat: migrate i18n from global p3xr.strings to reactive i18n service`
+- `db22c02 feat: improve console toolbar layout and mobile responsiveness`
+
+The `01023b2 feat: enhance language menu...` was already in v2026.4.334. So the two above are the new ones.
+
+
+Rules:
+- Use this EXACT format:
+### v2026.4.337
+Released on 04/01/2026
+* CATEGORY: Description.
+
+- Valid categories: FEATURE, BUGFIX, PERF, REFACTOR, DOCS, CHORE
+- Each bullet starts with "* CATEGORY: " (with the asterisk)
+- Only include user-facing or significant changes
+- SKIP these types of commits entirely — they must NOT appear in the changelog:
+  - Version bumps, submodule updates, typo fixes, changelog updates
+  - Anything related to the secure/ folder (publish scripts, tokens, deploy configs)
+  - Internal CI/CD, build pipeline, or release automation changes
+  - Co-Authored-By lines or merge commits
+- Keep descriptions concise (one line each)
+- Do NOT repeat anything from the previous changelog entry shown above
+- Do NOT use markdown code fences
+- Output ONLY the changelog entry, no extra commentary
