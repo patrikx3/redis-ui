@@ -30,7 +30,7 @@ spec:
           timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds | default 5 }}
         readinessProbe:
           httpGet:
-            path: /health?ready=true
+            path: /health
             port: 7843
           initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds | default 5 }}
           periodSeconds: {{ .Values.readinessProbe.periodSeconds | default 10 }}

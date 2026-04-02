@@ -525,9 +525,7 @@ kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
 
-The manifests and Helm chart include **liveness** and **readiness** probes:
-- **Liveness** — `GET /health` every 30 s (restarts the pod if the server is unresponsive)
-- **Readiness** — `GET /health?ready=true` every 10 s (returns 503 until at least one Redis connection is configured, keeping the pod out of the Service until it's ready to serve traffic)
+The manifests and Helm chart include **liveness** and **readiness** probes — both use `GET /health` to verify the server is responding.
 
 #### Helm Chart
 
