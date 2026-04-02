@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.348
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.350
 
 
   
@@ -68,154 +68,12 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 ## Features
 
 ### AI-Powered Redis Query Translation
-- **Natural language queries:** type plain English (or any language) in the console — if Redis doesn't recognize the command, it's automatically translated to a valid Redis command via AI and executed
+- **Natural language queries:** type plain English (or any language) in the console — if Redis doesn't recognize the command, AI translates it to a valid Redis command and replaces the console input; the command is **not executed automatically** — you review, edit if needed, and press Enter to run it
+- **Input replacement:** after AI translation, the console input is replaced with the generated Redis command so you can see exactly what will be executed before running it
 - **Multilingual:** understands 50+ languages, explanations are returned in the language you type in
 - **Context-aware:** sends Redis version, loaded modules, and available RediSearch indexes to the AI for accurate command generation
 - **Bring your own key:** optionally set your own free Groq API key in Settings for better performance (get one at [console.groq.com](https://console.groq.com))
 - **`ai:` prefix:** explicitly trigger AI translation by starting your input with `ai:`
-
-### Compatibility
-- **Redis 6+ with TLS** — see [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/) for setup details
-- **Pika compatible** (not fully optimized)
-- **SSH tunneling** for single instances, cluster, and sentinel
-- **Environment variables:** customize server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME`
-
-### Data Handling
-- **Binary data:** use the download button for binary content; direct text editing is not supported for binary values
-- **Large values (>256 kB):** shown as `[object ArrayBuffer]`; use binary upload/download
-- **Clipboard:** text can be copied directly; binary data requires the download button
-
-### Key Export / Import
-- **Export:** download keys as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
-- **Search-aware:** when a search is active, export only the matching results; otherwise export all keys in the current database
-- **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, CDK virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
-- **Hamburger menu:** export and import actions are accessible from the `⋮` menu in the tree controls toolbar; the menu label dynamically shows the key count and whether it's exporting all keys or search results
-
-### Real-Time Monitoring Dashboard
-- **Live metrics:** memory usage, ops/sec, connected clients, hit rate, network I/O, expired/evicted keys — all updating in real time
-- **uPlot charts:** lightweight canvas charts (~35KB) for memory, ops/sec, clients, and network I/O with theme-aware colors
-- **Slow log viewer:** recent slow queries with execution duration
-- **Client list:** all connected Redis clients with address, database, current command, idle time, and kill button
-- **Memory top keys:** top 20 biggest keys by memory usage with byte sizes
-- **Auto-refresh:** toggle auto-polling for client list and memory top keys
-- **Pause/resume:** pause live updates without leaving the page
-- **Theme + language reactive:** charts reinitialize on theme or language change
-
-### User Interface
-- **Responsive design:** works on phones, tablets, and desktops
-- **Themes:** Dark (Dracula) and Light with **auto-switch** that follows your system's dark/light preference in real time
-- **Theme auto-switch:** defaults to system preference on first visit; manually selecting a theme overrides auto mode
-- **Info page:** dedicated page with keyboard shortcuts reference, about section (version, Redis info, links), and supported languages list
-- **Command palette:** VS Code-style quick command palette (`Ctrl+K` in Electron) with search and keyboard navigation
-- **Desktop shortcuts:** press ALT to access menus in the desktop version
-- **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
-
-### Keyboard Shortcuts (Electron Desktop)
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+R` / `F5` | Refresh current view |
-| `Ctrl+F` | Focus search input |
-| `Ctrl+N` | New key dialog |
-| `Ctrl+K` | Command palette |
-| `Ctrl+D` | Disconnect |
-
-### Connection Management
-- **Connection groups:** organize connections into named groups with collapsible headers in Settings
-- **Drag-and-drop:** reorder connections within a group and reorder groups themselves by dragging headers
-- **Group toggle:** enable/disable grouped view with a single click — persisted in localStorage
-- **Group field:** optional group name in the connection dialog with autocomplete from existing groups
-
-### Console and Search
-- **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
-- **Database selection:** choose databases via the console or dropdown (shows empty/filled status)
-- **Search modes:** client-side for small key sets, server-side for large key sets; search by prefix or substring
-
-### Networking
-- **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
-- **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
-
-### Modern Angular Frontend
-The UI has been fully migrated from AngularJS (1.x) to **Angular** — the current long-term support release. This migration delivers major improvements across the board:
-- **~1.6 MB smaller bundle** — removed jQuery, moment.js, and the AngularJS/Angular compatibility layer
-- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack` AngularWebpackPlugin
-- **Web Worker tree building** — key sorting and tree construction run off the main thread via inline Blob Workers, keeping the UI responsive even with large key sets
-- **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
-- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
-- **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
-
-### RediSearch Full-Text Search
-- **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
-- **Index management:** create indexes with schema builder (TEXT, NUMERIC, TAG, GEO, VECTOR fields), drop indexes with confirmation
-- **Index info:** view index metadata and statistics after running a search
-- **Module-aware:** header button automatically appears when the `search` module is loaded (Redis 8+ or Redis Stack)
-
-### Redis 8 Module Support (ReJSON)
-- **ReJSON (JSON data type)** — view, create, edit, format, copy, and download JSON documents stored with `JSON.SET`
-- **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
-- **JSON keys** appear in the tree with a `</>` icon; JSON type is available in the "Add Key" dialog when the module is detected
-- **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
-- **CodeMirror 6 editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
-
-### ES Modules Backend
-The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
-
-### Security
-- **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
-
-<!--
-👷 **The first full complete version was created in 20 days in September of 2018.**
--->
-
-
-## Important Notice
-
-Do not manually create the configuration `JSON` file with a text editor. Use the GUI to generate it instead — the resulting file can then be deployed to systems like Kubernetes.
-
-## Optional HTTP Basic Authentication
-
-Protect both HTTP routes and Socket.IO with HTTP Basic authentication.
-
-Config (`p3xrs.json`):
-
-```json
-{
-  "p3xrs": {
-    "httpAuth": {
-      "enabled": true,
-      "username": "admin",
-      "passwordHash": "$2b$10$..."
-    }
-  }
-}
-```
-
-Generate a BCrypt password hash:
-
-```bash
-node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p myplainpass
-```
-
-Environment variables:
-
-- `HTTP_USER`
-- `HTTP_PASSWORD`
-- `HTTP_PASSWORD_HASH`
-- `HTTP_PASSWORD_HASH_FILE`
-- `HTTP_AUTH_ENABLED` (`true|false`)
-
-CLI options:
-
-- `--http-auth-enable`
-- `--http-auth-disable`
-- `--http-auth-username`
-- `--http-auth-password`
-- `--http-auth-password-hash`
-- `--http-auth-password-hash-file`
-
-Notes:
-
-- `passwordHash` is preferred over plain `password`.
-- Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
 
 ## AI Configuration
 
@@ -228,6 +86,21 @@ By default, AI queries are routed through `network.corifeus.com`, which handles 
 If you set your own Groq API key, you can choose to:
 - **Keep routing via `network.corifeus.com`** (default) — your key is used but queries still go through the proxy for analytics
 - **Route directly to Groq** — toggle "Route via network.corifeus.com" OFF in AI Settings to bypass the proxy entirely
+
+### Free Tier Limitations
+
+The default proxy uses the Groq free tier, which has strict rate limits for the `openai/gpt-oss-120b` model:
+
+| Limit | Value |
+|-------|-------|
+| Requests/minute | 30 |
+| Requests/day | 1,000 |
+| Tokens/minute | 8,000 |
+| Tokens/day | 200,000 |
+
+These limits are **shared across all users** of the default proxy. For complex queries (e.g. bulk key generation with EVAL/Lua scripts), the shared quota can be exhausted quickly.
+
+**Recommended:** Get your own free Groq API key at [console.groq.com](https://console.groq.com) — this gives you a dedicated quota and better reliability for AI-powered queries.
 
 ### AI Settings in the UI
 
@@ -312,6 +185,198 @@ Restart=on-abort
 [Install]
 WantedBy=multi-user.target
 ```
+
+### Connection Resilience
+- **Auto-reconnect** — when the server disconnects, a spinner overlay appears and Socket.IO automatically retries the connection
+- **Seamless recovery** — when the server comes back, the page reloads and reconnects to the same Redis instance automatically
+
+### Compatibility
+- **Redis 6+ with TLS** — see [Configuring Redis TLS](https://spin.atomicobject.com/2021/08/05/configuring-redis-tls/) for setup details
+- **Pika compatible** (not fully optimized)
+- **SSH tunneling** for single instances, cluster, and sentinel
+- **Environment variables:** customize server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME`
+
+### Data Handling
+- **Value format toggle** — switch between Raw, JSON, Hex, and Base64 display for all key types (string, hash, list, set, zset, stream); display-only — copy and edit always use the raw original value
+- **Hex dump viewer** — proper hex editor layout with address column, hex bytes (16 per line), and ASCII representation
+- **JSON pretty-print** — auto-formats valid JSON values with indentation
+- **Base64 encoding** — encodes values including Unicode and binary data via TextEncoder
+- **Binary data:** use the download button for binary content; direct text editing is not supported for binary values
+- **Large values (>256 kB):** shown as `[object ArrayBuffer]`; use binary upload/download
+- **Clipboard:** text can be copied directly; binary data requires the download button
+
+### Key Export / Import
+- **Export:** download keys as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
+- **Search-aware:** when a search is active, export only the matching results; otherwise export all keys in the current database
+- **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, CDK virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
+- **Hamburger menu:** export and import actions are accessible from the `⋮` menu in the tree controls toolbar; the menu label dynamically shows the key count and whether it's exporting all keys or search results
+- **Bulk delete:** delete all keys matching the current search pattern directly from the hamburger menu; when no search is active, deletes all keys using `FLUSHDB` for efficiency
+
+### Real-Time Monitoring (Pulse / Profiler / PubSub)
+
+Three dedicated tabs accessible from the monitoring page:
+
+#### Pulse — Live Dashboard
+- **Live metrics:** memory usage (used, RSS, peak, fragmentation), ops/sec, connected/blocked clients, hit rate, network I/O, expired/evicted keys — updating every 2 seconds
+- **uPlot charts:** four lightweight canvas charts (~35 KB) for memory, ops/sec, clients, and network I/O with theme-aware colors
+- **Slow log viewer:** recent slow queries with execution duration
+- **Client list:** all connected Redis clients with address, name, database, current command, idle time, and kill button
+- **Memory top keys:** top 20 biggest keys by memory usage with byte sizes
+- **Auto-refresh:** toggle auto-polling for client list and memory top keys
+- **Pause/resume:** pause live updates without leaving the page
+- **Export:** download overview data, charts (PNG), slow log, client list, and top keys as text files
+- **Theme + language reactive:** charts reinitialize on theme or language change
+
+#### Profiler — Real-Time Command Stream
+- **Redis MONITOR:** streams every command executed on the server in real time via a dedicated Redis connection
+- **Command display:** timestamp (ms precision), database number, source IP, and full command with arguments
+- **Performance:** renders max 66 DOM entries for smooth scrolling, stores up to 10,000 entries in memory
+- **Persistence:** last 100 entries saved to localStorage
+- **Export:** download all entries as a text file
+
+#### PubSub — Channel Message Monitoring
+- **Pattern subscription:** subscribe with configurable glob patterns (default `*` for all channels) via `PSUBSCRIBE`
+- **Message display:** timestamp, channel name, and full message content in real time
+- **Restart:** re-subscribe with a new pattern without leaving the page
+- **Performance:** same 66 DOM / 10,000 memory / 100 localStorage limits as Profiler
+- **Export:** download all entries as a text file
+
+### User Interface
+- **Responsive design:** works on phones, tablets, and desktops
+- **Themes:** Dark (Dracula) and Light with **auto-switch** that follows your system's dark/light preference in real time
+- **Theme auto-switch:** defaults to system preference on first visit; manually selecting a theme overrides auto mode
+- **Info page:** dedicated page with keyboard shortcuts reference, about section (version, Redis info, links), and supported languages list
+- **Command palette:** VS Code-style quick command palette (`Ctrl+K` in Electron) with search and keyboard navigation
+- **Desktop shortcuts:** press ALT to access menus in the desktop version
+- **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
+
+### Keyboard Shortcuts (Electron Desktop)
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+R` / `F5` | Refresh current view |
+| `Ctrl+F` | Focus search input |
+| `Ctrl+N` | New key dialog |
+| `Ctrl+K` | Command palette |
+| `Ctrl+D` | Disconnect |
+
+### Connection Management
+- **Connection groups:** organize connections into named groups with collapsible headers in Settings
+- **Drag-and-drop:** reorder connections within a group and reorder groups themselves by dragging headers
+- **Group toggle:** enable/disable grouped view with a single click — persisted in localStorage
+- **Group field:** optional group name in the connection dialog with autocomplete from existing groups
+
+### Console and Search
+- **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
+- **Database selection:** choose databases via the console or dropdown (shows empty/filled status)
+- **Search modes:** client-side for small key sets, server-side for large key sets; search by prefix or substring
+
+### Networking
+- **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
+- **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
+
+### Modern Angular Frontend
+The UI has been fully migrated from AngularJS (1.x) to **Angular** — the current long-term support release. This migration delivers major improvements across the board:
+- **~1.6 MB smaller bundle** — removed jQuery, moment.js, and the AngularJS/Angular compatibility layer
+- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack` AngularWebpackPlugin
+- **Web Worker tree building** — key sorting and tree construction run off the main thread via inline Blob Workers, keeping the UI responsive even with large key sets
+- **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
+- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
+- **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
+
+### RediSearch Full-Text Search
+- **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
+- **Index management:** create indexes with schema builder (TEXT, NUMERIC, TAG, GEO, VECTOR fields), drop indexes with confirmation
+- **Index info:** view index metadata and statistics after running a search
+- **Module-aware:** header button automatically appears when the `search` module is loaded (Redis 8+ or Redis Stack)
+
+### RedisTimeSeries Visualization
+- **Module auto-detection** — TimeSeries UI automatically appears when the `timeseries` module is loaded (Redis Stack or Redis 8+)
+- **Interactive line chart** — uPlot canvas chart with theme-aware colors (dark/light), responsive resizing, and locale-aware time formatting via native `Intl`
+- **Live auto-refresh** — toggle auto-polling (10-second interval) to watch incoming data in real time
+- **Reactive inputs** — chart auto-reloads on any input change (from/to, aggregation, overlay, label filter) with debounced updates
+- **Time range & aggregation** — filter by from/to timestamps, apply aggregation functions (avg, min, max, sum, count, first, last, range, std.p, std.s, var.p, var.s) with configurable time buckets
+- **Data point management** — add, edit, and delete individual data points with confirmation dialogs; inline add form directly below the chart
+- **Bulk edit** — edit all data points at once via the Edit button in the chart header; monospace textarea with `timestamp value` per line; `*` timestamps are auto-spread by a configurable interval (1s to 24h)
+- **Bulk generate on create** — toggle "Bulk generate" in the Add Key dialog to create a new timeseries key with multiple data points at once using the formula generator
+- **Formula generator** — generate test data with mathematical formulas (sin, cos, linear, random, sawtooth) with configurable point count, amplitude, and offset
+- **TS.INFO panel** — view retention, total samples, memory usage, chunk info, duplicate policy, labels, and compaction rules in a settings-style mat-list
+- **Labels editor** — edit retention, duplicate policy, and labels on existing keys via `TS.ALTER`; labels are also editable from the Edit dialog
+- **Default labels** — keys created from the GUI automatically get a `key=<keyname>` label for discoverability; keys without labels get the default label assigned on first view
+- **Multiple series overlay** — overlay additional timeseries keys on the same chart by entering comma-separated key names
+- **TS.MRANGE label filter** — query across multiple keys by label filter (e.g. `sensor=temp`) and overlay all matching series on the chart with different colors
+- **Export chart as PNG** — download the chart as a PNG image with proper background (dark/light aware), title, and color legend
+- **Key creation** — create new timeseries keys with configurable retention, duplicate policy (`LAST`, `FIRST`, `MIN`, `MAX`, `SUM`, `BLOCK`), and labels
+- **Tree integration** — timeseries keys show with a chart-area icon and display the data point count (totalSamples) in the tree view
+- **Theme + language reactive** — charts reinitialize on theme or language change
+- **No external date library** — all date formatting uses native `Intl.DateTimeFormat`, no dayjs dependency for the timeseries component
+
+### Redis 8 Module Support (ReJSON)
+- **ReJSON (JSON data type)** — view, create, edit, format, copy, and download JSON documents stored with `JSON.SET`
+- **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
+- **JSON keys** appear in the tree with a `</>` icon; JSON type is available in the "Add Key" dialog when the module is detected
+- **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
+- **CodeMirror 6 editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
+
+### ES Modules Backend
+The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
+
+### Security
+- **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
+
+<!--
+👷 **The first full complete version was created in 20 days in September of 2018.**
+-->
+
+
+## Important Notice
+
+Do not manually create the configuration `JSON` file with a text editor. Use the GUI to generate it instead — the resulting file can then be deployed to systems like Kubernetes.
+
+## Optional HTTP Basic Authentication
+
+Protect both HTTP routes and Socket.IO with HTTP Basic authentication.
+
+Config (`p3xrs.json`):
+
+```json
+{
+  "p3xrs": {
+    "httpAuth": {
+      "enabled": true,
+      "username": "admin",
+      "passwordHash": "$2b$10$..."
+    }
+  }
+}
+```
+
+Generate a BCrypt password hash:
+
+```bash
+node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p myplainpass
+```
+
+Environment variables:
+
+- `HTTP_USER`
+- `HTTP_PASSWORD`
+- `HTTP_PASSWORD_HASH`
+- `HTTP_PASSWORD_HASH_FILE`
+- `HTTP_AUTH_ENABLED` (`true|false`)
+
+CLI options:
+
+- `--http-auth-enable`
+- `--http-auth-disable`
+- `--http-auth-username`
+- `--http-auth-password`
+- `--http-auth-password-hash`
+- `--http-auth-password-hash-file`
+
+Notes:
+
+- `passwordHash` is preferred over plain `password`.
+- Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
 
 ## All Features Are Free
 
@@ -612,7 +677,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.348
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.350
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

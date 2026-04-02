@@ -13,12 +13,27 @@ spec:
       labels:
         app.kubernetes.io/name: p3x-redis-ui
     spec:
+      terminationGracePeriodSeconds: 15
       containers:
       - name: p3x-redis-ui
         image: patrikx3/p3x-redis-ui
         ports:
         - name: p3x-redis-ui
           containerPort: 7843
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 7843
+          initialDelaySeconds: 10
+          periodSeconds: 30
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health?ready=true
+            port: 7843
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 5
         volumeMounts:
         - name: p3x-redis-ui-settings
           mountPath: /settings/.p3xrs-conns.json

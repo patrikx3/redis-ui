@@ -1,46 +1,65 @@
-Generate a changelog entry for version v2026.4.348 of P3X Redis UI.
+Generate a changelog entry for version v2026.4.350 of P3X Redis UI.
 Based on these recent git commits across the project repos, write changelog bullet points.
 
 ## redis-ui
-e47184cf chore: bump version to v2026.4.347
-bae7e837 docs: expand AI settings documentation and add config fields
-aa69134c feat(electron): defer language menu until iframe is ready
-c225758c chore: improve changelog generation and update release notes
-3daa98d9 chore: bump version to v2026.4.346
-ef045712 chore: update changelog for v2026.4.346
-077eebb9 chore: bump version to v2026.4.345
-9479b604 docs: add AI configuration section to README
-1b2227f4 docs: add AI-powered Redis query translation feature to README
-b113ceff chore: bump version to v2026.4.344
-69998a91 chore: update changelog for v2026.4.344
-95ad46de chore: bump version to v2026.4.343
-0b1b58f9 fix: bidirectional language sync, native menu names, IPC handler
-59c1e6a2 fix: remove Claude commentary from changelog, add sanitization to publish.js
-7b1f170d fix: changelog prompt stricter - no commentary, include all submodule changes
-060cb05d fix: correct changelog for v2026.4.342 with all features
-eae27c0f chore: bump version to v2026.4.342
-ea6d1678 chore: update changelog for v2026.4.342
-2e7f8dda chore: bump version to v2026.4.341
-027369b2 docs: add RediSearch UI section to README
+fb3f791f chore(release): bump version to v2026.4.349
+f2d224dd docs: add data format toggle documentation to README
+e2156a8e feat: Docker HEALTHCHECK, K8s liveness/readiness probes, graceful shutdown
+3280f38e docs: update README with complete TimeSeries features and connection resilience
+a88c977d docs: add RedisTimeSeries documentation and bulk delete feature to README
+02f9ec27 refactor(publish): prioritize bump-to-bump range for changelog generation
+
+## redis-ui-material
+6d54caf chore: bump version to v2026.4.348 and update dependencies
+fd4107a fix: console history preserves quotes, AI input replacement
+4fd92ce feat: AI console input replacement, remove overlay, scroll fixes
+c5c52c1 feat: add monitoring tabs (Pulse/Profiler/PubSub) with real-time streaming
+b483ad0 feat: timeseries data table with virtual scroll, format fixes, translations
+7ce99e7 fix: string value wraps in all formats (no horizontal scroll)
+7584e01 fix: hex address padded to 8 digits for large values (64-bit style)
+f7c8f5b fix: hex format shows address + bytes only (Commodore monitor style)
+a233c5a feat: stream field-value display, format toggle for stream, scrollable values
+d01d0d5 feat: data format toggle (Raw/JSON/Hex/Base64) for all key types
+ed456b6 refactor: remove license code + feat: tree level expand, socket reconnect
+5fc0f9d fix: tree controls tooltips position changed to above
+7265888 feat: timeseries labels editor, bulk create, reactive inputs, socket reconnect
+3e77e07 feat: complete RedisTimeSeries UI with advanced features
+2336617 feat: add RedisTimeSeries UI with chart, info panel, data management
+4eb1d68 feat: add RedisTimeSeries UI with chart, info panel, data management
+21da988 fix: show overlay at caller level for AI queries in console and search
+97592b5 feat: add spinning overlay during AI queries in console and search
+5ec6f60 feat: add delete matching/all keys in hamburger menu + trash icon for tree delete
+e701029 feat: add active page highlighting to navigation toolbar buttons
+ff0378f feat: trigger change detection after index field deletion
+
+## redis-ui-server
+202be76 chore: bump version to v2026.4.310
+453a230 feat: add set-monitor handler with retry for MONITOR command
+ea6ddeb refactor: remove all license code, add /health endpoint, graceful shutdown
+5eceb68 feat: add /health endpoint and graceful shutdown (SIGTERM/SIGINT)
+1f37ca3 feat: timeseries labels, bulk mode, socket reconnect overlay
+ab21453 feat: complete RedisTimeSeries support with TS.ALTER, TS.MRANGE, formula generator
+8539840 feat: add RedisTimeSeries support (TS.INFO, TS.RANGE, TS.ADD, TS.DEL)
+0498c1f feat: add RedisTimeSeries support (TS.INFO, TS.RANGE, TS.ADD, TS.DEL)
+87339b1 feat: add delete-search-keys server handler with flushdb support
 
 IMPORTANT: The following is the PREVIOUS version's changelog entry. Do NOT repeat any of these items. Only include changes that are NEW in this version:
 
-### v2026.4.346
+### v2026.4.348
 Released on 04/01/2026
-* FEATURE: AI-powered natural language to Redis command translation — type plain text in the console and it auto-detects, translates via Groq AI, and executes the Redis command.
-* FEATURE: Multilingual AI — understands 50+ languages, returns explanations in the language you type in.
-* FEATURE: Context-aware AI — sends Redis version, loaded modules, and RediSearch indexes for accurate command generation.
-* FEATURE: Bring your own Groq API key — optional free API key setting in Settings page with dialog, CLI (`--groq-api-key`), and readonly mode (`--groq-api-key-readonly`).
-* FEATURE: AI admin dashboard on network.corifeus.com — real-time metrics with DataGridPro, daily stats, top IPs, token usage, MongoDB persistence with 1-year TTL.
-* FEATURE: Auto-fallback — if Redis returns "unknown command" and input looks like natural language, silently routes to AI and auto-executes.
-* FEATURE: `ai:` prefix for explicit AI queries in console and search page.
-* BUGFIX: Console output area now allows text selection and copy without collapsing the embedded console.
+* FEATURE: Direct Groq API support — redis-ui-server can call Groq directly with your own API key, no network.corifeus.com dependency needed.
+* FEATURE: AI Settings panel — enable/disable AI, route toggle (network.corifeus.com vs direct Groq), API key management with remote validation.
+* FEATURE: AI routing control — choose between routing through network.corifeus.com (default) or directly to Groq with your own API key.
+* FEATURE: Readonly AI settings — `--groq-api-key-readonly` CLI flag and `groqApiKeyReadonly` config to lock AI settings on public instances.
+* FEATURE: Electron language menu fix — Language submenu now appears after iframe loads, not on boot.
+* BUGFIX: Console text selection no longer collapses embedded console.
+* BUGFIX: AI results display with proper formatting (no duplicate commands, no empty lines).
 
 
 Rules:
 - Use this EXACT format:
-### v2026.4.348
-Released on 04/01/2026
+### v2026.4.350
+Released on 04/02/2026
 * CATEGORY: Description.
 
 - Valid categories: FEATURE, BUGFIX, PERF, REFACTOR, DOCS, CHORE

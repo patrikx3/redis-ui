@@ -12,4 +12,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV P3XRS_DOCKER_HOME=/settings
 EXPOSE 7843
 RUN npm -g --unsafe-perm install p3x-redis-ui
-CMD p3x-redis
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD node -e "const http = require('http'); http.get('http://localhost:7843/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"
+CMD ["p3x-redis"]

@@ -13,6 +13,7 @@ spec:
       labels:
         app.kubernetes.io/name: p3x-redis-ui
     spec:
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds | default 15 }}
       containers:
       - name: p3x-redis-ui
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -20,6 +21,20 @@ spec:
         ports:
         - name: p3x-redis-ui
           containerPort: 7843
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 7843
+          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds | default 10 }}
+          periodSeconds: {{ .Values.livenessProbe.periodSeconds | default 30 }}
+          timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds | default 5 }}
+        readinessProbe:
+          httpGet:
+            path: /health?ready=true
+            port: 7843
+          initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds | default 5 }}
+          periodSeconds: {{ .Values.readinessProbe.periodSeconds | default 10 }}
+          timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds | default 5 }}
         {{- with .Values.resources }}
         resources:
           {{ toYaml . | nindent 10 }}

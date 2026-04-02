@@ -15,6 +15,18 @@ resources: {}
   #   cpu: 200m
 #   memory: 200M
 
+terminationGracePeriodSeconds: 15
+
+livenessProbe:
+  initialDelaySeconds: 10
+  periodSeconds: 30
+  timeoutSeconds: 5
+
+readinessProbe:
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 5
+
 connections:
  - name: daas-cache-kryon-dev.ptdwzp.0001.euc1.cache.amazonaws.com
    host: daas-cache-kryon-dev.ptdwzp.0001.euc1.cache.amazonaws.com
