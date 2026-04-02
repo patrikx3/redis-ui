@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.350
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.352
 
 
   
@@ -69,6 +69,7 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 
 ### AI-Powered Redis Query Translation
 - **Natural language queries:** type plain English (or any language) in the console — if Redis doesn't recognize the command, AI translates it to a valid Redis command and replaces the console input; the command is **not executed automatically** — you review, edit if needed, and press Enter to run it
+- **Multi-command AI:** AI can generate multiple commands or multi-line EVAL scripts — they are placed in the textarea for review, then executed with Enter
 - **Input replacement:** after AI translation, the console input is replaced with the generated Redis command so you can see exactly what will be executed before running it
 - **Multilingual:** understands 50+ languages, explanations are returned in the language you type in
 - **Context-aware:** sends Redis version, loaded modules, and available RediSearch indexes to the AI for accurate command generation
@@ -241,6 +242,18 @@ Three dedicated tabs accessible from the monitoring page:
 - **Performance:** same 66 DOM / 10,000 memory / 100 localStorage limits as Profiler
 - **Export:** download all entries as a text file
 
+#### Analysis — Memory Analysis Dashboard
+- **One-click snapshot:** capture the full state of your Redis server at a point in time — type distribution, memory allocation per namespace, key expiration stats, and INFO memory breakdown
+- **Type distribution chart:** canvas bar chart showing how many keys and how much memory each data type (string, hash, list, set, zset, stream) uses
+- **Memory by prefix:** groups keys by their first `:` segment and ranks prefixes by total memory — quickly find which namespace is consuming the most resources
+- **Key expiration overview:** shows the count of keys with TTL vs persistent keys, plus the average TTL across all expiring keys (formatted with `humanize-duration`)
+- **Memory breakdown:** total, RSS, peak, overhead, dataset, Lua, fragmentation ratio, and allocator — all from `INFO memory`
+- **Server info header:** Redis version, mode (standalone/cluster/sentinel), and uptime displayed in the accordion header
+- **Configurable scan:** adjust "Top N" and "Max Scan Keys" to control scan depth; the UI shows how many keys were sampled out of the total database size
+- **Export All (ZIP):** download a complete analysis bundle as a ZIP file (`{connection}-analysis.zip`) containing the full text report and all chart images (PNG) — useful for sharing with your team or attaching to incident reports when investigating server issues
+- **Chart export:** each chart accordion has its own Export button to download individual charts as PNG
+- **Theme-aware:** bar charts use CSS custom property colors and automatically redraw on theme or window resize
+
 ### User Interface
 - **Responsive design:** works on phones, tablets, and desktops
 - **Themes:** Dark (Dracula) and Light with **auto-switch** that follows your system's dark/light preference in real time
@@ -266,6 +279,14 @@ Three dedicated tabs accessible from the monitoring page:
 - **Group field:** optional group name in the connection dialog with autocomplete from existing groups
 
 ### Console and Search
+- **Multi-line input:** the console uses a textarea that supports multi-line commands
+  - **Shift+Enter** inserts a new line, **Enter** executes
+  - Multiple commands (one per line) are executed sequentially
+  - Multi-line `EVAL`/`EVALSHA` scripts are sent as a single command — Lua newlines are preserved
+  - The textarea auto-grows up to 3 lines when focused, with a scrollbar for longer content
+  - On blur the textarea collapses to a single line to keep the output visible
+- **Command history:** **Shift+ArrowUp/Down** navigates history (plain arrows scroll the textarea)
+- **AI multi-line:** AI-generated commands can be multiple lines — they are placed in the textarea for review before execution
 - **Channel monitoring:** toggle monitoring for all channel messages via a checkbox; the last 20 entries are stored in local storage
 - **Database selection:** choose databases via the console or dropdown (shows empty/filled status)
 - **Search modes:** client-side for small key sets, server-side for large key sets; search by prefix or substring
@@ -687,7 +708,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.350
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.352
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
