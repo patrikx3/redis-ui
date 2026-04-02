@@ -502,6 +502,14 @@ docker run -v $PWD/p3x-redis-ui-settings:/settings -h docker-p3x-redis-ui -p 784
 
 The GUI will be at http://localhost:7843
 
+#### Health Check
+
+The Docker image includes a built-in `HEALTHCHECK` that polls `/health` every 30 seconds. Container orchestrators (Docker Compose, Swarm, etc.) will automatically mark the container as unhealthy if the server stops responding.
+
+#### Graceful Shutdown
+
+The server handles `SIGTERM` and `SIGINT` signals gracefully — it closes Socket.IO connections, disconnects all Redis clients, and shuts down the HTTP server before exiting.
+
 ### Kubernetes
 
 #### Raw Manifests
@@ -516,6 +524,10 @@ kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
+
+The manifests and Helm chart include **liveness** and **readiness** probes:
+- **Liveness** — `GET /health` every 30 s (restarts the pod if the server is unresponsive)
+- **Readiness** — `GET /health?ready=true` every 10 s (returns 503 until at least one Redis connection is configured, keeping the pod out of the Service until it's ready to serve traffic)
 
 #### Helm Chart
 

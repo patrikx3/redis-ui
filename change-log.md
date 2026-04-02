@@ -7,7 +7,16 @@
 
 ### v2026.4.350
 Released on 04/02/2026
-* CHORE: Release v2026.4.350.
+* FEATURE: Real-time monitoring tabs — Pulse (live dashboard), Profiler (Redis MONITOR command stream), and PubSub (channel message monitoring with pattern subscription).
+* FEATURE: RedisTimeSeries visualization — interactive uPlot chart, live auto-refresh, time range and aggregation controls, data point add/edit/delete, bulk edit, bulk generate with formula generator (sin, cos, linear, random, sawtooth), TS.INFO panel, labels editor via TS.ALTER, multi-series overlay, TS.MRANGE label filter, and PNG export.
+* FEATURE: Data format toggle — switch between Raw, JSON, Hex, and Base64 display for all key types (string, hash, list, set, zset, stream) with hex dump viewer and JSON pretty-print.
+* FEATURE: AI console input replacement — after AI translation, the console input is replaced with the generated Redis command; the command is not executed automatically, you press Enter to run it.
+* FEATURE: Docker HEALTHCHECK with `/health` endpoint, Kubernetes liveness/readiness probes, and graceful shutdown on SIGTERM/SIGINT.
+* FEATURE: Bulk delete — delete all keys matching the current search pattern from the hamburger menu; uses FLUSHDB when no search is active.
+* FEATURE: Stream field-value display with format toggle and scrollable values.
+* FEATURE: Connection resilience — auto-reconnect with spinner overlay when server disconnects, seamless recovery on reconnect.
+* FEATURE: Tree level expand for deeper key hierarchy navigation.
+* REFACTOR: Removed all license code — all features are now free with no license validation.
 
 ### v2026.4.348
 Released on 04/01/2026
