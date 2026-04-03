@@ -75,6 +75,7 @@ jobs:
             "p3xrs": {
               "http": { "port": 7843, "bind": "0.0.0.0" },
               "connections": { "home-dir": "/tmp/p3xr-test" },
+              "static": "~p3x-redis-ui-material/dist",
               "aiEnabled": true
             }
           }
