@@ -1,9 +1,12 @@
-name: Build and Release on Tag
+name: Build and Release
 
 on:
   push:
+    branches: [ master ]
     tags:
       - 'v*'
+  pull_request:
+    branches: [ master ]
 
 permissions:
   contents: write
@@ -24,7 +27,80 @@ jobs:
       - run: npm install
       - run: grunt
 
+  e2e:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['lts/*']
+    services:
+      redis:
+        image: redis:latest
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install Playwright
+        run: |
+          yarn add @playwright/test playwright
+          npx playwright install --with-deps chromium
+
+      - name: Seed test data
+        run: |
+          sudo apt-get install -y redis-tools
+          redis-cli SET test:string "hello world"
+          redis-cli HSET test:hash name Alice age 30
+          redis-cli RPUSH test:list item1 item2 item3
+          redis-cli SADD test:set red green blue
+          redis-cli ZADD test:zset 1 alpha 2 beta 3 gamma
+
+      - name: Start server and run E2E tests
+        run: |
+          mkdir -p /tmp/p3xr-test
+          cat > /tmp/p3xr-test/p3xrs.json <<'CONF'
+          {
+            "p3xrs": {
+              "http": { "port": 7843, "bind": "0.0.0.0" },
+              "connections": { "home-dir": "/tmp/p3xr-test" },
+              "aiEnabled": true
+            }
+          }
+          CONF
+          cat > /tmp/p3xr-test/.p3xrs-conns.json <<'CONNS'
+          {
+            "list": [
+              { "name": "localhost", "host": "127.0.0.1", "port": 6379, "id": "test-connection-1" }
+            ]
+          }
+          CONNS
+          node bin/p3x-redis.mjs -c /tmp/p3xr-test/p3xrs.json &
+          sleep 3
+          curl -sf http://localhost:7843/health
+          npx playwright test
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: test-results/
+          retention-days: 7
+
   deploy-image:
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -54,6 +130,7 @@ jobs:
               --push
 
   package-and-release-macos:
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v5
@@ -66,28 +143,9 @@ jobs:
           yarn install
           rm -rf node_modules/cpu-features/
 
-#      - name: Decode and Install Certificates
-#        env:
-#          CERTIFICATE_P12_BASE64: ${{ secrets.CERTIFICATE_P12_BASE64 }}
-#          CERTIFICATE_P12_PASSWORD: ${{ secrets.CERTIFICATE_P12_PASSWORD }}
-#        run: |
-#          echo $CERTIFICATE_P12_BASE64 | base64 --decode > certificate.p12
-#          security create-keychain -p actions temp.keychain
-#          security import certificate.p12 -k ~/Library/Keychains/temp.keychain -P "$CERTIFICATE_P12_PASSWORD" -T /usr/bin/codesign
-#          security list-keychains -s temp.keychain
-#          security default-keychain -s temp.keychain
-#          security unlock-keychain -p actions temp.keychain
-#          security set-key-partition-list -S apple-tool:,apple: -s -k actions temp.keychain
-
       - name: Build and package macOS app
-#        env:
-#          APPLE_ID: ${{ secrets.APPLE_ID }}
-#          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-#          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-#          DEBUG: "*"
-
         run: npm run publish-macos
-#
+
       - name: Upload macOS build to GitHub Release
         uses: softprops/action-gh-release@v2.5.0
         with:
@@ -102,6 +160,7 @@ jobs:
             dist/latest-mac.yml
 
   package-and-release-windows:
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v5
@@ -116,7 +175,7 @@ jobs:
             Remove-Item -Recurse -Force node_modules/cpu-features
           }
         shell: pwsh
-        
+
       - name: Build and package Windows app
         run: npm run publish-windows
         env:

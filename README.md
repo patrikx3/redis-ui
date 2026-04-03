@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.352
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.354
 
 
   
@@ -74,7 +74,17 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 - **Multilingual:** understands 50+ languages, explanations are returned in the language you type in
 - **Context-aware:** sends Redis version, loaded modules, and available RediSearch indexes to the AI for accurate command generation
 - **Bring your own key:** optionally set your own free Groq API key in Settings for better performance (get one at [console.groq.com](https://console.groq.com))
-- **`ai:` prefix:** explicitly trigger AI translation by starting your input with `ai:`
+- **`ai:` prefix:** explicitly trigger AI translation by starting your input with `ai:` — works when AI is enabled in Settings
+- **AI toggle in console:** when AI is globally enabled in Settings, a slide toggle appears in the console toolbar to control auto-detect behavior:
+  - **AI ON** (default): unrecognized commands automatically try AI translation
+  - **AI OFF**: only the explicit `ai:` prefix triggers AI — console errors are instant with no Groq round-trip delay
+  - When AI is disabled in Settings, the toggle is hidden and all AI features are off
+
+  | Settings AI | Console Toggle | `ai:` prefix | Auto-detect on errors |
+  |---|---|---|---|
+  | Disabled | Hidden | Off | Off |
+  | Enabled | ON (default) | Works | Works |
+  | Enabled | OFF | Works | Off (instant errors) |
 
 ## AI Configuration
 
@@ -131,7 +141,7 @@ Config (`p3xrs.json`):
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `groqApiKey` | string | `""` | Your Groq API key (get free at [console.groq.com](https://console.groq.com)) |
-| `aiEnabled` | boolean | `true` | Enable/disable AI query translation |
+| `aiEnabled` | boolean | `true` | Enable/disable AI auto-detect on unrecognized commands; `ai:` prefix always works regardless |
 | `aiUseOwnKey` | boolean | `false` | `true` = route directly to Groq, `false` = route via network.corifeus.com |
 | `groqApiKeyReadonly` | boolean | `false` | Lock all AI settings (toggles disabled, Edit hidden) |
 
@@ -198,6 +208,7 @@ WantedBy=multi-user.target
 - **Environment variables:** customize server port and home directory via `P3XRS_PORT` and `P3XRS_DOCKER_HOME`
 
 ### Data Handling
+- **Auto data decompression** — automatically detects and decompresses compressed values stored in Redis. Supports GZIP, ZIP (PKZip), zlib/deflate, Zstandard (zstd), LZ4, Snappy, and Brotli. Shows a compression badge with the algorithm name and space savings ratio. Only decompresses when the result is valid text — binary uploads (e.g., gzipped images) are left untouched. Works for string, list, hash, set, and sorted set values.
 - **Value format toggle** — switch between Raw, JSON, Hex, and Base64 display for all key types (string, hash, list, set, zset, stream); display-only — copy and edit always use the raw original value
 - **Hex dump viewer** — proper hex editor layout with address column, hex bytes (16 per line), and ASCII representation
 - **JSON pretty-print** — auto-formats valid JSON values with indentation
@@ -708,7 +719,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.352
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.354
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

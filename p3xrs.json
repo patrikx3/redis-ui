@@ -33,21 +33,6 @@
       "|",
       "-",
       "@"
-    ],
-    "license": {
-      "status": "ok",
-      "action": "check",
-      "valid": false,
-      "reason": "LICENSE_MISSING",
-      "product": "p3x-redis-ui",
-      "tier": "free",
-      "features": [],
-      "licenseStatus": "inactive",
-      "maxDevices": null,
-      "activeDevices": null,
-      "deviceLease": null,
-      "checkedAt": "2026-03-15T15:21:53.612Z",
-      "licenseKey": ""
-    }
+    ]
   }
 }

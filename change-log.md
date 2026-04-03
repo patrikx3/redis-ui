@@ -5,6 +5,13 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.354
+Released on 04/03/2026
+* FEATURE: Auto data decompression support for Gzip, Zlib, Zstd, LZ4, Snappy, Brotli, and ZIP (PKZip) formats.
+* FEATURE: Command metadata with syntax hints and categories for enhanced autocomplete.
+* FEATURE: TTL display in keys info pipeline with fetchedAt timestamp.
+* BUGFIX: Binary pub/sub data handling using pmessageBuffer with MessagePack support.
+
 ### v2026.4.352
 Released on 04/03/2026
 * FEATURE: Memory analysis dashboard — real-time Redis memory usage breakdown and statistics tab.
@@ -479,7 +486,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.352
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.354
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
