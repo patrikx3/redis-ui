@@ -1,0 +1,40 @@
+Generate a changelog entry for version v2026.4.625 of P3X Redis UI.
+Based on these recent git commits across the project repos, write changelog bullet points.
+
+## redis-ui
+5f265e49 You've hit your limit · resets Apr 6, 8pm (Europe/Budapest)
+89c5c62e ci(snap): add LXD support for arm64 snap builds
+
+## redis-ui-material
+4249086f You've hit your limit · resets Apr 6, 8pm (Europe/Budapest)
+
+## redis-ui-server
+9174bb3 You've hit your limit · resets Apr 6, 8pm (Europe/Budapest)
+
+IMPORTANT: The following is the PREVIOUS version's changelog entry. Do NOT repeat any of these items. Only include changes that are NEW in this version:
+
+### v2026.4.624
+Released on 04/04/2026
+* CHORE: Updated the `p3x-redis-ui-material` dependency to `v2026.4.398`.
+
+
+Rules:
+- Use this EXACT format:
+### v2026.4.625
+Released on 04/04/2026
+* CATEGORY: Description.
+
+- Valid categories: FEATURE, BUGFIX, PERF, REFACTOR, DOCS, CHORE
+- Each bullet starts with "* CATEGORY: " (with the asterisk)
+- Only include user-facing or significant changes
+- SKIP these types of commits entirely — they must NOT appear in the changelog:
+  - Version bumps, submodule updates, typo fixes, changelog updates
+  - Anything related to the secure/ folder (publish scripts, tokens, deploy configs)
+  - Internal CI/CD, build pipeline, or release automation changes
+  - Co-Authored-By lines or merge commits
+- Keep descriptions concise (one line each)
+- Do NOT repeat anything from the previous changelog entry shown above
+- Do NOT use markdown code fences
+- Output ONLY the changelog entry starting with ### — absolutely NO extra text, NO commentary, NO explanations, NO sentences outside the bullet format
+- The commits come from MULTIPLE repos (redis-ui, redis-ui-material, redis-ui-server) — include significant changes from ALL repos, not just the parent
+- If there are many feature commits, list each feature separately
