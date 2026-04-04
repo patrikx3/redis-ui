@@ -68,6 +68,8 @@ jobs:
           redis-cli ZADD test:zset 1 alpha 2 beta 3 gamma
 
       - name: Start server and run E2E tests
+        env:
+          P3XR_URL: http://localhost:7843
         run: |
           mkdir -p /tmp/p3xr-test
           cat > /tmp/p3xr-test/p3xrs.json <<'CONF'
@@ -75,7 +77,6 @@ jobs:
             "p3xrs": {
               "http": { "port": 7843, "bind": "0.0.0.0" },
               "connections": { "home-dir": "/tmp/p3xr-test" },
-              "static": "~p3x-redis-ui-material/dist",
               "aiEnabled": true
             }
           }
@@ -90,7 +91,7 @@ jobs:
           node bin/p3x-redis.mjs -c /tmp/p3xr-test/p3xrs.json &
           sleep 3
           curl -sf http://localhost:7843/health
-          PLAYWRIGHT_BASE_URL=http://localhost:7843/ng npx playwright test
+          npx playwright test
 
       - name: Upload test results
         if: always()
