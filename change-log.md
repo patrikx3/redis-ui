@@ -5,9 +5,30 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.360
+Released on 04/04/2026
+* FEATURE: Improved language selector menu UX — auto-closes on window resize, responsive popup with overflow constraints, and full-width search input with text-overflow ellipsis.
+
 ### v2026.4.358
 Released on 04/04/2026
+* FEATURE: Dual GUI — fully migrated from AngularJS to both Angular and React/MUI frontends, switchable live in Settings or Electron menu.
+* FEATURE: React/MUI port — complete reimplementation of all pages: Settings, Info, Database (tree, console, all key types), Monitoring (Pulse, Profiler, PubSub, Memory Analysis), Search, Statistics, Export/Import.
+* FEATURE: Electron menu Angular/React switch — Home and Settings menus now have Angular/React sub-menus to switch frontends.
+* FEATURE: Electron bridge for React — persistent storage sync (group mode, collapsed groups, language, theme) between React iframe and Electron shell.
+* FEATURE: Angular served at root `/`, React served at `/react/`, root auto-redirects based on last used frontend.
+* FEATURE: Bundled Font Awesome locally in React (removed CDN dependency) for CSP compatibility.
+* FEATURE: Live TTL countdown badge in tree view with adaptive repaint and refresh throttle.
+* FEATURE: Compression badge UI with ratio display and 54-language translations.
+* FEATURE: Auto AI checkbox toggle in console toolbar with localized error toasts.
+* FEATURE: Enhanced console autocomplete with grouped commands, syntax hints, and argument bar.
+* FEATURE: Playwright E2E tests — 10 tests covering connections, tree, console, key CRUD, and AI queries via GitHub Actions CI.
+* REFACTOR: Complete elimination of AngularJS `p3xr` global — migrated to Angular services with signals.
+* REFACTOR: Replaced dayjs with native `Intl.DateTimeFormat`.
 * BUGFIX: Pre-read SPA index.html to fix fallback routing inside Electron .asar archives.
+* BUGFIX: Database change forces tree refresh, bypassing throttle.
+* BUGFIX: Fixed double bottom spacing on pulse and analysis pages.
+* BUGFIX: Fixed profiler/pubsub scroll — own scroll containers, shell no longer hides main scroll.
+* BUGFIX: Fixed monitoring shell sticky tabs with proper content scroll.
 
 ### v2026.4.354
 Released on 04/03/2026
@@ -490,7 +511,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.358
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.360
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

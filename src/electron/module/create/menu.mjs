@@ -1,8 +1,17 @@
 import { dialog, Menu, shell, app, globalShortcut } from 'electron'
+import Store from 'electron-store'
 
+const uiStateStore = new Store()
+
+function switchFrontend(frontend) {
+    uiStateStore.set('p3xr-frontend', frontend)
+    global.p3xre.iframeReady = false
+    global.p3xre.mainWindow.loadURL(`${global.p3xre.indexHtml}?port=${global.p3xrsElectronPort}`)
+}
 
 async function mainMenu() {
 
+    const currentFrontend = uiStateStore.get('p3xr-frontend', 'ng')
 
     const template = [
         {
@@ -10,19 +19,39 @@ async function mainMenu() {
             submenu: [
                 {
                     label: global.p3xre.strings.menu.main.home,
-                    click: () => {
-                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
-                            action: 'main.statistics'
-                        })
-                    }
+                    submenu: [
+                        {
+                            label: 'Angular',
+                            type: 'radio',
+                            checked: currentFrontend !== 'react',
+                            click: () => switchFrontend('ng'),
+                        },
+                        {
+                            label: 'React',
+                            type: 'radio',
+                            checked: currentFrontend === 'react',
+                            click: () => switchFrontend('react'),
+                        },
+                    ],
                 },
                 {
                     label: global.p3xre.strings.menu.main.settings,
-                    click: () => {
-                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
-                            action: 'settings'
-                        })
-                    }
+                    submenu: [
+                        {
+                            label: 'Angular',
+                            click: () => {
+                                global.p3xre.mainWindow.webContents.send('p3x-menu', {
+                                    action: 'settings'
+                                })
+                            },
+                        },
+                        {
+                            label: 'React',
+                            click: () => {
+                                switchFrontend('react')
+                            },
+                        },
+                    ],
                 },
                 /*
                 {
