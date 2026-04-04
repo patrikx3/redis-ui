@@ -95,7 +95,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: playwright-report
           path: test-results/
@@ -160,6 +160,34 @@ jobs:
             dist/*.zip
             dist/*.blockmap
             dist/latest-mac.yml
+
+  snap-arm64:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: |
+          yarn install
+          rm -rf node_modules/cpu-features/
+      - name: Install snapcraft and LXD
+        run: |
+          sudo snap install snapcraft --classic
+          sudo snap install lxd
+          sudo lxd init --auto
+          sudo usermod -aG lxd $USER
+      - name: Build arm64 snap
+        run: sg lxd -c "npm run publish-electron-snap-arm64"
+      - name: Upload arm64 snap to Snap Store
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+        run: |
+          cd dist
+          snapcraft upload --release=stable p3x-redis-ui_*_arm64.snap
 
   package-and-release-windows:
     if: startsWith(github.ref, 'refs/tags/v')
