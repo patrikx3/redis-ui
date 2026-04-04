@@ -5,6 +5,14 @@
                         
 [//]: #@corifeus-header:end
 
+Based on the commits provided, there are no new changelog-worthy entries for v2026.4.604. Every commit is either:
+
+- A version bump (explicitly skipped per rules)
+- Already listed in v2026.4.602 (the iframe fix)
+- A non-meaningful commit (the empty "clean working tree" message)
+
+If there are additional commits I'm not seeing, please share them and I'll generate the entry. Otherwise, this version would only contain internal version bumps with no user-facing changes to document.
+
 ### v2026.4.602
 Released on 04/04/2026
 * BUGFIX: Prevent frontend redirect when loaded inside an iframe.
@@ -515,7 +523,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.602
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.604
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
