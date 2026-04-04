@@ -130,6 +130,11 @@ window.addEventListener('message', (event) => {
         if (event.data.key === 'p3xr-language') {
             ipcRenderer.send('p3x-set-language-from-web', { key: event.data.value })
         }
+
+        // If frontend preference changed, also set top-level key so it persists across restarts
+        if (event.data.key === 'p3xr-frontend') {
+            uiStateStore.set('p3xr-frontend', event.data.value)
+        }
     }
 })
 
