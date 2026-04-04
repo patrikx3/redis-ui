@@ -249,7 +249,10 @@ window.p3xreRun = async function () {
             serverUrl = await waitForServer(getCurrentLocalServerUrl())
         }
 
-        global.p3xre.iframe.src = getIframeUrlWithUiState(serverUrl)
+        // Append /react/ if React preference, otherwise root /
+        const frontendPref = uiStateStore.get('p3xr-frontend', 'ng')
+        const frontendPath = frontendPref === 'react' ? '/react/' : '/'
+        global.p3xre.iframe.src = getIframeUrlWithUiState(serverUrl + frontendPath)
 
     } catch (e) {
         console.error(e);
