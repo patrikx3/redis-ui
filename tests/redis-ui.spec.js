@@ -1,6 +1,15 @@
 const { test, expect } = require('@playwright/test');
 
-// Helper: wait for Angular app to be ready (socket connected, connections loaded)
+// Helper: set React frontend preference so React doesn't redirect to Angular
+test.beforeEach(async ({ page }, testInfo) => {
+    if (testInfo.project.name === 'react') {
+        await page.addInitScript(() => {
+            try { localStorage.setItem('p3xr-frontend', 'react') } catch {}
+        })
+    }
+})
+
+// Helper: wait for app to be ready (socket connected, connections loaded)
 async function waitForReady(page) {
     await page.waitForFunction(() => {
         const t = window.__p3xr_test;
@@ -11,13 +20,16 @@ async function waitForReady(page) {
     }, { timeout: 20000 });
 }
 
-// Helper: connect to localhost via footer menu
+// Helper: connect to localhost via footer menu (works for both Angular and React)
 async function connectToLocalhost(page) {
-    await page.goto('/ng/settings');
+    await page.goto('settings');
     await waitForReady(page);
-    const connectMenu = page.locator('#p3xr-layout-footer-container button:has-text("Connect")');
-    await connectMenu.click();
-    await page.locator('.mat-mdc-menu-item:has-text("localhost")').click();
+    // Click Connect button in footer (scoped to footer to avoid matching "NEW CONNECTION")
+    const connectBtn = page.locator('#p3xr-layout-footer-container button').filter({ hasText: /connect/i }).first();
+    await connectBtn.click();
+    // Click localhost menu item
+    const menuItem = page.locator('[role="menuitem"]:has-text("localhost")');
+    await menuItem.click();
     await waitForReady(page);
     // Wait for keys to load
     await page.waitForFunction(() => {
@@ -28,8 +40,10 @@ async function connectToLocalhost(page) {
 
 test.describe('Settings', () => {
     test('page loads with connections, labels, footer', async ({ page }) => {
-        await page.goto('/ng/settings');
+        await page.goto('settings');
         await waitForReady(page);
+        // Wait for page content to render (React may need extra time after i18n init)
+        await page.waitForFunction(() => document.body.innerText.includes('Connections'), { timeout: 10000 });
         const text = await page.evaluate(() => document.body.innerText);
 
         expect(text).toContain('Connections');
@@ -59,14 +73,14 @@ test.describe('Database', () => {
     });
 
     test('tree renders with nodes', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         await page.waitForSelector('.p3xr-database-tree-node', { timeout: 10000 });
         const nodes = await page.locator('.p3xr-database-tree-node').count();
         expect(nodes).toBeGreaterThan(0);
     });
 
     test('click a key opens key view', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         await page.waitForSelector('.p3xr-database-tree-node', { timeout: 10000 });
         const keyNode = page.locator('.p3xr-database-tree-node').first();
         if (await keyNode.count() > 0) {
@@ -76,7 +90,7 @@ test.describe('Database', () => {
     });
 
     test('console PING', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         const input = page.locator('#p3xr-console-input');
         await expect(input).toBeVisible({ timeout: 5000 });
         await input.fill('PING');
@@ -90,7 +104,7 @@ test.describe('Database', () => {
     });
 
     test('console multi-line', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         const input = page.locator('#p3xr-console-input');
         await expect(input).toBeVisible({ timeout: 5000 });
         await input.fill('SET test:e2e hello\nGET test:e2e');
@@ -110,7 +124,7 @@ test.describe('AI', () => {
     });
 
     test('ai: prefix generates a Redis command via network.corifeus.com', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         const input = page.locator('#p3xr-console-input');
         await expect(input).toBeVisible({ timeout: 5000 });
 
@@ -135,7 +149,7 @@ test.describe('AI', () => {
     });
 
     test('ai auto-detect triggers on natural language', async ({ page }) => {
-        await page.goto('/ng/database');
+        await page.goto('database');
         const input = page.locator('#p3xr-console-input');
         await expect(input).toBeVisible({ timeout: 5000 });
 
@@ -163,16 +177,16 @@ test.describe('AI', () => {
 test.describe('Monitoring', () => {
     test('page loads', async ({ page }) => {
         await connectToLocalhost(page);
-        await page.goto('/ng/monitoring');
-        await page.waitForFunction(() => document.body.innerText.includes('Pulse'), { timeout: 10000 });
+        await page.goto('monitoring');
+        await page.waitForFunction(() => document.body.innerText.toUpperCase().includes('PULSE'), { timeout: 20000 });
         const text = await page.evaluate(() => document.body.innerText);
-        expect(text).toContain('Pulse');
+        expect(text.toUpperCase()).toContain('PULSE');
     });
 });
 
 test.describe('Info', () => {
     test('page loads', async ({ page }) => {
-        await page.goto('/ng/info');
+        await page.goto('info');
         await page.waitForFunction(() => document.body.innerText.toUpperCase().includes('P3X REDIS UI'), { timeout: 10000 });
         const text = await page.evaluate(() => document.body.innerText);
         expect(text.toUpperCase()).toContain('P3X REDIS UI');

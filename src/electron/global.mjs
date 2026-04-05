@@ -1,6 +1,7 @@
 import { createRequire } from 'node:module'
 import Store from 'electron-store'
 import setLanguage from '../lib/set-language.mjs'
+import { resolveLanguage } from '../lib/set-language.mjs'
 
 const require = createRequire(import.meta.url)
 const pkg = require('../../package.json')
@@ -10,8 +11,10 @@ const conf = new Store();
 let currentTranslation = conf.get('current-translation')
 
 if (currentTranslation === undefined) {
-    currentTranslation = 'en'
+    currentTranslation = 'auto'
 }
+
+const resolvedTranslation = resolveLanguage(currentTranslation)
 
 // optionToHideMenu
 let optionToHideMenu = conf.get('option-to-hide-menu')
@@ -20,7 +23,7 @@ if (optionToHideMenu === undefined) {
     optionToHideMenu = false;
 }
 
-const stringsModule = await import(`../strings/${currentTranslation}/index.mjs`)
+const stringsModule = await import(`../strings/${resolvedTranslation}/index.mjs`)
 
 global.p3xre = {
     dev: process.env.NODE_ENV === 'development',
@@ -30,6 +33,7 @@ global.p3xre = {
     indexHtml: 'file://' + import.meta.dirname + '/window/main/index.html',
     strings: stringsModule.default,
     currentTranslation: currentTranslation,
+    resolvedTranslation: resolvedTranslation,
     conf: conf,
     setLanguage: setLanguage,
     optionToHideMenu: optionToHideMenu,

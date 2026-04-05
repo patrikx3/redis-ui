@@ -159,6 +159,13 @@ ipcRenderer.on('p3x-action', function (event, data) {
     }
 })
 
+// Forward notification postMessages from web iframe to Electron main process
+window.addEventListener('message', (event) => {
+    if (event.data?.type === 'p3x-notify') {
+        ipcRenderer.send('p3x-notify', { title: event.data.title, body: event.data.body })
+    }
+})
+
 const isLocalHttpAvailable = (port, timeoutMs = 800, host = '127.0.0.1') => {
     return new Promise((resolve) => {
         let settled = false

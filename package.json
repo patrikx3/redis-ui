@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2026.4.625",
+    "version": "2026.4.628",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -87,8 +87,8 @@
         "corifeus-utils": "^2025.4.123",
         "electron-store": "^11.0.2",
         "electron-updater": "^6.8.3",
-        "p3x-redis-ui-material": "^2026.4.399",
-        "p3x-redis-ui-server": "^2026.4.334"
+        "p3x-redis-ui-material": "^2026.4.402",
+        "p3x-redis-ui-server": "^2026.4.337"
     },
     "build-save": {
         "mac": {
@@ -146,7 +146,8 @@
         "snap": {
             "environment": {
                 "XDG_DATA_HOME": "$SNAP_USER_DATA/.local/share"
-            }
+            },
+            "description": "P3X Redis UI v2026.4.625\n\nA versatile Redis management GUI — works as a web server, Docker container, or desktop app (Electron). Manages JSON data with CodeMirror editor, supports SSH tunneling, cluster, and sentinel configurations.\n\nQUICK START (Docker):\n  docker run -d --name p3x-redis-ui -p 7843:7843 patrikx3/p3x-redis-ui\n  Open: http://localhost:7843\n\nFEATURES:\n- Dual GUI: Angular + React/MUI (switch live in Settings)\n- AI-powered Redis query translation (natural language to Redis commands)\n- 8 Redis data types: string, hash, list, set, zset, stream, JSON (ReJSON), TimeSeries\n- Auto data decompression (GZIP, ZIP, zlib, Zstandard, LZ4, Snappy, Brotli)\n- Value format toggle: Raw, JSON, Hex, Base64\n- Binary data upload/download\n- Key export/import with conflict handling\n- CodeMirror JSON editor with GitHub dark/light themes\n- 54 languages covering 88+ countries\n- 7 themes (4 dark, 3 light) with auto system preference detection\n- Responsive design (phone, tablet, desktop)\n\nMONITORING:\n- Pulse: live memory, ops/sec, clients, hit rate charts (uPlot)\n- Profiler: real-time MONITOR command stream\n- PubSub: PSUBSCRIBE channel message monitoring\n- Memory Analysis: type distribution, prefix memory, expiration stats\n- Export All as ZIP (text + PNG charts + PDF)\n\nCONSOLE:\n- Command autocomplete with syntax hints\n- Multi-line input (Shift+Enter for newline)\n- Command history (Shift+Arrow Up/Down)\n- AI auto-detect: unrecognized commands trigger AI translation\n\nCONNECTIONS:\n- SSH tunneling (single, cluster, sentinel)\n- TLS/SSL with certificate support\n- Cluster and Sentinel modes with multi-node config\n- Connection groups with drag-and-drop reorder\n- askAuth: prompt for credentials on connect\n- Readonly mode\n\nSEARCH:\n- RediSearch integration: full-text query, index management\n- Client-side or server-side key search\n- Tree view with virtual scrolling (up to 100,000 keys)\n\nDESKTOP (Electron):\n- Keyboard shortcuts: Ctrl+R/F5 (refresh), Ctrl+F (search), Ctrl+N (new key), Ctrl+K (command palette), Ctrl+D (disconnect)\n- Available as AppImage (x64/arm64), Snap (x64/arm64), Flatpak, Windows installer, macOS DMG\n\nDEPLOYMENT:\n- Docker: patrikx3/p3x-redis-ui (x64 + arm64)\n- NPM: npm install -g p3x-redis-ui && p3xrs\n- Snap: sudo snap install p3x-redis-ui\n- Kubernetes/Helm compatible\n\nHomepage: https://corifeus.com/redis-ui\nGitHub: https://github.com/patrikx3/redis-ui\nSnap Store: https://snapcraft.io/p3x-redis-ui"
         },
         "flatpak": {
             "runtime": "org.freedesktop.Platform",

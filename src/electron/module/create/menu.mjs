@@ -268,6 +268,19 @@ ${global.p3xre.strings.message.restart}
         Menu.setApplicationMenu(menu)
         return
     }
+    // Auto option at top
+    const isAuto = global.p3xre.currentTranslation === 'auto'
+    languageEntry.submenu.push({
+        label: global.p3xre.strings.menu?.language?.auto || 'Auto (system)',
+        type: 'radio',
+        checked: isAuto,
+        click: async () => {
+            await global.p3xre.setLanguage({ key: 'auto' })
+            global.p3xre.mainWindow.webContents.send('p3x-set-language', {
+                translation: global.p3xre.resolvedTranslation
+            })
+        }
+    })
     // Always use English translation list for native language names
     const enStrings = (await import('../../../strings/en/index.mjs')).default
     const languageList = enStrings.menu.language.translation
@@ -282,12 +295,11 @@ ${global.p3xre.strings.message.restart}
                 })
             }
         }
-        const nativeName = (languageList[translationKey] || translationKey).split(' / ')[0]
-        const menuLabel = translationKey === 'en' ? 'English' : nativeName + ' / Language'
+        const menuLabel = languageList[translationKey] || translationKey
         languageEntry.submenu.push({
             label: menuLabel,
             type: 'radio',
-            checked: global.p3xre.currentTranslation === translationKey,
+            checked: !isAuto && global.p3xre.currentTranslation === translationKey,
             click: clickFunction(translationKey)
         })
     }

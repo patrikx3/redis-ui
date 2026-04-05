@@ -5,6 +5,27 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.628
+Released on 04/05/2026
+* BUGFIX: Redirect to settings page when not connected to a Redis server.
+* BUGFIX: Center the collapsed sidebar logo icon.
+
+### v2026.4.627
+Released on 04/04/2026
+* CHORE: Update dependencies for p3x-redis-ui-material and p3x-redis-ui-server.
+
+### v2026.4.626
+Released on 04/04/2026
+* FEATURE: Auto language detection with Electron menu auto option.
+* FEATURE: Desktop notifications via Electron IPC.
+* FEATURE: Snap exported credentials file support.
+* FEATURE: Complete React parity with Angular — all features aligned.
+* BUGFIX: Read index.html from disk on each SPA fallback for non-asar deployments.
+* REFACTOR: Remove redundant redirect for main route.
+* DOCS: Add CLI install and options reference to README.
+* DOCS: Remove hardcoded CodeMirror version number from documentation.
+* DOCS: Update CLI help with groq-api-key options.
+
 ### v2026.4.625
 Released on 04/04/2026
 * CHORE: Release v2026.4.625.
@@ -566,7 +587,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.625
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.628
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

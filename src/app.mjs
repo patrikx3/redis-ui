@@ -1,4 +1,4 @@
-import { app, ipcMain, shell, globalShortcut, session } from 'electron'
+import { app, ipcMain, shell, globalShortcut, session, Notification } from 'electron'
 
 process.on("unhandledRejection", (err, promise) => {
     console.error(new Date().toLocaleString(), 'unhandledRejection', err, promise);
@@ -61,6 +61,27 @@ const execAsync = async() => {
             mainMenu()
         }
     });
+
+    // Handle native desktop notifications from web UI
+    ipcMain.on('p3x-notify', (event, data) => {
+        if (!data?.title) return
+        try {
+            const notification = new Notification({
+                title: data.title,
+                body: data.body || '',
+                icon: undefined, // uses app icon by default
+            })
+            notification.on('click', () => {
+                if (global.p3xre?.mainWindow) {
+                    global.p3xre.mainWindow.show()
+                    global.p3xre.mainWindow.focus()
+                }
+            })
+            notification.show()
+        } catch (e) {
+            console.warn('p3xre: notification failed', e)
+        }
+    })
 
     // Handle language change from web UI (renderer → main process)
     ipcMain.on('p3x-set-language-from-web', async (event, data) => {

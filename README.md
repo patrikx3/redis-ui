@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.625
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.628
 
 
   
@@ -233,7 +233,7 @@ WantedBy=multi-user.target
 ### Key Export / Import
 - **Export:** download keys as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
 - **Search-aware:** when a search is active, export only the matching results; otherwise export all keys in the current database
-- **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, CDK virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
+- **Import:** upload a previously exported JSON file with a preview dialog showing all keys with their translated types, virtual scrolling for large key sets, and conflict handling (overwrite or skip existing keys)
 - **Hamburger menu:** export and import actions are accessible from the `⋮` menu in the tree controls toolbar; the menu label dynamically shows the key count and whether it's exporting all keys or search results
 - **Bulk delete:** delete all keys matching the current search pattern directly from the hamburger menu; when no search is active, deletes all keys using `FLUSHDB` for efficiency
 
@@ -280,12 +280,12 @@ Three dedicated tabs accessible from the monitoring page:
 
 ### User Interface
 - **Responsive design:** works on phones, tablets, and desktops
-- **Themes:** Dark (Dracula) and Light with **auto-switch** that follows your system's dark/light preference in real time
+- **7 themes:** Light, Enterprise, Redis (light) + Dark, Dark Neu, Darko Bluo, Matrix (dark) — with **auto-switch** that follows your system's dark/light preference in real time
 - **Theme auto-switch:** defaults to system preference on first visit; manually selecting a theme overrides auto mode
 - **Info page:** dedicated page with keyboard shortcuts reference, about section (version, Redis info, links), and supported languages list
 - **Command palette:** VS Code-style quick command palette (`Ctrl+K` in Electron) with search and keyboard navigation
 - **Desktop shortcuts:** press ALT to access menus in the desktop version
-- **Tree view:** adjustable key count (100–100,000) with CDK virtual scrolling for performance
+- **Tree view:** adjustable key count (100–100,000) with virtual scrolling for performance
 
 ### Keyboard Shortcuts (Electron Desktop)
 | Shortcut | Action |
@@ -319,14 +319,26 @@ Three dedicated tabs accessible from the monitoring page:
 - **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
 - **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
-### Modern Angular Frontend
-The UI has been fully migrated from AngularJS (1.x) to **Angular** — the current long-term support release. This migration delivers major improvements across the board:
-- **~1.6 MB smaller bundle** — removed jQuery, moment.js, and the AngularJS/Angular compatibility layer
-- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack` AngularWebpackPlugin
-- **Web Worker tree building** — key sorting and tree construction run off the main thread via inline Blob Workers, keeping the UI responsive even with large key sets
-- **CDK virtual scrolling** — tree view uses `CdkVirtualScrollViewport` with `*cdkVirtualFor`, rendering only visible rows for O(visible) DOM performance
-- **Standalone components** — modern Angular architecture with signals, CDK virtual scrolling, and Angular Material
-- **dayjs** — lightweight date handling replacing moment.js (2 KB core vs 400 KB)
+### Modern Dual Frontend Architecture
+The UI has been fully migrated from AngularJS (1.x) to two modern frontends — **Angular** and **React/MUI** — both at full feature parity:
+
+**Angular frontend** (`/ng/`):
+- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack`
+- **CDK virtual scrolling** — tree view renders only visible rows for O(visible) DOM performance
+- **Standalone components** — Angular signals, Angular Material, and lazy-loaded routes
+
+**React frontend** (`/react/`):
+- **Zustand state management** — lightweight stores replacing Angular services
+- **@tanstack/react-virtual** — virtual scrolling for tree view and large lists
+- **MUI (Material UI)** — React component library matching Angular Material's look and feel
+- **Vite** — instant dev server startup and fast production builds
+
+**Shared across both:**
+- **Web Worker tree building** — key sorting and tree construction run off the main thread, keeping the UI responsive with large key sets
+- **Same Socket.IO protocol** — both frontends use the identical backend API
+- **Same translation system** — 54 languages shared from a single source
+- **Same 7 themes** — 4 dark + 3 light, with auto system preference detection
+- **E2E tested** — Playwright tests run against both frontends in parallel
 
 ### RediSearch Full-Text Search
 - **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
@@ -360,7 +372,7 @@ The UI has been fully migrated from AngularJS (1.x) to **Angular** — the curre
 - **Module auto-detection** — available modules are detected on connection via `MODULE LIST`
 - **JSON keys** appear in the tree with a `</>` icon; JSON type is available in the "Add Key" dialog when the module is detected
 - **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
-- **CodeMirror 6 editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
+- **CodeMirror editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
@@ -516,6 +528,34 @@ https://github.com/patrikx3/redis-ui/releases
 
 Start the server via Node.js/NPM and access it in a browser.
 
+```bash
+npm install -g p3x-redis-ui
+p3xrs
+```
+
+Open: `http://localhost:7843`
+
+#### CLI Options
+
+```text
+Usage: p3xrs [options]
+
+Options:
+  -V, --version                           output the version number
+  -c, --config [config]                   Set the p3xr.json p3x-redis-ui-server configuration, see more help in p3x-redis-ui-server
+  -r, --readonly-connections              Set the connections to be readonly, no adding, saving or delete a connection
+  -n, --connections-file-name [filename]  Set the connections file name, overrides default .p3xrs-conns.json
+  --http-auth-enable                      Enable HTTP Basic auth
+  --http-auth-disable                     Disable HTTP Basic auth
+  --http-auth-username [username]         HTTP Basic auth username
+  --http-auth-password [password]         HTTP Basic auth plain password
+  --http-auth-password-hash [hash]        HTTP Basic auth bcrypt password hash
+  --http-auth-password-hash-file [file]   Read HTTP Basic auth bcrypt password hash from file
+  --groq-api-key [key]                    Groq API key for AI-powered Redis query translation (get a free key at console.groq.com)
+  --groq-api-key-readonly                 Prevent users from changing the Groq API key via the UI
+  -h, --help                              display help for command
+```
+
 [Server startup guide](artifacts/readme/start-up-server.md)
 
 [Config file reference](p3xrs.json)
@@ -593,9 +633,11 @@ sudo xattr -rd com.apple.quarantine P3X-Redis-UI.app
 
 #### Snap
 
-<!--
-The main source installer is the `AppImage`, so, the themes are not implemented (the main menus). If you want the themes to be implemented (dark vs light), I suggest using the `AppImage` as it supports the themes natively. Besides, the auto self update function is not implemented in `Snap`, only in `AppImage` version.
--->
+Available for **x64** and **arm64** architectures.
+
+```bash
+sudo snap install p3x-redis-ui
+```
 
 [![LINK](https://cdn.corifeus.com/assets/svg/snap-store-black.svg)](https://snapcraft.io/p3x-redis-ui#cory-non-external)
 
@@ -654,7 +696,9 @@ This application uses Socket.IO instead of REST for client-server communication.
 ```
 Browser / Electron App
         ↓
-redis-ui-material (Angular + Angular Material)
+redis-ui-material
+  ├── Angular frontend (/ng/)  — Angular + Angular Material + Webpack
+  └── React frontend (/react/) — React + MUI + Vite + Zustand
         ↓ Socket.IO + HTTP
 redis-ui-server (Express + ioredis)
         ↓
@@ -732,7 +776,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.625
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.628
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

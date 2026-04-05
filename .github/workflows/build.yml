@@ -173,20 +173,17 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install
-          rm -rf node_modules/cpu-features/
-      - name: Install snapcraft and LXD
+          rm -rf node_modules/cpu-features/ || true
+      - name: Update apt and install snapcraft
         run: |
+          sudo apt-get update
           sudo snap install snapcraft --classic
-          sudo snap install lxd
-          sudo lxd init --auto
-          sudo usermod -aG lxd $USER
-          # electron-builder defaults snap builds to core20, which otherwise picks Multipass.
-          sudo snap set snapcraft provider=lxd
-          snap get snapcraft provider
+      - name: Generate snap description
+        run: node scripts/fix-packages-publish.js snap-description
       - name: Build arm64 snap
         env:
-          SNAPCRAFT_BUILD_ENVIRONMENT: lxd
-        run: sg lxd -c "npm run publish-electron-snap-arm64"
+          SNAPCRAFT_BUILD_ENVIRONMENT: host
+        run: npm run publish-electron-snap-arm64
       - name: Upload arm64 snap to Snap Store
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
