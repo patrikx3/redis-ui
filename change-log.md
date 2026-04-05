@@ -5,6 +5,11 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.630
+Released on 04/05/2026
+* FEATURE: Run E2E tests before publish to catch errors early.
+* FEATURE: Support `P3XR_E2E_EXTRA_ARGS` environment variable for extra Playwright options in E2E testing.
+
 ### v2026.4.629
 Released on 04/05/2026
 * BUGFIX: Resolved TypeScript AOT build error in the settings service.
@@ -592,7 +597,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.629
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.630
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
