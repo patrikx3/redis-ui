@@ -5,15 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
-### v2026.4.635
+### v2026.4.637
 Released on 04/06/2026
-* BUGFIX: Removed AI Max Tokens setting from both Angular and React GUIs, now exclusively server-controlled at 16384.
+* CHORE: Release v2026.4.637.
 
 ### v2026.4.633
 Released on 04/06/2026
-* FEATURE: Added configurable AI max tokens setting (groqMaxTokens) with 16384 default.
 * FEATURE: Added moveUp/moveDown translation strings for the VS Code extension.
-* BUGFIX: Synchronized theme localStorage format between Angular and React GUIs.
+* BUGFIX: Synchronized theme localStorage format between Angular and React GUIs so the theme persists when switching between the two frontends.
+* BUGFIX: Removed the AI Max Tokens setting from the settings UI in both Angular and React, as the value is server-controlled.
 * BUGFIX: Fixed React mobile language popup auto-closing when the virtual keyboard opens on phone.
 
 ### v2026.4.632
@@ -621,7 +621,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.635
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.637
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
