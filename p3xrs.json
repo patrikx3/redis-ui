@@ -25,6 +25,7 @@
     "aiEnabled": true,
     "aiUseOwnKey": false,
     "groqApiKeyReadonly": false,
+    "groqMaxTokens": 16384,
     "licenseEditable": true,
     "licenseKey": "",
     "treeDividers": [
