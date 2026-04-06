@@ -7,7 +7,8 @@
 
 ### v2026.4.642
 Released on 04/06/2026
-* CHORE: Release v2026.4.642.
+* BUGFIX: Restored corrupted Armenian (hy) translation strings and added missing translation keys.
+* DOCS: Updated server README for JWT authentication and AI query features.
 
 ### v2026.4.641
 Released on 04/06/2026
