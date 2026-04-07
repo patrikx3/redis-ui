@@ -115,21 +115,6 @@ If you set your own Groq API key, you can choose to:
 - **Keep routing via `network.corifeus.com`** (default) — your key is used but queries still go through the proxy for analytics
 - **Route directly to Groq** — toggle "Route via network.corifeus.com" OFF in AI Settings to bypass the proxy entirely
 
-### Free Tier Limitations
-
-The default proxy uses the Groq free tier, which has strict rate limits for the `openai/gpt-oss-120b` model:
-
-| Limit | Value |
-|-------|-------|
-| Requests/minute | 30 |
-| Requests/day | 1,000 |
-| Tokens/minute | 8,000 |
-| Tokens/day | 200,000 |
-
-These limits are **shared across all users** of the default proxy. For complex queries (e.g. bulk key generation with EVAL/Lua scripts), the shared quota can be exhausted quickly.
-
-**Recommended:** Get your own free Groq API key at [console.groq.com](https://console.groq.com) — this gives you a dedicated quota and better reliability for AI-powered queries.
-
 ### AI Settings in the UI
 
 The **Settings** page has an **AI Settings** panel with:
