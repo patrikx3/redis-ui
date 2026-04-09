@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.642
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.644
 
 
   
@@ -312,7 +312,7 @@ Three dedicated tabs accessible from the monitoring page:
 The UI has been fully migrated from AngularJS (1.x) to two modern frontends — **Angular** and **React/MUI** — both at full feature parity:
 
 **Angular frontend** (`/ng/`):
-- **AOT compilation** — faster startup and smaller runtime footprint via `@ngtools/webpack`
+- **Angular CLI with esbuild** — near-instant dev recompiles and optimized production builds
 - **CDK virtual scrolling** — tree view renders only visible rows for O(visible) DOM performance
 - **Standalone components** — Angular signals, Angular Material, and lazy-loaded routes
 
@@ -362,6 +362,28 @@ The UI has been fully migrated from AngularJS (1.x) to two modern frontends — 
 - **JSON keys** appear in the tree with a `</>` icon; JSON type is available in the "Add Key" dialog when the module is detected
 - **Inline JSON tree** — JSON keys display as an expandable/collapsible tree with syntax coloring
 - **CodeMirror editor** — edit JSON documents with syntax highlighting, GitHub dark/light themes, line wrapping toggle, and code folding
+
+### RedisBloom Probabilistic Data Structures
+- **Full support for 5 types** — Bloom filter, Cuckoo filter, Top-K, Count-Min Sketch, and T-Digest
+- **Module auto-detection** — probabilistic types appear when the `bf` (RedisBloom) module is detected via `MODULE LIST`
+- **Info display** — click any probabilistic key to see its metadata (capacity, size, error rate, items inserted, etc.) in a clean card layout
+- **Inline actions** — add items, check membership (Bloom/Cuckoo), query counts (CMS), query quantiles (T-Digest), and list top items (Top-K) — all from the key view
+- **Key creation** — create new keys with smart defaults pre-filled (error rate, capacity, K, width, depth, decay, compression)
+- **Tree integration** — each type has its own icon (filter, trophy, chart) and shows item count in the tree view
+- **Console hints** — full autocomplete support for all BF.*, CF.*, TOPK.*, CMS.*, and TDIGEST.* commands
+- **AI query support** — the AI console understands all RedisBloom types and commands
+
+### Redis 8 VectorSet Support
+- **Native vector type** — full support for Redis 8's built-in `VECTORSET` data type (no module required)
+- **Vector info** — view metadata (dimensions, element count, quantization, projection) via `VINFO`
+- **Element browser** — paginated list of all vector elements with search, attribute inspection, and delete actions
+- **Similarity search** — search by element name or by raw vector with configurable COUNT; results displayed with similarity scores
+- **Attribute viewer** — inspect `VGETATTR` attributes on individual elements via info icon + toast
+- **Add elements** — inline form to add new vector elements with `VADD` (element name, vector, optional attributes)
+- **Key creation** — create new VectorSet keys from the "Add Key" dialog with dimension and initial element
+- **Tree integration** — VectorSet keys show with a data-array icon and display element count (VCARD) in the tree view
+- **Console hints** — autocomplete for VADD, VSIM, VCARD, VDIM, VGETATTR, VSETATTR, VREM, VINFO, VLINKS
+- **AI query support** — the AI console understands VectorSet types and commands
 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
@@ -773,7 +795,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.642
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.644
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

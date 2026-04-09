@@ -5,6 +5,27 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.644
+Released on 04/09/2026
+* FEATURE: Added VectorSet data type support with full CRUD operations (VINFO, VSIM, VADD, VREM, VGETATTR, VCARD) in both Angular and React.
+* FEATURE: Added pagination for VectorSet elements.
+* FEATURE: Added VectorSet commands to the AI query prompt.
+* FEATURE: Added RedisBloom probabilistic data structure support (Bloom, Cuckoo, TopK, Count-Min Sketch, T-Digest) for both server and UI.
+* FEATURE: Graceful fallback UI for unknown key types.
+* FEATURE: Migrated Angular build from Webpack to Angular CLI with esbuild.
+* BUGFIX: Fixed socket.io Buffer serialization handling ({type:"Buffer",data:[...]}).
+* BUGFIX: Fixed React refresh flash by skipping setLoading on refresh.
+* BUGFIX: Fixed uPlot CSS loading in Angular TimeSeries component for production builds.
+* BUGFIX: Fixed key-get type handling with explicit per-type branches in the server.
+* BUGFIX: Replaced fzstd with system zstd binary for zstandard decompression.
+* BUGFIX: Corrected T-Digest and Cuckoo filter TYPE strings in the server.
+* BUGFIX: Fixed pipeline misalignment for unknown key types.
+* BUGFIX: Various UI layout fixes (confirm dialogs, button sizing, spacing, toast notifications).
+* BUGFIX: Migrated deprecated MUI MenuListProps to slotProps.list for MUI v9 compatibility.
+* REFACTOR: Use shared corifeus-builder changelog and GitHub release module.
+* CHORE: Upgraded dependencies including Angular, MUI v9, and Vite v8.
+* DOCS: Updated README with VectorSet support, esbuild migration, and RedisBloom documentation.
+
 ### v2026.4.642
 Released on 04/06/2026
 * BUGFIX: Restored corrupted Armenian (hy) translation strings and added missing translation keys.
@@ -637,7 +658,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.642
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.644
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
