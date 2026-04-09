@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.644
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.801
 
 
   
@@ -383,7 +383,17 @@ The UI has been fully migrated from AngularJS (1.x) to two modern frontends — 
 - **Key creation** — create new VectorSet keys from the "Add Key" dialog with dimension and initial element
 - **Tree integration** — VectorSet keys show with a data-array icon and display element count (VCARD) in the tree view
 - **Console hints** — autocomplete for VADD, VSIM, VCARD, VDIM, VGETATTR, VSETATTR, VREM, VINFO, VLINKS
+- **VSIM IN filter** (Redis 8.2+) — filter expression input for similarity search, narrow results by attribute values
 - **AI query support** — the AI console understands VectorSet types and commands
+
+### Redis 8.x Advanced Features
+- **Per-field hash TTL** (Redis 8.0+) — set expiration on individual hash fields via `HEXPIRE`; schedule icon per field row with live countdown, color-coded (green >1h, yellow <1h, red <5min, pulsing <30s), tooltip with humanized duration; auto-refresh when a field expires
+- **String digest** (Redis 8.4+) — view the hash digest of any string key value via the `DIGEST` command; one-click button in string key actions
+- **Hybrid search** (Redis 8.4+) — toggle `FT.HYBRID` mode on the search page to combine text queries with vector similarity using Reciprocal Rank Fusion; requires a RediSearch index with a VECTOR field
+- **Cluster slot stats** (Redis 8.2+) — monitoring dashboard accordion showing top slots by key count, CPU time, or memory usage via `CLUSTER SLOT-STATS`; only visible in cluster mode
+- **Console command hints** — autocomplete for all new Redis 8.0–8.6 commands: HGETEX, HSETEX, HGETDEL, HTTL, HEXPIRE, HPERSIST, MSETEX, XDELEX, XCFGSET, DIGEST, FT.HYBRID, CLUSTER SLOT-STATS, CLUSTER MIGRATION
+- **AI query support** — AI prompt updated with all Redis 8.0–8.6 commands; Redis server version now correctly sent to AI for version-aware command generation
+- **Version-gated UI** — all Redis 8.x features automatically appear/hide based on the connected Redis server version
 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
@@ -795,7 +805,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.644
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.801
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

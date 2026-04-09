@@ -42,7 +42,7 @@ export default {
       reload: "Аз нав бор кунед",
       forcereload: "Боркунии дубора",
       toggledevtools: "Воситаҳои рушдро иваз кунед",
-      resetzoom: "А�� нав танзимкунии Масштаб",
+      resetzoom: "Аз нав танзим кардани масштаб",
       zoomin: "Масштаб кардан",
       zoomout: "Масоҳат кардан",
       togglefullscreen: "Экрани пурраро иваз кунед"
@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "Забон",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

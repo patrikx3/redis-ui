@@ -49,6 +49,7 @@ export default {
         },
         language: {
             title: '言語 / Language',
+            auto: 'Auto (system)',
             translation: {
                 bg: 'Български / Bulgarian',
                 cs: 'Čeština / Czech',

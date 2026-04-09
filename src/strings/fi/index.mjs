@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "Kieli",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

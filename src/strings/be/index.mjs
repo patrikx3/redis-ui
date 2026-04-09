@@ -5,7 +5,7 @@ export default {
     'update-available': "Спампоўка апошняга выпуску...",
     'update-not-available': "Няма даступных новых абнаўленняў.",
     error: opts => {
-      return `Памылка ў праграме аўтаматычнага абнаўл��ння: ${opts.errorMessage}`;
+      return `Памылка ў праграме аўтаматычнага абнаўлення: ${opts.errorMessage}`;
     },
     'download-progress': opts => {
       return "Спампавана " + opts.progressObj.percent + "%";
@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "мова",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

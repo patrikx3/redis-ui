@@ -51,6 +51,7 @@ export default {
             // When you translate the language, keep the Language in English
             // eg. Idioma / Language
             title: '\u0408\u0435\u0437\u0438\u043A / Language',
+            auto: 'Auto (system)',
             translation: {
                 // When you translate the english name, keep the Language in English
                 // eg. Inglés / English

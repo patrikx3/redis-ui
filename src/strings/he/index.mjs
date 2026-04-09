@@ -23,7 +23,7 @@ export default {
       home: "בית",
       console: "קונסולה",
       settings: "הגדרות",
-      overview: "סקי��ה כללית",
+      overview: "סקירה כללית",
       quit: "עזוב"
     },
     edit: {
@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "שפה",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

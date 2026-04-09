@@ -5,7 +5,7 @@ export default {
     'update-available': "पछिल्लो रिलीज डाउनलोड गर्दै...",
     'update-not-available': "कुनै नयाँ अद्यावधिक उपलब्ध छैन।",
     error: opts => {
-      return `स्व���: अपडेटरमा त्रुटि: ${opts.errorMessage}`;
+      return `स्वतः अपडेटरमा त्रुटि: ${opts.errorMessage}`;
     },
     'download-progress': opts => {
       return "डाउनलोड गरियो " + opts.progressObj.percent + "%";
@@ -33,7 +33,7 @@ export default {
       cut: "काट्नुहोस्",
       copy: "प्रतिलिपि गर्नुहोस्",
       paste: "टाँस्नुहोस्",
-      pasteandmatchstyle: "टाँस्नुहोस् र शैली ��िलाउनुहोस्",
+      pasteandmatchstyle: "टाँस्नुहोस् र शैली मिलाउनुहोस्",
       delete: "मेट्नुहोस्",
       selectall: "सबै चयन गर्नुहोस्"
     },
@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "भाषा",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

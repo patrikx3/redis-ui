@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "언어",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",
@@ -112,7 +113,7 @@ export default {
       title: "설정",
       hideMenu: "메인 메뉴 숨기기(ALT로 표시)",
       optionToHideMenuState: {
-        yes: "다시 시작한 후에는 메뉴가 ��겨지고 ALT에 표시됩니다."
+        yes: "다시 시작한 후에는 메뉴가 숨겨지고 ALT에 표시됩니다."
       }
     },
     help: {

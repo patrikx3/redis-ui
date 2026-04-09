@@ -49,6 +49,7 @@ export default {
         },
         language: {
             title: 'Dil / Language',
+            auto: 'Auto (system)',
             translation: {
                 bg: "Български / Bulgarian",
                 cs: "Čeština / Czech",

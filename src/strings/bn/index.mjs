@@ -5,7 +5,7 @@ export default {
     'update-available': "সর্বশেষ প্রকাশ ডাউনলোড হচ্ছে...",
     'update-not-available': "কোন নতুন আপডেট উপলব্ধ নেই.",
     error: opts => {
-      return `স���বয়ংক্রিয়-আপডেটারে ত্রুটি: ${opts.errorMessage}`;
+      return `স্বয়ংক্রিয়-আপডেটারে ত্রুটি: ${opts.errorMessage}`;
     },
     'download-progress': opts => {
       return "ডাউনলোড করা হয়েছে " + opts.progressObj.percent + "%";
@@ -33,7 +33,7 @@ export default {
       cut: "কাটা",
       copy: "কপি",
       paste: "পেস্ট করুন",
-      pasteandmatchstyle: "পেস্ট এবং ম্যাচ ���ৈলী",
+      pasteandmatchstyle: "পেস্ট করুন এবং শৈলী মেলান",
       delete: "মুছে দিন",
       selectall: "সব নির্বাচন করুন"
     },
@@ -44,13 +44,14 @@ export default {
       toggledevtools: "উন্নয়ন টুল টগল করুন",
       resetzoom: "জুম রিসেট করুন",
       zoomin: "জুম ইন করুন",
-      zoomout: "���ুম আউট করুন",
+      zoomout: "জুম আউট করুন",
       togglefullscreen: "পূর্ণ স্ক্রীন টগল করুন"
     },
     language: {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "ভাষা",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",
@@ -112,7 +113,7 @@ export default {
       title: "সেটিংস",
       hideMenu: "প্রধান মেনু লুকান (ALT দিয়ে দেখান)",
       optionToHideMenuState: {
-        yes: "পুনঃসূচনা করার পরে, এটি মেনুট�� লুকাবে এবং ALT এ দেখাবে।"
+        yes: "পুনঃসূচনা করার পরে, এটি মেনুটি লুকাবে এবং ALT এ দেখাবে।"
       }
     },
     help: {

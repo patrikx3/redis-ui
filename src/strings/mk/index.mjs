@@ -29,7 +29,7 @@ export default {
     edit: {
       title: "Уреди",
       undo: "Врати",
-      redo: "Повт��рете",
+      redo: "Повторете",
       cut: "Исечете",
       copy: "Копирај",
       paste: "Вметни",
@@ -51,6 +51,7 @@ export default {
       // When you translate the language, keep the Language in English
       // eg. Idioma / Language
       title: "Јазик",
+      auto: "Auto (system)",
       translation: {
         ar: "العربية / Arabic",
         az: "Azərbaycanca / Azerbaijani",

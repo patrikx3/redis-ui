@@ -5,6 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.801
+Released on 04/09/2026
+* FEATURE: Added Redis 8.0-8.6 command support (DIGEST, HEXPIRE, FT.HYBRID, CLUSTER SLOT-STATS).
+* FEATURE: Added smart paging for improved navigation through large datasets.
+* FEATURE: Added AI prompt token limit configuration.
+* FEATURE: Updated translations for new Redis 8.x features.
+* BUGFIX: Fixed nested comment syntax error in redis-version.mjs causing terser parse failure.
+* DOCS: Updated README with Redis 8.x features documentation.
+
 ### v2026.4.644
 Released on 04/09/2026
 * FEATURE: Added VectorSet data type support with full CRUD operations (VINFO, VSIM, VADD, VREM, VGETATTR, VCARD) in both Angular and React.
@@ -658,7 +667,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.644
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.801
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
