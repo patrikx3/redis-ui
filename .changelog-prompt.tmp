@@ -1,0 +1,40 @@
+Generate a changelog entry for version v2026.4.805 of P3X Redis UI.
+Based on these recent git commits, write changelog bullet points.
+
+## ../redis-ui
+8c79ea23 chore: update p3x-redis-ui-material and p3x-redis-ui-server dependencies
+
+## ../redis-ui-material
+cdfc0438 chore: bump version to v2026.4.426 and publish
+
+## ../redis-ui-server
+4375830 chore: bump version to v2026.4.353
+
+IMPORTANT: The following is the PREVIOUS version's changelog entry. Do NOT repeat any of these items. Only include changes that are NEW in this version:
+
+### v2026.4.803
+Released on 04/10/2026
+* FEATURE: Added smart tree memory that persists tree expansion state in sessionStorage per connection and database.
+* DOCS: Added smart tree memory documentation to README.
+
+
+Rules:
+- Use this EXACT format:
+### v2026.4.805
+Released on 04/10/2026
+* CATEGORY: Description.
+
+- Valid categories: FEATURE, BUGFIX, PERF, REFACTOR, DOCS, CHORE
+- Each bullet starts with "* CATEGORY: " (with the asterisk)
+- Only include user-facing or significant changes
+- SKIP these types of commits entirely:
+  - Version bumps, submodule updates, typo fixes, changelog updates
+  - Anything related to the secure/ folder
+  - Internal CI/CD, build pipeline, or release automation changes
+  - Co-Authored-By lines or merge commits
+- Keep descriptions concise (one line each)
+- Do NOT repeat anything from the previous changelog entry shown above
+- Do NOT use markdown code fences
+- Output ONLY the changelog entry starting with ### — absolutely NO extra text
+- The commits come from MULTIPLE repos (../redis-ui, ../redis-ui-material, ../redis-ui-server) — include significant changes from ALL repos, not just the parent
+- If there are many feature commits, list each feature separately

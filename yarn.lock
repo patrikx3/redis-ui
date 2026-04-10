@@ -3041,11 +3041,6 @@ function-bind@^1.1.2:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.2.tgz#2c02d864d97f3ea6c8830c464cbd11ab6eab7a1c"
   integrity sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==
 
-fzstd@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/fzstd/-/fzstd-0.1.1.tgz#a3da29f2fff45070ca90073f866d97e0c56a4a52"
-  integrity sha512-dkuVSOKKwh3eas5VkJy1AW1vFpet8TA/fGmVA5krThl8YcOVE/8ZIoEA1+U1vEn5ckxxhLirSdY837azmbaNHA==
-
 gaze@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/gaze/-/gaze-1.1.3.tgz#c441733e13b927ac8c0ff0b4c3b033f28812924a"
@@ -5053,10 +5048,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.423:
-  version "2026.4.423"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.423.tgz#81ee4ef69590e41eace94acdc5e87c6d54f49652"
-  integrity sha512-wgHF2SJI9/cmMXmDGMfkby4YiQ9O6d6XXdir1txnu4tdiJdbgW3Y0VgInI+P8/65eCpR0ndzPdr2b6UTwSei/w==
+p3x-redis-ui-material@^2026.4.426:
+  version "2026.4.426"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.426.tgz#b573dd0b675220769f16705b0636adcfa542dd43"
+  integrity sha512-c3gsOyQxGC+/DxQNukTzzjs8izKiAWxJO775kK7FCM887jkVcGDTWdOnCn9Vm0yWmJgQ7vrsZuFsaRc76p0Sqg==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -5082,10 +5077,10 @@ p3x-redis-ui-material@^2026.4.423:
     uplot "^1.6.32"
     zustand "^5.0.12"
 
-p3x-redis-ui-server@^2026.4.347:
-  version "2026.4.347"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.347.tgz#f9205baf706d862f0e13b9bb034d4dc20a3db2e7"
-  integrity sha512-ebyoodV4nKCch97egcWo4DuTq+p2jZzga3HURkGsMlbcMI84GppNv61RV/GLdIiDc+I/tYuuimdKZdUJqoPluA==
+p3x-redis-ui-server@^2026.4.353:
+  version "2026.4.353"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.353.tgz#1d3c1241142c4394213aeda7f67f67d6ad8393e5"
+  integrity sha512-jUjh+xzdAOD7GzGNoComekeGhkqMa6s3J72YXLjxngXei8Gh0fPKRyAFg/tj+TP+AaZURdulttDlT0u/FzqSAg==
   dependencies:
     "@msgpack/msgpack" "^3.1.3"
     bcryptjs "^3.0.3"
@@ -5093,7 +5088,6 @@ p3x-redis-ui-server@^2026.4.347:
     commander "^14.0.3"
     corifeus-utils "^2025.4.123"
     express "^5.2.1"
-    fzstd "^0.1.1"
     groq-sdk "^1.1.2"
     ioredis "^5.10.1"
     lodash-es "^4.18.1"
