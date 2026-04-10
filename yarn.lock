@@ -5053,10 +5053,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.422:
-  version "2026.4.422"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.422.tgz#2e2349200f062f41357818f08e2ca4d4923093ed"
-  integrity sha512-R4KVqJbUCXStbyOlZdLz2IttqsfCGfU/wSMNuxyyQHkc+JFI8/xAhEeNW9yvf+7oX0rbIHJebKMUjFmTgjXIbQ==
+p3x-redis-ui-material@^2026.4.423:
+  version "2026.4.423"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.423.tgz#81ee4ef69590e41eace94acdc5e87c6d54f49652"
+  integrity sha512-wgHF2SJI9/cmMXmDGMfkby4YiQ9O6d6XXdir1txnu4tdiJdbgW3Y0VgInI+P8/65eCpR0ndzPdr2b6UTwSei/w==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"

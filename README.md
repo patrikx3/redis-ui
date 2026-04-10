@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.802
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.803
 
 
   
@@ -280,6 +280,7 @@ Three dedicated tabs accessible from the monitoring page:
 - **Command palette:** VS Code-style quick command palette (`Ctrl+K` in Electron) with search and keyboard navigation
 - **Desktop shortcuts:** press ALT to access menus in the desktop version
 - **Tree view:** adjustable key count (100–100,000) with virtual scrolling for performance
+- **Smart tree memory:** expanded/collapsed folder state is saved per connection and database in session storage — survives page refreshes and database switches, restored automatically when reconnecting to the same server
 
 ### Keyboard Shortcuts (Electron Desktop)
 | Shortcut | Action |
@@ -810,7 +811,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.802
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.803
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
