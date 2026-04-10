@@ -7,7 +7,11 @@
 
 ### v2026.4.805
 Released on 04/10/2026
-* CHORE: Release v2026.4.805.
+* FEATURE: Added Commodore-style hex monitor view for all key types (string, list, hash, set, zset, stream) in both Angular and React.
+* FEATURE: Hex monitor displays three-column layout: address (dimmed), hex bytes in two groups of 8, and ASCII with a CSS border separator.
+* FEATURE: Incomplete last lines are padded with 00 bytes shown at 0.5 opacity to distinguish real data from padding.
+* FEATURE: Sticky horizontal scrollbar synced via JS and ResizeObserver, page handles vertical scrolling.
+* BUGFIX: Fixed workspace publish failure caused by corifeus-utils not being hoisted to the top level by yarn.
 
 ### v2026.4.803
 Released on 04/10/2026
