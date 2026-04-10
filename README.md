@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.801
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.802
 
 
   
@@ -219,6 +219,10 @@ WantedBy=multi-user.target
 - **Large values (>256 kB):** shown as `[object ArrayBuffer]`; use binary upload/download
 - **Clipboard:** text can be copied directly; binary data requires the download button
 
+### Editing Safety
+- **Diff view before save** — optional diff dialog shows inline or side-by-side comparison of old vs. new value before committing changes; works for string, hash, list, and JSON key types including the JSON editor; collapsible unchanged sections with context lines; toggle in Redis Settings (default: off)
+- **Undo after save** — after saving a string or JSON key, a toast notification appears with an Undo button; clicking it restores the previous value immediately; works for both direct edits and JSON editor saves
+
 ### Key Export / Import
 - **Export:** download keys as a JSON file — supports string, list, set, zset, hash, stream, and JSON types with binary data encoded as base64 and TTL preservation
 - **Search-aware:** when a search is active, export only the matching results; otherwise export all keys in the current database
@@ -232,13 +236,14 @@ Three dedicated tabs accessible from the monitoring page:
 
 #### Pulse — Live Dashboard
 - **Live metrics:** memory usage (used, RSS, peak, fragmentation), ops/sec, connected/blocked clients, hit rate, network I/O, expired/evicted keys — updating every 2 seconds
+- **Dashboard info cards:** server info (OS, port, PID, config file, CPU usage), persistence status (RDB last save, AOF), replication (role, replicas, master host), keyspace breakdown (keys + expires per database), loaded modules with versions — all with individual export buttons
 - **uPlot charts:** four lightweight canvas charts (~35 KB) for memory, ops/sec, clients, and network I/O with theme-aware colors
 - **Slow log viewer:** recent slow queries with execution duration
 - **Client list:** all connected Redis clients with address, name, database, current command, idle time, and kill button
 - **Memory top keys:** top 20 biggest keys by memory usage with byte sizes
 - **Auto-refresh:** toggle auto-polling for client list and memory top keys
 - **Pause/resume:** pause live updates without leaving the page
-- **Export:** download overview data, charts (PNG), slow log, client list, and top keys as text files
+- **Export:** download overview data, dashboard info, charts (PNG), slow log, client list, and top keys as text files; Export All bundles everything into a ZIP with TXT + PNG + PDF
 - **Theme + language reactive:** charts reinitialize on theme or language change
 
 #### Profiler — Real-Time Command Stream
@@ -805,7 +810,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.801
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.802
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

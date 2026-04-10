@@ -5,6 +5,18 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.802
+Released on 04/10/2026
+* FEATURE: Added diff view before save with settings toggle for comparing changes.
+* FEATURE: Added undo for string and JSON key edits with settings toggle.
+* FEATURE: Added dashboard info cards to the Pulse page.
+* FEATURE: Added panel split persistence across sessions.
+* BUGFIX: Fixed diff view to coerce values to string for binary key support.
+* BUGFIX: Fixed dialog Escape key handling.
+* BUGFIX: Fixed settings page styling.
+* BUGFIX: Fixed React accordion uPlot resize on Pulse page.
+* DOCS: Added diff view, undo, and dashboard info cards documentation to README.
+
 ### v2026.4.801
 Released on 04/09/2026
 * FEATURE: Added Redis 8.0-8.6 command support (DIGEST, HEXPIRE, FT.HYBRID, CLUSTER SLOT-STATS).
@@ -667,7 +679,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.801
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.802
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
