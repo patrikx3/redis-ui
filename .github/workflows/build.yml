@@ -95,7 +95,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: playwright-report
           path: test-results/
@@ -149,7 +149,7 @@ jobs:
         run: npm run publish-macos
 
       - name: Upload macOS build to GitHub Release
-        uses: softprops/action-gh-release@v2.5.0
+        uses: softprops/action-gh-release@v2.6.1
         with:
           tag_name: ${{ github.ref_name }}
           token: ${{ github.token }}
@@ -214,7 +214,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload Windows build to GitHub Release
-        uses: softprops/action-gh-release@v2.5.0
+        uses: softprops/action-gh-release@v2.6.1
         with:
           token: ${{ github.token }}
           fail_on_unmatched_files: true
