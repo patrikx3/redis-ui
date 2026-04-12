@@ -5,6 +5,16 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1002
+Released on 04/12/2026
+* FEATURE: Smooth view-transition CSS crossfade animation when switching between GUI frameworks (Angular, React, Vue).
+* FEATURE: Anti-flash theme background on GUI navigation and root redirect to eliminate black flashes.
+* FEATURE: Prefetch other GUI framework assets for faster switching.
+* BUGFIX: Color-scheme meta tag now set dynamically from app theme instead of system preference, preventing visual flashes.
+* BUGFIX: Vue settings donate PayPal link not opening due to window not being accessible in template.
+* BUGFIX: Vue timeseries aggregation dropdown now uses correct item objects for Vuetify 3 v-select.
+* BUGFIX: Narrower GUI toggle padding on mobile for better fit (24px to 12px horizontal).
+
 ### v2026.4.1001
 Released on 04/12/2026
 * BUGFIX: Reverted Angular Material icons from SVG back to font-based rendering for better consistency.
@@ -720,7 +730,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1001
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1002
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
