@@ -8,7 +8,7 @@
 ### v2026.4.1000
 Released on 04/12/2026
 * FEATURE: **Vue 3 + Vuetify 4 — Complete third GUI framework.** Full feature parity with Angular and React: Settings, Monitoring (Pulse, Profiler, PubSub, Analysis with charts and PDF export), Database (tree with drag-and-drop, virtual scrolling, all key type renderers including String, Hash, List, Set, Zset, Stream, JSON, TimeSeries, Probabilistic, VectorSet), Console, Search, Info pages. Login and auth dialogs, command palette, TTL dialog, key import/export, JSON editor — all ported.
-* FEATURE: **GUI switcher** in layout footer and settings page across all 3 frameworks with FontAwesome brand icons (Angular, React, Vue).
+* FEATURE: **GUI switcher** on settings and login pages across all 3 frameworks with FontAwesome brand icons (Angular, React, Vue).
 * FEATURE: Detect file type from magic bytes on binary download — auto-selects correct file extension (PNG, JPEG, GIF, PDF, ZIP, GZIP, MP3, MP4, WASM, SQLite, and 20+ more formats) across all 3 GUIs.
 * FEATURE: Format toggle (Raw/JSON/Hex/Base64) border styling unified across Angular, React, and Vue with theme-aware divider colors.
 * FEATURE: Upgraded Roboto/Roboto Mono fonts to per-script subsets (Latin, Latin Extended, Cyrillic, Cyrillic Extended, Greek, Vietnamese) for better international text rendering.
