@@ -7,9 +7,15 @@
 
 ### v2026.4.1000
 Released on 04/12/2026
-* FEATURE: Added Vue frontend support with static mount, SPA fallback, and root redirect.
-* BUGFIX: Stopped exposing Groq API key to browser clients and added masked key display in settings.
+* FEATURE: **Vue 3 + Vuetify 4 — Complete third GUI framework.** Full feature parity with Angular and React: Settings, Monitoring (Pulse, Profiler, PubSub, Analysis with charts and PDF export), Database (tree with drag-and-drop, virtual scrolling, all key type renderers including String, Hash, List, Set, Zset, Stream, JSON, TimeSeries, Probabilistic, VectorSet), Console, Search, Info pages. Login and auth dialogs, command palette, TTL dialog, key import/export, JSON editor — all ported.
+* FEATURE: **GUI switcher** in layout footer and settings page across all 3 frameworks with FontAwesome brand icons (Angular, React, Vue).
+* FEATURE: Detect file type from magic bytes on binary download — auto-selects correct file extension (PNG, JPEG, GIF, PDF, ZIP, GZIP, MP3, MP4, WASM, SQLite, and 20+ more formats) across all 3 GUIs.
+* FEATURE: Format toggle (Raw/JSON/Hex/Base64) border styling unified across Angular, React, and Vue with theme-aware divider colors.
+* FEATURE: Upgraded Roboto/Roboto Mono fonts to per-script subsets (Latin, Latin Extended, Cyrillic, Cyrillic Extended, Greek, Vietnamese) for better international text rendering.
+* FEATURE: Added icon registry service for Angular with SVG icon support.
 * FEATURE: Added Content-Security-Policy header to Express server.
+* BUGFIX: Restored Material Icons font CSS that was accidentally removed from Angular build.
+* BUGFIX: Stopped exposing Groq API key to browser clients; added masked key display in settings.
 
 ### v2026.4.807
 Released on 04/11/2026
