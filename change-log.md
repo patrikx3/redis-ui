@@ -5,6 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1001
+Released on 04/12/2026
+* BUGFIX: Reverted Angular Material icons from SVG back to font-based rendering for better consistency.
+* BUGFIX: Finalized GUI toggle icon sizes and alignment across all three frameworks with per-framework dimensions.
+* BUGFIX: Improved GUI toggle styling with monochrome background, opacity-based inactive state, and stronger active highlight.
+
 ### v2026.4.1000
 Released on 04/12/2026
 * FEATURE: **Vue 3 + Vuetify 4 — Complete third GUI framework.** Full feature parity with Angular and React: Settings, Monitoring (Pulse, Profiler, PubSub, Analysis with charts and PDF export), Database (tree with drag-and-drop, virtual scrolling, all key type renderers including String, Hash, List, Set, Zset, Stream, JSON, TimeSeries, Probabilistic, VectorSet), Console, Search, Info pages. Login and auth dialogs, command palette, TTL dialog, key import/export, JSON editor — all ported.
@@ -714,7 +720,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1000
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1001
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
