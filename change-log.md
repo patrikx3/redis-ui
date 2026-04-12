@@ -5,6 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1000
+Released on 04/12/2026
+* FEATURE: Added Vue frontend support with static mount, SPA fallback, and root redirect.
+* BUGFIX: Stopped exposing Groq API key to browser clients and added masked key display in settings.
+* FEATURE: Added Content-Security-Policy header to Express server.
+
 ### v2026.4.807
 Released on 04/11/2026
 * REFACTOR: Reorganized socket.io request handlers into area subdirectories with auto-discovery.
@@ -702,7 +708,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.807
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1000
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

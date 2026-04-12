@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.807
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.1000
 
 
   
@@ -73,12 +73,13 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 
 ## Features
 
-### Dual GUI: Angular + React
+### Triple GUI: Angular + React + Vue
 
-P3X Redis UI was originally built with AngularJS and has been fully migrated to two modern frontends — **Angular** and **React/MUI**. You can switch between them live in **Settings → GUI**.
+P3X Redis UI was originally built with AngularJS and has been fully migrated to three modern frontends — **Angular**, **React/MUI**, and **Vue/Vuetify**. You can switch between them live in **Settings → GUI**.
 
 - **Angular** is served at `/ng/`
 - **React** is served at `/react/`
+- **Vue** is served at `/vue/`
 - `/` auto-redirects to your last used frontend
 - Switch anytime from the GUI toggle in Settings — your preference is remembered
 - Both frontends share the same backend, Socket.IO protocol, translation system, themes, and all features
@@ -738,7 +739,7 @@ Redis Instance (standalone / cluster / sentinel, optional SSH tunnel)
 |------------|-------------|
 | [p3x-redis-ui](https://github.com/patrikx3/redis-ui) | Electron desktop app + CLI (this repo) |
 | [p3x-redis-ui-server](https://github.com/patrikx3/redis-ui-server) | HTTP + Socket.IO server backend |
-| [p3x-redis-ui-material](https://github.com/patrikx3/redis-ui-material) | Angular + React frontends |
+| [p3x-redis-ui-material](https://github.com/patrikx3/redis-ui-material) | Angular + React + Vue frontends |
 
 ## Adoption Notes
 
@@ -811,7 +812,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.807
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1000
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
