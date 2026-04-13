@@ -405,6 +405,15 @@ The UI has been fully migrated from AngularJS (1.x) to two modern frontends — 
 ### ES Modules Backend
 The server codebase has been fully migrated from CommonJS to **ES Modules** (`.mjs`), enabling native Node.js ESM support and better tree-shaking.
 
+### ACL Management (Redis 6.0+)
+- **User list** — view all ACL users with status (enabled/disabled), current user indicator, and rules summary
+- **Create / Edit / Delete** — full ACL user management via a dialog with chip-based rule editing
+- **Chip inputs** — commands, key patterns, and pub/sub channels are entered as chips with placeholder hints
+- **Deny highlighting** — commands starting with `-` (e.g. `-@dangerous`) are visually highlighted with the warning color
+- **Default user warning** — editing the `default` user shows an inline warning alert explaining the risk of locking out connections
+- **Save confirmation** — every ACL save shows a themed confirm dialog
+- **Consistent across GUIs** — identical chip styling, layout, and behavior in Angular, React, and Vue
+
 ### Security
 - **Secure configuration:** passwords and sensitive data are protected with unique identifiers for both main and node configurations
 
