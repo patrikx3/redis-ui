@@ -75,14 +75,13 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 
 ### Triple GUI: Angular + React + Vue
 
-P3X Redis UI was originally built with AngularJS and has been fully migrated to three modern frontends — **Angular**, **React/MUI**, and **Vue/Vuetify**. You can switch between them live in **Settings → GUI**.
+P3X Redis UI was originally built with AngularJS and has been fully migrated to three modern frontends — **Angular**, **React/MUI**, and **Vue/Vuetify** — all at full feature parity. You can switch between them live in **Settings → GUI**.
 
-- **Angular** is served at `/ng/`
-- **React** is served at `/react/`
-- **Vue** is served at `/vue/`
+- **Angular** (`/ng/`) — Angular CLI with esbuild, CDK virtual scrolling, standalone components with signals
+- **React** (`/react/`) — Zustand state management, @tanstack/react-virtual, MUI (Material UI), Vite
+- **Vue** (`/vue/`) — Pinia state management, Vue 3 Composition API, Vuetify, Vite
 - `/` auto-redirects to your last used frontend
-- Switch anytime from the GUI toggle in Settings — your preference is remembered
-- Both frontends share the same backend, Socket.IO protocol, translation system, themes, and all features
+- **Shared across all three:** same Socket.IO protocol, same 54-language translation system, same 7 themes (4 dark + 3 light), Web Worker tree building, Playwright E2E tests
 - Works in the Electron desktop app, Docker, and standalone server
 
 ### AI-Powered Redis Query Translation
@@ -315,31 +314,6 @@ Three dedicated tabs accessible from the monitoring page:
 - **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
 - **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
-### Modern Triple Frontend Architecture
-The UI has been fully migrated from AngularJS (1.x) to three modern frontends — **Angular**, **React/MUI**, and **Vue/Vuetify** — all at full feature parity:
-
-**Angular frontend** (`/ng/`):
-- **Angular CLI with esbuild** — near-instant dev recompiles and optimized production builds
-- **CDK virtual scrolling** — tree view renders only visible rows for O(visible) DOM performance
-- **Standalone components** — Angular signals, Angular Material, and lazy-loaded routes
-
-**React frontend** (`/react/`):
-- **Zustand state management** — lightweight stores replacing Angular services
-- **@tanstack/react-virtual** — virtual scrolling for tree view and large lists
-- **MUI (Material UI)** — React component library matching Angular Material's look and feel
-- **Vite** — instant dev server startup and fast production builds
-
-**Vue frontend** (`/vue/`):
-- **Pinia state management** — lightweight stores with Vue 3 Composition API
-- **Vuetify** — Material Design component library with full theme support
-- **Vite** — instant dev server startup and fast production builds
-
-**Shared across all three:**
-- **Web Worker tree building** — key sorting and tree construction run off the main thread, keeping the UI responsive with large key sets
-- **Same Socket.IO protocol** — all frontends use the identical backend API
-- **Same translation system** — 54 languages shared from a single source
-- **Same 7 themes** — 4 dark + 3 light, with auto system preference detection
-- **E2E tested** — Playwright tests run against all frontends
 
 ### RediSearch Full-Text Search
 - **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
