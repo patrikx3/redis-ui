@@ -713,7 +713,7 @@ This application uses Socket.IO instead of REST for client-server communication.
 Browser / Electron App / VS Code Extension
         ↓
 redis-ui-material
-  ├── Angular frontend (/ng/)  — Angular + Angular Material + Webpack
+  ├── Angular frontend (/ng/)  — Angular + Angular Material
   ├── React frontend (/react/) — React + MUI + Vite + Zustand
   └── Vue frontend (/vue/)     — Vue 3 + Vuetify + Vite + Pinia
         ↓ Socket.IO + HTTP
