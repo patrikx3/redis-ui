@@ -714,7 +714,8 @@ Browser / Electron App / VS Code Extension
         ↓
 redis-ui-material
   ├── Angular frontend (/ng/)  — Angular + Angular Material + Webpack
-  └── React frontend (/react/) — React + MUI + Vite + Zustand
+  ├── React frontend (/react/) — React + MUI + Vite + Zustand
+  └── Vue frontend (/vue/)     — Vue 3 + Vuetify + Vite + Pinia
         ↓ Socket.IO + HTTP
 redis-ui-server (Express + ioredis)
         ↓
