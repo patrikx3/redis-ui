@@ -5,6 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1005
+Released on 04/13/2026
+* FEATURE: ACL UX improvements — auth hint, credential hiding in askAuth dialog, shared connect, and layout alignment.
+* FEATURE: ACL chip autocomplete with grouped suggestions for commands, keys, and channels.
+* FEATURE: ACL editor consistency — chip styling and confirm dialog for destructive operations.
+* FEATURE: ACL chip theme-awareness across all UI frameworks.
+* FEATURE: Removed all translation string fallbacks across all three GUI frameworks.
+* BUGFIX: ACL warning icons now display correctly.
+
 ### v2026.4.1004
 Released on 04/13/2026
 * FEATURE: ACL default user warning when editing the default account, with translations across all supported languages.
@@ -742,7 +751,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1004
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1005
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
