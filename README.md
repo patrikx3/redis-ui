@@ -71,6 +71,14 @@ Arabic (`ar`), Azerbaijani (`az`), Belarusian (`be`), Bengali (`bn`), Bosnian (`
 
 ![P3X Redis UI Demo](artifacts/demo.gif)
 
+## Live Demo
+
+Try the latest version at [p3x.redis.patrikx3.com](https://p3x.redis.patrikx3.com).
+
+- **Daily data reset:** the Redis database restores certain datasets every morning (CET)
+- **Brief downtime:** occasional ~1 second interruptions may occur due to automatic updates from Git changes
+- **Version differences:** the live instance may differ from the GitHub or NPM release; updates are typically published monthly
+
 ## Features
 
 ### Triple GUI: Angular + React + Vue
@@ -525,14 +533,6 @@ Example:
 
 Restart the server after changing `p3xrs.json`.
 -->
-
-## Live Demo
-
-Try the latest version at [p3x.redis.patrikx3.com](https://p3x.redis.patrikx3.com).
-
-- **Daily data reset:** the Redis database restores certain datasets every morning (CET)
-- **Brief downtime:** occasional ~1 second interruptions may occur due to automatic updates from Git changes
-- **Version differences:** the live instance may differ from the GitHub or NPM release; updates are typically published monthly
 
 ## Installation
 
