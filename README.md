@@ -315,8 +315,8 @@ Three dedicated tabs accessible from the monitoring page:
 - **Sub-directory support:** use Nginx/Ingress path rewriting — see [Issue #43](https://github.com/patrikx3/redis-ui/issues/43)
 - **Cluster support:** continuously improving, with significant contributions by [@devthejo](https://github.com/devthejo)
 
-### Modern Dual Frontend Architecture
-The UI has been fully migrated from AngularJS (1.x) to two modern frontends — **Angular** and **React/MUI** — both at full feature parity:
+### Modern Triple Frontend Architecture
+The UI has been fully migrated from AngularJS (1.x) to three modern frontends — **Angular**, **React/MUI**, and **Vue/Vuetify** — all at full feature parity:
 
 **Angular frontend** (`/ng/`):
 - **Angular CLI with esbuild** — near-instant dev recompiles and optimized production builds
@@ -329,12 +329,17 @@ The UI has been fully migrated from AngularJS (1.x) to two modern frontends — 
 - **MUI (Material UI)** — React component library matching Angular Material's look and feel
 - **Vite** — instant dev server startup and fast production builds
 
-**Shared across both:**
+**Vue frontend** (`/vue/`):
+- **Pinia state management** — lightweight stores with Vue 3 Composition API
+- **Vuetify** — Material Design component library with full theme support
+- **Vite** — instant dev server startup and fast production builds
+
+**Shared across all three:**
 - **Web Worker tree building** — key sorting and tree construction run off the main thread, keeping the UI responsive with large key sets
-- **Same Socket.IO protocol** — both frontends use the identical backend API
+- **Same Socket.IO protocol** — all frontends use the identical backend API
 - **Same translation system** — 54 languages shared from a single source
 - **Same 7 themes** — 4 dark + 3 light, with auto system preference detection
-- **E2E tested** — Playwright tests run against both frontends in parallel
+- **E2E tested** — Playwright tests run against all frontends
 
 ### RediSearch Full-Text Search
 - **Search page:** full-text search UI with index selector, query input, and paginated results — only visible when RediSearch module is detected
