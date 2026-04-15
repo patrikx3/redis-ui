@@ -5,6 +5,13 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1006
+Released on 04/15/2026
+* FEATURE: Added network.corifeus.com promo toast for demo site with dynamic hide delay and disclaimer.
+* BUGFIX: Fixed connection readonly mode broken by stale isProOrEnterpriseTier() call.
+* BUGFIX: Added googletagmanager.com to CSP connect-src for analytics across all frameworks.
+* DOCS: Updated README with triple frontend architecture, Vue sections, and ACL management documentation.
+
 ### v2026.4.1005
 Released on 04/13/2026
 * FEATURE: ACL UX improvements — auth hint, credential hiding in askAuth dialog, shared connect, and layout alignment.
@@ -751,7 +758,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1005
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1006
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
