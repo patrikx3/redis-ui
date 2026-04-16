@@ -87,6 +87,7 @@ ipcRenderer.on('p3x-set-language', (event, data) => {
             return;
         }
         const translation = data.translation
+        if (translation === 'auto') return
         const stringsModule = await import(`../../../strings/${translation}/index.mjs`)
         global.p3xre.strings = stringsModule.default
         global.p3xre.iframe.contentWindow.postMessage({ type: 'p3x-set-language', translation: translation }, '*')
@@ -261,9 +262,9 @@ window.p3xreRun = async function () {
             serverUrl = await waitForServer(getCurrentLocalServerUrl())
         }
 
-        // Append /react/ or /ng/ based on stored frontend preference
+        // Append /react/, /vue/, or /ng/ based on stored frontend preference
         const frontendPref = uiStateStore.get('p3xr-frontend', 'ng')
-        const frontendPath = frontendPref === 'react' ? '/react/' : '/ng/'
+        const frontendPath = frontendPref === 'react' ? '/react/' : frontendPref === 'vue' ? '/vue/' : '/ng/'
         global.p3xre.iframe.src = getIframeUrlWithUiState(serverUrl + frontendPath)
 
     } catch (e) {

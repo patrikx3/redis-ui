@@ -18,51 +18,17 @@ async function mainMenu() {
             label: global.p3xre.strings.title,
             submenu: [
                 {
-                    label: global.p3xre.strings.menu.main.home,
-                    submenu: [
-                        {
-                            label: 'Angular',
-                            type: 'radio',
-                            checked: currentFrontend !== 'react',
-                            click: () => switchFrontend('ng'),
-                        },
-                        {
-                            label: 'React',
-                            type: 'radio',
-                            checked: currentFrontend === 'react',
-                            click: () => switchFrontend('react'),
-                        },
-                    ],
+                    label: 'Angular',
+                    click: () => switchFrontend('ng'),
                 },
                 {
-                    label: global.p3xre.strings.menu.main.settings,
-                    submenu: [
-                        {
-                            label: 'Angular',
-                            click: () => {
-                                global.p3xre.mainWindow.webContents.send('p3x-menu', {
-                                    action: 'settings'
-                                })
-                            },
-                        },
-                        {
-                            label: 'React',
-                            click: () => {
-                                switchFrontend('react')
-                            },
-                        },
-                    ],
+                    label: 'React',
+                    click: () => switchFrontend('react'),
                 },
-                /*
                 {
-                    label: global.p3xre.strings.menu.main.overview,
-                    click: () => {
-                        global.p3xre.mainWindow.webContents.send('p3x-menu', {
-                            action: 'overview'
-                        })
-                    }
+                    label: 'Vue',
+                    click: () => switchFrontend('vue'),
                 },
-                */
                 {type: 'separator'},
                 {
                     label: global.p3xre.strings.menu.main.quit,

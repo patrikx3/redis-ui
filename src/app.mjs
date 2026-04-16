@@ -114,7 +114,7 @@ const execAsync = async() => {
     })
 
     const { default: createWindow } = await import('./electron/module/create/window.mjs');
-    const rendererCsp = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; worker-src 'self' blob:; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'";
+    const rendererCsp = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; worker-src 'self' blob:; child-src 'self' http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'";
 
     app.on('ready', () => {
         session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
