@@ -5,6 +5,21 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.2000
+Released on 04/17/2026
+* FEATURE: Added Vue to Electron menu and simplified the main menu structure.
+* FEATURE: Added scrollbar-aware console drawer with search page spacer trim.
+* FEATURE: Added 4px side padding on scrollable console output.
+* FEATURE: Unified console toolbar with DatabaseHeader and accordion drawer.
+* FEATURE: Added accordion-style border around the database page.
+* FEATURE: Documented client verbs to the LLM and guarded refresh and console handlers.
+* BUGFIX: Fixed auto-language crash and CSP issues in Electron.
+* BUGFIX: Hidden drawer border when collapsed.
+* BUGFIX: Fixed square icon buttons and removed Angular inner border frame in console.
+* BUGFIX: Silenced verb dispatch when AI already explained the action.
+* BUGFIX: Removed client verb and savedConnections branches from AI prompts.
+* DOCS: Updated repository links from http to https.
+
 ### v2026.4.1008
 Released on 04/17/2026
 * FEATURE: Added global bottom console drawer with connection-state awareness.
@@ -787,7 +802,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1008
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2000
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
