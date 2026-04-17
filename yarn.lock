@@ -927,24 +927,24 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tanstack/react-virtual@^3.13.23":
-  version "3.13.23"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.13.23.tgz#27e969396c39ee919dead847b2f513e2f3b707bf"
-  integrity sha512-XnMRnHQ23piOVj2bzJqHrRrLg4r+F86fuBcwteKfbIjJrtGxb4z7tIvPVAe4B+4UVwo9G4Giuz5fmapcrnZ0OQ==
+"@tanstack/react-virtual@^3.13.24":
+  version "3.13.24"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.13.24.tgz#77af3d5dcf77358d805b7b3b06d3221af7bd3f6f"
+  integrity sha512-aIJvz5OSkhNIhZIpYivrxrPTKYsjW9Uzy+sP/mx0S3sev2HyvPb7xmjbYvokzEpfgYHy/HjzJ2zFAETuUfgCpg==
   dependencies:
-    "@tanstack/virtual-core" "3.13.23"
+    "@tanstack/virtual-core" "3.14.0"
 
-"@tanstack/virtual-core@3.13.23":
-  version "3.13.23"
-  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.13.23.tgz#72bcaad8bbf6bd86e0d02776dc7dc968d0aba07b"
-  integrity sha512-zSz2Z2HNyLjCplANTDyl3BcdQJc2k1+yyFoKhNRmCr7V7dY8o8q5m8uFTI1/Pg1kL+Hgrz6u3Xo6eFUB7l66cg==
+"@tanstack/virtual-core@3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.14.0.tgz#c8839d0d702b8af47c0e57d4ab72fc3ba8bbf3da"
+  integrity sha512-JLANqGy/D6k4Ujmh8Tr25lGimuOXNiaVyXaCAZS0W+1390sADdGnyUdSWNIfd49gebtIxGMij4IktRVzrdr12Q==
 
-"@tanstack/vue-virtual@^3.13.23":
-  version "3.13.23"
-  resolved "https://registry.yarnpkg.com/@tanstack/vue-virtual/-/vue-virtual-3.13.23.tgz#7dc7445bc7585d59b656906728094ee3c08292f1"
-  integrity sha512-b5jPluAR6U3eOq6GWAYSpj3ugnAIZgGR0e6aGAgyRse0Yu6MVQQ0ZWm9SArSXWtageogn6bkVD8D//c4IjW3xQ==
+"@tanstack/vue-virtual@^3.13.24":
+  version "3.13.24"
+  resolved "https://registry.yarnpkg.com/@tanstack/vue-virtual/-/vue-virtual-3.13.24.tgz#f6c76f452dff6c1add9934f6b8023b9c8dce06c0"
+  integrity sha512-A0k2qF0zFSUStXSZkGXABouXr2Tw2Ztl/cVIYG9qy84uR8W7UNjAcX3DvzBS3YnDcwvLxab8v7dbmYBZ39itDA==
   dependencies:
-    "@tanstack/virtual-core" "3.13.23"
+    "@tanstack/virtual-core" "3.14.0"
 
 "@tufjs/canonical-json@2.0.0":
   version "2.0.0"
@@ -5360,10 +5360,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.441:
-  version "2026.4.441"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.441.tgz#bf7da4e0ce7ea5328e94fc5fe4f002abaecfeda9"
-  integrity sha512-wvvWg4ej6YWHJYy6765pY+sTm5JuBdR0mOQZ4GHH55c3wsXssSAJ1BWZaA+WNs9MM7nhOhmzYv9g+6rfWk7TTA==
+p3x-redis-ui-material@^2026.4.442:
+  version "2026.4.442"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.442.tgz#d0995b2ed21354789999a5e30b52d0a4ec2df06b"
+  integrity sha512-AoGjoaMjrf4GwKJPhmArf2r6hV/vyYKOzQK8w5xYuI7cZv0ZtvZStgvdRoKQdCO9fj+qUKBmqTnb7bpwipIDNA==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -5378,8 +5378,8 @@ p3x-redis-ui-material@^2026.4.441:
     "@msgpack/msgpack" "^3.1.3"
     "@mui/icons-material" "^9.0.0"
     "@mui/material" "^9.0.0"
-    "@tanstack/react-virtual" "^3.13.23"
-    "@tanstack/vue-virtual" "^3.13.23"
+    "@tanstack/react-virtual" "^3.13.24"
+    "@tanstack/vue-virtual" "^3.13.24"
     "@uiw/codemirror-theme-github" "^4.25.9"
     "@vitejs/plugin-vue" "^6.0.6"
     codemirror "^6.0.2"
@@ -5399,10 +5399,10 @@ p3x-redis-ui-material@^2026.4.441:
     vuetify "^4"
     zustand "^5.0.12"
 
-p3x-redis-ui-server@^2026.4.363:
-  version "2026.4.363"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.363.tgz#8ddb53ed70d4e30020583b26c4c385d441b409c6"
-  integrity sha512-o3O1tkJd0mlCJ0MlOn5cph7OPi8iptcqI24GrTwk9ff3SkxFXl5R1bp0/7LaizD6pIepatGs/5VYRgRaMvU1hg==
+p3x-redis-ui-server@^2026.4.364:
+  version "2026.4.364"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.364.tgz#f046e3226c2928934d082f4310e5ddc71821737b"
+  integrity sha512-ZfD3MGTFTYRorOwX0+FCWvoF5/cqHqbeOQXoTU2d6N9NGdrx/sXkjV1FY4OxNCo4MJljtdqTvCCFfwBX4VojZw==
   dependencies:
     "@msgpack/msgpack" "^3.1.3"
     bcryptjs "^3.0.3"

@@ -5,6 +5,28 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.1008
+Released on 04/17/2026
+* FEATURE: Added global bottom console drawer with connection-state awareness.
+* FEATURE: Added agentic AI tool-use loop with 15 read-only Redis tools.
+* FEATURE: Added AI cheatsheet dialog and client verbs auto-executed by AI.
+* FEATURE: Added AI stop button and drawer persistence across page refreshes.
+* FEATURE: Added rendered AI tool-use trail with spacing polish.
+* FEATURE: Added Vue to Playwright E2E tests across Angular, React, and Vue.
+* FEATURE: Added limited-AI-mode branch and raised max_tokens default to 65536.
+* FEATURE: Surfaced saved connections in both limited and connected AI prompts.
+* PERF: Compressed older AI tool results before each Groq call to reduce token usage.
+* BUGFIX: Fixed 'connect to X' natural-language command and expanded help text.
+* BUGFIX: Routed disconnected natural-language input through AI auto-detect.
+* BUGFIX: Forwarded saved connection names to AI and dropped English fallbacks.
+* BUGFIX: Fixed AI tool-use to avoid prefilling input and preserve scroll on late layout.
+* BUGFIX: Ensured drawer always renders full console with disconnected welcome in scrollback.
+* BUGFIX: Cleaned 'not_connected' error when no Redis client is active.
+* BUGFIX: Prevented ioredis execution when no live connection exists.
+* BUGFIX: Stripped markdown and separator artifacts from AI responses.
+* BUGFIX: Updated cheatsheet hint format across multiple languages.
+* DOCS: Updated URLs to use the new domain.
+
 ### v2026.4.1007
 Released on 04/16/2026
 * FEATURE: Added Vue to Electron menu.
@@ -765,7 +787,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1007
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1008
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.1007
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.1008
 
 
   
@@ -96,8 +96,11 @@ P3X Redis UI was originally built with AngularJS and has been fully migrated to 
 - **Natural language queries:** type plain English (or any language) in the console — if Redis doesn't recognize the command, AI translates it to a valid Redis command and replaces the console input; the command is **not executed automatically** — you review, edit if needed, and press Enter to run it
 - **Multi-command AI:** AI can generate multiple commands or multi-line EVAL scripts — they are placed in the textarea for review, then executed with Enter
 - **Input replacement:** after AI translation, the console input is replaced with the generated Redis command so you can see exactly what will be executed before running it
-- **Multilingual:** understands 50+ languages, explanations are returned in the language you type in
-- **Context-aware:** sends Redis version, loaded modules, and available RediSearch indexes to the AI for accurate command generation
+- **Multilingual:** understands 54 languages, explanations are returned in the language you type in
+- **Context-aware:** sends Redis version, loaded modules, available RediSearch indexes, current page, active connection, and selected database to the AI for accurate, situation-aware answers
+- **Agentic tool-use:** for investigation prompts ("why is memory high?", "show me the 10 busiest keys"), the AI can call safe read-only Redis tools (INFO, MEMORY STATS, SLOWLOG, SCAN, ACL WHOAMI, etc.) in a bounded loop and surfaces every tool call + result in the console scrollback for transparency
+- **AI Cheatsheet:** dedicated dialog (replaces the old Redis Commands popup) with categorized, searchable prompts grouped by feature (diagnostics, keys, data types, RedisJSON, RediSearch, TimeSeries, Bloom, VectorSet, scripting, cluster, ACL, translation). Module- and version-aware: groups only appear when the relevant module is loaded
+- **Stop button:** click the stop icon in the console input to cancel a running AI query instantly — the input is cleared and re-enabled while the server-side loop finishes in the background and its response is discarded
 - **Bring your own key:** optionally set your own free Groq API key in Settings for better performance (get one at [console.groq.com](https://console.groq.com))
 - **`ai:` prefix:** explicitly trigger AI translation by starting your input with `ai:` — works when AI is enabled in Settings
 - **AI toggle in console:** when AI is globally enabled in Settings, a slide toggle appears in the console toolbar to control auto-detect behavior:
@@ -306,6 +309,7 @@ Three dedicated tabs accessible from the monitoring page:
 - **Group field:** optional group name in the connection dialog with autocomplete from existing groups
 
 ### Console and Search
+- **Global console drawer:** bottom slide-up drawer accessible from any page — toggle via the footer Console button or **Ctrl+`** shortcut. Lets you run commands without leaving the Keys / Monitoring / Settings page you're on. Preference persists across reloads (per-connection — drawer stays hidden when disconnected)
 - **Multi-line input:** the console uses a textarea that supports multi-line commands
   - **Shift+Enter** inserts a new line, **Enter** executes
   - Multiple commands (one per line) are executed sequentially
@@ -801,7 +805,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1007
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.1008
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
