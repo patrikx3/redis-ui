@@ -5,6 +5,13 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.2001
+Released on 04/18/2026
+* FEATURE: Added macOS-style custom overlay scrollbar across Angular, React, and Vue frontends.
+* FEATURE: Applied overlay scrollbar app-wide via installOverlayScrolls.
+* BUGFIX: Use BGSAVE instead of SAVE for non-blocking Redis snapshots.
+* DOCS: Updated URLs to use new domain.
+
 ### v2026.4.2000
 Released on 04/17/2026
 * FEATURE: Added Vue to Electron menu and simplified the main menu structure.
@@ -802,7 +809,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2000
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2001
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

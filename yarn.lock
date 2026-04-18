@@ -5360,10 +5360,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.444:
-  version "2026.4.444"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.444.tgz#cc9044005e644865cb4732d9de5d52ec6c875619"
-  integrity sha512-0WK16CIV4x3xX+jqzzJ3mGdwZZIfz+dHEr4/xOH89dV1ajnwlj4673xKqbLvhJMifw/PV4EhbNXECdBsOEvJRg==
+p3x-redis-ui-material@^2026.4.445:
+  version "2026.4.445"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.445.tgz#77c8a5856cf62b61420714bdf53e86d45765c63b"
+  integrity sha512-NpoaU7PJJHHI+LdJjpzNLPdbuy3xzwLYSDl8ZVvAiBeQgeaCIbVtJ90n4k5uxOL7TJkbYUrtQ0vjlTHF/KbLFg==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -5399,10 +5399,10 @@ p3x-redis-ui-material@^2026.4.444:
     vuetify "^4"
     zustand "^5.0.12"
 
-p3x-redis-ui-server@^2026.4.366:
-  version "2026.4.366"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.366.tgz#75f9b1909353d9645b45d273a3ec73b0da3ee405"
-  integrity sha512-YNC7BARwHMsVaMEEd89h5w4EdefZzjeUSpHIY6MmEAcyk31Gi7zt8RGjJsAYDApk6pQBTAYyiiqq7Q87qBDD4w==
+p3x-redis-ui-server@^2026.4.367:
+  version "2026.4.367"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.367.tgz#b980b69c3b19073ca0e99c6d728effdcf5b5710b"
+  integrity sha512-r44Vw9rU+DyMr0KQUOqmjESxh6YCBDBGkQm4A+8G8aQFKuS7hUYKkrITd8CQxSzQwYDE6I70VTW1Vo9A/X0WGw==
   dependencies:
     "@msgpack/msgpack" "^3.1.3"
     bcryptjs "^3.0.3"
