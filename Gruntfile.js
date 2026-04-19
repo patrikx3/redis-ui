@@ -1,4 +1,3 @@
-const utils = require('corifeus-utils');
 
 module.exports = (grunt) => {
     const _ = require('lodash');

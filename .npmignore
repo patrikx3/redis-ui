@@ -88,3 +88,6 @@ AGENTS.md
 /.eslintrc
 secure/
 agents/
+.claude/
+.codex/
+CLAUDE.md
