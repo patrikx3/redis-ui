@@ -5,13 +5,16 @@
                         
 [//]: #@corifeus-header:end
 
-### v2026.4.2002
+### v2026.4.2004
 Released on 04/19/2026
-* FEATURE: Added resizable console drawer across Angular, React, and Vue frontends.
-* FEATURE: Bootstrapped saved console drawer height across all GUIs.
-* FEATURE: Lowered console drawer minimum height from 30vh to 15vh for more flexible layouts.
-* BUGFIX: Fixed database splitter cursor at bounds.
-* DOCS: Updated documentation and configuration URLs.
+* FEATURE: Resizable console drawer in Angular with database splitter cursor fix at bounds.
+* FEATURE: Resizable console drawer ported to React with database splitter cursor fix.
+* FEATURE: Resizable console drawer ported to Vue with saved height bootstrapped across all GUIs.
+* FEATURE: Lowered Angular console drawer minimum height from 30vh to 15vh.
+* BUGFIX: Overlay scrollbar now attaches to CDK virtual scroll viewport in the database tree.
+* BUGFIX: Overlay scrollbar thumb renders correctly inside Angular Material MDC surfaces.
+* BUGFIX: Overlay scrollbar attaches to Angular Material popups and observes children for content-size changes.
+* BUGFIX: Fixed missing Vue translation keys and theme-aware warn icon.
 
 ### v2026.4.2001
 Released on 04/18/2026
@@ -817,7 +820,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2002
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2004
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
