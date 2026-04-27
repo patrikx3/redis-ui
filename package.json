@@ -71,7 +71,7 @@
         "@playwright/test": "^1.59.1",
         "axios": "^1.15.2",
         "copyfiles": "^2.4.1",
-        "corifeus-builder": "^2026.4.149",
+        "corifeus-builder": "^2026.4.151",
         "electron": "^41.3.0",
         "electron-builder": "^26.8.1",
         "node-fetch": "^3.3.2",
@@ -84,10 +84,10 @@
     "homepage": "https://corifeus.com/redis-ui",
     "dependencies": {
         "@fontsource/roboto": "^5.2.10",
-        "corifeus-utils": "^2026.4.130",
+        "corifeus-utils": "^2026.4.132",
         "electron-store": "^11.0.2",
         "electron-updater": "^6.8.3",
-        "p3x-redis-ui-material": "^2026.4.453",
+        "p3x-redis-ui-material": "^2026.4.455",
         "p3x-redis-ui-server": "^2026.4.373"
     },
     "build-save": {
