@@ -36,6 +36,8 @@ v24.14.1
 
 **p3x-redis-ui** is a versatile Redis GUI that works as a web-based server application or a standalone desktop app. It excels at managing JSON data through an integrated CodeMirror editor with GitHub dark/light themes, supports uploading and downloading binary data, and handles SSH, cluster, and sentinel configurations.
 
+📊 **Comparing tools?** See [**COMPARISON.md**](./COMPARISON.md) for an honest breakdown vs. redis-commander, RedisInsight, and AnotherRedisDesktopManager — feature matrix, performance at 1M keys, and when to pick each.
+
 ### Minimum Node.js Version
 
 ```txt
