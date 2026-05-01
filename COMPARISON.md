@@ -95,5 +95,5 @@ Reproduce: `redis-cli debug populate 1000000` then point each tool at the same i
 
 - npm: https://www.npmjs.com/package/p3x-redis-ui
 - Docker Hub: https://hub.docker.com/r/patrikx3/p3x-redis-ui
-- Source: https://git.patrikx3.com/redis-ui (mirror: github.com/patrikx3/redis-ui)
+- Source: https://github.com/patrikx3/redis-ui
 - Live demo: https://p3x.redis.patrikx3.com
