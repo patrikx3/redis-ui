@@ -4,21 +4,51 @@
 
                         
 [//]: #@corifeus-header:end
-# Create HTTPS2 certificate
+# Optional HTTP Basic Authentication
 
-Use PEM pass phrase: `123456789`
+Protects both HTTP routes and Socket.IO with HTTP Basic auth.
 
-```bash
-#openssl req -newkey rsa:2048 -keyout localhost.key -out localhost.csr -passwd 123456789
-openssl req -x509 -sha256 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 36500 
-openssl rsa -in key.pem -out key.nopass.pem
+`p3xrs.json`:
+
+```json
+{
+  "p3xrs": {
+    "httpAuth": {
+      "enabled": true,
+      "username": "admin",
+      "passwordHash": "$2b$10$..."
+    }
+  }
+}
 ```
 
-# Allow unauthorized TLS certificate
+Generate a BCrypt password hash:
 
 ```bash
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+node ./node_modules/p3x-redis-ui-server/bin/bcrypt-password.js -p myplainpass
 ```
+
+## Environment Variables
+
+- `HTTP_USER`
+- `HTTP_PASSWORD`
+- `HTTP_PASSWORD_HASH`
+- `HTTP_PASSWORD_HASH_FILE`
+- `HTTP_AUTH_ENABLED` (`true|false`)
+
+## CLI
+
+- `--http-auth-enable`
+- `--http-auth-disable`
+- `--http-auth-username`
+- `--http-auth-password`
+- `--http-auth-password-hash`
+- `--http-auth-password-hash-file`
+
+## Notes
+
+- `passwordHash` is preferred over plain `password`.
+- Use HTTPS or a reverse proxy with TLS when HTTP auth is enabled.
 
 [//]: #@corifeus-footer
 

@@ -5,6 +5,12 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.2011
+Released on 05/08/2026
+* BUGFIX: Bumped @codemirror/view resolution to 6.42.1 to fix duplicate KeyBinding type error.
+* DOCS: Trimmed README from 835 to 370 lines and moved long sections to artifacts/readme/.
+* CHORE: Updated dependencies across all packages.
+
 ### v2026.4.2010
 Released on 05/08/2026
 * FEATURE: Added Meet Assistant SaaS promo alongside AI Network Assistant on demo site.
@@ -864,7 +870,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2010
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2011
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

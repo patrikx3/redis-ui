@@ -4,21 +4,32 @@
 
                         
 [//]: #@corifeus-header:end
-# Create HTTPS2 certificate
+# Architecture
 
-Use PEM pass phrase: `123456789`
+P3X Redis UI uses **Socket.IO** instead of REST for client-server communication. Avoiding HTTP protocol overhead gives a smoother, more responsive feel — see [REST vs WebSocket benchmarks](https://www.google.com/search?q=rest+vs+websocket+comparison+benchmarks).
 
-```bash
-#openssl req -newkey rsa:2048 -keyout localhost.key -out localhost.csr -passwd 123456789
-openssl req -x509 -sha256 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 36500 
-openssl rsa -in key.pem -out key.nopass.pem
+## Communication Flow
+
+```
+Browser / Electron App / VS Code Extension
+        ↓
+redis-ui-material
+  ├── Angular frontend (/ng/)  — Angular + Angular Material
+  ├── React frontend (/react/) — React + MUI + Vite + Zustand
+  └── Vue frontend (/vue/)     — Vue 3 + Vuetify + Vite + Pinia
+        ↓ Socket.IO + HTTP
+redis-ui-server (Express + ioredis)
+        ↓
+Redis Instance (standalone / cluster / sentinel, optional SSH tunnel)
 ```
 
-# Allow unauthorized TLS certificate
+## Related Repositories
 
-```bash
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-```
+| Repository | Description |
+|------------|-------------|
+| [p3x-redis-ui](https://github.com/patrikx3/redis-ui) | Electron desktop app + CLI (this repo) |
+| [p3x-redis-ui-server](https://github.com/patrikx3/redis-ui-server) | HTTP + Socket.IO server backend |
+| [p3x-redis-ui-material](https://github.com/patrikx3/redis-ui-material) | Angular + React + Vue frontends |
 
 [//]: #@corifeus-footer
 

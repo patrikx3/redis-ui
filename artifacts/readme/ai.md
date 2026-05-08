@@ -4,20 +4,77 @@
 
                         
 [//]: #@corifeus-header:end
-# Create HTTPS2 certificate
+# AI Configuration
 
-Use PEM pass phrase: `123456789`
+Natural language → Redis commands via the Groq API. Works out of the box.
 
-```bash
-#openssl req -newkey rsa:2048 -keyout localhost.key -out localhost.csr -passwd 123456789
-openssl req -x509 -sha256 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 36500 
-openssl rsa -in key.pem -out key.nopass.pem
+## How It Works
+
+By default, AI queries route through `network.corifeus.com` (Groq API call handled there — no configuration needed).
+
+If you set your own Groq API key, you can:
+
+- **Keep routing via `network.corifeus.com`** (default) — your key is used but queries still go through the proxy for analytics
+- **Route directly to Groq** — toggle "Route via network.corifeus.com" OFF in AI Settings
+
+## AI Settings (UI)
+
+Settings page → AI Settings panel:
+
+- **AI Enabled** — on/off (enabled by default)
+- **Route via network.corifeus.com** — only visible with a valid Groq API key
+- **Groq API Key** — set via Edit (validated against Groq before saving)
+
+## Configuration Options
+
+**Recommended:** configure via the GUI first. Optionally lock it via `groqApiKeyReadonly: true` in `p3xrs.json` or `--groq-api-key-readonly` CLI flag.
+
+`p3xrs.json`:
+
+```json
+{
+  "p3xrs": {
+    "groqApiKey": "gsk_your_key_here",
+    "aiEnabled": true,
+    "aiUseOwnKey": false
+  }
+}
 ```
 
-# Allow unauthorized TLS certificate
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `groqApiKey` | string | `""` | Free key at [console.groq.com](https://console.groq.com) |
+| `aiEnabled` | boolean | `true` | Enable AI auto-detect on unrecognized commands; `ai:` prefix always works |
+| `aiUseOwnKey` | boolean | `false` | `true` = direct to Groq, `false` = via network.corifeus.com |
+| `groqApiKeyReadonly` | boolean | `false` | Lock all AI settings (toggles disabled, Edit hidden) |
+
+CLI:
 
 ```bash
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+p3xrs --groq-api-key gsk_your_key_here
+p3xrs --groq-api-key-readonly
+```
+
+## Readonly Mode
+
+To lock AI settings on a public instance — set the key in `p3xrs.json` plus `groqApiKeyReadonly: true`, or pass `--groq-api-key --groq-api-key-readonly`. Combine with `-r` (readonly connections) which also disables AI settings.
+
+Example systemd unit:
+
+```ini
+[Unit]
+Description=p3x-redis-ui
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/p3x-redis-ui
+ExecStart=/var/p3x-redis-ui-server/bin/p3xrs.mjs -r --groq-api-key-readonly --config /home/user/p3x-redis-ui/p3xrs.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 [//]: #@corifeus-footer
