@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2026.4.2011",
+    "version": "2026.4.2012",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -33,7 +33,7 @@
         "publish-electron-snap-arm64": "rimraf dist && electron-builder --linux snap -p never --arm64",
         "publish-electron-yml": "node ./node_modules/corifeus-builder/src/utils/appimage/post-build.js",
         "publish-electron-flatpak": "rm -rf dist && electron-builder -p always --linux flatpak  --x64  --arm64",
-        "publish-macos": "electron-builder --mac --publish never",
+        "publish-macos": "electron-builder --mac --x64 --arm64 --publish never",
         "publish-macos-mas": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && mkdir build && cp secure/apple/p3xredisuimacos.provisionprofile ./build && cp -R artifacts/apple/entitlements/ ./build  && electron-builder --mac mas --universal  --publish never",
         "publish-macos-mas-save": "source ./secure/apple-env.sh && sudo rm -rf build && sudo rm -rf dist && cp -R artifacts/apple/entitlements/ ./build  && cp secure/apple/p3xredisuimacos.provisionprofile ./build  && electron-builder --mac mas --universal  --publish never"
     },
@@ -87,8 +87,8 @@
         "corifeus-utils": "^2026.4.135",
         "electron-store": "^11.0.2",
         "electron-updater": "^6.8.3",
-        "p3x-redis-ui-material": "^2026.4.460",
-        "p3x-redis-ui-server": "^2026.4.375"
+        "p3x-redis-ui-material": "^2026.4.461",
+        "p3x-redis-ui-server": "^2026.4.376"
     },
     "build-save": {
         "mac": {
