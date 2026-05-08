@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.2009
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.2010
 
 
   
@@ -22,7 +22,7 @@
 ### 🛠️ Built on NodeJs version
 
 ```txt
-v24.14.1
+v24.15.0
 ```
 
 
@@ -645,6 +645,8 @@ kubectl apply -f generated.yaml
 
 ### Desktop Applications
 
+> **Stuck on the loading screen?** Reinstall the app (Snap / Flatpak / deb / rpm / AppImage / dmg / msi). A cached or partial install from a previous auto-update is the usual cause; reinstall clears it and the GUI loads on next launch.
+
 #### macOS
 
 Supports both Intel and Apple Silicon builds. If you download the `zip` for the `arm64` version, remove the quarantine attribute:
@@ -824,7 +826,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2009
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2010
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

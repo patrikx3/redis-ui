@@ -5,6 +5,18 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.2010
+Released on 05/08/2026
+* FEATURE: Added Meet Assistant SaaS promo alongside AI Network Assistant on demo site.
+* FEATURE: Registered forum icon for Meet Assistant SaaS promo button.
+* BUGFIX: AI explanations now default to English when no UI language is set instead of biasing toward Hungarian.
+* REFACTOR: Extracted shared AI prompt and parser to a common library module.
+* REFACTOR: Moved callGroq, runSingleShotQuery, and AI utilities into the shared layer.
+* DOCS: Added COMPARISON.md comparing P3X Redis UI against other Redis tools, linked from README.
+* DOCS: Updated repository URL references across documentation.
+* DOCS: Updated documentation headers across packages.
+* CHORE: Updated dependencies to the latest versions across all packages.
+
 ### v2026.4.2007
 Released on 04/20/2026
 * BUGFIX: Updated info component in Material UI.
@@ -852,7 +864,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2009
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2010
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
