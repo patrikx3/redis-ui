@@ -177,7 +177,20 @@ jobs:
       - name: Update apt and install snapcraft
         run: |
           sudo apt-get update
-          sudo snap install snapcraft --classic
+          # IPv6 to api.snapcraft.io is intermittently broken on GitHub arm64 runners
+          # (TCP 443 timeouts) while IPv4 works. Prefer IPv4 system-wide for snapd.
+          echo "precedence ::ffff:0:0/96  100" | sudo tee -a /etc/gai.conf
+          sudo systemctl restart snapd
+          # Wait for any auto-snapd restart triggered by the apt upgrade above
+          sudo snap wait system seed.loaded
+          # Retry up to 5x with 30s backoff in case of transient store hiccups
+          for i in 1 2 3 4 5; do
+            sudo snap install snapcraft --classic && break
+            echo "snap install attempt $i failed, sleeping 30s..."
+            sleep 30
+          done
+          # Final verification — fail loudly if all 5 attempts failed
+          snap list snapcraft
       - name: Generate snap description
         run: node scripts/fix-packages-publish.js snap-description
       - name: Build arm64 snap

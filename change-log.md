@@ -5,20 +5,6 @@
                         
 [//]: #@corifeus-header:end
 
-### v2026.4.2015
-Released on 05/21/2026
-* CHORE: Updated dependencies to latest versions.
-* DOCS: Updated repository URL references across documentation.
-
-### v2026.4.2014
-Released on 05/21/2026
-* BUGFIX: Corrected tree node expand/collapse toggle behavior.
-* BUGFIX: Bumped @codemirror/view to 6.42.1 to resolve duplicate KeyBinding type error.
-* REFACTOR: Removed obsolete build configuration.
-* DOCS: Updated repository links from http to https.
-* DOCS: Moved comparison document to artifacts directory.
-* CHORE: Updated dependencies and lock file to latest versions.
-
 ### v2026.4.2012
 Released on 05/08/2026
 * FEATURE: macOS builds now ship both arm64 and x64 architectures (20 release assets, up from 16).
