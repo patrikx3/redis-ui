@@ -5,6 +5,15 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.2014
+Released on 05/21/2026
+* BUGFIX: Corrected tree node expand/collapse toggle behavior.
+* BUGFIX: Bumped @codemirror/view to 6.42.1 to resolve duplicate KeyBinding type error.
+* REFACTOR: Removed obsolete build configuration.
+* DOCS: Updated repository links from http to https.
+* DOCS: Moved comparison document to artifacts directory.
+* CHORE: Updated dependencies and lock file to latest versions.
+
 ### v2026.4.2012
 Released on 05/08/2026
 * FEATURE: macOS builds now ship both arm64 and x64 architectures (20 release assets, up from 16).
@@ -876,7 +885,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2012
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2014
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

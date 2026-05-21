@@ -6,7 +6,7 @@
 
 
 
-# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.2012
+# 📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications v2026.4.2014
 
 
   
@@ -36,7 +36,8 @@ v24.15.0
 
 **p3x-redis-ui** is a versatile Redis GUI that works as a web-based server application or a standalone desktop app. It excels at managing JSON data through an integrated CodeMirror editor with GitHub dark/light themes, supports uploading and downloading binary data, and handles SSH, cluster, and sentinel configurations.
 
-📊 **Comparing tools?** See [**COMPARISON.md**](./COMPARISON.md) for an honest breakdown vs. redis-commander, RedisInsight, and AnotherRedisDesktopManager — feature matrix, performance at 1M keys, and when to pick each.
+📊 **Comparing tools?** See [**COMPARISON.md**](artifacts/readme/COMPARISON.md) for an honest breakdown vs. redis-commander, RedisInsight, and AnotherRedisDesktopManager — feature matrix, performance at 1M keys, and when to pick each.
+
 
 ### Minimum Node.js Version
 
@@ -359,7 +360,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2012
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.2014
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
