@@ -229,6 +229,7 @@ jobs:
       - name: Upload Windows build to GitHub Release
         uses: softprops/action-gh-release@v2.6.1
         with:
+          tag_name: ${{ github.ref_name }}
           token: ${{ github.token }}
           fail_on_unmatched_files: true
           overwrite_files: true
