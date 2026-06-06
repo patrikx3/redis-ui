@@ -196,6 +196,16 @@ See [AI Configuration](ai.md) for setup, readonly mode, and CLI flags.
 - **Console hints** — VADD, VSIM, VCARD, VDIM, VGETATTR, VSETATTR, VREM, VINFO, VLINKS
 - **VSIM IN filter** (Redis 8.2+) — narrow results by attribute values
 
+## Redis 8.8 Array Support
+
+- **Native array type** — Redis 8.8 built-in (no module required); `TYPE` returns `array`
+- **Sparse index → value table** — paginated, numerically ordered, gaps allowed (arrays are sparse)
+- **Add / set** — set at an explicit index, or leave the index empty to append after the last element
+- **Move on edit** — change an element's index to relocate it (the original index is removed, no duplicate)
+- **Delete element** — `ARDEL` per index
+- **Console hints** — ARSET, ARMSET, ARGET, ARMGET, ARGETRANGE, ARSCAN, ARDEL, ARDELRANGE, ARLEN, ARCOUNT, ARINSERT, ARINFO, and more
+- **Version-gated UI** — the Array type appears in the new-key dialog only on Redis 8.8+
+
 ## Redis 8.x Advanced Features
 
 - **Per-field hash TTL** (8.0+) — `HEXPIRE`; live countdown with color stages (green >1h, yellow <1h, red <5min, pulsing <30s)
@@ -285,7 +295,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3004
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3005
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
