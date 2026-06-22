@@ -196,7 +196,10 @@ jobs:
         # core24 destructive/host build must install build-snaps (mesa-2404,
         # gnome-46-2404) and stage-packages, which needs root. Run as root with
         # the runner's node PATH + host env preserved.
-        run: sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap
+        run: |
+          sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap
+          # build ran as root → dist/ is root-owned; hand it back so the (non-root) upload step can read/write it
+          sudo chown -R "$(id -u):$(id -g)" dist
       - name: Upload x64 snap to Snap Store
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
@@ -242,7 +245,10 @@ jobs:
         # core24 destructive/host build must install build-snaps (mesa-2404,
         # gnome-46-2404) and stage-packages, which needs root. Run as root with
         # the runner's node PATH + host env preserved.
-        run: sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap-arm64
+        run: |
+          sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap-arm64
+          # build ran as root → dist/ is root-owned; hand it back so the (non-root) upload step can read/write it
+          sudo chown -R "$(id -u):$(id -g)" dist
       - name: Upload arm64 snap to Snap Store
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
