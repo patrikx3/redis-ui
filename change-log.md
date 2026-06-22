@@ -5,6 +5,40 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.3011
+Released on 06/22/2026
+* FEATURE: Added array data type support for Redis keys.
+* FEATURE: Added AI-powered command hints.
+* BUGFIX: Fixed tree node expand/collapse toggle behavior.
+* CHORE: Upgraded Angular to the latest version.
+* DOCS: Updated project links from HTTP to HTTPS.
+
+### v2026.4.3010
+Released on 06/22/2026
+* CHORE: Updated dependencies to the latest compatible versions.
+* DOCS: Updated repository URLs to the new project domain.
+
+### v2026.4.3009
+Released on 06/22/2026
+* FEATURE: Added AI-powered command hints to assist with building Redis commands.
+* FEATURE: Added support for the array data type, including array operations on Redis keys.
+* CHORE: Upgraded Angular and refreshed dependencies across the web UI.
+
+### v2026.4.3008
+Released on 06/22/2026
+* BUGFIX: Fixed tree node expand/collapse toggle behavior.
+* BUGFIX: Pinned the CodeMirror view dependency to resolve a duplicate KeyBinding type error.
+* DOCS: Added features documentation and updated the comparison page.
+* DOCS: Updated project links from HTTP to HTTPS.
+* CHORE: Updated dependencies and cleaned up lockfiles across redis-ui, redis-ui-material, and redis-ui-server.
+
+### v2026.4.3007
+Released on 06/22/2026
+* FEATURE: Added array data type support for Redis keys.
+* FEATURE: Added AI-powered command hints for working with Redis commands.
+* REFACTOR: Upgraded Angular to the latest version in the web UI.
+* CHORE: Updated dependencies across redis-ui, redis-ui-material, and redis-ui-server.
+
 ### v2026.4.3006
 Released on 06/22/2026
 * BUGFIX: Fixed tree node expand/collapse toggle behavior.
@@ -897,7 +931,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3007
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3011
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

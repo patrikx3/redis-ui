@@ -193,7 +193,10 @@ jobs:
       - name: Build x64 snap
         env:
           SNAPCRAFT_BUILD_ENVIRONMENT: host
-        run: npm run publish-electron-snap
+        # core24 destructive/host build must install build-snaps (mesa-2404,
+        # gnome-46-2404) and stage-packages, which needs root. Run as root with
+        # the runner's node PATH + host env preserved.
+        run: sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap
       - name: Upload x64 snap to Snap Store
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
@@ -236,7 +239,10 @@ jobs:
       - name: Build arm64 snap
         env:
           SNAPCRAFT_BUILD_ENVIRONMENT: host
-        run: npm run publish-electron-snap-arm64
+        # core24 destructive/host build must install build-snaps (mesa-2404,
+        # gnome-46-2404) and stage-packages, which needs root. Run as root with
+        # the runner's node PATH + host env preserved.
+        run: sudo --preserve-env=SNAPCRAFT_BUILD_ENVIRONMENT env "PATH=$PATH" npm run publish-electron-snap-arm64
       - name: Upload arm64 snap to Snap Store
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}

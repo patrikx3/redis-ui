@@ -1543,10 +1543,10 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.14.0"
 
-axios@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.18.0.tgz#8a7f8854af280fcaae063272df2ed9f3837d2398"
-  integrity sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==
+axios@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.18.1.tgz#d63f9863bcd8938815c86f9e2abd380189d96dfe"
+  integrity sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==
   dependencies:
     follow-redirects "^1.16.0"
     form-data "^4.0.5"
@@ -5216,10 +5216,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p3x-redis-ui-material@^2026.4.473:
-  version "2026.4.473"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.473.tgz#a3c0652195237d88c0c58465aac9610e3da90eef"
-  integrity sha512-3V+KvBxECztxY78Rz1iFsoH9wqsmVArAfXbS0Q8I4H8dvwaS1rofVZ6syxFEvQVUN1Uoeb+2X3oVK2fEm1yusg==
+p3x-redis-ui-material@^2026.4.477:
+  version "2026.4.477"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-material/-/p3x-redis-ui-material-2026.4.477.tgz#9c17b2fd9a0660c021390752d2c614bd491d4f57"
+  integrity sha512-7rYsEB8ISEcBhAEyooU1JpWRivpRVOy3ZuYRu+75crTiQJE6NWunGaI84mRmcC9oPcqW2DdoitEZeD/TbUeFcQ==
   dependencies:
     "@codemirror/lang-json" "^6.0.2"
     "@codemirror/state" "^6.6.0"
@@ -5255,10 +5255,10 @@ p3x-redis-ui-material@^2026.4.473:
     vuetify "^4"
     zustand "^5.0.14"
 
-p3x-redis-ui-server@^2026.4.386:
-  version "2026.4.386"
-  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.386.tgz#33ef2c4048800c88c37123b4468369253f6b863f"
-  integrity sha512-PVVm15FRhksG1Fyq1dqgV6okqgqRor8+NkK8KgvQf9vThUX07bFXIcPxb/pbo8p2OJ0U31I17/e4pFDIKbBENg==
+p3x-redis-ui-server@^2026.4.390:
+  version "2026.4.390"
+  resolved "https://registry.yarnpkg.com/p3x-redis-ui-server/-/p3x-redis-ui-server-2026.4.390.tgz#777077b89385ec491e55728b5d6c043fdfe9b2ba"
+  integrity sha512-oGKYQ6UiiiB2a1LogOw8OOpzEor/gAgTz8IEyffdd5XLJlEBaTICdQZ6nD1sXi3+jbLfP2Kcvc/nazXRJMG+ww==
   dependencies:
     "@msgpack/msgpack" "^3.1.3"
     bcryptjs "^3.0.3"
