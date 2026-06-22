@@ -17,8 +17,9 @@ const asyncStart = async () => {
         case 'snap-description':
             const description = generateSnapDescription(pkg.version)
             if (!pkg.build) pkg.build = {}
-            if (!pkg.build.snap) pkg.build.snap = {}
-            pkg.build.snap.description = description
+            if (!pkg.build.snapcraft) pkg.build.snapcraft = {}
+            if (!pkg.build.snapcraft.core24) pkg.build.snapcraft.core24 = {}
+            pkg.build.snapcraft.core24.description = description
             console.log(`Injected snap description (${description.length} / 4096 chars) into package.json`)
             break;
 
