@@ -1,6 +1,6 @@
 {
     "name": "p3x-redis-ui",
-    "version": "2026.4.3005",
+    "version": "2026.4.3006",
     "description": "📡 P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
     "corifeus": {
         "description-snap": "P3X Redis UI: A highly functional and convenient database GUI that fits in your pocket, accessible on both responsive web and desktop applications",
@@ -12,7 +12,7 @@
         "type": "p3x",
         "publish": true,
         "build": true,
-        "nodejs": "v24.16.0",
+        "nodejs": "v24.17.0",
         "reponame": "redis-ui",
         "opencollective": false,
         "install-appimage-launcher": "sudo add-apt-repository ppa:appimagelauncher-team/stable && sudo apt install -y appimagelauncher"
@@ -68,14 +68,14 @@
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "@playwright/test": "^1.60.0",
-        "axios": "^1.17.0",
+        "@playwright/test": "^1.61.0",
+        "axios": "^1.18.0",
         "copyfiles": "^2.4.1",
         "corifeus-builder": "^2026.4.163",
-        "electron": "^42.3.3",
-        "electron-builder": "^26.15.0",
+        "electron": "^42.4.1",
+        "electron-builder": "^26.15.3",
         "node-fetch": "^3.3.2",
-        "playwright": "^1.60.0",
+        "playwright": "^1.61.0",
         "rimraf": "^6.1.3"
     },
     "engines": {
@@ -87,8 +87,8 @@
         "corifeus-utils": "^2026.4.142",
         "electron-store": "^11.0.2",
         "electron-updater": "^6.8.9",
-        "p3x-redis-ui-material": "^2026.4.471",
-        "p3x-redis-ui-server": "^2026.4.384"
+        "p3x-redis-ui-material": "^2026.4.472",
+        "p3x-redis-ui-server": "^2026.4.385"
     },
     "build-save": {
         "mac": {

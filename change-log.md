@@ -5,6 +5,13 @@
                         
 [//]: #@corifeus-header:end
 
+### v2026.4.3006
+Released on 06/22/2026
+* BUGFIX: Fixed tree node expand/collapse toggle behavior.
+* BUGFIX: Resolved a duplicate KeyBinding type error in the CodeMirror editor.
+* FEATURE: Added Meet Assistant SaaS promo alongside the AI Network Assistant on the demo site.
+* CHORE: Updated dependencies across redis-ui, redis-ui-material, and redis-ui-server.
+
 ### v2026.4.3005
 Released on 06/06/2026
 * FEATURE: Added array data type support for Redis keys.
@@ -890,7 +897,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 **🚨 Important Changes:** Any breaking changes are prominently noted in the readme to keep you informed.
 
 
-[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3005
+[**P3X-REDIS-UI**](https://corifeus.com/redis-ui) Build v2026.4.3006
 
  [![NPM](https://img.shields.io/npm/v/p3x-redis-ui.svg)](https://www.npmjs.com/package/p3x-redis-ui)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
