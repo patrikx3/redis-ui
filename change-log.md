@@ -7,11 +7,11 @@
 
 ### v2026.10.100
 Released on 09/02/2026
-* FEATURE: Added AI-powered command hints and array operations in the server.
-* CHORE: Kept RESP2 support pinned under ioredis 6 for compatibility.
-* CHORE: Held TypeScript at the version required by Angular 22.1.
-* DOCS: Updated repository URLs, project links and documentation references to the new p3x organization and main branch.
-* CHORE: Updated dependencies across the server, material and UI packages to the latest versions.
+* FEATURE: Added AI-powered command hints and array operations to the server.
+* BUGFIX: Kept RESP2 support working under ioredis 6.
+* CHORE: Held TypeScript back for Angular 22.1 compatibility.
+* DOCS: Updated repository URLs, project links and documentation references across all packages.
+* CHORE: Updated dependencies to the latest versions.
 
 ### v2026.4.3014
 Released on 06/29/2026
